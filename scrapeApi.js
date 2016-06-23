@@ -26,34 +26,26 @@ function fetchPage(url, callback) {
 }
 
 var processPage = function(body,url) {
-	if ((url.indexOf('developer')>=0) && (seen.indexOf(url)<0)) {
-		console.log('Processing page '+url);
+	console.log('Processing page '+url);
 
-		var filename = url.replace('http://','');
-		filename = filename.replace('https://','');
-		filename = filename.split('?')[0];
-		filename = filename.split('/').join('-');
-		filename = 'apiSource/'+filename;
-		fs.writeFileSync(filename,body,'utf8');
+	var filename = url.replace('http://','');
+	filename = filename.replace('https://','');
+	filename = filename.split('?')[0];
+	filename = filename.split('/').join('-');
+	filename = 'apiSource/'+filename;
+	fs.writeFileSync(filename,body,'utf8');
 
-		var $ = cheerio.load(body);
-		var elements = $("a").each(function () {
-			setTimeout(function(a){
-				var newurl = $(a).attr('href');
-				if ((newurl.indexOf('developer')>=0) && (seen.indexOf(newurl)<0)) {
-					fetchPage(newurl,processPage);
-				}
-			},100,this);
-		});
-	}
+	var $ = cheerio.load(body);
+	var elements = $("a").each(function () {
+		setTimeout(function(a){
+			var newurl = $(a).attr('href');
+			if ((newurl.indexOf('developer')>=0) && (newurl.indexOf('docs')>=0) && (seen.indexOf(newurl)<0)) {
+				fetchPage(newurl,processPage);
+			}
+		},100,this);
+	});
 	seen.push(url);
 }
 
-function run() {
-	// Use request to read in pages.
-	fetchPage("http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources", function (body, url) {
-		processPage(body,url);
-	});
-}
-
-run();
+// Use request to read in pages.
+fetchPage("http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources",processPage);
