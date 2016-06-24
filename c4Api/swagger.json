@@ -56,7 +56,7 @@
           "DiscoveryResources"
         ],
         "operationId": "A_to_Z_Landing_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-DiscoveryResources-A_to_Z_Landing_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Landing_Feed",
         "produces": [],
         "parameters": [],
         "responses": {
@@ -70,16 +70,23 @@
         "security": []
       }
     },
-    "/atoz/start_letter.atom": {
+    "/atoz/{start_letter}.atom": {
       "get": {
         "summary": "A to Z Letter Feed",
         "tags": [
           "DiscoveryResources"
         ],
         "operationId": "A_to_Z_Letter_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-DiscoveryResources-A_to_Z_Letter_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Letter_Feed",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "start_letter",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -91,16 +98,23 @@
         "security": []
       }
     },
-    "/4od/episode-list/date/[yyyy]/[mm]/[dd].atom": {
+    "/4od/episode-list/date/{yyyy.mm.dd}.atom": {
       "get": {
         "summary": "4oD Browse by Date Feed",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "4oD_Browse_by_Date_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Browse_by_Date_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Browse_by_Date_Feed",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "yyyy.mm.dd",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -119,7 +133,7 @@
           "discoveryresources"
         ],
         "operationId": "4oD_Clips_Catch_Up_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Clips_Catch_Up_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Clips_Catch_Up_Feed",
         "produces": [],
         "parameters": [],
         "responses": {
@@ -140,7 +154,7 @@
           "discoveryresources"
         ],
         "operationId": "4oD_Most_Popular_Episodes_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Most_Popular_Episodes_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Most_Popular_Episodes_Feed",
         "produces": [],
         "parameters": [],
         "responses": {
@@ -161,7 +175,7 @@
           "discoveryresources"
         ],
         "operationId": "4oD_Popular_All_Brands_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Popular_All_Brands_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Popular_All_Brands_Feed",
         "produces": [],
         "parameters": [],
         "responses": {
@@ -175,16 +189,23 @@
         "security": []
       }
     },
-    "/categories/category/4od.atom": {
+    "/categories/{category}/4od.atom": {
       "get": {
         "summary": "4oD Programmes by TX Date",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "4oD_Programmes_by_TX_Date",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Programmes_by_TX_Date",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -196,16 +217,23 @@
         "security": []
       }
     },
-    "/categories/category/4od/title.atom": {
+    "/categories/{category}/4od/title.atom": {
       "get": {
         "summary": "4oD Programmes by Title",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "4oD_Programmes_by_Title",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Programmes_by_Title",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -224,7 +252,7 @@
           "discoveryresources"
         ],
         "operationId": "4oD_Title_All_Brands_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Title_All_Brands_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Title_All_Brands_Feed",
         "produces": [],
         "parameters": [],
         "responses": {
@@ -238,16 +266,23 @@
         "security": []
       }
     },
-    "/categories/category.atom": {
+    "/categories/{category}.atom": {
       "get": {
         "summary": "All Programmes by TX Date",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "All_Programmes_by_TX_Date",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-All_Programmes_by_TX_Date",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -259,16 +294,23 @@
         "security": []
       }
     },
-    "/categories/category/title.atom": {
+    "/categories/{category}/title.atom": {
       "get": {
         "summary": "All Programmes by Title",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "All_Programmes_by_Title",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-All_Programmes_by_Title",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -287,7 +329,7 @@
           "discoveryresources"
         ],
         "operationId": "Categories_Landing_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Categories_Landing_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Categories_Landing_Feed",
         "produces": [],
         "parameters": [],
         "responses": {
@@ -301,16 +343,23 @@
         "security": []
       }
     },
-    "/collections/collection-name[/4od].atom": {
+    "/collections/collection-name/{4od}.atom": {
       "get": {
         "summary": "Collections Feed",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "Collections_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Collections_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Collections_Feed",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "4od",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -322,14 +371,14 @@
         "security": []
       }
     },
-    "/categories/category/4od/popular.atom": {
+    "/collections/collection-name.atom": {
       "get": {
-        "summary": "Most Popular Brands Feed",
+        "summary": "Collections Feed(2)",
         "tags": [
           "discoveryresources"
         ],
-        "operationId": "Most_Popular_Brands_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Most_Popular_Brands_Feed",
+        "operationId": "Collections_Feed(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Collections_Feed",
         "produces": [],
         "parameters": [],
         "responses": {
@@ -343,16 +392,72 @@
         "security": []
       }
     },
-    "/collections/collection-name/flattened[/4od].atom": {
+    "/collections/collection-name/flattened/{4od}.atom": {
       "get": {
         "summary": "Flattened Collection Feed",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "Flattened_Collection_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Flattened_Collection_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Flattened_Collection_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "name": "4od",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/collections/collection-name/flattened.atom": {
+      "get": {
+        "summary": "Flattened Collection Feed(2)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Flattened_Collection_Feed(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Flattened_Collection_Feed",
         "produces": [],
         "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/categories/{category}/4od/popular.atom": {
+      "get": {
+        "summary": "Most Popular Brands Feed",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Most_Popular_Brands_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -371,49 +476,7 @@
           "discoveryresources"
         ],
         "operationId": "Popular_Brands_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Popular_Brands_Feed",
-        "produces": [],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        },
-        "security": []
-      }
-    },
-    "/tv-listings/daily/[yyyy]/[mm]/[dd].atom": {
-      "get": {
-        "summary": "TV Listings Feed",
-        "tags": [
-          "discoveryresources"
-        ],
-        "operationId": "TV_Listings_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-TV_Listings_Feed",
-        "produces": [],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        },
-        "security": []
-      }
-    },
-    "/tv-listings/daily/[yyyy]/[mm]/[dd]/[channel].atom": {
-      "get": {
-        "summary": "TV Listings Feed(1)",
-        "tags": [
-          "discoveryresources"
-        ],
-        "operationId": "TV_Listings_Feed(1)",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-TV_Listings_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Popular_Brands_Feed",
         "produces": [],
         "parameters": [],
         "responses": {
@@ -434,9 +497,16 @@
           "discoveryresources"
         ],
         "operationId": "Search_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Search_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Search_Feed",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "q",
+            "type": "string",
+            "in": "query",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -448,16 +518,23 @@
         "security": []
       }
     },
-    "/search/search-term.atom": {
+    "/search/{q}.atom": {
       "get": {
-        "summary": "Search Feed(1)",
+        "summary": "Search Feed(2)",
         "tags": [
           "discoveryresources"
         ],
-        "operationId": "Search_Feed(1)",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Search_Feed",
+        "operationId": "Search_Feed(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Search_Feed",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "q",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -469,37 +546,85 @@
         "security": []
       }
     },
-    "/[brand-web-safe-title]/4od.atom": {
+    "/tv-listings/daily/{yyyy.mm.dd}.atom": {
+      "get": {
+        "summary": "TV Listings Feed",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "TV_Listings_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/TV_Listings_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "name": "yyyy.mm.dd",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/tv-listings/daily/{yyyy.mm.dd}/{channel}.atom": {
+      "get": {
+        "summary": "TV Listings Feed(2)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "TV_Listings_Feed(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/TV_Listings_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "name": "yyyy.mm.dd",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "channel",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/{brand-web-safe-title}/4od.atom": {
       "get": {
         "summary": "4oD Feed",
         "tags": [
           "metadataresources"
         ],
         "operationId": "4oD_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-metadataresources-4oD_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/4oD_Feed",
         "produces": [],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
+        "parameters": [
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
           }
-        },
-        "security": []
-      }
-    },
-    "/brand-web-safe-title/epg.atom": {
-      "get": {
-        "summary": "Brand EPG Atom Feed",
-        "tags": [
-          "metadataresources"
         ],
-        "operationId": "Brand_EPG_Atom_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Brand_EPG_Atom_Feed",
-        "produces": [],
-        "parameters": [],
         "responses": {
           "200": {
             "description": "Default response",
@@ -511,16 +636,159 @@
         "security": []
       }
     },
-    "/brand-web-safe-title/videos/clip-asset-id.atom": {
+    "/{brand-web-safe-title}/videos/{clip-asset-id}.atom": {
       "get": {
         "summary": "Clip Detail Atom Feed",
         "tags": [
           "metadataresources"
         ],
         "operationId": "Clip_Detail_Atom_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Clip_Detail_Atom_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clip_Detail_Atom_Feed",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "clip-asset-id",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/{brand-web-safe-title}/epg.atom": {
+      "get": {
+        "summary": "Brand EPG Atom Feed",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Brand_EPG_Atom_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Brand_EPG_Atom_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/{brand-web-safe-title}/videos/all.atom": {
+      "get": {
+        "summary": "Clips Landing Feed Brand Series and Episode Levels",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
+        "produces": [],
+        "parameters": [
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/{brand-web-safe-title}/videos/series-{SERIES_SEQUENCE_NUMBER}.atom": {
+      "get": {
+        "summary": "Clips Landing Feed Brand Series and Episode Levels(2)",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
+        "produces": [],
+        "parameters": [
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "SERIES_SEQUENCE_NUMBER",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/{brand-web-safe-title}/videos/series-{SERIES_SEQUENCE_NUMBER}/episode-{EPISODE_SEQUENCE_NUMBER}.atom": {
+      "get": {
+        "summary": "Clips Landing Feed Brand Series and Episode Levels(3)",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels(3)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
+        "produces": [],
+        "parameters": [
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "SERIES_SEQUENCE_NUMBER",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "EPISODE_SEQUENCE_NUMBER",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -539,7 +807,7 @@
           "metadataresources"
         ],
         "operationId": "Coming_Soon_feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Coming_Soon_feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Coming_Soon_feed",
         "produces": [],
         "parameters": [],
         "responses": {
@@ -553,37 +821,23 @@
         "security": []
       }
     },
-    "/coming-soon/[category].atom": {
+    "/coming-soon/{category}.atom": {
       "get": {
-        "summary": "Coming Soon feed(1)",
+        "summary": "Coming Soon feed(2)",
         "tags": [
           "metadataresources"
         ],
-        "operationId": "Coming_Soon_feed(1)",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Coming_Soon_feed",
+        "operationId": "Coming_Soon_feed(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Coming_Soon_feed",
         "produces": [],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
+        "parameters": [
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
           }
-        },
-        "security": []
-      }
-    },
-    "/brand-web-safe-title/videos/all.atom": {
-      "get": {
-        "summary": "Clips Landing Feed Brand Series and Episode Levels",
-        "tags": [
-          "metadataresources"
         ],
-        "operationId": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
-        "produces": [],
-        "parameters": [],
         "responses": {
           "200": {
             "description": "Default response",
@@ -595,79 +849,29 @@
         "security": []
       }
     },
-    "/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER.atom": {
-      "get": {
-        "summary": "Clips Landing Feed Brand Series and Episode Levels(1)",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels(1)",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
-        "produces": [],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        },
-        "security": []
-      }
-    },
-    "/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER/episode-EPISODE_SEQUENCE_NUMBER.atom": {
-      "get": {
-        "summary": "Clips Landing Feed Brand Series and Episode Levels(2)",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels(2)",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
-        "produces": [],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        },
-        "security": []
-      }
-    },
-    "/brand-web-safe-title/episode-guide/series-series_number/episode-episode_number.atom": {
-      "get": {
-        "summary": "Episode Guide Feed Episode Detail",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Episode_Guide_Feed_Episode_Detail",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Episode_Guide_Feed_Episode_Detail",
-        "produces": [],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        },
-        "security": []
-      }
-    },
-    "/brand-web-safe-title/episode-guide/series-series_number.atom": {
+    "/{brand-web-safe-title}/episode-guide/series-{series_number}.atom": {
       "get": {
         "summary": "Episode Guide Feed Series Detail",
         "tags": [
           "metadataresources"
         ],
         "operationId": "Episode_Guide_Feed_Series_Detail",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Episode_Guide_Feed_Series_Detail",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Detail",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "series_number",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -679,16 +883,35 @@
         "security": []
       }
     },
-    "/brand-web-safe-title.atom": {
+    "/{brand-web-safe-title}/episode-guide/series-{series_number}/episode-{episode_number}.atom": {
       "get": {
-        "summary": "Hub Feed",
+        "summary": "Episode Guide Feed Episode Detail",
         "tags": [
           "metadataresources"
         ],
-        "operationId": "Hub_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Hub_Feed",
+        "operationId": "Episode_Guide_Feed_Episode_Detail",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Episode_Detail",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "series_number",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "episode_number",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -700,16 +923,23 @@
         "security": []
       }
     },
-    "/brand-web-safe-title/episode-guide.atom": {
+    "/{brand-web-safe-title}/episode-guide.atom": {
       "get": {
         "summary": "Episode Guide Feed Series Landing",
         "tags": [
           "metadataresources"
         ],
         "operationId": "Episode_Guide_Feed_Series_Landing",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Episode_Guide_Feed_Series_Landing",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Landing",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -721,16 +951,51 @@
         "security": []
       }
     },
-    "/programme/[programme-id].atom": {
+    "/programme/{programme-id}.atom": {
       "get": {
         "summary": "Programme Feed",
         "tags": [
           "metadataresources"
         ],
         "operationId": "Programme_Feed",
-        "x-documentation": "http://developer.channel4.com/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Programme_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Programme_Feed",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "programme-id",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/{brand-web-safe-title}.atom": {
+      "get": {
+        "summary": "Hub Feed",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Hub_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Hub_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -752,7 +1017,7 @@
   "securityDefinitions": {
     "api_key": {
       "type": "apiKey",
-      "name": "api_key",
+      "name": "apikey",
       "in": "query"
     }
   },

@@ -98,9 +98,16 @@ function postProcess(src) {
 				else if ((cols[0] == 'URL') || (cols[0] == 'URLs')) {
 					var url = cols[1];
 					url = url.replaceAll(' OR ',' ');
+					url = url.replaceAll('xxorhttp','xx http');
 					url = url.replaceAll('series number','series_number');
 					url = url.replaceAll('episode number','episode_number');
 					var urls = url.split(' ');
+
+					if (urls[0].indexOf('[/4od]')>0) {
+						urls[0] = urls[0].replace('[/4od]','/[4od]');
+						urls.push(urls[0].replace('/[4od]',''));
+					}
+
 					result.urls = result.urls.concat(urls);
 					result.score++;
 				}
@@ -116,6 +123,9 @@ function postProcess(src) {
 					param.name = cols[0];
 					param.name = param.name.replaceAll('series number','series_number');
 					param.name = param.name.replaceAll('episode number','episode_number');
+					param.name = param.name.replaceAll('[','');
+					param.name = param.name.replaceAll(']','');
+					param.name = param.name.replaceAll('yyyy/mm/dd','yyyy.mm.dd');
 					param.description = cols[1];
 					result.parameters.push(param);
 					result.score++;
@@ -128,7 +138,7 @@ function postProcess(src) {
 				item.name = cols[0];
 				if (item.name != 'Element') {
 					item.description = cols[1];
-					item.example = cols[2];
+					item.example = cols[2].replaceAll('xxorhttp','xx http');
 					item.type = cols[3];
 					target.push(item);
 					result.score++;
@@ -233,7 +243,7 @@ function definePath(file,url,suffix) {
 	path.get.tags = [];
 	path.get.tags.push(file.group);
 	path.get.operationId = file.operation+suffix;
-	path.get["x-documentation"] = file.filename.replace('apiSource\\','http://developer.channel4.com/');
+	path.get["x-documentation"] = file.filename.replace('apiSource\\','http://').replaceAll('-','/');
 	path.get.produces = [];
 	path.get.produces.push = 'application/xml';
 	path.get.parameters = [];
@@ -244,16 +254,7 @@ function definePath(file,url,suffix) {
 	path.get.responses["200"].schema["$ref"] = '#/definitions/atom'
 	path.get.security = [];
 
-    /*      {
-            "name": "pid",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "pattern": "^([0-9,a-d,f-h,j-n,p-t,v-z]){8,}$",
-            "minLength": 8
-          }, */
-
-	return path;;
+	return path;
 }
 
 function generateSwagger(){
@@ -261,13 +262,47 @@ function generateSwagger(){
 		var file = api.files[f];
 		for (var u in file.output.urls) {
 			var url = file.output.urls[u];
+
+			var queryString = '&'+url.split('?')[1];
+
 			var suffix = '';
 			if (u>0) {
-				suffix = '('+u+')';
+				suffix = '('+(parseInt(u,10)+1)+')';
 			}
 			var path = definePath(file,url,suffix);
 			url = url.split('?')[0];
 			url = url.replace('http://api.channel4.com/pmlsd','');
+			url = url.replaceAll('[','{');
+			url = url.replaceAll(']','}');
+
+			url = url.replace('search-term.','{q}.');
+			url = url.replace('{yyyy}/{mm}/{dd}','{yyyy.mm.dd}');
+
+			for (var p in file.output.parameters) {
+				var param = file.output.parameters[p];
+				if (param.name != 'apikey') {
+					url = url.replaceAll(param.name,'{'+param.name+'}');
+					var location = '';
+					if (url.indexOf('{'+param.name+'}')>=0) location = 'path'
+					else if (queryString.indexOf('&'+param.name)>=0) location = 'query';
+					if (location) {
+						var swagParam = {};
+						swagParam.name = param.name;
+						swagParam.type = (param.type ? param.type : 'string');
+						swagParam["in"] = location;
+						swagParam.required = true; //(location == 'path');
+						path.get.parameters.push(swagParam);
+					}
+					else {
+						if ((param.name.indexOf(' ')<0) && (param.name != 'Film')) {
+							console.log(file.operation+suffix+' omitted parameter: '+param.name);
+						}
+					}
+				}
+			}
+			url = url.replaceAll('{{','{');
+			url = url.replaceAll('}}','}');
+
 			swagger.paths[url] = path;
 		}
 	}
@@ -332,7 +367,7 @@ var swagStr = `{
       "securityDefinitions" : {
 		"api_key" : {
 			"type" : "apiKey",
-			"name" : "api_key",
+			"name" : "apikey",
 			"in" : "query"
 		}
 	  },
@@ -347,6 +382,7 @@ processPath('./apiSource');
 process.on('exit', function(code) {
 	fs.writeFileSync('./c4Api/api.json',JSON.stringify(api,null,2),'utf8');
 
+	console.log();
 	generateSwagger();
 	fs.writeFileSync('./c4Api/swagger.json',JSON.stringify(swagger,null,2),'utf8');
 });
