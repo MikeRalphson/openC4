@@ -71,13 +71,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.2",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -244,13 +244,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -411,13 +411,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -815,13 +815,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -1032,13 +1032,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -1478,13 +1478,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -1723,13 +1723,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -1946,13 +1946,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "id",
@@ -1964,7 +1964,7 @@
             "name": "title",
             "description": "Programme's Brand Name",
             "example": "4thought.tv",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "summary",
@@ -2149,13 +2149,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -2394,13 +2394,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -2621,13 +2621,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -2784,13 +2784,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.2",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -2874,6 +2874,401 @@
           }
         ],
         "multipleEntry": []
+      }
+    },
+    {
+      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Flattened_Collection_Feed",
+      "group": "discoveryresources",
+      "operation": "Flattened_Collection_Feed",
+      "summary": "Flattened Collection Feed",
+      "output": {
+        "score": 68,
+        "urls": [
+          "http://api.channel4.com/pmlsd/collections/collection-name/flattened/[4od].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/collections/collection-name/flattened.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
+        ],
+        "sampleUrl": "http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xe",
+        "feedDescription": "The Flattened Collections Feed is only applicable for GROUP collections and its purpose is mainly return 3 items (BRAND, SERIES or EPSIODE) of each of the simple collections assigned to the GROUP.",
+        "parameters": [
+          {
+            "name": "collection name",
+            "description": "Web safe title for the collection."
+          },
+          {
+            "name": "4od",
+            "description": "If included 4od param in the URL, only 4od available content will be shown."
+          },
+          {
+            "name": "apikey",
+            "description": "24-character alphanumeric key provided to you when you registered your application at http://developer.channel4.com/apps/register."
+          }
+        ],
+        "feed": [
+          {
+            "name": "id",
+            "description": "Unique identifier of this feed",
+            "example": "tag:api.channel4.com,2009:/programmes/collections/4od-home-promo/flattened",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "Title of this feed",
+            "example": "LIVE",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.Synopsis",
+            "description": "Summary of this feed",
+            "example": "",
+            "type": "string"
+          },
+          {
+            "name": "updated",
+            "description": "Date and time feed last updated",
+            "example": "2012-09-07T08:56:11.526Z",
+            "type": "date"
+          },
+          {
+            "name": "author/name",
+            "description": "Identifier for author/company",
+            "example": "Channel 4 Television",
+            "type": "string"
+          },
+          {
+            "name": "logo",
+            "description": "Default image URL for location of author's logo",
+            "example": "http://www.channel4.com/static/programmes/images/c4-atom-logo.gif",
+            "type": "uri"
+          },
+          {
+            "name": "link@self",
+            "description": "URL of current feed",
+            "example": "",
+            "type": "string"
+          },
+          {
+            "name": "link@related",
+            "description": "This only appears in COLLECTION GROUP feed. URL to flattened view of same collection, including 3 entries for each of the collections which compound the GROUP.",
+            "example": "",
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "description": "ID of episode",
+            "example": "tag:www.channel4.com,2009:/programmes/the-it-crowd/4od%232921825",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "Title of episode",
+            "example": "Yesterday's Jam",
+            "type": "string"
+          },
+          {
+            "name": "updated",
+            "description": "Date & time entry last updated",
+            "example": "2010-10-18T11:09:12.665Z",
+            "type": "date"
+          },
+          {
+            "name": "summary",
+            "description": "Synopsis of episode",
+            "example": "The unloved and socially-awkward Roy and Moss give computer-illiterate Jen a less than lukewarm welcome to the IT department. Soon, however, they realise a female presence in their team can have its benefits...",
+            "type": "string"
+          },
+          {
+            "name": "link@alternate",
+            "description": "URL to HTML version, i.e., player page",
+            "example": "http://www.channel4.com/programmes/the-it-crowd/4od#2921825",
+            "type": "uri"
+          },
+          {
+            "name": "link@related",
+            "description": "URL to Episode Guide feed, if available",
+            "example": "http://api.channel4.com/pmlsd/the-it-crowd/episode-guide/series-1/episode-1.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "media:group / media:player",
+            "description": "URL to media-player version of episode",
+            "example": "http://www.channel4.com/programmes/the-it-crowd/4od#2921825",
+            "type": "uri"
+          },
+          {
+            "name": "media:group /media:thumbnail",
+            "description": "URL to medium-sized image of this episode",
+            "example": "url=\"http://www.channel4.com/assets/programmes/images/the-it-crowd/series-1/episode-1/the-it-crowd-s1e1_200x113.jpg\" height=\"113\" width=\"200\"",
+            "type": "string"
+          },
+          {
+            "name": "media:group /media:rating",
+            "description": "Flag to show whether episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")",
+            "example": "adult",
+            "type": "string"
+          },
+          {
+            "name": "media:group /media:copyright",
+            "description": "Link to copyright / T&C information",
+            "example": "url=\"http://www.channel4.com/terms_and_conditions.html\" Terms and Conditions",
+            "type": "string"
+          },
+          {
+            "name": "media:group /media:restriction",
+            "description": "Restriction flag (\"allow\") and list of country or state codes where episode is accessible to website users",
+            "example": "\"allow\" type=\"country\" GB,GG,IE,IM,JE",
+            "type": "string"
+          },
+          {
+            "name": "media:group /media:rights",
+            "description": "Status of media rights under which Channel 4 provides episode content",
+            "example": "\"official\"",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.BrandTitle",
+            "description": "Title of brand",
+            "example": "The IT Crowd",
+            "type": "string"
+          },
+          {
+            "name": "dcterms:available",
+            "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)",
+            "example": "start=2009-06-24T22:00:00.000Z;end=2011-01-24T00:00:00.000Z;scheme=W3C-DTF",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.SeriesNumber",
+            "description": "The series to which this episode belongs",
+            "example": "1",
+            "type": "integer"
+          },
+          {
+            "name": "dc:relation.EpisodeNumber",
+            "description": "The episode number within the series",
+            "example": "1",
+            "type": "integer"
+          },
+          {
+            "name": "dc:relation.programmeId",
+            "description": "Indicates the contract and programme numbers",
+            "example": "41227/001",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.RelatedEntryId",
+            "description": "The episode guide entry related to this episode",
+            "example": "tag:www.channel4.com,2009:/programmes/the-it-crowd/episode-guide/series-1/episode-1",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.AgeRating",
+            "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)",
+            "example": "0",
+            "type": "integer"
+          },
+          {
+            "name": "dc:relation.Guidance",
+            "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable",
+            "example": "Adult humour",
+            "type": "string"
+          },
+          {
+            "name": "dc:date.TXDate",
+            "description": "First TX date information for this episode",
+            "example": "2009-01-04T23:40:00.000Z",
+            "type": "date"
+          },
+          {
+            "name": "dc:relation.TXChannel",
+            "description": "First TX channel information for this episode",
+            "example": "M4",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.Subtitles",
+            "description": "Boolean indicating if subtitles are available for this episode",
+            "example": "true",
+            "type": "boolean"
+          },
+          {
+            "name": "dc:relation.AudioDescription",
+            "description": "Boolean indicating if an audio description is available for this episode",
+            "example": "false",
+            "type": "boolean"
+          },
+          {
+            "name": "dc:relation.LoginRequired",
+            "description": "Boolean indicating if the user has to be logged-in in order to play this episode.",
+            "example": "true",
+            "type": "boolean"
+          },
+          {
+            "name": "dc:relation.Duration",
+            "description": "Length in minutes and seconds - does not include ad breaks",
+            "example": "23:20",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.resourceType",
+            "description": "The type of the entry",
+            "example": "EPISODE",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.ParentCollectionId",
+            "description": "The ID of the Parent Collection where the resource is assigned to.",
+            "example": "tag:api.channel4.com,2009:/programmes/collections/e4-on-4od/4od",
+            "type": "string"
+          }
+        ],
+        "singleEntry": [
+          {
+            "name": "generator",
+            "description": "Identifies the agent used to generate the feed",
+            "example": "PMLSD",
+            "type": "string"
+          },
+          {
+            "name": "generator@version",
+            "description": "Identifies the version of the agent used to generate the feed",
+            "example": "1.27.1",
+            "type": "number"
+          },
+          {
+            "name": "dc:relation.platformClientVersion",
+            "description": "Identifies the version of the client application compatible with this feed.",
+            "example": "1.0",
+            "type": "number"
+          },
+          {
+            "name": "id",
+            "description": "ID containing Brand Web Safe Name",
+            "example": "tag:api.channel4.com,2009:/brand/a-cook-on-the-wild-side",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "The Programmes Brand Name",
+            "example": "Facejacker",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.Synopsys",
+            "description": "The synopsis of this brand",
+            "example": "The man of mystery returns. But he's put down his phone and now he's up close and personal! Disguised with the aid of prosthetics, Kayvan Novak (Fonejacker) plays a dazzling multitude of fictional characters.",
+            "type": "string"
+          },
+          {
+            "name": "updated",
+            "description": "Date and time feed last updated.",
+            "example": "2010-02-26T15:59:42.907Z",
+            "type": "date"
+          },
+          {
+            "name": "media:thumbnail",
+            "description": "URL to medium sized image of this brand",
+            "example": "http://.channel4.com/assets/programmes/images/marys-bottom-line/3ca5c4ff-18d6-46e2-aeb9-008619cd48ed_200x113.jpg",
+            "type": "uri"
+          },
+          {
+            "name": "link@self",
+            "description": "URL to self collection feed",
+            "example": "http://apì.channel4.com/pmlsd/4od-home-promo.atom",
+            "type": "uri"
+          },
+          {
+            "name": "Link@Related title=\"Episode Guide\"",
+            "description": "URL to brand episode guide feed",
+            "example": "http://api.channel4.com/pmlsd/facejacker/episode-guide.atom",
+            "type": "uri"
+          },
+          {
+            "name": "Link@Related title=\"4oD\"",
+            "description": "URL to Brand 4oD feed, if available",
+            "example": "http://api.channel4.com/pmlsd/facejacker/4od.atom",
+            "type": "uri"
+          },
+          {
+            "name": "dc:relation.resourceType",
+            "description": "The type of the entry",
+            "example": "BRAND",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.ParentCollectionId",
+            "description": "The ID of the Parent Collection where the resource is assigned to.",
+            "example": "tag:api.channel4.com,2009:/programmes/collections/e4-on-4od/4od",
+            "type": "string"
+          }
+        ],
+        "multipleEntry": [
+          {
+            "name": "id",
+            "description": "ID containing Series Web Safe Name",
+            "example": "tag:ios.int.channel4.com,2009:/programmes/jamie-at-home/episode-guide/series-1",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "The Programmes Series Name",
+            "example": "Series 1 - Jamie at Home",
+            "type": "string"
+          },
+          {
+            "name": "subtitle",
+            "description": "The synopsis of the series.",
+            "example": "The chef goes back to his roots, literally. From his Essex kitchen and garden, Jamie Oliver shows how easy it is to grow fantastic fruit and veg, and turn them into simple, delicious food.",
+            "type": "string"
+          },
+          {
+            "name": "updated",
+            "description": "Date and time feed last updated.",
+            "example": "2010-02-26T15:59:42.907Z",
+            "type": "date"
+          },
+          {
+            "name": "media:thumbnail",
+            "description": "URL to medium sized image of this series",
+            "example": "url=\"http://cache.int.channel4.com/assets/programmes/images/jamie-at-home/series-1/jamie-at-home-s1-20090617182359_200x113.jpg\" height=\"113\" width=\"200\" imageSource=\"fallback\" altText=\"Jamie Oliver\"",
+            "type": "string"
+          },
+          {
+            "name": "link@self",
+            "description": "Link to the Series Landing feed",
+            "example": "http://api.channel4.com/pmlsd/jamie-at-home/episode-guide/series-1.atom?platform=ios",
+            "type": "uri"
+          },
+          {
+            "name": "Link@Related title=\"4oD\"",
+            "description": "URL to Brand 4oD feed, if available",
+            "example": "http://api.channel4.com/pmlsd/jamie-at-home/4od.atom?platform=ios",
+            "type": "uri"
+          },
+          {
+            "name": "dc:relation.BrandTitle",
+            "description": "Title of the Brand for this Series",
+            "example": "Jamie at Home",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.SeriesNumber",
+            "description": "Number of series within brand",
+            "example": "1",
+            "type": "integer"
+          },
+          {
+            "name": "dc:relation.resourceType",
+            "description": "The type of the entry",
+            "example": "SERIES",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.ParentCollectionId",
+            "description": "The ID of the Parent Collection where the resource is assigned to.",
+            "example": "tag:api.channel4.com,2009:/programmes/collections/e4-on-4od/4od",
+            "type": "string"
+          }
+        ]
       }
     },
     {
@@ -3474,13 +3869,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "id",
@@ -3590,401 +3985,6 @@
             "name": "dc:relation.resourceType",
             "description": "The type of the entry",
             "example": "BRAND",
-            "type": "string"
-          }
-        ]
-      }
-    },
-    {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Flattened_Collection_Feed",
-      "group": "discoveryresources",
-      "operation": "Flattened_Collection_Feed",
-      "summary": "Flattened Collection Feed",
-      "output": {
-        "score": 68,
-        "urls": [
-          "http://api.channel4.com/pmlsd/collections/collection-name/flattened/[4od].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-          "http://api.channel4.com/pmlsd/collections/collection-name/flattened.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
-        ],
-        "sampleUrl": "http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xe",
-        "feedDescription": "The Flattened Collections Feed is only applicable for GROUP collections and its purpose is mainly return 3 items (BRAND, SERIES or EPSIODE) of each of the simple collections assigned to the GROUP.",
-        "parameters": [
-          {
-            "name": "collection name",
-            "description": "Web safe title for the collection."
-          },
-          {
-            "name": "4od",
-            "description": "If included 4od param in the URL, only 4od available content will be shown."
-          },
-          {
-            "name": "apikey",
-            "description": "24-character alphanumeric key provided to you when you registered your application at http://developer.channel4.com/apps/register."
-          }
-        ],
-        "feed": [
-          {
-            "name": "id",
-            "description": "Unique identifier of this feed",
-            "example": "tag:api.channel4.com,2009:/programmes/collections/4od-home-promo/flattened",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "Title of this feed",
-            "example": "LIVE",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.Synopsis",
-            "description": "Summary of this feed",
-            "example": "",
-            "type": "string"
-          },
-          {
-            "name": "updated",
-            "description": "Date and time feed last updated",
-            "example": "2012-09-07T08:56:11.526Z",
-            "type": "date"
-          },
-          {
-            "name": "author/name",
-            "description": "Identifier for author/company",
-            "example": "Channel 4 Television",
-            "type": "string"
-          },
-          {
-            "name": "logo",
-            "description": "Default image URL for location of author's logo",
-            "example": "http://www.channel4.com/static/programmes/images/c4-atom-logo.gif",
-            "type": "uri"
-          },
-          {
-            "name": "link@self",
-            "description": "URL of current feed",
-            "example": "",
-            "type": "string"
-          },
-          {
-            "name": "link@related",
-            "description": "This only appears in COLLECTION GROUP feed. URL to flattened view of same collection, including 3 entries for each of the collections which compound the GROUP.",
-            "example": "",
-            "type": "string"
-          },
-          {
-            "name": "id",
-            "description": "ID of episode",
-            "example": "tag:www.channel4.com,2009:/programmes/the-it-crowd/4od%232921825",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "Title of episode",
-            "example": "Yesterday's Jam",
-            "type": "string"
-          },
-          {
-            "name": "updated",
-            "description": "Date & time entry last updated",
-            "example": "2010-10-18T11:09:12.665Z",
-            "type": "date"
-          },
-          {
-            "name": "summary",
-            "description": "Synopsis of episode",
-            "example": "The unloved and socially-awkward Roy and Moss give computer-illiterate Jen a less than lukewarm welcome to the IT department. Soon, however, they realise a female presence in their team can have its benefits...",
-            "type": "string"
-          },
-          {
-            "name": "link@alternate",
-            "description": "URL to HTML version, i.e., player page",
-            "example": "http://www.channel4.com/programmes/the-it-crowd/4od#2921825",
-            "type": "uri"
-          },
-          {
-            "name": "link@related",
-            "description": "URL to Episode Guide feed, if available",
-            "example": "http://api.channel4.com/pmlsd/the-it-crowd/episode-guide/series-1/episode-1.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "media:group / media:player",
-            "description": "URL to media-player version of episode",
-            "example": "http://www.channel4.com/programmes/the-it-crowd/4od#2921825",
-            "type": "uri"
-          },
-          {
-            "name": "media:group /media:thumbnail",
-            "description": "URL to medium-sized image of this episode",
-            "example": "url=\"http://www.channel4.com/assets/programmes/images/the-it-crowd/series-1/episode-1/the-it-crowd-s1e1_200x113.jpg\" height=\"113\" width=\"200\"",
-            "type": "string"
-          },
-          {
-            "name": "media:group /media:rating",
-            "description": "Flag to show whether episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")",
-            "example": "adult",
-            "type": "string"
-          },
-          {
-            "name": "media:group /media:copyright",
-            "description": "Link to copyright / T&C information",
-            "example": "url=\"http://www.channel4.com/terms_and_conditions.html\" Terms and Conditions",
-            "type": "string"
-          },
-          {
-            "name": "media:group /media:restriction",
-            "description": "Restriction flag (\"allow\") and list of country or state codes where episode is accessible to website users",
-            "example": "\"allow\" type=\"country\" GB,GG,IE,IM,JE",
-            "type": "string"
-          },
-          {
-            "name": "media:group /media:rights",
-            "description": "Status of media rights under which Channel 4 provides episode content",
-            "example": "\"official\"",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.BrandTitle",
-            "description": "Title of brand",
-            "example": "The IT Crowd",
-            "type": "string"
-          },
-          {
-            "name": "dcterms:available",
-            "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)",
-            "example": "start=2009-06-24T22:00:00.000Z;end=2011-01-24T00:00:00.000Z;scheme=W3C-DTF",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.SeriesNumber",
-            "description": "The series to which this episode belongs",
-            "example": "1",
-            "type": "integer"
-          },
-          {
-            "name": "dc:relation.EpisodeNumber",
-            "description": "The episode number within the series",
-            "example": "1",
-            "type": "integer"
-          },
-          {
-            "name": "dc:relation.programmeId",
-            "description": "Indicates the contract and programme numbers",
-            "example": "41227/001",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.RelatedEntryId",
-            "description": "The episode guide entry related to this episode",
-            "example": "tag:www.channel4.com,2009:/programmes/the-it-crowd/episode-guide/series-1/episode-1",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.AgeRating",
-            "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)",
-            "example": "0",
-            "type": "integer"
-          },
-          {
-            "name": "dc:relation.Guidance",
-            "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable",
-            "example": "Adult humour",
-            "type": "string"
-          },
-          {
-            "name": "dc:date.TXDate",
-            "description": "First TX date information for this episode",
-            "example": "2009-01-04T23:40:00.000Z",
-            "type": "date"
-          },
-          {
-            "name": "dc:relation.TXChannel",
-            "description": "First TX channel information for this episode",
-            "example": "M4",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.Subtitles",
-            "description": "Boolean indicating if subtitles are available for this episode",
-            "example": "true",
-            "type": "boolean"
-          },
-          {
-            "name": "dc:relation.AudioDescription",
-            "description": "Boolean indicating if an audio description is available for this episode",
-            "example": "false",
-            "type": "boolean"
-          },
-          {
-            "name": "dc:relation.LoginRequired",
-            "description": "Boolean indicating if the user has to be logged-in in order to play this episode.",
-            "example": "true",
-            "type": "boolean"
-          },
-          {
-            "name": "dc:relation.Duration",
-            "description": "Length in minutes and seconds - does not include ad breaks",
-            "example": "23:20",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.resourceType",
-            "description": "The type of the entry",
-            "example": "EPISODE",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.ParentCollectionId",
-            "description": "The ID of the Parent Collection where the resource is assigned to.",
-            "example": "tag:api.channel4.com,2009:/programmes/collections/e4-on-4od/4od",
-            "type": "string"
-          }
-        ],
-        "singleEntry": [
-          {
-            "name": "generator",
-            "description": "Identifies the agent used to generate the feed",
-            "example": "PMLSD",
-            "type": "string"
-          },
-          {
-            "name": "generator@version",
-            "description": "Identifies the version of the agent used to generate the feed",
-            "example": "1.27.1",
-            "type": "float"
-          },
-          {
-            "name": "dc:relation.platformClientVersion",
-            "description": "Identifies the version of the client application compatible with this feed.",
-            "example": "1.0",
-            "type": "float"
-          },
-          {
-            "name": "id",
-            "description": "ID containing Brand Web Safe Name",
-            "example": "tag:api.channel4.com,2009:/brand/a-cook-on-the-wild-side",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "The Programmes Brand Name",
-            "example": "Facejacker",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.Synopsys",
-            "description": "The synopsis of this brand",
-            "example": "The man of mystery returns. But he's put down his phone and now he's up close and personal! Disguised with the aid of prosthetics, Kayvan Novak (Fonejacker) plays a dazzling multitude of fictional characters.",
-            "type": "string"
-          },
-          {
-            "name": "updated",
-            "description": "Date and time feed last updated.",
-            "example": "2010-02-26T15:59:42.907Z",
-            "type": "date"
-          },
-          {
-            "name": "media:thumbnail",
-            "description": "URL to medium sized image of this brand",
-            "example": "http://.channel4.com/assets/programmes/images/marys-bottom-line/3ca5c4ff-18d6-46e2-aeb9-008619cd48ed_200x113.jpg",
-            "type": "uri"
-          },
-          {
-            "name": "link@self",
-            "description": "URL to self collection feed",
-            "example": "http://apì.channel4.com/pmlsd/4od-home-promo.atom",
-            "type": "uri"
-          },
-          {
-            "name": "Link@Related title=\"Episode Guide\"",
-            "description": "URL to brand episode guide feed",
-            "example": "http://api.channel4.com/pmlsd/facejacker/episode-guide.atom",
-            "type": "uri"
-          },
-          {
-            "name": "Link@Related title=\"4oD\"",
-            "description": "URL to Brand 4oD feed, if available",
-            "example": "http://api.channel4.com/pmlsd/facejacker/4od.atom",
-            "type": "uri"
-          },
-          {
-            "name": "dc:relation.resourceType",
-            "description": "The type of the entry",
-            "example": "BRAND",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.ParentCollectionId",
-            "description": "The ID of the Parent Collection where the resource is assigned to.",
-            "example": "tag:api.channel4.com,2009:/programmes/collections/e4-on-4od/4od",
-            "type": "string"
-          }
-        ],
-        "multipleEntry": [
-          {
-            "name": "id",
-            "description": "ID containing Series Web Safe Name",
-            "example": "tag:ios.int.channel4.com,2009:/programmes/jamie-at-home/episode-guide/series-1",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "The Programmes Series Name",
-            "example": "Series 1 - Jamie at Home",
-            "type": "string"
-          },
-          {
-            "name": "subtitle",
-            "description": "The synopsis of the series.",
-            "example": "The chef goes back to his roots, literally. From his Essex kitchen and garden, Jamie Oliver shows how easy it is to grow fantastic fruit and veg, and turn them into simple, delicious food.",
-            "type": "string"
-          },
-          {
-            "name": "updated",
-            "description": "Date and time feed last updated.",
-            "example": "2010-02-26T15:59:42.907Z",
-            "type": "date"
-          },
-          {
-            "name": "media:thumbnail",
-            "description": "URL to medium sized image of this series",
-            "example": "url=\"http://cache.int.channel4.com/assets/programmes/images/jamie-at-home/series-1/jamie-at-home-s1-20090617182359_200x113.jpg\" height=\"113\" width=\"200\" imageSource=\"fallback\" altText=\"Jamie Oliver\"",
-            "type": "string"
-          },
-          {
-            "name": "link@self",
-            "description": "Link to the Series Landing feed",
-            "example": "http://api.channel4.com/pmlsd/jamie-at-home/episode-guide/series-1.atom?platform=ios",
-            "type": "uri"
-          },
-          {
-            "name": "Link@Related title=\"4oD\"",
-            "description": "URL to Brand 4oD feed, if available",
-            "example": "http://api.channel4.com/pmlsd/jamie-at-home/4od.atom?platform=ios",
-            "type": "uri"
-          },
-          {
-            "name": "dc:relation.BrandTitle",
-            "description": "Title of the Brand for this Series",
-            "example": "Jamie at Home",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.SeriesNumber",
-            "description": "Number of series within brand",
-            "example": "1",
-            "type": "integer"
-          },
-          {
-            "name": "dc:relation.resourceType",
-            "description": "The type of the entry",
-            "example": "SERIES",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.ParentCollectionId",
-            "description": "The ID of the Parent Collection where the resource is assigned to.",
-            "example": "tag:api.channel4.com,2009:/programmes/collections/e4-on-4od/4od",
             "type": "string"
           }
         ]
@@ -4115,13 +4115,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "id",
@@ -4133,7 +4133,7 @@
             "name": "title",
             "description": "Programme's Brand Name",
             "example": "4thought.tv",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "summary",
@@ -4318,13 +4318,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -4540,13 +4540,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -4742,13 +4742,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the specified platform client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -5071,7 +5071,7 @@
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.BrandWebSafeTitle",
@@ -5113,7 +5113,7 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -5441,6 +5441,267 @@
       }
     },
     {
+      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
+      "group": "metadataresources",
+      "operation": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
+      "summary": "Clips Landing Feed Brand Series and Episode Levels",
+      "output": {
+        "score": 44,
+        "urls": [
+          "http://api.channel4.com/pmlsd/brand-web-safe-title/videos/all.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER/episode-EPISODE_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx"
+        ],
+        "sampleUrl": "http://api.channel4.com/pmlsd/peep-show/videos.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
+        "feedDescription": "A feed containing metadata about all the short-form (clip) videos. The clips feed can be accessed at different levels: the content is then filtered depending on the level, but the structure is identical.When accessed: from the top, the feed contains all the clips for the brand;  at series level, the feed contains only clips from the series; and  at episode level, the feed contains only clips for the episode (and is very unlikely to require pagination). The entries for the Clips Landing Feed contain references to each short-form asset.",
+        "parameters": [
+          {
+            "name": "brand-web-safe-title",
+            "description": "Title of brand to which clips belong"
+          },
+          {
+            "name": "SERIES_SEQUENCE_NUMBER",
+            "description": "Unique identifier of series to which clips belong"
+          },
+          {
+            "name": "EPISODE_SEQUENCE_NUMBER",
+            "description": "Unique identifier of episode to which clips belong"
+          },
+          {
+            "name": "apikey",
+            "description": "24-character alphanumeric key provided to you when you registered your application at http://developer.channel4.com/apps/register"
+          }
+        ],
+        "feed": [
+          {
+            "name": "id",
+            "description": "Unique identifier of feed, including brand web safe title",
+            "example": "tag:www.channel4.com,2009:/programmes/peep-show/videos/all",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "Title of brand and the word \"Clips\"",
+            "example": "Peep Show Clips",
+            "type": "string"
+          },
+          {
+            "name": "subtitle",
+            "description": "Synopsis of brand",
+            "example": "Award-winning sitcom. David Mitchell and Robert Webb play two dysfunctional flatmates who reveal all their inner thoughts - whether dark, stupid or embarrassing. Or, occasionally, all three...",
+            "type": "enum Award-winning sitcom. David Mitchell and Robert Webb play two dysfunctional flatmates who reveal all their inner thoughts - whether dark, stupid or embarrassing. Or, occasionally, all three..."
+          },
+          {
+            "name": "updated",
+            "description": "Date & time feed last updated",
+            "example": "2010-11-01T11:17:55.410Z",
+            "type": "date"
+          },
+          {
+            "name": "author/name",
+            "description": "Author / owner of feed",
+            "example": "Channel 4 Television",
+            "type": "string"
+          },
+          {
+            "name": "logo",
+            "description": "Brand image URL",
+            "example": "http://www.channel4.com/assets/programmes/images/peep-show/c35e1c32-27dd-42aa-8fb0-33e7edc7b34c_200x113.jpg",
+            "type": "uri"
+          },
+          {
+            "name": "link@alternate",
+            "description": "URL to HTML version of current feed",
+            "example": "http://www.channel4.com/programmes/peep-show/videos",
+            "type": "uri"
+          },
+          {
+            "name": "link@self",
+            "description": "URL of current feed",
+            "example": "http://api.channel4.com/pmlsd/peep-show/videos/all.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "link@up",
+            "description": "URL of parent feed",
+            "example": "http://api.channel4.com/pmlsd/peep-show.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "link@next",
+            "description": "URL to next set of clips, if available",
+            "example": "http://api.channel4.com/pmlsd/peep-show/videos/all/page-2.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "link@previous",
+            "description": "URL to previous set of clips, if available",
+            "example": "http://api.channel4.com/pmlsd/peep-show/videos/all.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx http://api.channel4.com/pmlsd/peep-show/videos/all/page-2.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "fh:complete",
+            "description": "Presence of this element indicates no pagination",
+            "example": "N/A",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.Sharable",
+            "description": "Boolean value indicating if clips for brand are sharable",
+            "example": "false",
+            "type": "boolean"
+          },
+          {
+            "name": "generator",
+            "description": "Identifies the agent used to generate the feed",
+            "example": "PMLSD",
+            "type": "string"
+          },
+          {
+            "name": "generator@version",
+            "description": "Identifies the version of the agent used to generate the feed",
+            "example": "1.27.1",
+            "type": "number"
+          },
+          {
+            "name": "dc:relation.platformClientVersion",
+            "description": "Identifies the version of the client application compatible with this feed.",
+            "example": "1.0",
+            "type": "number"
+          }
+        ],
+        "singleEntry": [
+          {
+            "name": "id",
+            "description": "ID of clip",
+            "example": "tag:www.channel4.com,2009:clip/1234512436",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "Title of clip",
+            "example": "Driven Away",
+            "type": "string"
+          },
+          {
+            "name": "updated",
+            "description": "Date & time clip last updated",
+            "example": "2010-11-01T11:17:55.450Z",
+            "type": "date"
+          },
+          {
+            "name": "summary",
+            "description": "Synopsis of clip",
+            "example": "Mark's new driving instructor is not making much effort to keep his pupil happy",
+            "type": "string"
+          },
+          {
+            "name": "link@self",
+            "description": "URL to Clip Detail Feed",
+            "example": "http://api.channel4.com/pmlsd/peep-show/videos/123456789.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "link@alternate",
+            "description": "URL to HTML version",
+            "example": "http://www.channel4.com/programmes/peep-show/videos/123456789",
+            "type": "uri"
+          },
+          {
+            "name": "link@related (Episode Guide)",
+            "description": "URL to feed of full episode, if available",
+            "example": "http://api.channel4.com/pmlsd/peep-show.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "media:group / media:player",
+            "description": "URL to media-player version of full episode",
+            "example": "http://www.channel4.com/programmes/peep-show/videos/123456789",
+            "type": "uri"
+          },
+          {
+            "name": "media:group /media:thumbnail",
+            "description": "URL to clip image",
+            "example": "url=\"http://static.bips.channel4.com/bips/200x113/videos/123456789.jpg\" height=\"200\" width=\"113\"",
+            "type": "string"
+          },
+          {
+            "name": "media:group /media:rating",
+            "description": "Flag to show whether episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")",
+            "example": "adult",
+            "type": "string"
+          },
+          {
+            "name": "media:group /media:copyright",
+            "description": "Link to copyright / T&C information",
+            "example": "url=\"http://ww.channel4.com/terms_and_conditions.html\" Terms and Conditions",
+            "type": "string"
+          },
+          {
+            "name": "media:group /media:restriction",
+            "description": "Restriction flag (\"allow\") and list of country or state codes where episode is accessible to website users",
+            "example": "relationship=\"allow\" type=\"country\" uk,ie",
+            "type": "string"
+          },
+          {
+            "name": "media:group /media:rights",
+            "description": "Status of media rights under which Channel 4 provides episode content",
+            "example": "\"official\"",
+            "type": "string"
+          },
+          {
+            "name": "media:group /media:category",
+            "description": "Defines the type of short-form item.",
+            "example": "EXTRACT / PREVIEW / EXTRA / TRAILER",
+            "type": "string"
+          },
+          {
+            "name": "dcterms:available",
+            "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)",
+            "example": "start=2009-02-20T16:48:00.000Z; end=2012-10-13T22:00:00.000Z;scheme=W3C-DTF",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.AgeRating",
+            "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)",
+            "example": "16",
+            "type": "integer"
+          },
+          {
+            "name": "dc:relation.Guidance",
+            "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable",
+            "example": "WARNING This clip contains strong language",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.Duration",
+            "description": "Duration in minutes and seconds",
+            "example": "1:27",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.SeriesNumber",
+            "description": "Series to which clip belongs",
+            "example": "6",
+            "type": "integer"
+          },
+          {
+            "name": "dc:relation.EpisodeNumber",
+            "description": "Episode number within series",
+            "example": "6",
+            "type": "integer"
+          },
+          {
+            "name": "dc:relation.ExternalVideoId",
+            "description": "This is the clip asset id (from column CLIP_ASSET.ASSET_ID. For the current implementation this is the Brightcove Id.",
+            "example": "123456789",
+            "type": "integer"
+          }
+        ],
+        "multipleEntry": []
+      }
+    },
+    {
       "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Clip_Detail_Atom_Feed",
       "group": "metadataresources",
       "operation": "Clip_Detail_Atom_Feed",
@@ -5627,13 +5888,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [],
@@ -5757,13 +6018,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -5856,267 +6117,6 @@
             "description": "Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type.",
             "example": "DescriptionCode Single Season Ep Untitled SSU Single season Ep Titled SST Multi-season Ep Untitled MSU Multi-season Ep Titled MST Long running series LR One off / Standalone OOS Film FM Flattened Brand (PML) FB PML default while data is in migration UNDEFINED",
             "type": "string"
-          }
-        ],
-        "multipleEntry": []
-      }
-    },
-    {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
-      "group": "metadataresources",
-      "operation": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
-      "summary": "Clips Landing Feed Brand Series and Episode Levels",
-      "output": {
-        "score": 44,
-        "urls": [
-          "http://api.channel4.com/pmlsd/brand-web-safe-title/videos/all.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-          "http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-          "http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER/episode-EPISODE_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx"
-        ],
-        "sampleUrl": "http://api.channel4.com/pmlsd/peep-show/videos.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "feedDescription": "A feed containing metadata about all the short-form (clip) videos. The clips feed can be accessed at different levels: the content is then filtered depending on the level, but the structure is identical.When accessed: from the top, the feed contains all the clips for the brand;  at series level, the feed contains only clips from the series; and  at episode level, the feed contains only clips for the episode (and is very unlikely to require pagination). The entries for the Clips Landing Feed contain references to each short-form asset.",
-        "parameters": [
-          {
-            "name": "brand-web-safe-title",
-            "description": "Title of brand to which clips belong"
-          },
-          {
-            "name": "SERIES_SEQUENCE_NUMBER",
-            "description": "Unique identifier of series to which clips belong"
-          },
-          {
-            "name": "EPISODE_SEQUENCE_NUMBER",
-            "description": "Unique identifier of episode to which clips belong"
-          },
-          {
-            "name": "apikey",
-            "description": "24-character alphanumeric key provided to you when you registered your application at http://developer.channel4.com/apps/register"
-          }
-        ],
-        "feed": [
-          {
-            "name": "id",
-            "description": "Unique identifier of feed, including brand web safe title",
-            "example": "tag:www.channel4.com,2009:/programmes/peep-show/videos/all",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "Title of brand and the word \"Clips\"",
-            "example": "Peep Show Clips",
-            "type": "string"
-          },
-          {
-            "name": "subtitle",
-            "description": "Synopsis of brand",
-            "example": "Award-winning sitcom. David Mitchell and Robert Webb play two dysfunctional flatmates who reveal all their inner thoughts - whether dark, stupid or embarrassing. Or, occasionally, all three...",
-            "type": "enum Award-winning sitcom. David Mitchell and Robert Webb play two dysfunctional flatmates who reveal all their inner thoughts - whether dark, stupid or embarrassing. Or, occasionally, all three..."
-          },
-          {
-            "name": "updated",
-            "description": "Date & time feed last updated",
-            "example": "2010-11-01T11:17:55.410Z",
-            "type": "date"
-          },
-          {
-            "name": "author/name",
-            "description": "Author / owner of feed",
-            "example": "Channel 4 Television",
-            "type": "string"
-          },
-          {
-            "name": "logo",
-            "description": "Brand image URL",
-            "example": "http://www.channel4.com/assets/programmes/images/peep-show/c35e1c32-27dd-42aa-8fb0-33e7edc7b34c_200x113.jpg",
-            "type": "uri"
-          },
-          {
-            "name": "link@alternate",
-            "description": "URL to HTML version of current feed",
-            "example": "http://www.channel4.com/programmes/peep-show/videos",
-            "type": "uri"
-          },
-          {
-            "name": "link@self",
-            "description": "URL of current feed",
-            "example": "http://api.channel4.com/pmlsd/peep-show/videos/all.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "link@up",
-            "description": "URL of parent feed",
-            "example": "http://api.channel4.com/pmlsd/peep-show.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "link@next",
-            "description": "URL to next set of clips, if available",
-            "example": "http://api.channel4.com/pmlsd/peep-show/videos/all/page-2.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "link@previous",
-            "description": "URL to previous set of clips, if available",
-            "example": "http://api.channel4.com/pmlsd/peep-show/videos/all.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx http://api.channel4.com/pmlsd/peep-show/videos/all/page-2.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "fh:complete",
-            "description": "Presence of this element indicates no pagination",
-            "example": "N/A",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.Sharable",
-            "description": "Boolean value indicating if clips for brand are sharable",
-            "example": "false",
-            "type": "boolean"
-          },
-          {
-            "name": "generator",
-            "description": "Identifies the agent used to generate the feed",
-            "example": "PMLSD",
-            "type": "string"
-          },
-          {
-            "name": "generator@version",
-            "description": "Identifies the version of the agent used to generate the feed",
-            "example": "1.27.1",
-            "type": "float"
-          },
-          {
-            "name": "dc:relation.platformClientVersion",
-            "description": "Identifies the version of the client application compatible with this feed.",
-            "example": "1.0",
-            "type": "float"
-          }
-        ],
-        "singleEntry": [
-          {
-            "name": "id",
-            "description": "ID of clip",
-            "example": "tag:www.channel4.com,2009:clip/1234512436",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "Title of clip",
-            "example": "Driven Away",
-            "type": "string"
-          },
-          {
-            "name": "updated",
-            "description": "Date & time clip last updated",
-            "example": "2010-11-01T11:17:55.450Z",
-            "type": "date"
-          },
-          {
-            "name": "summary",
-            "description": "Synopsis of clip",
-            "example": "Mark's new driving instructor is not making much effort to keep his pupil happy",
-            "type": "string"
-          },
-          {
-            "name": "link@self",
-            "description": "URL to Clip Detail Feed",
-            "example": "http://api.channel4.com/pmlsd/peep-show/videos/123456789.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "link@alternate",
-            "description": "URL to HTML version",
-            "example": "http://www.channel4.com/programmes/peep-show/videos/123456789",
-            "type": "uri"
-          },
-          {
-            "name": "link@related (Episode Guide)",
-            "description": "URL to feed of full episode, if available",
-            "example": "http://api.channel4.com/pmlsd/peep-show.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "media:group / media:player",
-            "description": "URL to media-player version of full episode",
-            "example": "http://www.channel4.com/programmes/peep-show/videos/123456789",
-            "type": "uri"
-          },
-          {
-            "name": "media:group /media:thumbnail",
-            "description": "URL to clip image",
-            "example": "url=\"http://static.bips.channel4.com/bips/200x113/videos/123456789.jpg\" height=\"200\" width=\"113\"",
-            "type": "string"
-          },
-          {
-            "name": "media:group /media:rating",
-            "description": "Flag to show whether episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")",
-            "example": "adult",
-            "type": "string"
-          },
-          {
-            "name": "media:group /media:copyright",
-            "description": "Link to copyright / T&C information",
-            "example": "url=\"http://ww.channel4.com/terms_and_conditions.html\" Terms and Conditions",
-            "type": "string"
-          },
-          {
-            "name": "media:group /media:restriction",
-            "description": "Restriction flag (\"allow\") and list of country or state codes where episode is accessible to website users",
-            "example": "relationship=\"allow\" type=\"country\" uk,ie",
-            "type": "string"
-          },
-          {
-            "name": "media:group /media:rights",
-            "description": "Status of media rights under which Channel 4 provides episode content",
-            "example": "\"official\"",
-            "type": "string"
-          },
-          {
-            "name": "media:group /media:category",
-            "description": "Defines the type of short-form item.",
-            "example": "EXTRACT / PREVIEW / EXTRA / TRAILER",
-            "type": "string"
-          },
-          {
-            "name": "dcterms:available",
-            "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)",
-            "example": "start=2009-02-20T16:48:00.000Z; end=2012-10-13T22:00:00.000Z;scheme=W3C-DTF",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.AgeRating",
-            "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)",
-            "example": "16",
-            "type": "integer"
-          },
-          {
-            "name": "dc:relation.Guidance",
-            "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable",
-            "example": "WARNING This clip contains strong language",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.Duration",
-            "description": "Duration in minutes and seconds",
-            "example": "1:27",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.SeriesNumber",
-            "description": "Series to which clip belongs",
-            "example": "6",
-            "type": "integer"
-          },
-          {
-            "name": "dc:relation.EpisodeNumber",
-            "description": "Episode number within series",
-            "example": "6",
-            "type": "integer"
-          },
-          {
-            "name": "dc:relation.ExternalVideoId",
-            "description": "This is the clip asset id (from column CLIP_ASSET.ASSET_ID. For the current implementation this is the Brightcove Id.",
-            "example": "123456789",
-            "type": "integer"
           }
         ],
         "multipleEntry": []
@@ -6228,13 +6228,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the specified platform client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -6393,177 +6393,6 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Episode_Guide_Feed_Series_Detail",
-      "group": "metadataresources",
-      "operation": "Episode_Guide_Feed_Series_Detail",
-      "summary": "Episode Guide Feed Series Detail",
-      "output": {
-        "score": 29,
-        "urls": [
-          "http://api.channel4.com/pmlsd/brand-web-safe-title/episode-guide/series-series_number.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
-        ],
-        "sampleUrl": "http://api.channel4.com/pmlsd/chelmsford-123/episode-guide/series-1.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4\t",
-        "feedDescription": "A feed containing metadata about all the episodes for a specific series. The entries in this feed contain references to each of the episodes (where metadata has been published), with some convenient links.",
-        "parameters": [
-          {
-            "name": "brand-web-safe-title",
-            "description": "The title of the programme for which you seek series-related information"
-          },
-          {
-            "name": "series_number",
-            "description": "Unique enumerated identifier of the series within its brand"
-          },
-          {
-            "name": "apikey",
-            "description": "24-character alphanumeric key provided to you when you registered your application at http://developer.channel4.com/apps/register"
-          }
-        ],
-        "feed": [
-          {
-            "name": "id",
-            "description": "Unique identifier of this feed, including brand web safe title and series number",
-            "example": "tag:www.channel4.com,2009:/programmes/chelmsford-123/episode-guide/series-1",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "Title of series",
-            "example": "Series 1 - Chelmsford 123",
-            "type": "string"
-          },
-          {
-            "name": "subtitle",
-            "description": "Synopsis of brand",
-            "example": "In 123 AD, a young Roman general is found guilty of a most terrible crime, failing to grovel sufficiently to the Emperor. His punishment is the worst job in the Empire - governing Britannia.  It's hard to believe, but in those days Britain was a cold, miserable dump, populated by beer-swilling hooligans...",
-            "type": "string"
-          },
-          {
-            "name": "updated",
-            "description": "Date & time feed last updated",
-            "example": "2010-11-03T04:53:56.516Z",
-            "type": "date"
-          },
-          {
-            "name": "author/name",
-            "description": "Author / owner of feed",
-            "example": "Channel 4 Television",
-            "type": "string"
-          },
-          {
-            "name": "logo",
-            "description": "Series image URL",
-            "example": "http://www.channel4.com/assets/programmes/images/chelmsford-123/series-1/chelmsford-123-s1-20090610153259_200x113.jpg",
-            "type": "uri"
-          },
-          {
-            "name": "link@alternate",
-            "description": "URL to HTML version of current feed",
-            "example": "http://www.channel4.com/programmes/chelmsford-123/episode-guide/series-1",
-            "type": "uri"
-          },
-          {
-            "name": "link@up",
-            "description": "URL of parent feed",
-            "example": "http://api.channel4.com/pmlsd/chelmsford-123/episode-guide.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "link@self",
-            "description": "URL of current feed",
-            "example": "http://api.channel4.com/pmlsd/chelmsford-123/episode-guide/series-1.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "generator",
-            "description": "Identifies the agent used to generate the feed",
-            "example": "PMLSD",
-            "type": "string"
-          },
-          {
-            "name": "generator@version",
-            "description": "Identifies the version of the agent used to generate the feed",
-            "example": "1.27.1",
-            "type": "float"
-          },
-          {
-            "name": "dc:relation.platformClientVersion",
-            "description": "Identifies the version of the client application compatible with this feed.",
-            "example": "1.0",
-            "type": "float"
-          }
-        ],
-        "singleEntry": [
-          {
-            "name": "id",
-            "description": "ID of series & episode",
-            "example": "tag:www.channel4.com,2009:/programmes/chelmsford-123/episode-guide/series-1/episode-1",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "Title of episode",
-            "example": "Arrivederci Roma",
-            "type": "string"
-          },
-          {
-            "name": "summary",
-            "description": "Synopsis of episode",
-            "example": "After insulting the Emperor's girlfriend governor Aulus Paulinus is sent to Britannia where he meets Britain's surly tribal leader Badvoc.",
-            "type": "string"
-          },
-          {
-            "name": "updated",
-            "description": "Date & time episode last updated",
-            "example": "2010-10-18T11:08:55.718Z",
-            "type": "date"
-          },
-          {
-            "name": "link@alternate",
-            "description": "URL to HTML version of series metadata",
-            "example": "http://www.channel4.com/programmes/chelmsford-123/episode-guide/series-1/episode-1",
-            "type": "uri"
-          },
-          {
-            "name": "link@related (4oD)",
-            "description": "URL to HTML version of 4oD page for this series, if available",
-            "example": "http://www.channel4.com/programmes/chelmsford-123/4od#2917639",
-            "type": "uri"
-          },
-          {
-            "name": "link@self",
-            "description": "URL to episode feed",
-            "example": "http://api.channel4.com/pmlsd/chelmsford-123/episode-guide/series-1/episode-1.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "media:content / media:thumbnail",
-            "description": "URL to medium-sized episode image",
-            "example": "url=\"http://www.channel4.com/assets/programmes/images/chelmsford-123/series-1/chelmsford-123-s1-20090610153259_200x113.jpg\" height=\"113\" width=\"200\"",
-            "type": "string"
-          },
-          {
-            "name": "media:content /media:credit",
-            "description": "List of credits/cast for the episode",
-            "example": "role=\"Actor\" scheme=\"urn:ebu\" characterName=\"John Smith\" contribution=\"cast\" >Jerry Lewis<",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.SeriesNumber",
-            "description": "Series to which episode belongs",
-            "example": "1",
-            "type": "integer"
-          },
-          {
-            "name": "dc:relation.EpisodeNumber",
-            "description": "Episode number within series",
-            "example": "1",
-            "type": "integer"
-          }
-        ],
-        "multipleEntry": []
-      }
-    },
-    {
       "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Episode_Guide_Feed_Episode_Detail",
       "group": "metadataresources",
       "operation": "Episode_Guide_Feed_Episode_Detail",
@@ -6706,17 +6535,475 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [],
         "multipleEntry": []
+      }
+    },
+    {
+      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Episode_Guide_Feed_Series_Detail",
+      "group": "metadataresources",
+      "operation": "Episode_Guide_Feed_Series_Detail",
+      "summary": "Episode Guide Feed Series Detail",
+      "output": {
+        "score": 29,
+        "urls": [
+          "http://api.channel4.com/pmlsd/brand-web-safe-title/episode-guide/series-series_number.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
+        ],
+        "sampleUrl": "http://api.channel4.com/pmlsd/chelmsford-123/episode-guide/series-1.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4\t",
+        "feedDescription": "A feed containing metadata about all the episodes for a specific series. The entries in this feed contain references to each of the episodes (where metadata has been published), with some convenient links.",
+        "parameters": [
+          {
+            "name": "brand-web-safe-title",
+            "description": "The title of the programme for which you seek series-related information"
+          },
+          {
+            "name": "series_number",
+            "description": "Unique enumerated identifier of the series within its brand"
+          },
+          {
+            "name": "apikey",
+            "description": "24-character alphanumeric key provided to you when you registered your application at http://developer.channel4.com/apps/register"
+          }
+        ],
+        "feed": [
+          {
+            "name": "id",
+            "description": "Unique identifier of this feed, including brand web safe title and series number",
+            "example": "tag:www.channel4.com,2009:/programmes/chelmsford-123/episode-guide/series-1",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "Title of series",
+            "example": "Series 1 - Chelmsford 123",
+            "type": "string"
+          },
+          {
+            "name": "subtitle",
+            "description": "Synopsis of brand",
+            "example": "In 123 AD, a young Roman general is found guilty of a most terrible crime, failing to grovel sufficiently to the Emperor. His punishment is the worst job in the Empire - governing Britannia.  It's hard to believe, but in those days Britain was a cold, miserable dump, populated by beer-swilling hooligans...",
+            "type": "string"
+          },
+          {
+            "name": "updated",
+            "description": "Date & time feed last updated",
+            "example": "2010-11-03T04:53:56.516Z",
+            "type": "date"
+          },
+          {
+            "name": "author/name",
+            "description": "Author / owner of feed",
+            "example": "Channel 4 Television",
+            "type": "string"
+          },
+          {
+            "name": "logo",
+            "description": "Series image URL",
+            "example": "http://www.channel4.com/assets/programmes/images/chelmsford-123/series-1/chelmsford-123-s1-20090610153259_200x113.jpg",
+            "type": "uri"
+          },
+          {
+            "name": "link@alternate",
+            "description": "URL to HTML version of current feed",
+            "example": "http://www.channel4.com/programmes/chelmsford-123/episode-guide/series-1",
+            "type": "uri"
+          },
+          {
+            "name": "link@up",
+            "description": "URL of parent feed",
+            "example": "http://api.channel4.com/pmlsd/chelmsford-123/episode-guide.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "link@self",
+            "description": "URL of current feed",
+            "example": "http://api.channel4.com/pmlsd/chelmsford-123/episode-guide/series-1.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "generator",
+            "description": "Identifies the agent used to generate the feed",
+            "example": "PMLSD",
+            "type": "string"
+          },
+          {
+            "name": "generator@version",
+            "description": "Identifies the version of the agent used to generate the feed",
+            "example": "1.27.1",
+            "type": "number"
+          },
+          {
+            "name": "dc:relation.platformClientVersion",
+            "description": "Identifies the version of the client application compatible with this feed.",
+            "example": "1.0",
+            "type": "number"
+          }
+        ],
+        "singleEntry": [
+          {
+            "name": "id",
+            "description": "ID of series & episode",
+            "example": "tag:www.channel4.com,2009:/programmes/chelmsford-123/episode-guide/series-1/episode-1",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "Title of episode",
+            "example": "Arrivederci Roma",
+            "type": "string"
+          },
+          {
+            "name": "summary",
+            "description": "Synopsis of episode",
+            "example": "After insulting the Emperor's girlfriend governor Aulus Paulinus is sent to Britannia where he meets Britain's surly tribal leader Badvoc.",
+            "type": "string"
+          },
+          {
+            "name": "updated",
+            "description": "Date & time episode last updated",
+            "example": "2010-10-18T11:08:55.718Z",
+            "type": "date"
+          },
+          {
+            "name": "link@alternate",
+            "description": "URL to HTML version of series metadata",
+            "example": "http://www.channel4.com/programmes/chelmsford-123/episode-guide/series-1/episode-1",
+            "type": "uri"
+          },
+          {
+            "name": "link@related (4oD)",
+            "description": "URL to HTML version of 4oD page for this series, if available",
+            "example": "http://www.channel4.com/programmes/chelmsford-123/4od#2917639",
+            "type": "uri"
+          },
+          {
+            "name": "link@self",
+            "description": "URL to episode feed",
+            "example": "http://api.channel4.com/pmlsd/chelmsford-123/episode-guide/series-1/episode-1.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "media:content / media:thumbnail",
+            "description": "URL to medium-sized episode image",
+            "example": "url=\"http://www.channel4.com/assets/programmes/images/chelmsford-123/series-1/chelmsford-123-s1-20090610153259_200x113.jpg\" height=\"113\" width=\"200\"",
+            "type": "string"
+          },
+          {
+            "name": "media:content /media:credit",
+            "description": "List of credits/cast for the episode",
+            "example": "role=\"Actor\" scheme=\"urn:ebu\" characterName=\"John Smith\" contribution=\"cast\" >Jerry Lewis<",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.SeriesNumber",
+            "description": "Series to which episode belongs",
+            "example": "1",
+            "type": "integer"
+          },
+          {
+            "name": "dc:relation.EpisodeNumber",
+            "description": "Episode number within series",
+            "example": "1",
+            "type": "integer"
+          }
+        ],
+        "multipleEntry": []
+      }
+    },
+    {
+      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Hub_Feed",
+      "group": "metadataresources",
+      "operation": "Hub_Feed",
+      "summary": "Hub Feed",
+      "output": {
+        "score": 52,
+        "urls": [
+          "http://api.channel4.com/pmlsd/brand-web-safe-title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
+        ],
+        "sampleUrl": "http://api.channel4.com/pmlsd/the-it-crowd.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
+        "feedDescription": "The basis for all brand information",
+        "parameters": [
+          {
+            "name": "brand-web-safe-title",
+            "description": "The title of the programme for which you seek associated data"
+          },
+          {
+            "name": "apikey",
+            "description": "24-character alphanumeric key provided to you when you registered your application at http://developer.channel4.com/apps/register"
+          },
+          {
+            "name": "Single Season Ep Untitled",
+            "description": "SSU"
+          },
+          {
+            "name": "Single season Ep Titled",
+            "description": "SST"
+          },
+          {
+            "name": "Multi-season Ep Untitled",
+            "description": "MSU"
+          },
+          {
+            "name": "Multi-season Ep Titled",
+            "description": "MST"
+          },
+          {
+            "name": "Long running series",
+            "description": "LR"
+          },
+          {
+            "name": "One off / Standalone",
+            "description": "OOS"
+          },
+          {
+            "name": "Film",
+            "description": "FM"
+          },
+          {
+            "name": "Flattened Brand (PML)",
+            "description": "FB"
+          },
+          {
+            "name": "PML default while data is in migration",
+            "description": "UNDEFINED"
+          }
+        ],
+        "feed": [
+          {
+            "name": "id",
+            "description": "Unique identifier of this feed, including the brand web safe title",
+            "example": "tag:www.channel4.com,2009:/programmes/the-it-crowd",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "Title of the feed",
+            "example": "The IT Crowd",
+            "type": "string"
+          },
+          {
+            "name": "subtitle",
+            "description": "Synopsis of this brand",
+            "example": "Award-winning sitcom from Graham Linehan. Banished from the ivory towers of Reynholm Industries, the IT crowd lurk below ground, avoiding work and social contact in equal measure...",
+            "type": "string"
+          },
+          {
+            "name": "updated",
+            "description": "Date & time feed last updated",
+            "example": "2010-10-18T11:08:44.295Z",
+            "type": "date"
+          },
+          {
+            "name": "author/name",
+            "description": "Name of author / owner",
+            "example": "Channel 4 Television",
+            "type": "string"
+          },
+          {
+            "name": "logo",
+            "description": "Default Image URL",
+            "example": "http://www.channel4.com/assets/programmes/images/the-it-crowd/ac7edd25-9183-4fe1-b71f-e39238f9cfd7_145x82.jpg",
+            "type": "uri"
+          },
+          {
+            "name": "link@alternate",
+            "description": "URL to HTML version of current feed",
+            "example": "http://www.channel4.com/programmes/the-it-crowd",
+            "type": "uri"
+          },
+          {
+            "name": "link@self",
+            "description": "URL of current feed",
+            "example": "http://api.channel4.com/pmlsd/the-it-crowd.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "link@related (Episode Guide)",
+            "description": "URL to Episode Guide feed, if available",
+            "example": "http://api.channel4.com/pmlsd/the-it-crowd/episode-guide.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "link@related (4oD)",
+            "description": "URL to 4oD feed, if available",
+            "example": "http://api.channel4.com/pmlsd/the-it-crowd/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "link@related (Clips)",
+            "description": "URL to Short form video feed, if available",
+            "example": "http://api.channel4.com/pmlsd/the-it-crowd/video.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "category (primary)",
+            "description": "Primary category (brand must have ONE)",
+            "example": "term=\"http://api.channel4.com/pmlsd/tags/comedy.atom\" scheme=\"tag:www.channel4.com,2010:/category/primary\" label=\"Comedy\"",
+            "type": "string"
+          },
+          {
+            "name": "category (secondary)",
+            "description": "Secondary category (brand may have any number)",
+            "example": "term=\"http://api.channel4.com/pmlsd/tags/entertainment.atom\" scheme=\"tag:www.channel4.com,2010:/category/secondary\" label=\"Entertainment\"",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.BrandFlattened",
+            "description": "Boolean indicating if this is a flattened brand",
+            "example": "false",
+            "type": "boolean"
+          },
+          {
+            "name": "dc:relation.presentationBrand",
+            "description": "The presentation brand",
+            "example": "E4",
+            "type": "string"
+          },
+          {
+            "name": "generator",
+            "description": "Identifies the agent used to generate the feed",
+            "example": "PMLSD",
+            "type": "string"
+          },
+          {
+            "name": "generator@version",
+            "description": "Identifies the version of the agent used to generate the feed",
+            "example": "1.27.1",
+            "type": "number"
+          },
+          {
+            "name": "dc:relation.platformClientVersion",
+            "description": "Identifies the version of the client application compatible with this feed.",
+            "example": "1.0",
+            "type": "number"
+          },
+          {
+            "name": "dc:relation.BrandWebSafeTitle",
+            "description": "Title of the brand safe for web linking (no whitespaces, no special chars...)",
+            "example": "the-it-crowd",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.BrandTitle",
+            "description": "Title of the brand for this feed",
+            "example": "The IT Crowd",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.ProgrammeType",
+            "description": "Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type.",
+            "example": "DescriptionCode Single Season Ep Untitled SSU Single season Ep Titled SST Multi-season Ep Untitled MSU Multi-season Ep Titled MST Long running series LR One off / Standalone OOS Film FM Flattened Brand (PML) FB PML default while data is in migration UNDEFINED",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.comingSoonTo4oD",
+            "description": "If the brand is coming to be available on 4oD soon this empty element should be included.",
+            "example": "N/A",
+            "type": "string"
+          }
+        ],
+        "singleEntry": [],
+        "multipleEntry": [
+          {
+            "name": "id",
+            "description": "ID of episode",
+            "example": "tag:www.channel4.com,2009:/programmes/the-it-crowd/episode-guide/series-4/episode-6",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "Programme's brand name",
+            "example": "Reynholm vs Reynholm",
+            "type": "string"
+          },
+          {
+            "name": "summary",
+            "description": "Synopsis of this episode",
+            "example": "In the final episode of the series, Reynholm Industries are proud to announce their first sexy nude calendar. Enough said, probably.",
+            "type": "string"
+          },
+          {
+            "name": "updated",
+            "description": "Date & time episode last updated",
+            "example": "2010-10-18T11:08:55.718Z",
+            "type": "date"
+          },
+          {
+            "name": "link@alternate",
+            "description": "URL to HTML version of episode",
+            "example": "http://www.channel4.com/programmes/the-it-crowd/episode-guide/series-4/episode-6",
+            "type": "uri"
+          },
+          {
+            "name": "link@self",
+            "description": "URL to current feed of episode",
+            "example": "http://api.channel4.com/pmlsd/the-it-crowd/episode-guide/series-4/episode-6.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "link@related (4oD)",
+            "description": "URL to HTML version of 4oD page for this episode, if available",
+            "example": "http://www.channel4.com/programmes/the-it-crowd/4od#3110819",
+            "type": "uri"
+          },
+          {
+            "name": "media:content / media:thumbnail",
+            "description": "URL to medium-sized image of this episode",
+            "example": "url=\"http://www.channel4.com/assets/programmes/images/the-it-crowd/series-4/episode-6/ba2ca2c6-a31d-46f0-b095-4bb6328bb3ba_200x113.jpg\" height=\"113\" width=\"200\"",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.SeriesNumber",
+            "description": "The series to which this episode belongs",
+            "example": "4",
+            "type": "integer"
+          },
+          {
+            "name": "dc:relation.EpisodeNumber",
+            "description": "The episode number within the series",
+            "example": "6",
+            "type": "integer"
+          },
+          {
+            "name": "dc:relation.Repeat",
+            "description": "Boolean indicating if the Slot includes an indicator marked as repeat.",
+            "example": "false",
+            "type": "boolean"
+          },
+          {
+            "name": "dc:date.Last",
+            "description": "Timestamp of the previous TX from this brand (if applicable)",
+            "example": "2010-07-30T21:00:00.000Z",
+            "type": "date"
+          },
+          {
+            "name": "dc:relation.LastChannel",
+            "description": "The channel on which the previous TX from this brand(if applicable)",
+            "example": "C4",
+            "type": "string"
+          },
+          {
+            "name": "dc:date.Next",
+            "description": "Timestamp of the next TX from this brand (if applicable)",
+            "example": "2011-01-30T21:00:00.000Z",
+            "type": "date"
+          },
+          {
+            "name": "dc:relation.NextChannel",
+            "description": "The channel on which the next TX from this brand (if applicable)",
+            "example": "C4",
+            "type": "string"
+          }
+        ]
       }
     },
     {
@@ -6848,13 +7135,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.ProgrammeType",
@@ -7039,13 +7326,13 @@
             "name": "generator@version",
             "description": "Identifies the version of the agent used to generate the feed",
             "example": "1.27.1",
-            "type": "float"
+            "type": "number"
           },
           {
             "name": "dc:relation.platformClientVersion",
             "description": "Identifies the version of the client application compatible with this feed.",
             "example": "1.0",
-            "type": "float"
+            "type": "number"
           }
         ],
         "singleEntry": [
@@ -7225,293 +7512,6 @@
           }
         ],
         "multipleEntry": []
-      }
-    },
-    {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Hub_Feed",
-      "group": "metadataresources",
-      "operation": "Hub_Feed",
-      "summary": "Hub Feed",
-      "output": {
-        "score": 52,
-        "urls": [
-          "http://api.channel4.com/pmlsd/brand-web-safe-title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
-        ],
-        "sampleUrl": "http://api.channel4.com/pmlsd/the-it-crowd.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "feedDescription": "The basis for all brand information",
-        "parameters": [
-          {
-            "name": "brand-web-safe-title",
-            "description": "The title of the programme for which you seek associated data"
-          },
-          {
-            "name": "apikey",
-            "description": "24-character alphanumeric key provided to you when you registered your application at http://developer.channel4.com/apps/register"
-          },
-          {
-            "name": "Single Season Ep Untitled",
-            "description": "SSU"
-          },
-          {
-            "name": "Single season Ep Titled",
-            "description": "SST"
-          },
-          {
-            "name": "Multi-season Ep Untitled",
-            "description": "MSU"
-          },
-          {
-            "name": "Multi-season Ep Titled",
-            "description": "MST"
-          },
-          {
-            "name": "Long running series",
-            "description": "LR"
-          },
-          {
-            "name": "One off / Standalone",
-            "description": "OOS"
-          },
-          {
-            "name": "Film",
-            "description": "FM"
-          },
-          {
-            "name": "Flattened Brand (PML)",
-            "description": "FB"
-          },
-          {
-            "name": "PML default while data is in migration",
-            "description": "UNDEFINED"
-          }
-        ],
-        "feed": [
-          {
-            "name": "id",
-            "description": "Unique identifier of this feed, including the brand web safe title",
-            "example": "tag:www.channel4.com,2009:/programmes/the-it-crowd",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "Title of the feed",
-            "example": "The IT Crowd",
-            "type": "string"
-          },
-          {
-            "name": "subtitle",
-            "description": "Synopsis of this brand",
-            "example": "Award-winning sitcom from Graham Linehan. Banished from the ivory towers of Reynholm Industries, the IT crowd lurk below ground, avoiding work and social contact in equal measure...",
-            "type": "string"
-          },
-          {
-            "name": "updated",
-            "description": "Date & time feed last updated",
-            "example": "2010-10-18T11:08:44.295Z",
-            "type": "date"
-          },
-          {
-            "name": "author/name",
-            "description": "Name of author / owner",
-            "example": "Channel 4 Television",
-            "type": "string"
-          },
-          {
-            "name": "logo",
-            "description": "Default Image URL",
-            "example": "http://www.channel4.com/assets/programmes/images/the-it-crowd/ac7edd25-9183-4fe1-b71f-e39238f9cfd7_145x82.jpg",
-            "type": "uri"
-          },
-          {
-            "name": "link@alternate",
-            "description": "URL to HTML version of current feed",
-            "example": "http://www.channel4.com/programmes/the-it-crowd",
-            "type": "uri"
-          },
-          {
-            "name": "link@self",
-            "description": "URL of current feed",
-            "example": "http://api.channel4.com/pmlsd/the-it-crowd.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "link@related (Episode Guide)",
-            "description": "URL to Episode Guide feed, if available",
-            "example": "http://api.channel4.com/pmlsd/the-it-crowd/episode-guide.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "link@related (4oD)",
-            "description": "URL to 4oD feed, if available",
-            "example": "http://api.channel4.com/pmlsd/the-it-crowd/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "link@related (Clips)",
-            "description": "URL to Short form video feed, if available",
-            "example": "http://api.channel4.com/pmlsd/the-it-crowd/video.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "category (primary)",
-            "description": "Primary category (brand must have ONE)",
-            "example": "term=\"http://api.channel4.com/pmlsd/tags/comedy.atom\" scheme=\"tag:www.channel4.com,2010:/category/primary\" label=\"Comedy\"",
-            "type": "string"
-          },
-          {
-            "name": "category (secondary)",
-            "description": "Secondary category (brand may have any number)",
-            "example": "term=\"http://api.channel4.com/pmlsd/tags/entertainment.atom\" scheme=\"tag:www.channel4.com,2010:/category/secondary\" label=\"Entertainment\"",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.BrandFlattened",
-            "description": "Boolean indicating if this is a flattened brand",
-            "example": "false",
-            "type": "boolean"
-          },
-          {
-            "name": "dc:relation.presentationBrand",
-            "description": "The presentation brand",
-            "example": "E4",
-            "type": "string"
-          },
-          {
-            "name": "generator",
-            "description": "Identifies the agent used to generate the feed",
-            "example": "PMLSD",
-            "type": "string"
-          },
-          {
-            "name": "generator@version",
-            "description": "Identifies the version of the agent used to generate the feed",
-            "example": "1.27.1",
-            "type": "float"
-          },
-          {
-            "name": "dc:relation.platformClientVersion",
-            "description": "Identifies the version of the client application compatible with this feed.",
-            "example": "1.0",
-            "type": "float"
-          },
-          {
-            "name": "dc:relation.BrandWebSafeTitle",
-            "description": "Title of the brand safe for web linking (no whitespaces, no special chars...)",
-            "example": "the-it-crowd",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.BrandTitle",
-            "description": "Title of the brand for this feed",
-            "example": "The IT Crowd",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.ProgrammeType",
-            "description": "Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type.",
-            "example": "DescriptionCode Single Season Ep Untitled SSU Single season Ep Titled SST Multi-season Ep Untitled MSU Multi-season Ep Titled MST Long running series LR One off / Standalone OOS Film FM Flattened Brand (PML) FB PML default while data is in migration UNDEFINED",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.comingSoonTo4oD",
-            "description": "If the brand is coming to be available on 4oD soon this empty element should be included.",
-            "example": "N/A",
-            "type": "string"
-          }
-        ],
-        "singleEntry": [],
-        "multipleEntry": [
-          {
-            "name": "id",
-            "description": "ID of episode",
-            "example": "tag:www.channel4.com,2009:/programmes/the-it-crowd/episode-guide/series-4/episode-6",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "Programme's brand name",
-            "example": "Reynholm vs Reynholm",
-            "type": "string"
-          },
-          {
-            "name": "summary",
-            "description": "Synopsis of this episode",
-            "example": "In the final episode of the series, Reynholm Industries are proud to announce their first sexy nude calendar. Enough said, probably.",
-            "type": "string"
-          },
-          {
-            "name": "updated",
-            "description": "Date & time episode last updated",
-            "example": "2010-10-18T11:08:55.718Z",
-            "type": "date"
-          },
-          {
-            "name": "link@alternate",
-            "description": "URL to HTML version of episode",
-            "example": "http://www.channel4.com/programmes/the-it-crowd/episode-guide/series-4/episode-6",
-            "type": "uri"
-          },
-          {
-            "name": "link@self",
-            "description": "URL to current feed of episode",
-            "example": "http://api.channel4.com/pmlsd/the-it-crowd/episode-guide/series-4/episode-6.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "link@related (4oD)",
-            "description": "URL to HTML version of 4oD page for this episode, if available",
-            "example": "http://www.channel4.com/programmes/the-it-crowd/4od#3110819",
-            "type": "uri"
-          },
-          {
-            "name": "media:content / media:thumbnail",
-            "description": "URL to medium-sized image of this episode",
-            "example": "url=\"http://www.channel4.com/assets/programmes/images/the-it-crowd/series-4/episode-6/ba2ca2c6-a31d-46f0-b095-4bb6328bb3ba_200x113.jpg\" height=\"113\" width=\"200\"",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.SeriesNumber",
-            "description": "The series to which this episode belongs",
-            "example": "4",
-            "type": "integer"
-          },
-          {
-            "name": "dc:relation.EpisodeNumber",
-            "description": "The episode number within the series",
-            "example": "6",
-            "type": "integer"
-          },
-          {
-            "name": "dc:relation.Repeat",
-            "description": "Boolean indicating if the Slot includes an indicator marked as repeat.",
-            "example": "false",
-            "type": "boolean"
-          },
-          {
-            "name": "dc:date.Last",
-            "description": "Timestamp of the previous TX from this brand (if applicable)",
-            "example": "2010-07-30T21:00:00.000Z",
-            "type": "date"
-          },
-          {
-            "name": "dc:relation.LastChannel",
-            "description": "The channel on which the previous TX from this brand(if applicable)",
-            "example": "C4",
-            "type": "string"
-          },
-          {
-            "name": "dc:date.Next",
-            "description": "Timestamp of the next TX from this brand (if applicable)",
-            "example": "2011-01-30T21:00:00.000Z",
-            "type": "date"
-          },
-          {
-            "name": "dc:relation.NextChannel",
-            "description": "The channel on which the next TX from this brand (if applicable)",
-            "example": "C4",
-            "type": "string"
-          }
-        ]
       }
     }
   ]

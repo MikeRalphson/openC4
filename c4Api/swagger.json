@@ -58,7 +58,25 @@
         "operationId": "A_to_Z_Landing_Feed",
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Landing_Feed",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -80,6 +98,23 @@
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Letter_Feed",
         "produces": [],
         "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
           {
             "name": "start_letter",
             "type": "string",
@@ -109,6 +144,23 @@
         "produces": [],
         "parameters": [
           {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
+          {
             "name": "yyyy.mm.dd",
             "type": "string",
             "in": "path",
@@ -135,7 +187,25 @@
         "operationId": "4oD_Clips_Catch_Up_Feed",
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Clips_Catch_Up_Feed",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -156,7 +226,25 @@
         "operationId": "4oD_Most_Popular_Episodes_Feed",
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Most_Popular_Episodes_Feed",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -177,7 +265,25 @@
         "operationId": "4oD_Popular_All_Brands_Feed",
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Popular_All_Brands_Feed",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -199,6 +305,23 @@
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
         "produces": [],
         "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
           {
             "name": "category",
             "type": "string",
@@ -228,6 +351,23 @@
         "produces": [],
         "parameters": [
           {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
+          {
             "name": "category",
             "type": "string",
             "in": "path",
@@ -254,7 +394,25 @@
         "operationId": "4oD_Title_All_Brands_Feed",
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Title_All_Brands_Feed",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -276,6 +434,23 @@
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
         "produces": [],
         "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
           {
             "name": "category",
             "type": "string",
@@ -305,6 +480,23 @@
         "produces": [],
         "parameters": [
           {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
+          {
             "name": "category",
             "type": "string",
             "in": "path",
@@ -331,56 +523,25 @@
         "operationId": "Categories_Landing_Feed",
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Categories_Landing_Feed",
         "produces": [],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        },
-        "security": []
-      }
-    },
-    "/collections/collection-name/{4od}.atom": {
-      "get": {
-        "summary": "Collections Feed",
-        "tags": [
-          "discoveryresources"
-        ],
-        "operationId": "Collections_Feed",
-        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Collections_Feed",
-        "produces": [],
         "parameters": [
           {
-            "name": "4od",
+            "name": "platform",
             "type": "string",
-            "in": "path",
-            "required": true
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
           }
         ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        },
-        "security": []
-      }
-    },
-    "/collections/collection-name.atom": {
-      "get": {
-        "summary": "Collections Feed(2)",
-        "tags": [
-          "discoveryresources"
-        ],
-        "operationId": "Collections_Feed(2)",
-        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Collections_Feed",
-        "produces": [],
-        "parameters": [],
         "responses": {
           "200": {
             "description": "Default response",
@@ -402,6 +563,23 @@
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Flattened_Collection_Feed",
         "produces": [],
         "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
           {
             "name": "4od",
             "type": "string",
@@ -429,7 +607,109 @@
         "operationId": "Flattened_Collection_Feed(2)",
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Flattened_Collection_Feed",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/collections/collection-name/{4od}.atom": {
+      "get": {
+        "summary": "Collections Feed",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Collections_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Collections_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
+          {
+            "name": "4od",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/collections/collection-name.atom": {
+      "get": {
+        "summary": "Collections Feed(2)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Collections_Feed(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Collections_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -451,6 +731,23 @@
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
         "produces": [],
         "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
           {
             "name": "category",
             "type": "string",
@@ -478,7 +775,25 @@
         "operationId": "Popular_Brands_Feed",
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Popular_Brands_Feed",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -500,6 +815,23 @@
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Search_Feed",
         "produces": [],
         "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
           {
             "name": "q",
             "type": "string",
@@ -529,6 +861,23 @@
         "produces": [],
         "parameters": [
           {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
+          {
             "name": "q",
             "type": "string",
             "in": "path",
@@ -557,6 +906,23 @@
         "produces": [],
         "parameters": [
           {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
+          {
             "name": "yyyy.mm.dd",
             "type": "string",
             "in": "path",
@@ -584,6 +950,23 @@
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/TV_Listings_Feed",
         "produces": [],
         "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
           {
             "name": "yyyy.mm.dd",
             "type": "string",
@@ -619,67 +1002,22 @@
         "produces": [],
         "parameters": [
           {
-            "name": "brand-web-safe-title",
+            "name": "platform",
             "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        },
-        "security": []
-      }
-    },
-    "/{brand-web-safe-title}/videos/{clip-asset-id}.atom": {
-      "get": {
-        "summary": "Clip Detail Atom Feed",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Clip_Detail_Atom_Feed",
-        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clip_Detail_Atom_Feed",
-        "produces": [],
-        "parameters": [
-          {
-            "name": "brand-web-safe-title",
-            "type": "string",
-            "in": "path",
-            "required": true
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
           },
-          {
-            "name": "clip-asset-id",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        },
-        "security": []
-      }
-    },
-    "/{brand-web-safe-title}/epg.atom": {
-      "get": {
-        "summary": "Brand EPG Atom Feed",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Brand_EPG_Atom_Feed",
-        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Brand_EPG_Atom_Feed",
-        "produces": [],
-        "parameters": [
           {
             "name": "brand-web-safe-title",
             "type": "string",
@@ -709,6 +1047,23 @@
         "produces": [],
         "parameters": [
           {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
+          {
             "name": "brand-web-safe-title",
             "type": "string",
             "in": "path",
@@ -736,6 +1091,23 @@
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
         "produces": [],
         "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
           {
             "name": "brand-web-safe-title",
             "type": "string",
@@ -771,6 +1143,23 @@
         "produces": [],
         "parameters": [
           {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
+          {
             "name": "brand-web-safe-title",
             "type": "string",
             "in": "path",
@@ -800,6 +1189,102 @@
         "security": []
       }
     },
+    "/{brand-web-safe-title}/videos/{clip-asset-id}.atom": {
+      "get": {
+        "summary": "Clip Detail Atom Feed",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Clip_Detail_Atom_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clip_Detail_Atom_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "clip-asset-id",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/{brand-web-safe-title}/epg.atom": {
+      "get": {
+        "summary": "Brand EPG Atom Feed",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Brand_EPG_Atom_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Brand_EPG_Atom_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        },
+        "security": []
+      }
+    },
     "/coming-soon.atom": {
       "get": {
         "summary": "Coming Soon feed",
@@ -809,7 +1294,25 @@
         "operationId": "Coming_Soon_feed",
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Coming_Soon_feed",
         "produces": [],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          }
+        ],
         "responses": {
           "200": {
             "description": "Default response",
@@ -832,41 +1335,24 @@
         "produces": [],
         "parameters": [
           {
-            "name": "category",
+            "name": "platform",
             "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        },
-        "security": []
-      }
-    },
-    "/{brand-web-safe-title}/episode-guide/series-{series_number}.atom": {
-      "get": {
-        "summary": "Episode Guide Feed Series Detail",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Episode_Guide_Feed_Series_Detail",
-        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Detail",
-        "produces": [],
-        "parameters": [
-          {
-            "name": "brand-web-safe-title",
-            "type": "string",
-            "in": "path",
-            "required": true
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
           },
           {
-            "name": "series_number",
+            "name": "category",
             "type": "string",
             "in": "path",
             "required": true
@@ -893,6 +1379,23 @@
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Episode_Detail",
         "produces": [],
         "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
           {
             "name": "brand-web-safe-title",
             "type": "string",
@@ -923,6 +1426,102 @@
         "security": []
       }
     },
+    "/{brand-web-safe-title}/episode-guide/series-{series_number}.atom": {
+      "get": {
+        "summary": "Episode Guide Feed Series Detail",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Episode_Guide_Feed_Series_Detail",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Detail",
+        "produces": [],
+        "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "series_number",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/{brand-web-safe-title}.atom": {
+      "get": {
+        "summary": "Hub Feed",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Hub_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Hub_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        },
+        "security": []
+      }
+    },
     "/{brand-web-safe-title}/episode-guide.atom": {
       "get": {
         "summary": "Episode Guide Feed Series Landing",
@@ -933,6 +1532,23 @@
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Landing",
         "produces": [],
         "parameters": [
+          {
+            "name": "platform",
+            "type": "string",
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
           {
             "name": "brand-web-safe-title",
             "type": "string",
@@ -962,35 +1578,24 @@
         "produces": [],
         "parameters": [
           {
-            "name": "programme-id",
+            "name": "platform",
             "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        },
-        "security": []
-      }
-    },
-    "/{brand-web-safe-title}.atom": {
-      "get": {
-        "summary": "Hub Feed",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Hub_Feed",
-        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Hub_Feed",
-        "produces": [],
-        "parameters": [
+            "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+            ],
+            "in": "query",
+            "required": false
+          },
           {
-            "name": "brand-web-safe-title",
+            "name": "programme-id",
             "type": "string",
             "in": "path",
             "required": true
@@ -1011,6 +1616,825 @@
   "definitions": {
     "atom": {
       "type": "object",
+      "properties": {
+        "feed": {
+          "$ref": "#/definitions/feed"
+        }
+      },
+      "required": [
+        "feed"
+      ],
+      "additionalProperties": true
+    },
+    "feed": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of this feed, including the programmeId"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of brand for the programmeId"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date & time feed last updated"
+        },
+        "author/name": {
+          "type": "string",
+          "description": "Author / owner of feed"
+        },
+        "logo": {
+          "type": "uri",
+          "description": "Brand image URL"
+        },
+        "link@alternate": {
+          "type": "uri",
+          "description": "URL to HTML version of current feed"
+        },
+        "link@self": {
+          "type": "uri",
+          "description": "URL of current feed"
+        },
+        "generator": {
+          "type": "string",
+          "description": "Identifies the agent used to generate the feed"
+        },
+        "generator@version": {
+          "type": "number",
+          "description": "Identifies the version of the agent used to generate the feed"
+        },
+        "dc:relation.platformClientVersion": {
+          "type": "number",
+          "description": "Identifies the version of the client application compatible with this feed."
+        },
+        "link@up": {
+          "type": "uri",
+          "description": "URL of parent feed"
+        },
+        "link@next": {
+          "type": "uri",
+          "description": "URL to next set of clips, if available"
+        },
+        "link@previous": {
+          "type": "uri",
+          "description": "URL to previous set of clips, if available"
+        },
+        "link@related": {
+          "type": "uri",
+          "description": "4oD programmes in category by title"
+        },
+        "fh:complete": {
+          "type": "string",
+          "description": "Presence of this element indicates no pagination"
+        },
+        "dc:relation.4oDProgrammeCount": {
+          "type": "integer",
+          "description": "Number of available 4oD episodes for this Brand"
+        },
+        "dc:relation.AllProgrammeCount": {
+          "type": "integer",
+          "description": "Number of available brands in this category beginning with this letter (all programmes)"
+        },
+        "Entry Elements": {
+          "type": "string",
+          "description": "Element Description Example Value id ID containing Brand Web Safe Name tag:www.channel4.com,2009:/brand/inside-natures-giants title Programme's Brand Name Inside Nature's Giants summary Synopsis of this brand The award-winning series that gets under the skin of the largest animals on the planet. Most wildlife documentaries show how animals behave, but by exploring their anatomy, Inside Nature's Giants reveals how these creatures really work. updated Date and time element last updated 2010-10-18T10:08:44.295Z dc:relation.sortLetter  Starting letter for this programme I dc:relation.ProgrammeType  Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type. SSU dc:date.TXDate  Transmission date of the programme 2010-10-18T10:30:00.000Z media:content / media:thumbnail URL to medium-sized image of this brand url=\"http://www.channel4.com/assets/programmes/images/inside-natures-giants/7eb0ec03-1321-4532-bf51-cb2af0d9d528_145x82.jpg\" height=\"82\" width=\"145\" link@alternate URL to HTML version of brand http://www.channel4.com/programmes/inside-natures-giants link@self URL to the Channel 4 XML feed for this brand http://api.channel4.com/pmlsd/inside-natures-giants.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx link@related (Official Site) URL to the brand's official site, if available link@related (4oD) URL to 4oD feed, if available (self-referential in 4oD feeds) http://api.channel4.com/pmlsd/inside-natures-giants/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx link@related (Clips) URL to short-form video feed, if available http://api.channel4.com/pmlsd/inside-natures-giants/video.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx link@related (Episode Guide) URL to Episode Guide feed, if available http://api.channel4.com/pmlsd/inside-natures-giants/episode-guide.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
+        },
+        "dc:relation.CategoryType": {
+          "type": "string",
+          "description": "Type to which the category belongs (if applicable).(Valid values are 'Channel', 'Display' or 'None'.)"
+        },
+        "dc:relation.CategoryOrder": {
+          "type": "integer",
+          "description": "Enumerated order of category within its type(e.g., 'Channel' might have Food=1, More4=2, etc.)(Appears in feed only if CategoryType<>'None'.)"
+        },
+        "dc:relation.Synopsis": {
+          "type": "string",
+          "description": "Summary of this feed"
+        },
+        "summary": {
+          "type": "string",
+          "description": "Synopsis of episode"
+        },
+        "media:group / media:player": {
+          "type": "uri",
+          "description": "URL to media-player version of episode"
+        },
+        "media:group /media:thumbnail": {
+          "type": "string",
+          "description": "URL to clip image"
+        },
+        "media:group /media:rating": {
+          "type": "string",
+          "description": "Flag to show whether clip is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")"
+        },
+        "media:group /media:copyright": {
+          "type": "string",
+          "description": "Link to copyright / T&C information"
+        },
+        "media:group /media:restriction": {
+          "type": "string",
+          "description": "Restriction flag (\"allow\") and list of country or state codes where episode is accessible to website users"
+        },
+        "media:group /media:rights": {
+          "type": "string",
+          "description": "Status of media rights under which Channel 4 provides episode content"
+        },
+        "dc:relation.BrandTitle": {
+          "type": "string",
+          "description": "Title of the brand for this feed"
+        },
+        "dcterms:available": {
+          "type": "string",
+          "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)"
+        },
+        "dc:relation.SeriesNumber": {
+          "type": "integer",
+          "description": "Series to which this episode belongs"
+        },
+        "dc:relation.EpisodeNumber": {
+          "type": "integer",
+          "description": "Episode number within this series"
+        },
+        "dc:relation.programmeId": {
+          "type": "string",
+          "description": "Indicates the contract and programme numbers"
+        },
+        "dc:relation.RelatedEntryId": {
+          "type": "string",
+          "description": "The episode guide entry related to this episode"
+        },
+        "dc:relation.AgeRating": {
+          "type": "integer",
+          "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)"
+        },
+        "dc:relation.Guidance": {
+          "type": "string",
+          "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable"
+        },
+        "dc:date.TXDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "First TX date information for this episode"
+        },
+        "dc:relation.TXChannel": {
+          "type": "string",
+          "description": "First TX channel information for this episode"
+        },
+        "dc:relation.Subtitles": {
+          "type": "boolean",
+          "description": "Boolean indicating if subtitles are available for this episode"
+        },
+        "dc:relation.AudioDescription": {
+          "type": "boolean",
+          "description": "Boolean indicating if an audio description is available for this episode"
+        },
+        "dc:relation.LoginRequired": {
+          "type": "boolean",
+          "description": "Boolean indicating if the user has to be logged-in in order to play this episode."
+        },
+        "dc:relation.Duration": {
+          "type": "string",
+          "description": "Duration in minutes and seconds"
+        },
+        "dc:relation.resourceType": {
+          "type": "string",
+          "description": "The type of the entry"
+        },
+        "dc:relation.ParentCollectionId": {
+          "type": "string",
+          "description": "The ID of the Parent Collection where the resource is assigned to."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Synopsis of brand"
+        },
+        "media:thumbnail": {
+          "type": "string",
+          "description": "URL to medium sized image of this series"
+        },
+        "Link@Related title=\"4oD\"": {
+          "type": "uri",
+          "description": "URL to Brand 4oD feed, if available"
+        },
+        "dc:relation.ProgrammeType": {
+          "type": "string",
+          "description": "Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type."
+        },
+        "media:thumbnail /media:thumbnail": {
+          "type": "string",
+          "description": "URL to medium-sized image of this episode"
+        },
+        "": {
+          "type": "string",
+          "description": ""
+        },
+        "dc:date.firstTXDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "First TX date information for this episode"
+        },
+        "dc:relation.firstTXChannel": {
+          "type": "string",
+          "description": "Channel of first broadcast (optional). This is based on EPG or, when EPG data is not available for the episode, it can be set editorially (significant date)"
+        },
+        "media:group / media:content / media:player": {
+          "type": "uri",
+          "description": "URL to media-player version of episode"
+        },
+        "media:group / media:content / media:thumbnail": {
+          "type": "string",
+          "description": "URL to medium-sized image of this episode"
+        },
+        "media:group / media:content / media:rating": {
+          "type": "string",
+          "description": "Flag to show whether episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")"
+        },
+        "media:group / media:content / media:copyright": {
+          "type": "string",
+          "description": "Link to copyright / T&C information"
+        },
+        "media:group / media:content / media:restriction": {
+          "type": "string",
+          "description": "Restriction flag (\"allow\") and list of country or state codes where episode is accessible to website users"
+        },
+        "media:group / media:content / media:rights": {
+          "type": "string",
+          "description": "Status of media rights under which Channel 4 provides episode content"
+        },
+        "media:group / media:content / dc:relation.requestType": {
+          "type": "string",
+          "enum": [
+            "ARCHIVE",
+            "CATCHUP"
+          ],
+          "description": "Indicates catchup or archive content"
+        },
+        "media:group / media:content / dc:relation.deliveryType": {
+          "type": "string",
+          "enum": [
+            "STREAM",
+            "DOWNLOAD"
+          ],
+          "description": "Indicates STREAMING or FOR DOWNLOAD content"
+        },
+        "media:group / media:content / dcterms:available": {
+          "type": "string",
+          "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)"
+        },
+        "media:group / media:content / dc:relation.AgeRating": {
+          "type": "integer",
+          "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)"
+        },
+        "media:group / media:content / dc:relation.Guidance": {
+          "type": "string",
+          "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable"
+        },
+        "media:group / media:content / dc:relation.Subtitles": {
+          "type": "boolean",
+          "description": "Boolean indicating if subtitles are available for this episode"
+        },
+        "media:group / media:content / dc:relation.AudioDescription": {
+          "type": "boolean",
+          "description": "Boolean indicating if an audio description is available for this episode"
+        },
+        "media:group / media:content / dc:relation.Duration": {
+          "type": "string",
+          "description": "Length in minutes and seconds - does not include ad breaks"
+        },
+        "dc:relation.TotalResults": {
+          "type": "integer",
+          "description": "Number of entries what match the search-term"
+        },
+        "dc:relation.StartOffset": {
+          "type": "integer",
+          "description": ""
+        },
+        "dc:relation.BrandFlattened": {
+          "type": "boolean",
+          "description": "Boolean indicating whether there is no Series -> Episode structure in this brand (\"false\" indicating that there is such a structure)"
+        },
+        "dc:relation.presentationBrand": {
+          "type": "string",
+          "description": "The presentation brand"
+        },
+        "dc:relation.BrandWebSafeTitle": {
+          "type": "string",
+          "description": "Title of the brand safe for web linking (no whitespaces, no special chars...)"
+        },
+        "dc:relation.4oDSeriesCount": {
+          "type": "integer",
+          "description": "Number of available 4oD series for this Brand"
+        },
+        "dc:relation.New4oDSeriesAvailable": {
+          "type": "boolean",
+          "description": "Flags that notifies clients when a Brand contains NEW series."
+        },
+        "dc:relation.Sharable": {
+          "type": "boolean",
+          "description": "Boolean value indicating if clips for this brand are sharable"
+        },
+        "link@related (4oD Episode)": {
+          "type": "uri",
+          "description": "URL to 4oD HTML (player page) if available"
+        },
+        "media:group /media:player": {
+          "type": "uri",
+          "description": "URL to media-player version of full episode"
+        },
+        "media:group/media:category": {
+          "type": "string",
+          "description": "Defines the type of short-form item. Its value can be one of the next: EXTRACT, PREVIEW, EXTRA, TRAILER"
+        },
+        "dc:relation.ExternalVideoId": {
+          "type": "string",
+          "description": "Clip Asset_id value from the Clip table (a.k.a. Brightcode id)."
+        },
+        "link@related (Clips)": {
+          "type": "uri",
+          "description": "URL to Short form video feed, if available"
+        },
+        "dc:relation.firstTXDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date of first broadcast (optional). This is based on EPG or, when EPG data is not available for the episode, it can be set editorially (significant date)"
+        },
+        "dc:relation.lastTXDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date of last broadcast (optional). This is based on EPG ignoring repeats and giving preference to the channel that the brand is primarily targeted at (preferred channel)"
+        },
+        "dc:relation.lastTXChannel": {
+          "type": "string",
+          "description": "Channel of last broadcast (optional). This is based on EPG ignoring repeats and giving preference to the channel that the brand is primarily targeted at (preferred channel)"
+        },
+        "link@related (Episode Guide)": {
+          "type": "uri",
+          "description": "URL to Episode Guide feed, if available"
+        },
+        "link@related (4oD)": {
+          "type": "uri",
+          "description": "URL to 4oD feed, if available"
+        },
+        "category (primary)": {
+          "type": "string",
+          "description": "Primary category (brand must have ONE)"
+        },
+        "category (secondary)": {
+          "type": "string",
+          "description": "Secondary category (brand may have any number)"
+        },
+        "dc:relation.comingSoonTo4oD": {
+          "type": "string",
+          "description": "If the brand is coming to be available on 4oD soon this empty element should be included."
+        }
+      },
+      "additionalProperties": true
+    },
+    "entry": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "ID of entry"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of episode"
+        },
+        "summary": {
+          "type": "string",
+          "description": "Synopsis of episode"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date & time entry last updated"
+        },
+        "link@alternate": {
+          "type": "uri",
+          "description": "URL to HTML version, i.e., player page"
+        },
+        "link@related": {
+          "type": "uri",
+          "description": "URL to Episode Guide feed, if available"
+        },
+        "link@self": {
+          "type": "uri",
+          "description": "URL to current feed"
+        },
+        "dc:relation.sortLetter": {
+          "type": "string",
+          "description": "Starting letter for this programme"
+        },
+        "dc:relation.ProgrammeType": {
+          "type": "string",
+          "description": "Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type."
+        },
+        "media:content / media:thumbnail": {
+          "type": "string",
+          "description": "URL to medium-sized series image"
+        },
+        "link@related (4oD)": {
+          "type": "uri",
+          "description": "URL to HTML version of 4oD page for this series, if available"
+        },
+        "link@related (Clips)": {
+          "type": "uri",
+          "description": "URL to feed of video clips for this series"
+        },
+        "link@related (Episode Guide)": {
+          "type": "uri",
+          "description": "URL to feed of full episode, if available"
+        },
+        "dc:relation.BrandTitle": {
+          "type": "string",
+          "description": "Title of brand"
+        },
+        "dcterms:available": {
+          "type": "string",
+          "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)"
+        },
+        "dc:relation.SeriesNumber": {
+          "type": "integer",
+          "description": "The series to which this episode belongs"
+        },
+        "dc:relation.EpisodeNumber": {
+          "type": "integer",
+          "description": "The episode number within the series"
+        },
+        "dc:relation.AgeRating": {
+          "type": "integer",
+          "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)"
+        },
+        "dc:relation.Guidance": {
+          "type": "string",
+          "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable"
+        },
+        "dc:date.TXDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "First TX date information for this episode"
+        },
+        "dc:relation.TXChannel": {
+          "type": "string",
+          "description": "First TX channel information for this episode"
+        },
+        "dc:relation.Subtitles": {
+          "type": "boolean",
+          "description": "Boolean indicating if subtitles are available for this episode"
+        },
+        "dc:relation.AudioDescription": {
+          "type": "boolean",
+          "description": "Boolean indicating if an audio description is available for this episode"
+        },
+        "dc:relation.Duration": {
+          "type": "string",
+          "description": "Length in minutes and seconds - does not include ad breaks"
+        },
+        "media:group / media:player": {
+          "type": "uri",
+          "description": "URL to media-player version of episode"
+        },
+        "media:group /media:thumbnail": {
+          "type": "string",
+          "description": "URL to medium-sized image of this episode"
+        },
+        "media:group /media:rating": {
+          "type": "string",
+          "description": "Flag to show whether episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")"
+        },
+        "media:group /media:copyright": {
+          "type": "string",
+          "description": "Link to copyright / T&C information"
+        },
+        "media:group /media:restriction": {
+          "type": "string",
+          "description": "Restriction flag (\"allow\") and list of country or state codes where episode is accessible to website users"
+        },
+        "media:group /media:rights": {
+          "type": "string",
+          "description": "Status of media rights under which Channel 4 provides episode content"
+        },
+        "dc:relation.BrandWebsafeTitle": {
+          "type": "string",
+          "description": "The associated brand web-safe title"
+        },
+        "dc:relation.programmeId": {
+          "type": "string",
+          "description": "The contract number/programme number for episode."
+        },
+        "dc:date.firstTXDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "First TX date information for this episode"
+        },
+        "dc:relation.firstTXChannel": {
+          "type": "string",
+          "description": "First TX channel information for this episode"
+        },
+        "dc:date.slotTXDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Current TX date information for this slot's episode"
+        },
+        "dc:relation.slotTXChannel": {
+          "type": "string",
+          "description": "Current TX channel information for this slot's episode"
+        },
+        "media:group / media:content / media:player": {
+          "type": "uri",
+          "description": "URL to media-player version of episode"
+        },
+        "media:group / media:content / media:thumbnail": {
+          "type": "string",
+          "description": "URL to medium-sized image of this episode"
+        },
+        "media:group / media:content / media:rating": {
+          "type": "string",
+          "description": "Flag to show whether episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")"
+        },
+        "media:group / media:content / media:copyright": {
+          "type": "string",
+          "description": "Link to copyright / T&C information"
+        },
+        "media:group / media:content / media:restriction": {
+          "type": "string",
+          "description": "Restriction flag (\"allow\") and list of country or state codes where episode is accessible to website users"
+        },
+        "media:group / media:content / media:rights": {
+          "type": "string",
+          "description": "Status of media rights under which Channel 4 provides episode content"
+        },
+        "media:group / media:content / dc:relation.requestType": {
+          "type": "string",
+          "enum": [
+            "ARCHIVE",
+            "CATCHUP"
+          ],
+          "description": "Indicates catchup or archive content"
+        },
+        "media:group / media:content / dc:relation.deliveryType": {
+          "type": "string",
+          "enum": [
+            "STREAM",
+            "DOWNLOAD"
+          ],
+          "description": "Indicates STREAMING or FOR DOWNLOAD content"
+        },
+        "media:group / media:content / dcterms:available": {
+          "type": "string",
+          "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)"
+        },
+        "media:group / media:content / dc:relation.AgeRating": {
+          "type": "integer",
+          "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)"
+        },
+        "media:group / media:content / dc:relation.Guidance": {
+          "type": "string",
+          "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable"
+        },
+        "media:group / media:content / dc:relation.Subtitles": {
+          "type": "boolean",
+          "description": "Boolean indicating if subtitles are available for this episode"
+        },
+        "media:group / media:content / dc:relation.AudioDescription": {
+          "type": "boolean",
+          "description": "Boolean indicating if an audio description is available for this episode"
+        },
+        "media:group / media:content / dc:relation.Duration": {
+          "type": "string",
+          "description": "Length in minutes and seconds - does not include ad breaks"
+        },
+        "media:group /media:category": {
+          "type": "string",
+          "description": "Defines the type of short-form item."
+        },
+        "dc:relation.ExternalVideoId": {
+          "type": "integer",
+          "description": "This is the clip asset id (from column CLIP_ASSET.ASSET_ID. For the current implementation this is the Brightcove Id."
+        },
+        "dc:relataion.BrandTitle": {
+          "type": "string",
+          "description": "Title for the brand that the clip is associated with (directly or indirectly)"
+        },
+        "dc:relataion.BrandWebSafeTitle": {
+          "type": "string",
+          "description": "Web-safe title for the brand that the clip is associated with (directly or indirectly)"
+        },
+        "dc:relation.requestType": {
+          "type": "string",
+          "enum": [
+            "ARCHIVE",
+            "CATCHUP"
+          ],
+          "description": "Indicates catchup or archive content"
+        },
+        "media:group /media:player": {
+          "type": "uri",
+          "description": "URL to media-player version of episode"
+        },
+        "dc:relation.BrandWebSafeTitle": {
+          "type": "string",
+          "description": "Programme's Brand name in Web safe format"
+        },
+        "media:context / media:thumbnail": {
+          "type": "string",
+          "description": "URL to medium-sized image of this brand"
+        },
+        "link@related (Official Site)": {
+          "type": "string",
+          "description": "URL to the brand's official site, if available"
+        },
+        "generator": {
+          "type": "string",
+          "description": "Identifies the agent used to generate the feed"
+        },
+        "generator@version": {
+          "type": "number",
+          "description": "Identifies the version of the agent used to generate the feed"
+        },
+        "dc:relation.platformClientVersion": {
+          "type": "number",
+          "description": "Identifies the version of the client application compatible with this feed."
+        },
+        "dc:relation.sortOrder": {
+          "type": "integer",
+          "description": "Starting letter for this programme"
+        },
+        "link@relative (Official Site)": {
+          "type": "string",
+          "description": "URL to the brand's official site, if available"
+        },
+        "link@relative (4oD)": {
+          "type": "uri",
+          "description": "URL to 4oD feed, if available (self-referential in 4oD feeds)"
+        },
+        "link@relative (Clips)": {
+          "type": "uri",
+          "description": "URL to short-form video feed, if available"
+        },
+        "link@relative (Episode Guide)": {
+          "type": "uri",
+          "description": "URL to Episode Guide feed, if available"
+        },
+        "dc.relation.sortLetter": {
+          "type": "integer",
+          "description": "Starting letter for this programme"
+        },
+        "link@related (All Programmes by Title)": {
+          "type": "uri",
+          "description": "All programmes in category by title"
+        },
+        "link@related (4oD Programmes by TX Date)": {
+          "type": "uri",
+          "description": "4oD programmes in category by TX date"
+        },
+        "link@related (4oD Programmes by Title)": {
+          "type": "uri",
+          "description": "4oD programmes in category by title"
+        },
+        "dc:relation.CategoryType": {
+          "type": "string",
+          "description": "Type to which the category belongs (if applicable). (Valid values are 'Channel', 'Display' or 'None'.)"
+        },
+        "dc:relation.CategoryOrder": {
+          "type": "integer",
+          "description": "Enumerated order of category within its type (e.g., 'Channel' might have Food=1, More4=2, etc.) (Appears in feed only if CategoryType<>'None'.)"
+        },
+        "dc:relation.AllProgrammeCount": {
+          "type": "integer",
+          "description": "Number of available brands in this category (all programmes)"
+        },
+        "dc:relation.4oDProgrammeCount": {
+          "type": "integer",
+          "description": "The number of 4oD available programmes in the collection, including all Brand/Series/Episodes."
+        },
+        "dc:relation.Synopsys": {
+          "type": "string",
+          "description": "The synopsis of this brand"
+        },
+        "media:thumbnail": {
+          "type": "uri",
+          "description": "URL to medium sized image of this brand"
+        },
+        "Link@Related title=\"Episode Guide\"": {
+          "type": "uri",
+          "description": "URL to brand episode guide feed"
+        },
+        "Link@Related title=\"4oD\"": {
+          "type": "uri",
+          "description": "URL to Brand 4oD feed, if available"
+        },
+        "dc:relation.resourceType": {
+          "type": "string",
+          "description": "The type of the entry"
+        },
+        "dc:relation.ParentCollectionId": {
+          "type": "string",
+          "description": "The ID of the Parent Collection where the resource is assigned to."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "The synopsis of the series."
+        },
+        "dc:relation.Repeat": {
+          "type": "boolean",
+          "description": "Boolean indicating if the Slot includes an indicator marked as repeat."
+        },
+        "dc:relation.LoginRequired": {
+          "type": "boolean",
+          "description": "Boolean indicating if the user has to be logged-in in order to play this episode."
+        },
+        "dc:relation.SimulcastRights": {
+          "type": "boolean",
+          "description": "Boolean indicating if the episode has rights to be streamed on the live simulcast service."
+        },
+        "dc:relation.Movie": {
+          "type": "boolean",
+          "description": "Boolean indicating if the SLOT is a Movie or not."
+        },
+        "dc:relation.comingSoonTo4oD": {
+          "type": "string",
+          "description": "If the brand is coming to be available on 4oD soon this empty element should be included."
+        },
+        "dc:relation.hd": {
+          "type": "boolean",
+          "description": "Boolean indicating if the SLOT is HD on linear"
+        },
+        "dc:relation.RelatedEntryId": {
+          "type": "string",
+          "description": "The episode guide entry related to this episode"
+        },
+        "dc:relation.TXStartTime": {
+          "type": "string",
+          "description": "Start date and time of the broadcast"
+        },
+        "link@up": {
+          "type": "uri",
+          "description": "Parent brand feed URL"
+        },
+        "link@EpisodeUrl": {
+          "type": "uri",
+          "description": "Episode URL, if applicable"
+        },
+        "dc:relation.WideScreen": {
+          "type": "boolean",
+          "description": "Boolean value is true if widescreen slot_indicator exists for this slot, otherwise false"
+        },
+        "dc:relation.Signing": {
+          "type": "boolean",
+          "description": "Boolean value is true if signing slot_indicator exists for this slot, otherwise false."
+        },
+        "link@rel=alternate @type=text/html": {
+          "type": "uri",
+          "description": "URL to HTML version of brand (if available)"
+        },
+        "link@rel=self@type=application/atom+xml": {
+          "type": "uri",
+          "description": "URL of ATOM feed of current brand"
+        },
+        "link@rel=related@title=4oD": {
+          "type": "uri",
+          "description": "URL of ATOM 4oD feed of current brand (if available)"
+        },
+        "link@rel=related@title=Clips": {
+          "type": "uri",
+          "description": "URL of ATOM Clips feed of current brand (if available)"
+        },
+        "link@rel=related@title=Episode Guide": {
+          "type": "uri",
+          "description": "URL of ATOM Episode Guide details feed of current brand (if available)"
+        },
+        "media:content /media:credit": {
+          "type": "string",
+          "description": "List of credits/cast for the episode"
+        },
+        "dc:date.Last": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of the previous TX from this brand (if applicable)"
+        },
+        "dc:relation.LastChannel": {
+          "type": "string",
+          "description": "The channel on which the previous TX from this brand(if applicable)"
+        },
+        "dc:date.Next": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of the next TX from this brand (if applicable)"
+        },
+        "dc:relation.NextChannel": {
+          "type": "string",
+          "description": "The channel on which the next TX from this brand (if applicable)"
+        },
+        "dc:relation.Platform": {
+          "type": "string",
+          "description": "The platform code that this episode is available on"
+        }
+      },
       "additionalProperties": true
     }
   },

@@ -2,6 +2,9 @@ var fs = require('fs');
 
 var rr = require('recursive-readdir');
 var cheerio = require('cheerio');
+var validator = require('is-my-json-valid')
+
+var swaggerSchema = require('./validation/swagger2Schema.json');
 
 var api = {};
 var swagger;
@@ -39,7 +42,7 @@ function decorate(cols) {
 		cols.push('integer');
 	}
 	else if ((!isNaN(parseFloat(example))) && (example.indexOf('/') < 0) && (example.indexOf(':') < 0)) {
-		cols.push('float');
+		cols.push('number');
 	}
 	else {
 		cols.push('string');
@@ -247,6 +250,15 @@ function definePath(file,url,suffix) {
 	path.get.produces = [];
 	path.get.produces.push = 'application/xml';
 	path.get.parameters = [];
+
+	var param = {};
+	param.name = 'platform';
+	param.type = 'string';
+	param["enum"] = ['c4','ps3','yv','ios','p06','flashmobile','freesat','android','samsung'];
+	param["in"] = 'query';
+	param.required = false;
+	path.get.parameters.push(param);
+
 	path.get.responses = {};
 	path.get.responses["200"] = {};
 	path.get.responses["200"].description = 'Default response';
@@ -255,6 +267,27 @@ function definePath(file,url,suffix) {
 	path.get.security = [];
 
 	return path;
+}
+
+function addProperties(target,item) {
+	var newProp = {};
+	if (item.type == 'date') {
+		newProp.type = 'string';
+		newProp.format = 'date-time';
+	}
+	else if (item.type.startsWith('enum ')) {
+		var type = item.type.replace('enum ','');
+		type = type.replaceAll(' or ',' ');
+		type = type.replaceAll(' OR ',' ');
+		var entries = type.split(' ');
+		newProp.type = 'string';
+		newProp["enum"] = entries;
+	}
+	else {
+		newProp.type = item.type;
+	}
+	newProp.description = item.description;
+	target[item.name] = newProp;
 }
 
 function generateSwagger(){
@@ -304,6 +337,16 @@ function generateSwagger(){
 			url = url.replaceAll('}}','}');
 
 			swagger.paths[url] = path;
+
+			for (var i in file.output.feed) {
+				addProperties(swagger.definitions.feed.properties,file.output.feed[i]);
+			}
+			for (var i in file.output.singleEntry) {
+				addProperties(swagger.definitions.entry.properties,file.output.singleEntry[i]);
+			}
+			for (var i in file.output.multipleEntry) {
+				addProperties(swagger.definitions.entry.properties,file.output.multipleEntry[i]);
+			}
 		}
 	}
 }
@@ -361,6 +404,24 @@ var swagStr = `{
 	  "definitions": {
 		  "atom": {
 			  "type": "object",
+			  "properties": {
+				  "feed": {
+					  "$ref": "#/definitions/feed"
+				  }
+			  },
+			  "required": [
+				"feed"
+			  ],
+			  "additionalProperties": true
+		  },
+		  "feed": {
+			  "type": "object",
+			  "properties": {},
+			  "additionalProperties": true
+		  },
+		  "entry": {
+			  "type": "object",
+			  "properties": {},
 			  "additionalProperties": true
 		  }
 	  },
@@ -384,5 +445,20 @@ process.on('exit', function(code) {
 
 	console.log();
 	generateSwagger();
-	fs.writeFileSync('./c4Api/swagger.json',JSON.stringify(swagger,null,2),'utf8');
+
+	console.log();
+	console.log('Validating swagger spec...');
+	var validate = validator(swaggerSchema);
+	validate(swagger,{
+		greedy: true,
+		verbose: true
+	});
+	var errors = validate.errors;
+	if (errors) {
+		console.log(errors);
+	}
+	else {
+		console.log('Writing swagger spec');
+		fs.writeFileSync('./c4Api/swagger.json',JSON.stringify(swagger,null,2),'utf8');
+	}
 });
