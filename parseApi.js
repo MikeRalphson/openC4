@@ -275,6 +275,10 @@ function addProperties(target,item) {
 		newProp.type = 'string';
 		newProp.format = 'date-time';
 	}
+	else if (item.type == 'uri') {
+		newProp.type = 'string';
+		newProp.format = 'uri';
+	}
 	else if (item.type.startsWith('enum ')) {
 		var type = item.type.replace('enum ','');
 		type = type.replaceAll(' or ',' ');
@@ -287,7 +291,23 @@ function addProperties(target,item) {
 		newProp.type = item.type;
 	}
 	newProp.description = item.description;
-	target[item.name] = newProp;
+
+	var path = item.name.split('/');
+	if (path.length>1) {
+		for (var p=0;p<path.length-1;p++) {
+			var comp = path[p].trim();
+			if ((!target[comp]) || (!target[comp].properties)) {
+				target[comp] = {};
+				target[comp].type = 'object';
+				target[comp].properties = {};
+			}
+			target = target[comp].properties;
+		}
+		target[path[path.length-1].trim()] = newProp;
+	}
+	else {
+		target[item.name] = newProp;
+	}
 }
 
 function generateSwagger(){
