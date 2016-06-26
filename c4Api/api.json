@@ -1,7 +1,7 @@
 {
   "files": [
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-DiscoveryResources-A_to_Z_Landing_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-DiscoveryResources-A_to_Z_Landing_Feed",
       "group": "DiscoveryResources",
       "operation": "A_to_Z_Landing_Feed",
       "summary": "A to Z Landing Feed",
@@ -128,7 +128,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-DiscoveryResources-A_to_Z_Letter_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-DiscoveryResources-A_to_Z_Letter_Feed",
       "group": "DiscoveryResources",
       "operation": "A_to_Z_Letter_Feed",
       "summary": "A to Z Letter Feed",
@@ -331,7 +331,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Browse_by_Date_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Browse_by_Date_Feed",
       "group": "discoveryresources",
       "operation": "4oD_Browse_by_Date_Feed",
       "summary": "4oD Browse by Date Feed",
@@ -751,7 +751,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Clips_Catch_Up_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Clips_Catch_Up_Feed",
       "group": "discoveryresources",
       "operation": "4oD_Clips_Catch_Up_Feed",
       "summary": "4oD Clips Catch Up Feed",
@@ -968,7 +968,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Most_Popular_Episodes_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Most_Popular_Episodes_Feed",
       "group": "discoveryresources",
       "operation": "4oD_Most_Popular_Episodes_Feed",
       "summary": "4oD Most Popular Episodes Feed",
@@ -1372,7 +1372,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Popular_All_Brands_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Popular_All_Brands_Feed",
       "group": "discoveryresources",
       "operation": "4oD_Popular_All_Brands_Feed",
       "summary": "4oD Popular All Brands Feed",
@@ -1595,7 +1595,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Programmes_by_TX_Date",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Programmes_by_TX_Date",
       "group": "discoveryresources",
       "operation": "4oD_Programmes_by_TX_Date",
       "summary": "4oD Programmes by TX Date",
@@ -1822,7 +1822,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Programmes_by_Title",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Programmes_by_Title",
       "group": "discoveryresources",
       "operation": "4oD_Programmes_by_Title",
       "summary": "4oD Programmes by Title",
@@ -2043,7 +2043,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Title_All_Brands_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-4oD_Title_All_Brands_Feed",
       "group": "discoveryresources",
       "operation": "4oD_Title_All_Brands_Feed",
       "summary": "4oD Title All Brands Feed",
@@ -2266,7 +2266,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-All_Programmes_by_TX_Date",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-All_Programmes_by_TX_Date",
       "group": "discoveryresources",
       "operation": "All_Programmes_by_TX_Date",
       "summary": "All Programmes by TX Date",
@@ -2493,7 +2493,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-All_Programmes_by_Title",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-All_Programmes_by_Title",
       "group": "discoveryresources",
       "operation": "All_Programmes_by_Title",
       "summary": "All Programmes by Title",
@@ -2714,7 +2714,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Categories_Landing_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Categories_Landing_Feed",
       "group": "discoveryresources",
       "operation": "Categories_Landing_Feed",
       "summary": "Categories Landing Feed",
@@ -2877,398 +2877,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Flattened_Collection_Feed",
-      "group": "discoveryresources",
-      "operation": "Flattened_Collection_Feed",
-      "summary": "Flattened Collection Feed",
-      "output": {
-        "score": 68,
-        "urls": [
-          "http://api.channel4.com/pmlsd/collections/collection_name/flattened/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-          "http://api.channel4.com/pmlsd/collections/collection_name/flattened/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
-        ],
-        "sampleUrl": "http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xe",
-        "feedDescription": "The Flattened Collections Feed is only applicable for GROUP collections and its purpose is mainly return 3 items (BRAND, SERIES or EPSIODE) of each of the simple collections assigned to the GROUP.",
-        "parameters": [
-          {
-            "name": "collection_name",
-            "description": "Web safe title for the collection."
-          },
-          {
-            "name": "apikey",
-            "description": "24-character alphanumeric key provided to you when you registered your application at http://developer.channel4.com/apps/register."
-          }
-        ],
-        "feed": [
-          {
-            "name": "id",
-            "description": "Unique identifier of this feed",
-            "example": "tag:api.channel4.com,2009:/programmes/collections/4od-home-promo/flattened",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "Title of this feed",
-            "example": "LIVE",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.Synopsis",
-            "description": "Summary of this feed",
-            "example": "",
-            "type": "string"
-          },
-          {
-            "name": "updated",
-            "description": "Date and time feed last updated",
-            "example": "2012-09-07T08:56:11.526Z",
-            "type": "date"
-          },
-          {
-            "name": "author/name",
-            "description": "Identifier for author/company",
-            "example": "Channel 4 Television",
-            "type": "string"
-          },
-          {
-            "name": "logo",
-            "description": "Default image URL for location of author's logo",
-            "example": "http://www.channel4.com/static/programmes/images/c4-atom-logo.gif",
-            "type": "uri"
-          },
-          {
-            "name": "link@self",
-            "description": "URL of current feed",
-            "example": "",
-            "type": "string"
-          },
-          {
-            "name": "link@related",
-            "description": "This only appears in COLLECTION GROUP feed. URL to flattened view of same collection, including 3 entries for each of the collections which compound the GROUP.",
-            "example": "",
-            "type": "string"
-          },
-          {
-            "name": "id",
-            "description": "ID of episode",
-            "example": "tag:www.channel4.com,2009:/programmes/the-it-crowd/4od%232921825",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "Title of episode",
-            "example": "Yesterday's Jam",
-            "type": "string"
-          },
-          {
-            "name": "updated",
-            "description": "Date & time entry last updated",
-            "example": "2010-10-18T11:09:12.665Z",
-            "type": "date"
-          },
-          {
-            "name": "summary",
-            "description": "Synopsis of episode",
-            "example": "The unloved and socially-awkward Roy and Moss give computer-illiterate Jen a less than lukewarm welcome to the IT department. Soon, however, they realise a female presence in their team can have its benefits...",
-            "type": "string"
-          },
-          {
-            "name": "link@alternate",
-            "description": "URL to HTML version, i.e., player page",
-            "example": "http://www.channel4.com/programmes/the-it-crowd/4od#2921825",
-            "type": "uri"
-          },
-          {
-            "name": "link@related",
-            "description": "URL to Episode Guide feed, if available",
-            "example": "http://api.channel4.com/pmlsd/the-it-crowd/episode-guide/series-1/episode-1.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "media:group / media:player",
-            "description": "URL to media-player version of episode",
-            "example": "http://www.channel4.com/programmes/the-it-crowd/4od#2921825",
-            "type": "uri"
-          },
-          {
-            "name": "media:group /media:thumbnail",
-            "description": "URL to medium-sized image of this episode",
-            "example": "url=\"http://www.channel4.com/assets/programmes/images/the-it-crowd/series-1/episode-1/the-it-crowd-s1e1_200x113.jpg\" height=\"113\" width=\"200\"",
-            "type": "string"
-          },
-          {
-            "name": "media:group /media:rating",
-            "description": "Flag to show whether episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")",
-            "example": "adult",
-            "type": "string"
-          },
-          {
-            "name": "media:group /media:copyright",
-            "description": "Link to copyright / T&C information",
-            "example": "url=\"http://www.channel4.com/terms_and_conditions.html\" Terms and Conditions",
-            "type": "string"
-          },
-          {
-            "name": "media:group /media:restriction",
-            "description": "Restriction flag (\"allow\") and list of country or state codes where episode is accessible to website users",
-            "example": "\"allow\" type=\"country\" GB,GG,IE,IM,JE",
-            "type": "string"
-          },
-          {
-            "name": "media:group /media:rights",
-            "description": "Status of media rights under which Channel 4 provides episode content",
-            "example": "\"official\"",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.BrandTitle",
-            "description": "Title of brand",
-            "example": "The IT Crowd",
-            "type": "string"
-          },
-          {
-            "name": "dcterms:available",
-            "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)",
-            "example": "start=2009-06-24T22:00:00.000Z;end=2011-01-24T00:00:00.000Z;scheme=W3C-DTF",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.SeriesNumber",
-            "description": "The series to which this episode belongs",
-            "example": "1",
-            "type": "integer"
-          },
-          {
-            "name": "dc:relation.EpisodeNumber",
-            "description": "The episode number within the series",
-            "example": "1",
-            "type": "integer"
-          },
-          {
-            "name": "dc:relation.programmeId",
-            "description": "Indicates the contract and programme numbers",
-            "example": "41227/001",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.RelatedEntryId",
-            "description": "The episode guide entry related to this episode",
-            "example": "tag:www.channel4.com,2009:/programmes/the-it-crowd/episode-guide/series-1/episode-1",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.AgeRating",
-            "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)",
-            "example": "0",
-            "type": "integer"
-          },
-          {
-            "name": "dc:relation.Guidance",
-            "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable",
-            "example": "Adult humour",
-            "type": "string"
-          },
-          {
-            "name": "dc:date.TXDate",
-            "description": "First TX date information for this episode",
-            "example": "2009-01-04T23:40:00.000Z",
-            "type": "date"
-          },
-          {
-            "name": "dc:relation.TXChannel",
-            "description": "First TX channel information for this episode",
-            "example": "M4",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.Subtitles",
-            "description": "Boolean indicating if subtitles are available for this episode",
-            "example": "true",
-            "type": "boolean"
-          },
-          {
-            "name": "dc:relation.AudioDescription",
-            "description": "Boolean indicating if an audio description is available for this episode",
-            "example": "false",
-            "type": "boolean"
-          },
-          {
-            "name": "dc:relation.LoginRequired",
-            "description": "Boolean indicating if the user has to be logged-in in order to play this episode.",
-            "example": "true",
-            "type": "boolean"
-          },
-          {
-            "name": "dc:relation.Duration",
-            "description": "Length in minutes and seconds - does not include ad breaks",
-            "example": "23:20",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.resourceType",
-            "description": "The type of the entry",
-            "example": "EPISODE",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.ParentCollectionId",
-            "description": "The ID of the Parent Collection where the resource is assigned to.",
-            "example": "tag:api.channel4.com,2009:/programmes/collections/e4-on-4od/4od",
-            "type": "string"
-          }
-        ],
-        "singleEntry": [
-          {
-            "name": "generator",
-            "description": "Identifies the agent used to generate the feed",
-            "example": "PMLSD",
-            "type": "string"
-          },
-          {
-            "name": "generator@version",
-            "description": "Identifies the version of the agent used to generate the feed",
-            "example": "1.27.1",
-            "type": "number"
-          },
-          {
-            "name": "dc:relation.platformClientVersion",
-            "description": "Identifies the version of the client application compatible with this feed.",
-            "example": "1.0",
-            "type": "number"
-          },
-          {
-            "name": "id",
-            "description": "ID containing Brand Web Safe Name",
-            "example": "tag:api.channel4.com,2009:/brand/a-cook-on-the-wild-side",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "The Programmes Brand Name",
-            "example": "Facejacker",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.Synopsys",
-            "description": "The synopsis of this brand",
-            "example": "The man of mystery returns. But he's put down his phone and now he's up close and personal! Disguised with the aid of prosthetics, Kayvan Novak (Fonejacker) plays a dazzling multitude of fictional characters.",
-            "type": "string"
-          },
-          {
-            "name": "updated",
-            "description": "Date and time feed last updated.",
-            "example": "2010-02-26T15:59:42.907Z",
-            "type": "date"
-          },
-          {
-            "name": "media:thumbnail",
-            "description": "URL to medium sized image of this brand",
-            "example": "http://.channel4.com/assets/programmes/images/marys-bottom-line/3ca5c4ff-18d6-46e2-aeb9-008619cd48ed_200x113.jpg",
-            "type": "uri"
-          },
-          {
-            "name": "link@self",
-            "description": "URL to self collection feed",
-            "example": "http://apì.channel4.com/pmlsd/4od-home-promo.atom",
-            "type": "uri"
-          },
-          {
-            "name": "Link@Related title=\"Episode Guide\"",
-            "description": "URL to brand episode guide feed",
-            "example": "http://api.channel4.com/pmlsd/facejacker/episode-guide.atom",
-            "type": "uri"
-          },
-          {
-            "name": "Link@Related title=\"4oD\"",
-            "description": "URL to Brand 4oD feed, if available",
-            "example": "http://api.channel4.com/pmlsd/facejacker/4od.atom",
-            "type": "uri"
-          },
-          {
-            "name": "dc:relation.resourceType",
-            "description": "The type of the entry",
-            "example": "BRAND",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.ParentCollectionId",
-            "description": "The ID of the Parent Collection where the resource is assigned to.",
-            "example": "tag:api.channel4.com,2009:/programmes/collections/e4-on-4od/4od",
-            "type": "string"
-          }
-        ],
-        "multipleEntry": [
-          {
-            "name": "id",
-            "description": "ID containing Series Web Safe Name",
-            "example": "tag:ios.int.channel4.com,2009:/programmes/jamie-at-home/episode-guide/series-1",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "The Programmes Series Name",
-            "example": "Series 1 - Jamie at Home",
-            "type": "string"
-          },
-          {
-            "name": "subtitle",
-            "description": "The synopsis of the series.",
-            "example": "The chef goes back to his roots, literally. From his Essex kitchen and garden, Jamie Oliver shows how easy it is to grow fantastic fruit and veg, and turn them into simple, delicious food.",
-            "type": "string"
-          },
-          {
-            "name": "updated",
-            "description": "Date and time feed last updated.",
-            "example": "2010-02-26T15:59:42.907Z",
-            "type": "date"
-          },
-          {
-            "name": "media:thumbnail",
-            "description": "URL to medium sized image of this series",
-            "example": "url=\"http://cache.int.channel4.com/assets/programmes/images/jamie-at-home/series-1/jamie-at-home-s1-20090617182359_200x113.jpg\" height=\"113\" width=\"200\" imageSource=\"fallback\" altText=\"Jamie Oliver\"",
-            "type": "string"
-          },
-          {
-            "name": "link@self",
-            "description": "Link to the Series Landing feed",
-            "example": "http://api.channel4.com/pmlsd/jamie-at-home/episode-guide/series-1.atom?platform=ios",
-            "type": "uri"
-          },
-          {
-            "name": "Link@Related title=\"4oD\"",
-            "description": "URL to Brand 4oD feed, if available",
-            "example": "http://api.channel4.com/pmlsd/jamie-at-home/4od.atom?platform=ios",
-            "type": "uri"
-          },
-          {
-            "name": "dc:relation.BrandTitle",
-            "description": "Title of the Brand for this Series",
-            "example": "Jamie at Home",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.SeriesNumber",
-            "description": "Number of series within brand",
-            "example": "1",
-            "type": "integer"
-          },
-          {
-            "name": "dc:relation.resourceType",
-            "description": "The type of the entry",
-            "example": "SERIES",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.ParentCollectionId",
-            "description": "The ID of the Parent Collection where the resource is assigned to.",
-            "example": "tag:api.channel4.com,2009:/programmes/collections/e4-on-4od/4od",
-            "type": "string"
-          }
-        ]
-      }
-    },
-    {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Collections_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Collections_Feed",
       "group": "discoveryresources",
       "operation": "Collections_Feed",
       "summary": "Collections Feed",
@@ -3983,7 +3592,398 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Most_Popular_Brands_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Flattened_Collection_Feed",
+      "group": "discoveryresources",
+      "operation": "Flattened_Collection_Feed",
+      "summary": "Flattened Collection Feed",
+      "output": {
+        "score": 68,
+        "urls": [
+          "http://api.channel4.com/pmlsd/collections/collection_name/flattened/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/collections/collection_name/flattened/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
+        ],
+        "sampleUrl": "http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xe",
+        "feedDescription": "The Flattened Collections Feed is only applicable for GROUP collections and its purpose is mainly return 3 items (BRAND, SERIES or EPSIODE) of each of the simple collections assigned to the GROUP.",
+        "parameters": [
+          {
+            "name": "collection_name",
+            "description": "Web safe title for the collection."
+          },
+          {
+            "name": "apikey",
+            "description": "24-character alphanumeric key provided to you when you registered your application at http://developer.channel4.com/apps/register."
+          }
+        ],
+        "feed": [
+          {
+            "name": "id",
+            "description": "Unique identifier of this feed",
+            "example": "tag:api.channel4.com,2009:/programmes/collections/4od-home-promo/flattened",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "Title of this feed",
+            "example": "LIVE",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.Synopsis",
+            "description": "Summary of this feed",
+            "example": "",
+            "type": "string"
+          },
+          {
+            "name": "updated",
+            "description": "Date and time feed last updated",
+            "example": "2012-09-07T08:56:11.526Z",
+            "type": "date"
+          },
+          {
+            "name": "author/name",
+            "description": "Identifier for author/company",
+            "example": "Channel 4 Television",
+            "type": "string"
+          },
+          {
+            "name": "logo",
+            "description": "Default image URL for location of author's logo",
+            "example": "http://www.channel4.com/static/programmes/images/c4-atom-logo.gif",
+            "type": "uri"
+          },
+          {
+            "name": "link@self",
+            "description": "URL of current feed",
+            "example": "",
+            "type": "string"
+          },
+          {
+            "name": "link@related",
+            "description": "This only appears in COLLECTION GROUP feed. URL to flattened view of same collection, including 3 entries for each of the collections which compound the GROUP.",
+            "example": "",
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "description": "ID of episode",
+            "example": "tag:www.channel4.com,2009:/programmes/the-it-crowd/4od%232921825",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "Title of episode",
+            "example": "Yesterday's Jam",
+            "type": "string"
+          },
+          {
+            "name": "updated",
+            "description": "Date & time entry last updated",
+            "example": "2010-10-18T11:09:12.665Z",
+            "type": "date"
+          },
+          {
+            "name": "summary",
+            "description": "Synopsis of episode",
+            "example": "The unloved and socially-awkward Roy and Moss give computer-illiterate Jen a less than lukewarm welcome to the IT department. Soon, however, they realise a female presence in their team can have its benefits...",
+            "type": "string"
+          },
+          {
+            "name": "link@alternate",
+            "description": "URL to HTML version, i.e., player page",
+            "example": "http://www.channel4.com/programmes/the-it-crowd/4od#2921825",
+            "type": "uri"
+          },
+          {
+            "name": "link@related",
+            "description": "URL to Episode Guide feed, if available",
+            "example": "http://api.channel4.com/pmlsd/the-it-crowd/episode-guide/series-1/episode-1.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "media:group / media:player",
+            "description": "URL to media-player version of episode",
+            "example": "http://www.channel4.com/programmes/the-it-crowd/4od#2921825",
+            "type": "uri"
+          },
+          {
+            "name": "media:group /media:thumbnail",
+            "description": "URL to medium-sized image of this episode",
+            "example": "url=\"http://www.channel4.com/assets/programmes/images/the-it-crowd/series-1/episode-1/the-it-crowd-s1e1_200x113.jpg\" height=\"113\" width=\"200\"",
+            "type": "string"
+          },
+          {
+            "name": "media:group /media:rating",
+            "description": "Flag to show whether episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")",
+            "example": "adult",
+            "type": "string"
+          },
+          {
+            "name": "media:group /media:copyright",
+            "description": "Link to copyright / T&C information",
+            "example": "url=\"http://www.channel4.com/terms_and_conditions.html\" Terms and Conditions",
+            "type": "string"
+          },
+          {
+            "name": "media:group /media:restriction",
+            "description": "Restriction flag (\"allow\") and list of country or state codes where episode is accessible to website users",
+            "example": "\"allow\" type=\"country\" GB,GG,IE,IM,JE",
+            "type": "string"
+          },
+          {
+            "name": "media:group /media:rights",
+            "description": "Status of media rights under which Channel 4 provides episode content",
+            "example": "\"official\"",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.BrandTitle",
+            "description": "Title of brand",
+            "example": "The IT Crowd",
+            "type": "string"
+          },
+          {
+            "name": "dcterms:available",
+            "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)",
+            "example": "start=2009-06-24T22:00:00.000Z;end=2011-01-24T00:00:00.000Z;scheme=W3C-DTF",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.SeriesNumber",
+            "description": "The series to which this episode belongs",
+            "example": "1",
+            "type": "integer"
+          },
+          {
+            "name": "dc:relation.EpisodeNumber",
+            "description": "The episode number within the series",
+            "example": "1",
+            "type": "integer"
+          },
+          {
+            "name": "dc:relation.programmeId",
+            "description": "Indicates the contract and programme numbers",
+            "example": "41227/001",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.RelatedEntryId",
+            "description": "The episode guide entry related to this episode",
+            "example": "tag:www.channel4.com,2009:/programmes/the-it-crowd/episode-guide/series-1/episode-1",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.AgeRating",
+            "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)",
+            "example": "0",
+            "type": "integer"
+          },
+          {
+            "name": "dc:relation.Guidance",
+            "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable",
+            "example": "Adult humour",
+            "type": "string"
+          },
+          {
+            "name": "dc:date.TXDate",
+            "description": "First TX date information for this episode",
+            "example": "2009-01-04T23:40:00.000Z",
+            "type": "date"
+          },
+          {
+            "name": "dc:relation.TXChannel",
+            "description": "First TX channel information for this episode",
+            "example": "M4",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.Subtitles",
+            "description": "Boolean indicating if subtitles are available for this episode",
+            "example": "true",
+            "type": "boolean"
+          },
+          {
+            "name": "dc:relation.AudioDescription",
+            "description": "Boolean indicating if an audio description is available for this episode",
+            "example": "false",
+            "type": "boolean"
+          },
+          {
+            "name": "dc:relation.LoginRequired",
+            "description": "Boolean indicating if the user has to be logged-in in order to play this episode.",
+            "example": "true",
+            "type": "boolean"
+          },
+          {
+            "name": "dc:relation.Duration",
+            "description": "Length in minutes and seconds - does not include ad breaks",
+            "example": "23:20",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.resourceType",
+            "description": "The type of the entry",
+            "example": "EPISODE",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.ParentCollectionId",
+            "description": "The ID of the Parent Collection where the resource is assigned to.",
+            "example": "tag:api.channel4.com,2009:/programmes/collections/e4-on-4od/4od",
+            "type": "string"
+          }
+        ],
+        "singleEntry": [
+          {
+            "name": "generator",
+            "description": "Identifies the agent used to generate the feed",
+            "example": "PMLSD",
+            "type": "string"
+          },
+          {
+            "name": "generator@version",
+            "description": "Identifies the version of the agent used to generate the feed",
+            "example": "1.27.1",
+            "type": "number"
+          },
+          {
+            "name": "dc:relation.platformClientVersion",
+            "description": "Identifies the version of the client application compatible with this feed.",
+            "example": "1.0",
+            "type": "number"
+          },
+          {
+            "name": "id",
+            "description": "ID containing Brand Web Safe Name",
+            "example": "tag:api.channel4.com,2009:/brand/a-cook-on-the-wild-side",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "The Programmes Brand Name",
+            "example": "Facejacker",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.Synopsys",
+            "description": "The synopsis of this brand",
+            "example": "The man of mystery returns. But he's put down his phone and now he's up close and personal! Disguised with the aid of prosthetics, Kayvan Novak (Fonejacker) plays a dazzling multitude of fictional characters.",
+            "type": "string"
+          },
+          {
+            "name": "updated",
+            "description": "Date and time feed last updated.",
+            "example": "2010-02-26T15:59:42.907Z",
+            "type": "date"
+          },
+          {
+            "name": "media:thumbnail",
+            "description": "URL to medium sized image of this brand",
+            "example": "http://.channel4.com/assets/programmes/images/marys-bottom-line/3ca5c4ff-18d6-46e2-aeb9-008619cd48ed_200x113.jpg",
+            "type": "uri"
+          },
+          {
+            "name": "link@self",
+            "description": "URL to self collection feed",
+            "example": "http://apì.channel4.com/pmlsd/4od-home-promo.atom",
+            "type": "uri"
+          },
+          {
+            "name": "Link@Related title=\"Episode Guide\"",
+            "description": "URL to brand episode guide feed",
+            "example": "http://api.channel4.com/pmlsd/facejacker/episode-guide.atom",
+            "type": "uri"
+          },
+          {
+            "name": "Link@Related title=\"4oD\"",
+            "description": "URL to Brand 4oD feed, if available",
+            "example": "http://api.channel4.com/pmlsd/facejacker/4od.atom",
+            "type": "uri"
+          },
+          {
+            "name": "dc:relation.resourceType",
+            "description": "The type of the entry",
+            "example": "BRAND",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.ParentCollectionId",
+            "description": "The ID of the Parent Collection where the resource is assigned to.",
+            "example": "tag:api.channel4.com,2009:/programmes/collections/e4-on-4od/4od",
+            "type": "string"
+          }
+        ],
+        "multipleEntry": [
+          {
+            "name": "id",
+            "description": "ID containing Series Web Safe Name",
+            "example": "tag:ios.int.channel4.com,2009:/programmes/jamie-at-home/episode-guide/series-1",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "The Programmes Series Name",
+            "example": "Series 1 - Jamie at Home",
+            "type": "string"
+          },
+          {
+            "name": "subtitle",
+            "description": "The synopsis of the series.",
+            "example": "The chef goes back to his roots, literally. From his Essex kitchen and garden, Jamie Oliver shows how easy it is to grow fantastic fruit and veg, and turn them into simple, delicious food.",
+            "type": "string"
+          },
+          {
+            "name": "updated",
+            "description": "Date and time feed last updated.",
+            "example": "2010-02-26T15:59:42.907Z",
+            "type": "date"
+          },
+          {
+            "name": "media:thumbnail",
+            "description": "URL to medium sized image of this series",
+            "example": "url=\"http://cache.int.channel4.com/assets/programmes/images/jamie-at-home/series-1/jamie-at-home-s1-20090617182359_200x113.jpg\" height=\"113\" width=\"200\" imageSource=\"fallback\" altText=\"Jamie Oliver\"",
+            "type": "string"
+          },
+          {
+            "name": "link@self",
+            "description": "Link to the Series Landing feed",
+            "example": "http://api.channel4.com/pmlsd/jamie-at-home/episode-guide/series-1.atom?platform=ios",
+            "type": "uri"
+          },
+          {
+            "name": "Link@Related title=\"4oD\"",
+            "description": "URL to Brand 4oD feed, if available",
+            "example": "http://api.channel4.com/pmlsd/jamie-at-home/4od.atom?platform=ios",
+            "type": "uri"
+          },
+          {
+            "name": "dc:relation.BrandTitle",
+            "description": "Title of the Brand for this Series",
+            "example": "Jamie at Home",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.SeriesNumber",
+            "description": "Number of series within brand",
+            "example": "1",
+            "type": "integer"
+          },
+          {
+            "name": "dc:relation.resourceType",
+            "description": "The type of the entry",
+            "example": "SERIES",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.ParentCollectionId",
+            "description": "The ID of the Parent Collection where the resource is assigned to.",
+            "example": "tag:api.channel4.com,2009:/programmes/collections/e4-on-4od/4od",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Most_Popular_Brands_Feed",
       "group": "discoveryresources",
       "operation": "Most_Popular_Brands_Feed",
       "summary": "Most Popular Brands Feed",
@@ -4204,7 +4204,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Popular_Brands_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Popular_Brands_Feed",
       "group": "discoveryresources",
       "operation": "Popular_Brands_Feed",
       "summary": "Popular Brands Feed",
@@ -4427,7 +4427,193 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-TV_Listings_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Search_Feed",
+      "group": "discoveryresources",
+      "operation": "Search_Feed",
+      "summary": "Search Feed",
+      "output": {
+        "score": 31,
+        "urls": [
+          "http://api.channel4.com/pmlsd/search.atom?q=search-term&apikey=xxx",
+          "http://api.channel4.com/pmlsd/search/search-term.atom?apikey=xxx"
+        ],
+        "sampleUrl": "http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&apikey=z4mwwux6yvahy4jz4xe3xeb4",
+        "feedDescription": "Lists all Channel 4 programmes where title (brand name) matching the search term. Matches are made from the beginning of individual words in the title.",
+        "parameters": [
+          {
+            "name": "q",
+            "description": "The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded."
+          },
+          {
+            "name": "apikey",
+            "description": "24-character alphanumeric key provided to you when you registered your application at http://developer.channel4.com/apps/register."
+          }
+        ],
+        "feed": [
+          {
+            "name": "id",
+            "description": "Unique identifier of this feed",
+            "example": "tag:api.channel4.com,2009:/programmes/search/search-term",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "Title of this feed",
+            "example": "Brand Search with SEARCH_TERM",
+            "type": "string"
+          },
+          {
+            "name": "updated",
+            "description": "Date and time feed last updated",
+            "example": "2012-05-01T13:15:04.810Z",
+            "type": "date"
+          },
+          {
+            "name": "author/name",
+            "description": "Identifier for author / company",
+            "example": "Channel 4 Television",
+            "type": "string"
+          },
+          {
+            "name": "logo",
+            "description": "Default image URL for location of author's logo",
+            "example": "http://www.channel4.com/static/programmes/images/c4-atom-logo.gif",
+            "type": "uri"
+          },
+          {
+            "name": "link@self",
+            "description": "URL of current feed",
+            "example": "http://api.channel4.com/pmlsd/search.atom?q=search-term&apikey=xxx",
+            "type": "uri"
+          },
+          {
+            "name": "link@next",
+            "description": "URL to next set of programmes with this letter, if available",
+            "example": "http://api.channel4.com/pmlsd/search/page-2.atom?q=search-term&apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "link@previous",
+            "description": "URL to previous set of programmes with this letter, if available",
+            "example": "http://api.channel4.com/pmlsd/search.atom?q=search-term&apikey=xxxxxxxxxxxxxxxxxxxxxxxx http://api.channel4.com/pmlsd/search.atom?q=search-term&apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "link@related",
+            "description": "4oD programmes in category by title",
+            "example": "http://api.channel4.com/pmlsd/search/4od.atom?q=search-term&apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "fh:complete",
+            "description": "Presence of this element indicates no pagination",
+            "example": "N/A",
+            "type": "string"
+          },
+          {
+            "name": "dc:relation.TotalResults",
+            "description": "Number of entries what match the search-term",
+            "example": "33",
+            "type": "integer"
+          },
+          {
+            "name": "dc:relation.StartOffset",
+            "description": "",
+            "example": "1",
+            "type": "integer"
+          },
+          {
+            "name": "generator",
+            "description": "Identifies the agent used to generate the feed",
+            "example": "PMLSD",
+            "type": "string"
+          },
+          {
+            "name": "generator@version",
+            "description": "Identifies the version of the agent used to generate the feed",
+            "example": "1.27.1",
+            "type": "number"
+          },
+          {
+            "name": "dc:relation.platformClientVersion",
+            "description": "Identifies the version of the client application compatible with this feed.",
+            "example": "1.0",
+            "type": "number"
+          }
+        ],
+        "singleEntry": [
+          {
+            "name": "id",
+            "description": "ID containing Brand Web Safe Name",
+            "example": "tag:api.channel4.com,2009:/programmes/the-it-crowd",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "description": "Programme's Brand Name",
+            "example": "The IT Crowd",
+            "type": "string"
+          },
+          {
+            "name": "summary",
+            "description": "Synopsis of this brand",
+            "example": "Award-winning comedy from writer Graham Linehan. Banished from the ivory towers of Reynholm Industries, the IT crowd lurk below ground, avoiding work and social contact in equal measure...",
+            "type": "string"
+          },
+          {
+            "name": "updated",
+            "description": "Date and time element last updated",
+            "example": "2011-09-28T14:51:57.848Z",
+            "type": "date"
+          },
+          {
+            "name": "dc:relation.ProgrammeType",
+            "description": "Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type.",
+            "example": "SSU",
+            "type": "string"
+          },
+          {
+            "name": "media:content / media:thumbnail",
+            "description": "URL to medium-sized image of this brand",
+            "example": "url=\"http://cache.channel4.com/assets/programmes/images/the-it-crowd/ac7edd25-9183-4fe1-b71f-e39238f9cfd7_200x113.jpg\" height=\"113\" width=\"200\"",
+            "type": "string"
+          },
+          {
+            "name": "link@alternate",
+            "description": "URL to HTML version of brand",
+            "example": "http://www.channel4.com/programmes/the-it-crowd",
+            "type": "uri"
+          },
+          {
+            "name": "link@self",
+            "description": "URL to the Channel 4 XML feed for this brand",
+            "example": "http://api.channel4.com/pmlsd/the-it-crowd.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "link@related (4oD)",
+            "description": "URL to 4oD feed, if available (self-referential in 4oD feeds)",
+            "example": "http://api.channel4.com/pmlsd/the-it-crowd/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "link@related (Clips)",
+            "description": "URL to short-form video feed, if available",
+            "example": "http://api.channel4.com/pmlsd/the-it-crowd/video.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          },
+          {
+            "name": "link@related (Episode Guide)",
+            "description": "URL to Episode Guide feed, if available",
+            "example": "http://api.channel4.com/pmlsd/the-it-crowd/episode-guide.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+            "type": "uri"
+          }
+        ],
+        "multipleEntry": []
+      }
+    },
+    {
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-discoveryresources-TV_Listings_Feed",
       "group": "discoveryresources",
       "operation": "TV_Listings_Feed",
       "summary": "TV Listings Feed",
@@ -4755,193 +4941,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-discoveryresources-Search_Feed",
-      "group": "discoveryresources",
-      "operation": "Search_Feed",
-      "summary": "Search Feed",
-      "output": {
-        "score": 31,
-        "urls": [
-          "http://api.channel4.com/pmlsd/search.atom?q=search-term&apikey=xxx",
-          "http://api.channel4.com/pmlsd/search/search-term.atom?apikey=xxx"
-        ],
-        "sampleUrl": "http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "feedDescription": "Lists all Channel 4 programmes where title (brand name) matching the search term. Matches are made from the beginning of individual words in the title.",
-        "parameters": [
-          {
-            "name": "q",
-            "description": "The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded."
-          },
-          {
-            "name": "apikey",
-            "description": "24-character alphanumeric key provided to you when you registered your application at http://developer.channel4.com/apps/register."
-          }
-        ],
-        "feed": [
-          {
-            "name": "id",
-            "description": "Unique identifier of this feed",
-            "example": "tag:api.channel4.com,2009:/programmes/search/search-term",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "Title of this feed",
-            "example": "Brand Search with SEARCH_TERM",
-            "type": "string"
-          },
-          {
-            "name": "updated",
-            "description": "Date and time feed last updated",
-            "example": "2012-05-01T13:15:04.810Z",
-            "type": "date"
-          },
-          {
-            "name": "author/name",
-            "description": "Identifier for author / company",
-            "example": "Channel 4 Television",
-            "type": "string"
-          },
-          {
-            "name": "logo",
-            "description": "Default image URL for location of author's logo",
-            "example": "http://www.channel4.com/static/programmes/images/c4-atom-logo.gif",
-            "type": "uri"
-          },
-          {
-            "name": "link@self",
-            "description": "URL of current feed",
-            "example": "http://api.channel4.com/pmlsd/search.atom?q=search-term&apikey=xxx",
-            "type": "uri"
-          },
-          {
-            "name": "link@next",
-            "description": "URL to next set of programmes with this letter, if available",
-            "example": "http://api.channel4.com/pmlsd/search/page-2.atom?q=search-term&apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "link@previous",
-            "description": "URL to previous set of programmes with this letter, if available",
-            "example": "http://api.channel4.com/pmlsd/search.atom?q=search-term&apikey=xxxxxxxxxxxxxxxxxxxxxxxx http://api.channel4.com/pmlsd/search.atom?q=search-term&apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "link@related",
-            "description": "4oD programmes in category by title",
-            "example": "http://api.channel4.com/pmlsd/search/4od.atom?q=search-term&apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "fh:complete",
-            "description": "Presence of this element indicates no pagination",
-            "example": "N/A",
-            "type": "string"
-          },
-          {
-            "name": "dc:relation.TotalResults",
-            "description": "Number of entries what match the search-term",
-            "example": "33",
-            "type": "integer"
-          },
-          {
-            "name": "dc:relation.StartOffset",
-            "description": "",
-            "example": "1",
-            "type": "integer"
-          },
-          {
-            "name": "generator",
-            "description": "Identifies the agent used to generate the feed",
-            "example": "PMLSD",
-            "type": "string"
-          },
-          {
-            "name": "generator@version",
-            "description": "Identifies the version of the agent used to generate the feed",
-            "example": "1.27.1",
-            "type": "number"
-          },
-          {
-            "name": "dc:relation.platformClientVersion",
-            "description": "Identifies the version of the client application compatible with this feed.",
-            "example": "1.0",
-            "type": "number"
-          }
-        ],
-        "singleEntry": [
-          {
-            "name": "id",
-            "description": "ID containing Brand Web Safe Name",
-            "example": "tag:api.channel4.com,2009:/programmes/the-it-crowd",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "description": "Programme's Brand Name",
-            "example": "The IT Crowd",
-            "type": "string"
-          },
-          {
-            "name": "summary",
-            "description": "Synopsis of this brand",
-            "example": "Award-winning comedy from writer Graham Linehan. Banished from the ivory towers of Reynholm Industries, the IT crowd lurk below ground, avoiding work and social contact in equal measure...",
-            "type": "string"
-          },
-          {
-            "name": "updated",
-            "description": "Date and time element last updated",
-            "example": "2011-09-28T14:51:57.848Z",
-            "type": "date"
-          },
-          {
-            "name": "dc:relation.ProgrammeType",
-            "description": "Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type.",
-            "example": "SSU",
-            "type": "string"
-          },
-          {
-            "name": "media:content / media:thumbnail",
-            "description": "URL to medium-sized image of this brand",
-            "example": "url=\"http://cache.channel4.com/assets/programmes/images/the-it-crowd/ac7edd25-9183-4fe1-b71f-e39238f9cfd7_200x113.jpg\" height=\"113\" width=\"200\"",
-            "type": "string"
-          },
-          {
-            "name": "link@alternate",
-            "description": "URL to HTML version of brand",
-            "example": "http://www.channel4.com/programmes/the-it-crowd",
-            "type": "uri"
-          },
-          {
-            "name": "link@self",
-            "description": "URL to the Channel 4 XML feed for this brand",
-            "example": "http://api.channel4.com/pmlsd/the-it-crowd.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "link@related (4oD)",
-            "description": "URL to 4oD feed, if available (self-referential in 4oD feeds)",
-            "example": "http://api.channel4.com/pmlsd/the-it-crowd/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "link@related (Clips)",
-            "description": "URL to short-form video feed, if available",
-            "example": "http://api.channel4.com/pmlsd/the-it-crowd/video.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          },
-          {
-            "name": "link@related (Episode Guide)",
-            "description": "URL to Episode Guide feed, if available",
-            "example": "http://api.channel4.com/pmlsd/the-it-crowd/episode-guide.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-            "type": "uri"
-          }
-        ],
-        "multipleEntry": []
-      }
-    },
-    {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-4oD_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-metadataresources-4oD_Feed",
       "group": "metadataresources",
       "operation": "4oD_Feed",
       "summary": "4oD Feed",
@@ -5433,7 +5433,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Brand_EPG_Atom_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Brand_EPG_Atom_Feed",
       "group": "metadataresources",
       "operation": "Brand_EPG_Atom_Feed",
       "summary": "Brand EPG Atom Feed",
@@ -5654,7 +5654,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Clip_Detail_Atom_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Clip_Detail_Atom_Feed",
       "group": "metadataresources",
       "operation": "Clip_Detail_Atom_Feed",
       "summary": "Clip Detail Atom Feed",
@@ -5854,7 +5854,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
       "group": "metadataresources",
       "operation": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
       "summary": "Clips Landing Feed Brand Series and Episode Levels",
@@ -6115,7 +6115,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Coming_Soon_feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Coming_Soon_feed",
       "group": "metadataresources",
       "operation": "Coming_Soon_feed",
       "summary": "Coming Soon feed",
@@ -6385,7 +6385,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Episode_Guide_Feed_Episode_Detail",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Episode_Guide_Feed_Episode_Detail",
       "group": "metadataresources",
       "operation": "Episode_Guide_Feed_Episode_Detail",
       "summary": "Episode Guide Feed Episode Detail",
@@ -6541,7 +6541,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Episode_Guide_Feed_Series_Detail",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Episode_Guide_Feed_Series_Detail",
       "group": "metadataresources",
       "operation": "Episode_Guide_Feed_Series_Detail",
       "summary": "Episode Guide Feed Series Detail",
@@ -6712,7 +6712,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Episode_Guide_Feed_Series_Landing",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Episode_Guide_Feed_Series_Landing",
       "group": "metadataresources",
       "operation": "Episode_Guide_Feed_Series_Landing",
       "summary": "Episode Guide Feed Series Landing",
@@ -6921,7 +6921,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Hub_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Hub_Feed",
       "group": "metadataresources",
       "operation": "Hub_Feed",
       "summary": "Hub Feed",
@@ -7208,7 +7208,7 @@
       }
     },
     {
-      "filename": "apiSource\\developer.channel4.com-docs-read-programmesapiguide-metadataresources-Programme_Feed",
+      "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-metadataresources-Programme_Feed",
       "group": "metadataresources",
       "operation": "Programme_Feed",
       "summary": "Programme Feed",

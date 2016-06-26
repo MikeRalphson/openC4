@@ -7,6 +7,8 @@
     "example": "examples"
   },
   "dependencies": {
+	"cheerio": "latest",
+	"request": "latest",
     "word-wrap": "^1.1.0"
   },
   "devDependencies": {},

@@ -1,7 +1,6 @@
 var fs = require('fs');
 var path = require('path');
 
-var rr = require('recursive-readdir');
 var cheerio = require('cheerio');
 var validator = require('is-my-json-valid')
 var wrap = require('word-wrap');
@@ -236,14 +235,13 @@ function processFile(filename){
 }
 
 function processPath(filespec){
-	rr(filespec, function (err, files) {
-		for (var f in files) {
-			var filename = files[f].toLocaleLowerCase();
-			if ((filename.indexOf('feed')>=0) || (filename.indexOf('_by_')>=0)) {
-				processFile(files[f]);
-			}
+	var files = fs.readdirSync(filespec).sort();
+	for (var f in files) {
+		var filename = files[f].toLocaleLowerCase();
+		if ((filename.indexOf('feed')>=0) || (filename.indexOf('_by_')>=0)) {
+			processFile('./apiSource/'+files[f]);
 		}
-	});
+	}
 }
 
 function definePath(file,url,suffix) {
@@ -260,11 +258,12 @@ function definePath(file,url,suffix) {
 	path.get.parameters = [];
 
 	var param = {};
-	param.name = 'platform';
-	param.type = 'string';
-	param["enum"] = ['c4','ps3','yv','ios','p06','flashmobile','freesat','android','samsung'];
-	param["in"] = 'query';
-	param.required = false;
+	//param.name = 'platform';
+	//param.type = 'string';
+	//param["enum"] = ['c4','ps3','yv','ios','p06','flashmobile','freesat','android','samsung'];
+	//param["in"] = 'query';
+	//param.required = false;
+	param["$ref"] = '#/parameters/platform';
 	path.get.parameters.push(param);
 
 	path.get.responses = {};
@@ -427,6 +426,24 @@ var swagStr = `{
 	  "produces": [
 		"application/xml"
 	  ],
+	  "parameters": {
+		"platform": {
+		  "name": "platform",
+		  "type": "string",
+		  "in": "query",
+		  "enum": [
+              "c4",
+              "ps3",
+              "yv",
+              "ios",
+              "p06",
+              "flashmobile",
+              "freesat",
+              "android",
+              "samsung"
+		  ]
+		}
+	  },
 	  "paths": {
 	  },
 	  "definitions": {
