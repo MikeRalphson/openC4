@@ -1,0 +1,36 @@
+{
+  "name": "openc4",
+  "version": "1.0.0",
+  "description": "Open Channel 4 SDK",
+  "main": "parseApi.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "word-wrap": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mermade/openC4.git"
+  },
+  "keywords": [
+    "channel4",
+    "sdk",
+    "entertainment",
+    "c4",
+    "film4",
+    "e4",
+    "television",
+    "tv"
+  ],
+  "author": "Mike Ralphson",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/Mermade/openC4/issues"
+  },
+  "homepage": "https://github.com/Mermade/openC4#readme"
+}

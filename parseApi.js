@@ -1,8 +1,11 @@
 var fs = require('fs');
+var path = require('path');
 
 var rr = require('recursive-readdir');
 var cheerio = require('cheerio');
 var validator = require('is-my-json-valid')
+var wrap = require('word-wrap');
+var swag2sdk = require('swagger2jsSdk');
 
 var swaggerSchema = require('./validation/swagger2Schema.json');
 
@@ -104,10 +107,12 @@ function postProcess(src) {
 					url = url.replaceAll('xxorhttp','xx http');
 					url = url.replaceAll('series number','series_number');
 					url = url.replaceAll('episode number','episode_number');
+					url = url.replaceAll('episode number','episode_number');
+					url = url.replaceAll('collection-name','collection_name');
 					var urls = url.split(' ');
 
 					if (urls[0].indexOf('[/4od]')>0) {
-						urls[0] = urls[0].replace('[/4od]','/[4od]');
+						urls[0] = urls[0].replace('[/4od]','/4od');
 						urls.push(urls[0].replace('/[4od]',''));
 					}
 
@@ -126,11 +131,14 @@ function postProcess(src) {
 					param.name = cols[0];
 					param.name = param.name.replaceAll('series number','series_number');
 					param.name = param.name.replaceAll('episode number','episode_number');
+					param.name = param.name.replaceAll('collection name','collection_name');
 					param.name = param.name.replaceAll('[','');
 					param.name = param.name.replaceAll(']','');
 					param.name = param.name.replaceAll('yyyy/mm/dd','yyyy.mm.dd');
 					param.description = cols[1];
-					result.parameters.push(param);
+					if (param.name != '4od') {
+						result.parameters.push(param);
+					}
 					result.score++;
 				}
 			}
@@ -241,7 +249,7 @@ function processPath(filespec){
 function definePath(file,url,suffix) {
 	var path = {};
 	path.get = {};
-	path.get.description = file.output.description;
+	path.get.description = wrap(file.output.feedDescription+'\n'+url+'\n'+file.output.sampleUrl,{width: 76});
 	path.get.summary = file.summary+suffix;
 	path.get.tags = [];
 	path.get.tags.push(file.group);
@@ -480,5 +488,6 @@ process.on('exit', function(code) {
 	else {
 		console.log('Writing swagger spec');
 		fs.writeFileSync('./c4Api/swagger.json',JSON.stringify(swagger,null,2),'utf8');
+		swag2sdk.swagger2jsSdk(path.resolve('./c4Api/swagger.json'),path.resolve('./c4Api/c4Api.js'));
 	}
 });
