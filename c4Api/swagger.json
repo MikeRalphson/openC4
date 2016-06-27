@@ -89,8 +89,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/atoz/{start_letter}.atom": {
@@ -121,8 +120,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/4od/episode-list/date/{yyyy.mm.dd}.atom": {
@@ -153,8 +151,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/4od/recently-added/videos.atom": {
@@ -179,8 +176,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/4od/episode-list/popular.atom": {
@@ -205,8 +201,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/brands/4od/popular.atom": {
@@ -231,8 +226,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/categories/{category}/4od.atom": {
@@ -263,8 +257,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/categories/{category}/4od/title.atom": {
@@ -295,8 +288,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/brands/4od.atom": {
@@ -321,8 +313,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/categories/{category}.atom": {
@@ -353,8 +344,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/categories/{category}/title.atom": {
@@ -385,8 +375,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/categories.atom": {
@@ -411,8 +400,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/collections/{collection_name}/4od.atom": {
@@ -443,8 +431,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/collections/{collection_name}/flattened/4od.atom": {
@@ -475,8 +462,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/categories/{category}/4od/popular.atom": {
@@ -507,8 +493,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/brands/popular.atom": {
@@ -533,8 +518,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/search.atom": {
@@ -565,8 +549,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/search/{q}.atom": {
@@ -597,8 +580,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/tv-listings/daily/{yyyy.mm.dd}.atom": {
@@ -629,8 +611,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/tv-listings/daily/{yyyy.mm.dd}/{channel}.atom": {
@@ -667,8 +648,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/{brand-web-safe-title}/4od.atom": {
@@ -699,8 +679,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/{brand-web-safe-title}/epg.atom": {
@@ -731,8 +710,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/{brand-web-safe-title}/videos/{clip-asset-id}.atom": {
@@ -769,8 +747,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/{brand-web-safe-title}/videos/all.atom": {
@@ -801,8 +778,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/{brand-web-safe-title}/videos/series-{SERIES_SEQUENCE_NUMBER}.atom": {
@@ -839,8 +815,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/{brand-web-safe-title}/videos/series-{SERIES_SEQUENCE_NUMBER}/episode-{EPISODE_SEQUENCE_NUMBER}.atom": {
@@ -883,8 +858,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/coming-soon.atom": {
@@ -909,8 +883,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/coming-soon/{category}.atom": {
@@ -941,8 +914,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/{brand-web-safe-title}/episode-guide/series-{series_number}/episode-{episode_number}.atom": {
@@ -985,8 +957,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/{brand-web-safe-title}/episode-guide/series-{series_number}.atom": {
@@ -1023,8 +994,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/{brand-web-safe-title}/episode-guide.atom": {
@@ -1055,8 +1025,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/{brand-web-safe-title}.atom": {
@@ -1087,8 +1056,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     },
     "/programme/{programme-id}.atom": {
@@ -1119,8 +1087,7 @@
               "$ref": "#/definitions/atom"
             }
           }
-        },
-        "security": []
+        }
       }
     }
   },

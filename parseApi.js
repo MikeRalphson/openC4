@@ -266,7 +266,7 @@ function definePath(file,url,suffix) {
 	path.get.responses["200"].description = 'Default response';
 	path.get.responses["200"].schema = {};
 	path.get.responses["200"].schema["$ref"] = '#/definitions/atom'
-	path.get.security = [];
+	//path.get.security = [];
 
 	return path;
 }
