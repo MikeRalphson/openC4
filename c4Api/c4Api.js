@@ -440,5 +440,5 @@ module.exports = {
   getEpisodeGuide : getEpisodeGuide,
   get : get,
   getProgramme : getProgramme,
-  host : 'channel4.com'
+  host : 'api.channel4.com'
 };

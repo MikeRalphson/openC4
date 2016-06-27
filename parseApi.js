@@ -403,7 +403,7 @@ var swagStr = `{
 		"description": "Programmes API Guide",
 		"url": "http://developer.channel4.com/docs/read/ProgrammesAPIGuide"
 	  },
-	  "host": "channel4.com",
+	  "host": "api.channel4.com",
 	  "basePath": "/pmlsd",
 	  "tags" : [{
 			"name" : "discoveryresources",
