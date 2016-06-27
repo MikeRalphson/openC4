@@ -4,7 +4,7 @@ var path = require('path');
 var cheerio = require('cheerio');
 var validator = require('is-my-json-valid')
 var wrap = require('word-wrap');
-var swag2sdk = require('swagger2jsSdk');
+var oa2js = require('openapi2js');
 
 var swaggerSchema = require('./validation/swagger2Schema.json');
 
@@ -505,6 +505,7 @@ process.on('exit', function(code) {
 	else {
 		console.log('Writing swagger spec');
 		fs.writeFileSync('./c4Api/swagger.json',JSON.stringify(swagger,null,2),'utf8');
-		swag2sdk.swagger2jsSdk(path.resolve('./c4Api/swagger.json'),path.resolve('./c4Api/c4Api.js'));
+		console.log('Writing JS API definitions');
+		oa2js.openAPI2js(swagger,'./c4Api/c4Api.js');
 	}
 });

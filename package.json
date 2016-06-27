@@ -9,7 +9,9 @@
   "dependencies": {
 	"cheerio": "latest",
 	"request": "latest",
-    "word-wrap": "^1.1.0"
+	"is-my-json-valid": "latest",
+	"word-wrap": "^1.1.0",
+	"openapi2js": "latest"
   },
   "devDependencies": {},
   "scripts": {

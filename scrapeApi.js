@@ -1,7 +1,6 @@
 var fs = require('fs');
 var cheerio = require("cheerio");
 var request = require("request");
-//var sqlite3 = require("sqlite3").verbose();
 
 var seen = [];
 var cookies = [];
