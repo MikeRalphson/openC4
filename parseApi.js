@@ -468,14 +468,14 @@ var swagStr = `{
 		  }
 	  },
       "securityDefinitions" : {
-		"api_key" : {
+		"apikey" : {
 			"type" : "apiKey",
 			"name" : "apikey",
 			"in" : "query"
 		}
 	  },
 	  "security": [{
-		  "api_key" : []
+		  "apikey" : []
 	  }]
 	}`;
 swagger = JSON.parse(swagStr);
