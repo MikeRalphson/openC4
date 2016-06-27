@@ -272,43 +272,45 @@ function definePath(file,url,suffix) {
 }
 
 function addProperties(target,item) {
-	var newProp = {};
-	if (item.type == 'date') {
-		newProp.type = 'string';
-		newProp.format = 'date-time';
-	}
-	else if (item.type == 'uri') {
-		newProp.type = 'string';
-		newProp.format = 'uri';
-	}
-	else if (item.type.startsWith('enum ')) {
-		var type = item.type.replace('enum ','');
-		type = type.replaceAll(' or ',' ');
-		type = type.replaceAll(' OR ',' ');
-		var entries = type.split(' ');
-		newProp.type = 'string';
-		newProp["enum"] = entries;
-	}
-	else {
-		newProp.type = item.type;
-	}
-	newProp.description = item.description;
-
-	var path = item.name.split('/');
-	if (path.length>1) {
-		for (var p=0;p<path.length-1;p++) {
-			var comp = path[p].trim();
-			if ((!target[comp]) || (!target[comp].properties)) {
-				target[comp] = {};
-				target[comp].type = 'object';
-				target[comp].properties = {};
-			}
-			target = target[comp].properties;
+	if (item.name) {
+		var newProp = {};
+		if (item.type == 'date') {
+			newProp.type = 'string';
+			newProp.format = 'date-time';
 		}
-		target[path[path.length-1].trim()] = newProp;
-	}
-	else {
-		target[item.name] = newProp;
+		else if (item.type == 'uri') {
+			newProp.type = 'string';
+			newProp.format = 'uri';
+		}
+		else if (item.type.startsWith('enum ')) {
+			var type = item.type.replace('enum ','');
+			type = type.replaceAll(' or ',' ');
+			type = type.replaceAll(' OR ',' ');
+			var entries = type.split(' ');
+			newProp.type = 'string';
+			newProp["enum"] = entries;
+		}
+		else {
+			newProp.type = item.type;
+		}
+		newProp.description = item.description;
+
+		var path = item.name.split('/');
+		if (path.length>1) {
+			for (var p=0;p<path.length-1;p++) {
+				var comp = path[p].trim();
+				if ((!target[comp]) || (!target[comp].properties)) {
+					target[comp] = {};
+					target[comp].type = 'object';
+					target[comp].properties = {};
+				}
+				target = target[comp].properties;
+			}
+			target[path[path.length-1].trim()] = newProp;
+		}
+		else {
+			target[item.name] = newProp;
+		}
 	}
 }
 

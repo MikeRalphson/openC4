@@ -1283,10 +1283,6 @@
           "type": "string",
           "description": "Indicates the contract and programme numbers"
         },
-        "": {
-          "type": "string",
-          "description": ""
-        },
         "media:group": {
           "type": "object",
           "properties": {
