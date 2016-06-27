@@ -2,7 +2,7 @@
   "files": [
     {
       "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-DiscoveryResources-A_to_Z_Landing_Feed",
-      "group": "DiscoveryResources",
+      "group": "discoveryresources",
       "operation": "A_to_Z_Landing_Feed",
       "summary": "A to Z Landing Feed",
       "output": {
@@ -129,7 +129,7 @@
     },
     {
       "filename": "./apiSource/developer.channel4.com-docs-read-programmesapiguide-DiscoveryResources-A_to_Z_Letter_Feed",
-      "group": "DiscoveryResources",
+      "group": "discoveryresources",
       "operation": "A_to_Z_Letter_Feed",
       "summary": "A to Z Letter Feed",
       "output": {

@@ -72,7 +72,7 @@
         "description": "  Lists Channel 4 programmes alphabetically from A to Z, providing the same \n  functionality and information as is available in the A to Z section of the \n  Channel 4 Programmes page, http://www.channel4.com/programmes.\n\n  http://api.channel4.com/pmlsd/atoz.atom\n\n  http://api.channel4.com/pmlsd/atoz.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
         "summary": "A to Z Landing Feed",
         "tags": [
-          "DiscoveryResources"
+          "discoveryresources"
         ],
         "operationId": "A_to_Z_Landing_Feed",
         "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Landing_Feed",
@@ -98,7 +98,7 @@
         "description": "  Lists Channel 4 programmes whose names begin with the associated letter.\n\n  http://api.channel4.com/pmlsd/atoz/start_letter.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/atoz/a.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
         "summary": "A to Z Letter Feed",
         "tags": [
-          "DiscoveryResources"
+          "discoveryresources"
         ],
         "operationId": "A_to_Z_Letter_Feed",
         "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Letter_Feed",

@@ -167,7 +167,7 @@ function processFile(filename){
 	var file = {};
 	file.filename = filename;
 	var fc = filename.split('-');
-	file.group = fc[4];
+	file.group = fc[4].toLocaleLowerCase();
 	file.operation = fc[5];
 	file.summary = fc[5].replaceAll('_',' ');
 	file.content = {};
