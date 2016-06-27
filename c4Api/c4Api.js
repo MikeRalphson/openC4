@@ -35,9 +35,11 @@ function getAtoz2(startLetter){
   http://api.channel4.com/pmlsd/4od/episode-list/date/[yyyy]/[mm]/[dd].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/4od/episode-list/date/2010/11/28.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4 */
-function get4odEpisodeListDate(yyyyMmDd){
-  var p = '/pmlsd/4od/episode-list/date/{yyyy.mm.dd}.atom';
-  p = p.replace('{yyyy.mm.dd}',yyyyMmDd);
+function get4odEpisodeListDate(yyyy,mm,dd){
+  var p = '/pmlsd/4od/episode-list/date/{yyyy}/{mm}/{dd}.atom';
+  p = p.replace('{yyyy}',yyyy);
+  p = p.replace('{mm}',mm);
+  p = p.replace('{dd}',dd);
   return p;
 }
 
@@ -206,9 +208,11 @@ function getSearch2(q){
   http://api.channel4.com/pmlsd/tv-listings/daily/[yyyy]/[mm]/[dd].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/tv-listings/daily/2010/11/28.atom?apikey=xxxxxxx */
-function getTvListingsDaily(yyyyMmDd){
-  var p = '/pmlsd/tv-listings/daily/{yyyy.mm.dd}.atom';
-  p = p.replace('{yyyy.mm.dd}',yyyyMmDd);
+function getTvListingsDaily(yyyy,mm,dd){
+  var p = '/pmlsd/tv-listings/daily/{yyyy}/{mm}/{dd}.atom';
+  p = p.replace('{yyyy}',yyyy);
+  p = p.replace('{mm}',mm);
+  p = p.replace('{dd}',dd);
   return p;
 }
 
@@ -218,9 +222,11 @@ function getTvListingsDaily(yyyyMmDd){
   http://api.channel4.com/pmlsd/tv-listings/daily/[yyyy]/[mm]/[dd]/[channel].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/tv-listings/daily/2010/11/28.atom?apikey=xxxxxxx */
-function getTvListingsDaily2(yyyyMmDd,channel){
-  var p = '/pmlsd/tv-listings/daily/{yyyy.mm.dd}/{channel}.atom';
-  p = p.replace('{yyyy.mm.dd}',yyyyMmDd);
+function getTvListingsDaily/(yyyy,mm,dd,channel){
+  var p = '/pmlsd/tv-listings/daily/{yyyy}/{mm}/{dd}/{channel}.atom';
+  p = p.replace('{yyyy}',yyyy);
+  p = p.replace('{mm}',mm);
+  p = p.replace('{dd}',dd);
   p = p.replace('{channel}',channel);
   return p;
 }
@@ -426,7 +432,7 @@ module.exports = {
   getSearch : getSearch,
   getSearch2 : getSearch2,
   getTvListingsDaily : getTvListingsDaily,
-  getTvListingsDaily2 : getTvListingsDaily2,
+  getTvListingsDaily/ : getTvListingsDaily/,
   get4od : get4od,
   getEpg : getEpg,
   getVideos : getVideos,

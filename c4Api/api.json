@@ -344,7 +344,15 @@
         "feedDescription": "Information of daily broadcast content available on 4oD, according to broadcast date",
         "parameters": [
           {
-            "name": "yyyy.mm.dd",
+            "name": "yyyy",
+            "description": "The date for which you wish to see programming information"
+          },
+          {
+            "name": "mm",
+            "description": "The date for which you wish to see programming information"
+          },
+          {
+            "name": "dd",
             "description": "The date for which you wish to see programming information"
           },
           {
@@ -4627,7 +4635,15 @@
         "feedDescription": "EPG Information of daily broadcast content aired per channels, according to broadcast date",
         "parameters": [
           {
-            "name": "yyyy.mm.dd",
+            "name": "yyyy",
+            "description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
+          },
+          {
+            "name": "mm",
+            "description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
+          },
+          {
+            "name": "dd",
             "description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
           },
           {

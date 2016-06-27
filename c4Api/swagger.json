@@ -123,7 +123,7 @@
         }
       }
     },
-    "/4od/episode-list/date/{yyyy.mm.dd}.atom": {
+    "/4od/episode-list/date/{yyyy}/{mm}/{dd}.atom": {
       "get": {
         "description": "  Information of daily broadcast content available on 4oD, according to \n  broadcast date\n\n  http://api.channel4.com/pmlsd/4od/episode-list/date/[yyyy]/[mm]/[dd].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/4od/episode-list/date/2010/11/28.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
         "summary": "4oD Browse by Date Feed",
@@ -138,7 +138,19 @@
             "$ref": "#/parameters/platform"
           },
           {
-            "name": "yyyy.mm.dd",
+            "name": "yyyy",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "mm",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "dd",
             "type": "string",
             "in": "path",
             "required": true
@@ -583,7 +595,7 @@
         }
       }
     },
-    "/tv-listings/daily/{yyyy.mm.dd}.atom": {
+    "/tv-listings/daily/{yyyy}/{mm}/{dd}.atom": {
       "get": {
         "description": "  EPG Information of daily broadcast content aired per channels, according to \n  broadcast date\n\n  http://api.channel4.com/pmlsd/tv-listings/daily/[yyyy]/[mm]/[dd].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/tv-listings/daily/2010/11/28.atom?apikey=xxxxxxx",
         "summary": "TV Listings Feed",
@@ -598,7 +610,19 @@
             "$ref": "#/parameters/platform"
           },
           {
-            "name": "yyyy.mm.dd",
+            "name": "yyyy",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "mm",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "dd",
             "type": "string",
             "in": "path",
             "required": true
@@ -614,7 +638,7 @@
         }
       }
     },
-    "/tv-listings/daily/{yyyy.mm.dd}/{channel}.atom": {
+    "/tv-listings/daily/{yyyy}/{mm}/{dd}/{channel}.atom": {
       "get": {
         "description": "  EPG Information of daily broadcast content aired per channels, according to \n  broadcast date\n\n  http://api.channel4.com/pmlsd/tv-listings/daily/[yyyy]/[mm]/[dd]/[channel].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/tv-listings/daily/2010/11/28.atom?apikey=xxxxxxx",
         "summary": "TV Listings Feed(2)",
@@ -629,7 +653,19 @@
             "$ref": "#/parameters/platform"
           },
           {
-            "name": "yyyy.mm.dd",
+            "name": "yyyy",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "mm",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "dd",
             "type": "string",
             "in": "path",
             "required": true

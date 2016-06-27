@@ -17,6 +17,10 @@ String.prototype.replaceAll = function(search, replacement) {
     return target.split(search).join(replacement);
 };
 
+function clone(obj) {
+	return JSON.parse(JSON.stringify(obj));
+}
+
 function clean(s) {
 	var result = s.replaceAll('\n',' ');
 	while (result.indexOf('  ')>=0) {
@@ -114,6 +118,9 @@ function postProcess(src) {
 						urls[0] = urls[0].replace('[/4od]','/4od');
 						urls.push(urls[0].replace('/[4od]',''));
 					}
+					if (urls[0].indexOf('[yyyy/mm/dd]')>0) {
+						urls[0] = urls[0].replace('[yyyy/mm/dd]','[yyyy]/[mm]/[dd]');
+					}
 
 					result.urls = result.urls.concat(urls);
 					result.score++;
@@ -133,10 +140,18 @@ function postProcess(src) {
 					param.name = param.name.replaceAll('collection name','collection_name');
 					param.name = param.name.replaceAll('[','');
 					param.name = param.name.replaceAll(']','');
-					param.name = param.name.replaceAll('yyyy/mm/dd','yyyy.mm.dd');
+					param.name = param.name.replaceAll('yyyy/mm/dd','yyyy');
 					param.description = cols[1];
 					if (param.name != '4od') {
 						result.parameters.push(param);
+						if (param.name == 'yyyy') {
+							var param2 = clone(param);
+							param2.name = 'mm';
+							result.parameters.push(param2);
+							var param3 = clone(param);
+							param3.name = 'dd';
+							result.parameters.push(param3);
+						}
 					}
 					result.score++;
 				}
@@ -333,7 +348,7 @@ function generateSwagger(){
 			url = url.replaceAll(']','}');
 
 			url = url.replace('search-term.','{q}.');
-			url = url.replace('{yyyy}/{mm}/{dd}','{yyyy.mm.dd}');
+			//url = url.replace('{yyyy}/{mm}/{dd}','{yyyy.mm.dd}');
 
 			for (var p in file.output.parameters) {
 				var param = file.output.parameters[p];
@@ -498,6 +513,7 @@ process.on('exit', function(code) {
 	var errors = validate.errors;
 	if (errors) {
 		console.log(errors);
+		fs.writeFileSync('./c4Api/swagger.err',JSON.stringify(swagger,null,2),'utf8');
 	}
 	else {
 		console.log('Writing swagger spec');
