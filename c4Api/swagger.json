@@ -418,6 +418,37 @@
     "/collections/{collection_name}/4od.atom": {
       "get": {
         "description": "  Collections are editorially controlled groups of brands, series, episodes or \n  other collections used for promotion and discovery of content. A SIMPLE \n  collection can contain an assortment of Brands, Series, Episodes or Freeform \n  items. A GROUP collection contains other collections.\n\n  http://api.channel4.com/pmlsd/collections/collection_name/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/collections/4od-home-promo/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xe",
+        "summary": "Collections Feed",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Collections_Feed",
+        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Collections_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "collection_name",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collection_name}.atom": {
+      "get": {
+        "description": "  Collections are editorially controlled groups of brands, series, episodes or \n  other collections used for promotion and discovery of content. A SIMPLE \n  collection can contain an assortment of Brands, Series, Episodes or Freeform \n  items. A GROUP collection contains other collections.\n\n  http://api.channel4.com/pmlsd/collections/collection_name.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/collections/4od-home-promo/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xe",
         "summary": "Collections Feed(2)",
         "tags": [
           "discoveryresources"
@@ -449,6 +480,37 @@
     "/collections/{collection_name}/flattened/4od.atom": {
       "get": {
         "description": "  The Flattened Collections Feed is only applicable for GROUP collections and \n  its purpose is mainly return 3 items (BRAND, SERIES or EPSIODE) of each of \n  the simple collections assigned to the GROUP.\n\n  http://api.channel4.com/pmlsd/collections/collection_name/flattened/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xe",
+        "summary": "Flattened Collection Feed",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Flattened_Collection_Feed",
+        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Flattened_Collection_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "collection_name",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collection_name}/flattened.atom": {
+      "get": {
+        "description": "  The Flattened Collections Feed is only applicable for GROUP collections and \n  its purpose is mainly return 3 items (BRAND, SERIES or EPSIODE) of each of \n  the simple collections assigned to the GROUP.\n\n  http://api.channel4.com/pmlsd/collections/collection_name/flattened.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xe",
         "summary": "Flattened Collection Feed(2)",
         "tags": [
           "discoveryresources"

@@ -115,8 +115,8 @@ function postProcess(src) {
 					var urls = url.split(' ');
 
 					if (urls[0].indexOf('[/4od]')>0) {
+						urls.push(urls[0].replace('[/4od]',''));
 						urls[0] = urls[0].replace('[/4od]','/4od');
-						urls.push(urls[0].replace('/[4od]',''));
 					}
 					if (urls[0].indexOf('[yyyy/mm/dd]')>0) {
 						urls[0] = urls[0].replace('[yyyy/mm/dd]','[yyyy]/[mm]/[dd]');

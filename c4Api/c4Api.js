@@ -148,6 +148,20 @@ function getCollections4od(collectionName){
   return p;
 }
 
+/*   Collections are editorially controlled groups of brands, series, episodes or 
+  other collections used for promotion and discovery of content. A SIMPLE 
+  collection can contain an assortment of Brands, Series, Episodes or Freeform 
+  items. A GROUP collection contains other collections.
+
+  http://api.channel4.com/pmlsd/collections/collection_name.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/collections/4od-home-promo/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xe */
+function getCollections(collectionName){
+  var p = '/pmlsd/collections/{collection_name}.atom';
+  p = p.replace('{collection_name}',collectionName);
+  return p;
+}
+
 /*   The Flattened Collections Feed is only applicable for GROUP collections and 
   its purpose is mainly return 3 items (BRAND, SERIES or EPSIODE) of each of 
   the simple collections assigned to the GROUP.
@@ -157,6 +171,19 @@ function getCollections4od(collectionName){
   http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xe */
 function getCollectionsFlattened4od(collectionName){
   var p = '/pmlsd/collections/{collection_name}/flattened/4od.atom';
+  p = p.replace('{collection_name}',collectionName);
+  return p;
+}
+
+/*   The Flattened Collections Feed is only applicable for GROUP collections and 
+  its purpose is mainly return 3 items (BRAND, SERIES or EPSIODE) of each of 
+  the simple collections assigned to the GROUP.
+
+  http://api.channel4.com/pmlsd/collections/collection_name/flattened.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xe */
+function getCollectionsFlattened(collectionName){
+  var p = '/pmlsd/collections/{collection_name}/flattened.atom';
   p = p.replace('{collection_name}',collectionName);
   return p;
 }
@@ -426,7 +453,9 @@ module.exports = {
   getCategoriesTitle : getCategoriesTitle,
   getCategories2 : getCategories2,
   getCollections4od : getCollections4od,
+  getCollections : getCollections,
   getCollectionsFlattened4od : getCollectionsFlattened4od,
+  getCollectionsFlattened : getCollectionsFlattened,
   getCategories4odPopular : getCategories4odPopular,
   getBrandsPopular : getBrandsPopular,
   getSearch : getSearch,
