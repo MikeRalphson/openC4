@@ -736,7 +736,15 @@
             "name": "channel",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "enum": [
+              "c4",
+              "f4",
+              "e4",
+              "m4",
+              "4m",
+              "4s"
+            ]
           }
         ],
         "responses": {

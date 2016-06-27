@@ -363,6 +363,9 @@ function generateSwagger(){
 						swagParam.type = (param.type ? param.type : 'string');
 						swagParam["in"] = location;
 						swagParam.required = true; //(location == 'path');
+						if (swagParam.name == 'channel') {
+							swagParam["enum"] = ["c4","f4","e4","m4","4m","4s"];
+						}
 						path.get.parameters.push(swagParam);
 					}
 					else {

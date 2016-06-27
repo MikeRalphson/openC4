@@ -249,7 +249,7 @@ function getTvListingsDaily(yyyy,mm,dd){
   http://api.channel4.com/pmlsd/tv-listings/daily/[yyyy]/[mm]/[dd]/[channel].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/tv-listings/daily/2010/11/28.atom?apikey=xxxxxxx */
-function getTvListingsDaily/(yyyy,mm,dd,channel){
+function getTvListingsDaily2(yyyy,mm,dd,channel){
   var p = '/pmlsd/tv-listings/daily/{yyyy}/{mm}/{dd}/{channel}.atom';
   p = p.replace('{yyyy}',yyyy);
   p = p.replace('{mm}',mm);
@@ -257,6 +257,12 @@ function getTvListingsDaily/(yyyy,mm,dd,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
+const getTvListingsDaily2ChannelC4 = 'c4';
+const getTvListingsDaily2ChannelF4 = 'f4';
+const getTvListingsDaily2ChannelE4 = 'e4';
+const getTvListingsDaily2ChannelM4 = 'm4';
+const getTvListingsDaily2Channel4m = '4m';
+const getTvListingsDaily2Channel4s = '4s';
 
 /*   A feed containing all available on-demand long-form content for a specified 
   brand. The entries for the 4oD feed contain references to each long-form 
@@ -461,7 +467,7 @@ module.exports = {
   getSearch : getSearch,
   getSearch2 : getSearch2,
   getTvListingsDaily : getTvListingsDaily,
-  getTvListingsDaily/ : getTvListingsDaily/,
+  getTvListingsDaily2 : getTvListingsDaily2,
   get4od : get4od,
   getEpg : getEpg,
   getVideos : getVideos,
