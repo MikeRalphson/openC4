@@ -1,12 +1,12 @@
 var fs = require('fs');
-var path = require('path');
+var nodePath = require('path');
 
 var cheerio = require('cheerio');
 var validator = require('is-my-json-valid')
 var wrap = require('word-wrap');
 var oa2js = require('openapi2js');
 
-var swaggerSchema = require('./validation/swagger2Schema.json');
+var swaggerSchema = require(nodePath.resolve('./validation/swagger2Schema.json'));
 
 var api = {};
 var swagger;
@@ -258,11 +258,6 @@ function definePath(file,url,suffix) {
 	path.get.parameters = [];
 
 	var param = {};
-	//param.name = 'platform';
-	//param.type = 'string';
-	//param["enum"] = ['c4','ps3','yv','ios','p06','flashmobile','freesat','android','samsung'];
-	//param["in"] = 'query';
-	//param.required = false;
 	param["$ref"] = '#/parameters/platform';
 	path.get.parameters.push(param);
 
