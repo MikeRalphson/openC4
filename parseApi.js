@@ -114,12 +114,20 @@ function postProcess(src) {
 					url = url.replaceAll('collection-name','collection_name');
 					var urls = url.split(' ');
 
+					if (urls[0].startsWith('http://api.channel4.com/pmlsd/categories/category/4od/popular.atom')) {
+						urls[0] = urls[0].replace('/4od','[/4od]');
+					}
+
 					if (urls[0].indexOf('[/4od]')>0) {
 						urls.push(urls[0].replace('[/4od]',''));
 						urls[0] = urls[0].replace('[/4od]','/4od');
 					}
 					if (urls[0].indexOf('[yyyy/mm/dd]')>0) {
 						urls[0] = urls[0].replace('[yyyy/mm/dd]','[yyyy]/[mm]/[dd]');
+					}
+					if (urls[0].startsWith('http://api.channel4.com/pmlsd/categories/category')) {
+						urls.push(urls[0].replace('categories/category','categories/category/channel/[channel]'));
+						urls.push(urls[0].replace('categories/category','categories/category/derived/ad'));
 					}
 
 					result.urls = result.urls.concat(urls);
@@ -151,6 +159,12 @@ function postProcess(src) {
 							var param3 = clone(param);
 							param3.name = 'dd';
 							result.parameters.push(param3);
+						}
+						if (param.name == 'category') {
+							var param2 = clone(param);
+							param2.name = 'channel';
+							param2.description = 'The name of the channel for which you seek associated Channel 4oD programmes';
+							result.parameters.push(param2);
 						}
 					}
 					result.score++;
@@ -353,7 +367,9 @@ function generateSwagger(){
 			for (var p in file.output.parameters) {
 				var param = file.output.parameters[p];
 				if (param.name != 'apikey') {
-					url = url.replaceAll(param.name,'{'+param.name+'}');
+					if (url.indexOf('{'+param.name+'}')<0) {
+						url = url.replaceAll(param.name,'{'+param.name+'}');
+					}
 					var location = '';
 					if (url.indexOf('{'+param.name+'}')>=0) location = 'path'
 					else if (queryString.indexOf('&'+param.name)>=0) location = 'query';

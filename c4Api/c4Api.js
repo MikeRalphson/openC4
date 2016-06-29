@@ -83,6 +83,39 @@ function getCategories4od(category){
 }
 
 /*   Lists all Channel 4oD programmes associated with the specified category 
+  (tag).By default, the programmes are listed in order of Transmission (TX) 
+  Date, with the most-recently-transmitted programmes listed first.
+
+  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4 */
+function getCategoriesChannel4od(category,channel){
+  var p = '/pmlsd/categories/{category}/channel/{channel}/4od.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{channel}',channel);
+  return p;
+}
+const getCategoriesChannel4odChannelC4 = 'c4';
+const getCategoriesChannel4odChannelF4 = 'f4';
+const getCategoriesChannel4odChannelE4 = 'e4';
+const getCategoriesChannel4odChannelM4 = 'm4';
+const getCategoriesChannel4odChannel4m = '4m';
+const getCategoriesChannel4odChannel4s = '4s';
+
+/*   Lists all Channel 4oD programmes associated with the specified category 
+  (tag).By default, the programmes are listed in order of Transmission (TX) 
+  Date, with the most-recently-transmitted programmes listed first.
+
+  http://api.channel4.com/pmlsd/categories/category/derived/ad/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4 */
+function getCategoriesDerivedAd4od(category){
+  var p = '/pmlsd/categories/{category}/derived/ad/4od.atom';
+  p = p.replace('{category}',category);
+  return p;
+}
+
+/*   Lists all Channel 4oD programmes associated with the specified category 
   (tag), alphanumerically in order of Title.
 
   http://api.channel4.com/pmlsd/categories/category/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
@@ -90,6 +123,37 @@ function getCategories4od(category){
   http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4 */
 function getCategories4odTitle(category){
   var p = '/pmlsd/categories/{category}/4od/title.atom';
+  p = p.replace('{category}',category);
+  return p;
+}
+
+/*   Lists all Channel 4oD programmes associated with the specified category 
+  (tag), alphanumerically in order of Title.
+
+  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4 */
+function getCategoriesChannel4odTitle(category,channel){
+  var p = '/pmlsd/categories/{category}/channel/{channel}/4od/title.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{channel}',channel);
+  return p;
+}
+const getCategoriesChannel4odTitleChannelC4 = 'c4';
+const getCategoriesChannel4odTitleChannelF4 = 'f4';
+const getCategoriesChannel4odTitleChannelE4 = 'e4';
+const getCategoriesChannel4odTitleChannelM4 = 'm4';
+const getCategoriesChannel4odTitleChannel4m = '4m';
+const getCategoriesChannel4odTitleChannel4s = '4s';
+
+/*   Lists all Channel 4oD programmes associated with the specified category 
+  (tag), alphanumerically in order of Title.
+
+  http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4 */
+function getCategoriesDerivedAd4odTitle(category){
+  var p = '/pmlsd/categories/{category}/derived/ad/4od/title.atom';
   p = p.replace('{category}',category);
   return p;
 }
@@ -115,6 +179,39 @@ function getCategories(category){
   return p;
 }
 
+/*   Lists all Channel 4 programmes associated with the specified category (tag).  
+  By default, the programmes are listed in order of Transmission (TX) Date, 
+  with the most-recently-transmitted programmes listed first.
+
+  http://api.channel4.com/pmlsd/categories/category/channel/[channel].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/animals.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4 */
+function getCategoriesChannel(category,channel){
+  var p = '/pmlsd/categories/{category}/channel/{channel}.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{channel}',channel);
+  return p;
+}
+const getCategoriesChannelChannelC4 = 'c4';
+const getCategoriesChannelChannelF4 = 'f4';
+const getCategoriesChannelChannelE4 = 'e4';
+const getCategoriesChannelChannelM4 = 'm4';
+const getCategoriesChannelChannel4m = '4m';
+const getCategoriesChannelChannel4s = '4s';
+
+/*   Lists all Channel 4 programmes associated with the specified category (tag).  
+  By default, the programmes are listed in order of Transmission (TX) Date, 
+  with the most-recently-transmitted programmes listed first.
+
+  http://api.channel4.com/pmlsd/categories/category/derived/ad.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/animals.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4 */
+function getCategoriesDerivedAd(category){
+  var p = '/pmlsd/categories/{category}/derived/ad.atom';
+  p = p.replace('{category}',category);
+  return p;
+}
+
 /*   Lists all Channel 4 programmes associated with the specified category (tag), 
   alphanumerically in order of Title.
 
@@ -123,6 +220,37 @@ function getCategories(category){
   http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4 */
 function getCategoriesTitle(category){
   var p = '/pmlsd/categories/{category}/title.atom';
+  p = p.replace('{category}',category);
+  return p;
+}
+
+/*   Lists all Channel 4 programmes associated with the specified category (tag), 
+  alphanumerically in order of Title.
+
+  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4 */
+function getCategoriesChannelTitle(category,channel){
+  var p = '/pmlsd/categories/{category}/channel/{channel}/title.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{channel}',channel);
+  return p;
+}
+const getCategoriesChannelTitleChannelC4 = 'c4';
+const getCategoriesChannelTitleChannelF4 = 'f4';
+const getCategoriesChannelTitleChannelE4 = 'e4';
+const getCategoriesChannelTitleChannelM4 = 'm4';
+const getCategoriesChannelTitleChannel4m = '4m';
+const getCategoriesChannelTitleChannel4s = '4s';
+
+/*   Lists all Channel 4 programmes associated with the specified category (tag), 
+  alphanumerically in order of Title.
+
+  http://api.channel4.com/pmlsd/categories/category/derived/ad/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4 */
+function getCategoriesDerivedAdTitle(category){
+  var p = '/pmlsd/categories/{category}/derived/ad/title.atom';
   p = p.replace('{category}',category);
   return p;
 }
@@ -196,6 +324,49 @@ function getCollectionsFlattened(collectionName){
   http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4 */
 function getCategories4odPopular(category){
   var p = '/pmlsd/categories/{category}/4od/popular.atom';
+  p = p.replace('{category}',category);
+  return p;
+}
+
+/*   Lists all Channel 4oD most popular brands for the given category within the 
+  last 7 days, in order of popularity.
+
+  http://api.channel4.com/pmlsd/categories/category/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4 */
+function getCategoriesPopular(category){
+  var p = '/pmlsd/categories/{category}/popular.atom';
+  p = p.replace('{category}',category);
+  return p;
+}
+
+/*   Lists all Channel 4oD most popular brands for the given category within the 
+  last 7 days, in order of popularity.
+
+  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4 */
+function getCategoriesChannel4odPopular(category,channel){
+  var p = '/pmlsd/categories/{category}/channel/{channel}/4od/popular.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{channel}',channel);
+  return p;
+}
+const getCategoriesChannel4odPopularChannelC4 = 'c4';
+const getCategoriesChannel4odPopularChannelF4 = 'f4';
+const getCategoriesChannel4odPopularChannelE4 = 'e4';
+const getCategoriesChannel4odPopularChannelM4 = 'm4';
+const getCategoriesChannel4odPopularChannel4m = '4m';
+const getCategoriesChannel4odPopularChannel4s = '4s';
+
+/*   Lists all Channel 4oD most popular brands for the given category within the 
+  last 7 days, in order of popularity.
+
+  http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4 */
+function getCategoriesDerivedAd4odPopular(category){
+  var p = '/pmlsd/categories/{category}/derived/ad/4od/popular.atom';
   p = p.replace('{category}',category);
   return p;
 }
@@ -453,16 +624,27 @@ module.exports = {
   get4odEpisodeListPopular : get4odEpisodeListPopular,
   getBrands4odPopular : getBrands4odPopular,
   getCategories4od : getCategories4od,
+  getCategoriesChannel4od : getCategoriesChannel4od,
+  getCategoriesDerivedAd4od : getCategoriesDerivedAd4od,
   getCategories4odTitle : getCategories4odTitle,
+  getCategoriesChannel4odTitle : getCategoriesChannel4odTitle,
+  getCategoriesDerivedAd4odTitle : getCategoriesDerivedAd4odTitle,
   getBrands4od : getBrands4od,
   getCategories : getCategories,
+  getCategoriesChannel : getCategoriesChannel,
+  getCategoriesDerivedAd : getCategoriesDerivedAd,
   getCategoriesTitle : getCategoriesTitle,
+  getCategoriesChannelTitle : getCategoriesChannelTitle,
+  getCategoriesDerivedAdTitle : getCategoriesDerivedAdTitle,
   getCategories2 : getCategories2,
   getCollections4od : getCollections4od,
   getCollections : getCollections,
   getCollectionsFlattened4od : getCollectionsFlattened4od,
   getCollectionsFlattened : getCollectionsFlattened,
   getCategories4odPopular : getCategories4odPopular,
+  getCategoriesPopular : getCategoriesPopular,
+  getCategoriesChannel4odPopular : getCategoriesChannel4odPopular,
+  getCategoriesDerivedAd4odPopular : getCategoriesDerivedAd4odPopular,
   getBrandsPopular : getBrandsPopular,
   getSearch : getSearch,
   getSearch2 : getSearch2,

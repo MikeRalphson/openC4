@@ -1610,7 +1610,9 @@
       "output": {
         "score": 38,
         "urls": [
-          "http://api.channel4.com/pmlsd/categories/category/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
+          "http://api.channel4.com/pmlsd/categories/category/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/categories/category/derived/ad/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
         ],
         "sampleUrl": "http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
         "feedDescription": "Lists all Channel 4oD programmes associated with the specified category (tag).By default, the programmes are listed in order of Transmission (TX) Date, with the most-recently-transmitted programmes listed first.",
@@ -1618,6 +1620,10 @@
           {
             "name": "category",
             "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+          },
+          {
+            "name": "channel",
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes"
           },
           {
             "name": "apikey",
@@ -1837,7 +1843,9 @@
       "output": {
         "score": 38,
         "urls": [
-          "http://api.channel4.com/pmlsd/categories/category/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
+          "http://api.channel4.com/pmlsd/categories/category/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
         ],
         "sampleUrl": "http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
         "feedDescription": "Lists all Channel 4oD programmes associated with the specified category (tag), alphanumerically in order of Title.",
@@ -1845,6 +1853,10 @@
           {
             "name": "category",
             "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+          },
+          {
+            "name": "channel",
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes"
           },
           {
             "name": "apikey",
@@ -2281,7 +2293,9 @@
       "output": {
         "score": 38,
         "urls": [
-          "http://api.channel4.com/pmlsd/categories/category.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
+          "http://api.channel4.com/pmlsd/categories/category.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/categories/category/channel/[channel].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/categories/category/derived/ad.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
         ],
         "sampleUrl": "http://api.channel4.com/pmlsd/categories/animals.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
         "feedDescription": "Lists all Channel 4 programmes associated with the specified category (tag).  By default, the programmes are listed in order of Transmission (TX) Date, with the most-recently-transmitted programmes listed first.",
@@ -2289,6 +2303,10 @@
           {
             "name": "category",
             "description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )"
+          },
+          {
+            "name": "channel",
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes"
           },
           {
             "name": "apikey",
@@ -2508,7 +2526,9 @@
       "output": {
         "score": 37,
         "urls": [
-          "http://api.channel4.com/pmlsd/categories/category/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
+          "http://api.channel4.com/pmlsd/categories/category/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/categories/category/channel/[channel]/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/categories/category/derived/ad/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
         ],
         "sampleUrl": "http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
         "feedDescription": "Lists all Channel 4 programmes associated with the specified category (tag), alphanumerically in order of Title.",
@@ -2516,6 +2536,10 @@
           {
             "name": "category",
             "description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+          },
+          {
+            "name": "channel",
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes"
           },
           {
             "name": "apikey",
@@ -3998,7 +4022,10 @@
       "output": {
         "score": 38,
         "urls": [
-          "http://api.channel4.com/pmlsd/categories/category/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
+          "http://api.channel4.com/pmlsd/categories/category/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/categories/category/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
         ],
         "sampleUrl": "http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
         "feedDescription": "Lists all Channel 4oD most popular brands for the given category within the last 7 days, in order of popularity.",
@@ -4006,6 +4033,10 @@
           {
             "name": "category",
             "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+          },
+          {
+            "name": "channel",
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes"
           },
           {
             "name": "apikey",
@@ -6147,6 +6178,10 @@
           {
             "name": "category",
             "description": "The category websafe_title to filter the coming soon programmes on TV."
+          },
+          {
+            "name": "channel",
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes"
           },
           {
             "name": "apikey",
