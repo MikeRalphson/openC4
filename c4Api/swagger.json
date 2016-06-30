@@ -67,71 +67,15 @@
     }
   },
   "paths": {
-    "/atoz.atom": {
-      "get": {
-        "description": "  Lists Channel 4 programmes alphabetically from A to Z, providing the same \n  functionality and information as is available in the A to Z section of the \n  Channel 4 Programmes page, http://www.channel4.com/programmes.\n\n  http://api.channel4.com/pmlsd/atoz.atom\n\n  http://api.channel4.com/pmlsd/atoz.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "A to Z Landing Feed",
-        "tags": [
-          "discoveryresources"
-        ],
-        "operationId": "A_to_Z_Landing_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Landing_Feed",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/atoz/{start_letter}.atom": {
-      "get": {
-        "description": "  Lists Channel 4 programmes whose names begin with the associated letter.\n\n  http://api.channel4.com/pmlsd/atoz/start_letter.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/atoz/a.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "A to Z Letter Feed",
-        "tags": [
-          "discoveryresources"
-        ],
-        "operationId": "A_to_Z_Letter_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Letter_Feed",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "start_letter",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
     "/4od/episode-list/date/{yyyy}/{mm}/{dd}.atom": {
       "get": {
-        "description": "  Information of daily broadcast content available on 4oD, according to \n  broadcast date\n\n  http://api.channel4.com/pmlsd/4od/episode-list/date/[yyyy]/[mm]/[dd].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/4od/episode-list/date/2010/11/28.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
+        "description": "Information of daily broadcast content available on 4oD, according to \n  broadcast date\n\n  http://api.channel4.com/pmlsd/4od/episode-list/date/[yyyy]/[mm]/[dd].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/4od/episode-list/date/2010/11/28.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "4oD Browse by Date Feed",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "4oD_Browse_by_Date_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Browse_by_Date_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Browse_by_Date_Feed",
         "produces": [],
         "parameters": [
           {
@@ -166,40 +110,15 @@
         }
       }
     },
-    "/4od/recently-added/videos.atom": {
-      "get": {
-        "description": "  A feed containing metadata about short-form content relating to 4oD Episodes \n  recently added to 4oD based on linear transmission. The entries for the \n  Clips Landing Feed contain references to each short-form asset. It will \n  return up to 20 entries.\n\n  http://api.channel4.com/pmlsd/4od/recently-added/videos.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/4od/episode-list/videos.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "4oD Clips Catch Up Feed",
-        "tags": [
-          "discoveryresources"
-        ],
-        "operationId": "4oD_Clips_Catch_Up_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Clips_Catch_Up_Feed",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
     "/4od/episode-list/popular.atom": {
       "get": {
-        "description": "  Information of the most popular content available on 4oD, according to user \n  data driven.\n\n  http://api.channel4.com/pmlsd/4od/episode-list/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/4od/episode-list/popular.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
+        "description": "Information of the most popular content available on 4oD, according to user \n  data driven.\n\n  http://api.channel4.com/pmlsd/4od/episode-list/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/4od/episode-list/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "4oD Most Popular Episodes Feed",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "4oD_Most_Popular_Episodes_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Most_Popular_Episodes_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Most_Popular_Episodes_Feed",
         "produces": [],
         "parameters": [
           {
@@ -216,15 +135,15 @@
         }
       }
     },
-    "/brands/4od/popular.atom": {
+    "/4od/recently-added/videos.atom": {
       "get": {
-        "description": "  Lists all Channel 4 programmes available on 4oD by popularity considering \n  the data gathered within the last 7 days.\n\n  http://api.channel4.com/pmlsd/brands/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/brands/4od/popular.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "4oD Popular All Brands Feed",
+        "description": "A feed containing metadata about short-form content relating to 4oD Episodes \n  recently added to 4oD based on linear transmission. The entries for the \n  Clips Landing Feed contain references to each short-form asset. It will \n  return up to 20 entries.\n\n  http://api.channel4.com/pmlsd/4od/recently-added/videos.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/4od/episode-list/videos.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Clips Catch Up Feed",
         "tags": [
           "discoveryresources"
         ],
-        "operationId": "4oD_Popular_All_Brands_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Popular_All_Brands_Feed",
+        "operationId": "4oD_Clips_Catch_Up_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Clips_Catch_Up_Feed",
         "produces": [],
         "parameters": [
           {
@@ -241,22 +160,22 @@
         }
       }
     },
-    "/categories/{category}/4od.atom": {
+    "/{brand-web-safe-title}/4od.atom": {
       "get": {
-        "description": "  Lists all Channel 4oD programmes associated with the specified category \n  (tag).By default, the programmes are listed in order of Transmission (TX) \n  Date, with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "4oD Programmes by TX Date",
+        "description": "A feed containing all available on-demand long-form content for a specified \n  brand. The entries for the 4oD feed contain references to each long-form \n  asset for a brand, ordered by series number and episode number.\n\n  http://api.channel4.com/pmlsd/[brand-web-safe-title]/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/the-it-crowd/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Feed",
         "tags": [
-          "discoveryresources"
+          "metadataresources"
         ],
-        "operationId": "4oD_Programmes_by_TX_Date",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
+        "operationId": "4oD_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/4oD_Feed",
         "produces": [],
         "parameters": [
           {
             "$ref": "#/parameters/platform"
           },
           {
-            "name": "category",
+            "name": "brand-web-safe-title",
             "type": "string",
             "in": "path",
             "required": true
@@ -272,39 +191,19 @@
         }
       }
     },
-    "/categories/{category}/channel/{channel}/4od.atom": {
+    "/atoz.atom": {
       "get": {
-        "description": "  Lists all Channel 4oD programmes associated with the specified category \n  (tag).By default, the programmes are listed in order of Transmission (TX) \n  Date, with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "4oD Programmes by TX Date(2)",
+        "description": "Lists Channel 4 programmes alphabetically from A to Z, providing the same \n  functionality and information as is available in the A to Z section of the \n  Channel 4 Programmes page, http://www.channel4.com/programmes.\n\n  http://api.channel4.com/pmlsd/atoz.atom\n\n  http://api.channel4.com/pmlsd/atoz.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "A to Z Landing Feed",
         "tags": [
           "discoveryresources"
         ],
-        "operationId": "4oD_Programmes_by_TX_Date(2)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
+        "operationId": "A_to_Z_Landing_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Landing_Feed",
         "produces": [],
         "parameters": [
           {
             "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "category",
-            "type": "string",
-            "in": "path",
-            "required": true
-          },
-          {
-            "name": "channel",
-            "type": "string",
-            "in": "path",
-            "required": true,
-            "enum": [
-              "c4",
-              "f4",
-              "e4",
-              "m4",
-              "4m",
-              "4s"
-            ]
           }
         ],
         "responses": {
@@ -317,22 +216,22 @@
         }
       }
     },
-    "/categories/{category}/derived/ad/4od.atom": {
+    "/atoz/{start_letter}.atom": {
       "get": {
-        "description": "  Lists all Channel 4oD programmes associated with the specified category \n  (tag).By default, the programmes are listed in order of Transmission (TX) \n  Date, with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/derived/ad/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "4oD Programmes by TX Date(3)",
+        "description": "Lists Channel 4 programmes whose names begin with the associated letter.\n\n  http://api.channel4.com/pmlsd/atoz/start_letter.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/atoz/a.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "A to Z Letter Feed",
         "tags": [
           "discoveryresources"
         ],
-        "operationId": "4oD_Programmes_by_TX_Date(3)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
+        "operationId": "A_to_Z_Letter_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Letter_Feed",
         "produces": [],
         "parameters": [
           {
             "$ref": "#/parameters/platform"
           },
           {
-            "name": "category",
+            "name": "start_letter",
             "type": "string",
             "in": "path",
             "required": true
@@ -348,22 +247,59 @@
         }
       }
     },
-    "/categories/{category}/4od/title.atom": {
+    "/atoz/{start_letter}/page-{pageno}.atom": {
       "get": {
-        "description": "  Lists all Channel 4oD programmes associated with the specified category \n  (tag), alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "4oD Programmes by Title",
+        "description": "Lists Channel 4 programmes whose names begin with the associated letter.\n\n  http://api.channel4.com/pmlsd/atoz/start_letter/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/atoz/a.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "A to Z Letter Feed(2)",
         "tags": [
           "discoveryresources"
         ],
-        "operationId": "4oD_Programmes_by_Title",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
+        "operationId": "A_to_Z_Letter_Feed(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Letter_Feed",
         "produces": [],
         "parameters": [
           {
             "$ref": "#/parameters/platform"
           },
           {
-            "name": "category",
+            "name": "start_letter",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/{brand-web-safe-title}.atom": {
+      "get": {
+        "description": "The basis for all brand information\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/the-it-crowd.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Hub Feed",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Hub_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Hub_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "brand-web-safe-title",
             "type": "string",
             "in": "path",
             "required": true
@@ -379,39 +315,25 @@
         }
       }
     },
-    "/categories/{category}/channel/{channel}/4od/title.atom": {
+    "/{brand-web-safe-title}/epg.atom": {
       "get": {
-        "description": "  Lists all Channel 4oD programmes associated with the specified category \n  (tag), alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "4oD Programmes by Title(2)",
+        "description": "This feed contains metadata about upcoming electronic programme guide (EPG) \n  information for a brand. The entry details upcoming transmission slots for \n  this brand.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/epg.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/the-simpsons/epg.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Brand EPG Atom Feed",
         "tags": [
-          "discoveryresources"
+          "metadataresources"
         ],
-        "operationId": "4oD_Programmes_by_Title(2)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
+        "operationId": "Brand_EPG_Atom_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Brand_EPG_Atom_Feed",
         "produces": [],
         "parameters": [
           {
             "$ref": "#/parameters/platform"
           },
           {
-            "name": "category",
+            "name": "brand-web-safe-title",
             "type": "string",
             "in": "path",
             "required": true
-          },
-          {
-            "name": "channel",
-            "type": "string",
-            "in": "path",
-            "required": true,
-            "enum": [
-              "c4",
-              "f4",
-              "e4",
-              "m4",
-              "4m",
-              "4s"
-            ]
           }
         ],
         "responses": {
@@ -424,22 +346,250 @@
         }
       }
     },
-    "/categories/{category}/derived/ad/4od/title.atom": {
+    "/{brand-web-safe-title}/episode-guide.atom": {
       "get": {
-        "description": "  Lists all Channel 4oD programmes associated with the specified category \n  (tag), alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "4oD Programmes by Title(3)",
+        "description": "A feed containing metadata about all series for a specified brand. The \n  entries in this feed contain references to each of the series (where \n  metadata has been published), with some convenient links.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/episode-guide.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/father-ted/episode-guide.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Episode Guide Feed Series Landing",
         "tags": [
-          "discoveryresources"
+          "metadataresources"
         ],
-        "operationId": "4oD_Programmes_by_Title(3)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
+        "operationId": "Episode_Guide_Feed_Series_Landing",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Landing",
         "produces": [],
         "parameters": [
           {
             "$ref": "#/parameters/platform"
           },
           {
-            "name": "category",
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/{brand-web-safe-title}/episode-guide/series-{series_number}.atom": {
+      "get": {
+        "description": "A feed containing metadata about all the episodes for a specific series. The \n  entries in this feed contain references to each of the episodes (where \n  metadata has been published), with some convenient links.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/episode-guide/series-series_number.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/chelmsford-123/episode-guide/series-1.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Episode Guide Feed Series Detail",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Episode_Guide_Feed_Series_Detail",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Detail",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "series_number",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/{brand-web-safe-title}/episode-guide/series-{series_number}/episode-{episode_number}.atom": {
+      "get": {
+        "description": "A feed containing metadata about a specified episode. (This feed does not \n  contain any entries and only contains a feed element regarding this \n  episode.)\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/episode-guide/series-series_number/episode-episode_number.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/the-it-crowd/episode-guide/series-1/episode-1.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Episode Guide Feed Episode Detail",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Episode_Guide_Feed_Episode_Detail",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Episode_Detail",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "series_number",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "episode_number",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/{brand-web-safe-title}/videos/all.atom": {
+      "get": {
+        "description": "A feed containing metadata about all the short-form (clip) videos. The clips \n  feed can be accessed at different levels: the content is then filtered \n  depending on the level, but the structure is identical.When accessed: from \n  the top, the feed contains all the clips for the brand;  at series level, \n  the feed contains only clips from the series; and  at episode level, the \n  feed contains only clips for the episode (and is very unlikely to require \n  pagination). The entries for the Clips Landing Feed contain references to \n  each short-form asset.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/all.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/peep-show/videos.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Clips Landing Feed Brand Series and Episode Levels",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/{brand-web-safe-title}/videos/series-{SERIES_SEQUENCE_NUMBER}.atom": {
+      "get": {
+        "description": "A feed containing metadata about all the short-form (clip) videos. The clips \n  feed can be accessed at different levels: the content is then filtered \n  depending on the level, but the structure is identical.When accessed: from \n  the top, the feed contains all the clips for the brand;  at series level, \n  the feed contains only clips from the series; and  at episode level, the \n  feed contains only clips for the episode (and is very unlikely to require \n  pagination). The entries for the Clips Landing Feed contain references to \n  each short-form asset.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/peep-show/videos.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Clips Landing Feed Brand Series and Episode Levels(2)",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "SERIES_SEQUENCE_NUMBER",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/{brand-web-safe-title}/videos/series-{SERIES_SEQUENCE_NUMBER}/episode-{EPISODE_SEQUENCE_NUMBER}.atom": {
+      "get": {
+        "description": "A feed containing metadata about all the short-form (clip) videos. The clips \n  feed can be accessed at different levels: the content is then filtered \n  depending on the level, but the structure is identical.When accessed: from \n  the top, the feed contains all the clips for the brand;  at series level, \n  the feed contains only clips from the series; and  at episode level, the \n  feed contains only clips for the episode (and is very unlikely to require \n  pagination). The entries for the Clips Landing Feed contain references to \n  each short-form asset.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER/episode-EPISODE_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/peep-show/videos.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Clips Landing Feed Brand Series and Episode Levels(3)",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels(3)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "SERIES_SEQUENCE_NUMBER",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "EPISODE_SEQUENCE_NUMBER",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/{brand-web-safe-title}/videos/{clip-asset-id}.atom": {
+      "get": {
+        "description": "A feed containing metadata about a single short-form video (clip).\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/clip-asset-id.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/the-it-crowd/videos/TCGS_CLIP_0000001015.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Clip Detail Atom Feed",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Clip_Detail_Atom_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clip_Detail_Atom_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "brand-web-safe-title",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "clip-asset-id",
             "type": "string",
             "in": "path",
             "required": true
@@ -457,13 +607,181 @@
     },
     "/brands/4od.atom": {
       "get": {
-        "description": "  Lists all Channel 4 programmes available on 4oD.  By default, the programmes \n  are listed by title in alphabetical order (case unsensitive).\n\n  http://api.channel4.com/pmlsd/brands/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/brands/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
+        "description": "Lists all Channel 4 programmes available on 4oD.  By default, the programmes \n  are listed by title in alphabetical order (case unsensitive).\n\n  http://api.channel4.com/pmlsd/brands/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/brands/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "4oD Title All Brands Feed",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "4oD_Title_All_Brands_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Title_All_Brands_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Title_All_Brands_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/brands/4od/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4 programmes available on 4oD.  By default, the programmes \n  are listed by title in alphabetical order (case unsensitive).\n\n  http://api.channel4.com/pmlsd/brands/4od/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/brands/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Title All Brands Feed(2)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "4oD_Title_All_Brands_Feed(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Title_All_Brands_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/brands/4od/popular.atom": {
+      "get": {
+        "description": "Lists all Channel 4 programmes available on 4oD by popularity considering \n  the data gathered within the last 7 days.\n\n  http://api.channel4.com/pmlsd/brands/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/brands/4od/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Popular All Brands Feed",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "4oD_Popular_All_Brands_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Popular_All_Brands_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/brands/4od/popular/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4 programmes available on 4oD by popularity considering \n  the data gathered within the last 7 days.\n\n  http://api.channel4.com/pmlsd/brands/4od/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/brands/4od/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Popular All Brands Feed(2)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "4oD_Popular_All_Brands_Feed(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Popular_All_Brands_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/brands/popular.atom": {
+      "get": {
+        "description": "Lists all Channel 4 programmes by popularity considering the data gathered \n  within the last 7 days.\n\n  http://api.channel4.com/pmlsd/brands/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/brands/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Popular Brands Feed",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Popular_Brands_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Popular_Brands_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/brands/popular/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4 programmes by popularity considering the data gathered \n  within the last 7 days.\n\n  http://api.channel4.com/pmlsd/brands/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/brands/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Popular Brands Feed(2)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Popular_Brands_Feed(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Popular_Brands_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories.atom": {
+      "get": {
+        "description": "Lists Channel 4 programmes by category (/ tag).\n\n  http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Categories Landing Feed",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Categories_Landing_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Categories_Landing_Feed",
         "produces": [],
         "parameters": [
           {
@@ -482,13 +800,13 @@
     },
     "/categories/{category}.atom": {
       "get": {
-        "description": "  Lists all Channel 4 programmes associated with the specified category (tag).  \n  By default, the programmes are listed in order of Transmission (TX) Date, \n  with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
+        "description": "Lists all Channel 4 programmes associated with the specified category (tag).  \n  By default, the programmes are listed in order of Transmission (TX) Date, \n  with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "All Programmes by TX Date",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "All_Programmes_by_TX_Date",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
         "produces": [],
         "parameters": [
           {
@@ -513,13 +831,13 @@
     },
     "/categories/{category}/channel/{channel}.atom": {
       "get": {
-        "description": "  Lists all Channel 4 programmes associated with the specified category (tag).  \n  By default, the programmes are listed in order of Transmission (TX) Date, \n  with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/channel/[channel].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
+        "description": "Lists all Channel 4 programmes associated with the specified category (tag).  \n  By default, the programmes are listed in order of Transmission (TX) Date, \n  with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/channel/[channel].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "All Programmes by TX Date(2)",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "All_Programmes_by_TX_Date(2)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
         "produces": [],
         "parameters": [
           {
@@ -558,13 +876,13 @@
     },
     "/categories/{category}/derived/ad.atom": {
       "get": {
-        "description": "  Lists all Channel 4 programmes associated with the specified category (tag).  \n  By default, the programmes are listed in order of Transmission (TX) Date, \n  with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/derived/ad.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
+        "description": "Lists all Channel 4 programmes associated with the specified category (tag).  \n  By default, the programmes are listed in order of Transmission (TX) Date, \n  with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/derived/ad.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "All Programmes by TX Date(3)",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "All_Programmes_by_TX_Date(3)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
         "produces": [],
         "parameters": [
           {
@@ -587,15 +905,52 @@
         }
       }
     },
-    "/categories/{category}/title.atom": {
+    "/categories/{category}/page-{pageno}.atom": {
       "get": {
-        "description": "  Lists all Channel 4 programmes associated with the specified category (tag), \n  alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "All Programmes by Title",
+        "description": "Lists all Channel 4 programmes associated with the specified category (tag).  \n  By default, the programmes are listed in order of Transmission (TX) Date, \n  with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "All Programmes by TX Date(4)",
         "tags": [
           "discoveryresources"
         ],
-        "operationId": "All_Programmes_by_Title",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
+        "operationId": "All_Programmes_by_TX_Date(4)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/4od.atom": {
+      "get": {
+        "description": "Lists all Channel 4oD programmes associated with the specified category \n  (tag).By default, the programmes are listed in order of Transmission (TX) \n  Date, with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Programmes by TX Date",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "4oD_Programmes_by_TX_Date",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
         "produces": [],
         "parameters": [
           {
@@ -618,15 +973,15 @@
         }
       }
     },
-    "/categories/{category}/channel/{channel}/title.atom": {
+    "/categories/{category}/channel/{channel}/4od.atom": {
       "get": {
-        "description": "  Lists all Channel 4 programmes associated with the specified category (tag), \n  alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "All Programmes by Title(2)",
+        "description": "Lists all Channel 4oD programmes associated with the specified category \n  (tag).By default, the programmes are listed in order of Transmission (TX) \n  Date, with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Programmes by TX Date(2)",
         "tags": [
           "discoveryresources"
         ],
-        "operationId": "All_Programmes_by_Title(2)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
+        "operationId": "4oD_Programmes_by_TX_Date(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
         "produces": [],
         "parameters": [
           {
@@ -663,15 +1018,15 @@
         }
       }
     },
-    "/categories/{category}/derived/ad/title.atom": {
+    "/categories/{category}/derived/ad/4od.atom": {
       "get": {
-        "description": "  Lists all Channel 4 programmes associated with the specified category (tag), \n  alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/derived/ad/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "All Programmes by Title(3)",
+        "description": "Lists all Channel 4oD programmes associated with the specified category \n  (tag).By default, the programmes are listed in order of Transmission (TX) \n  Date, with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/derived/ad/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Programmes by TX Date(3)",
         "tags": [
           "discoveryresources"
         ],
-        "operationId": "All_Programmes_by_Title(3)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
+        "operationId": "4oD_Programmes_by_TX_Date(3)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
         "produces": [],
         "parameters": [
           {
@@ -694,141 +1049,29 @@
         }
       }
     },
-    "/categories.atom": {
+    "/categories/{category}/4od/page-{pageno}.atom": {
       "get": {
-        "description": "  Lists Channel 4 programmes by category (/ tag).\n\n  http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "Categories Landing Feed",
+        "description": "Lists all Channel 4oD programmes associated with the specified category \n  (tag).By default, the programmes are listed in order of Transmission (TX) \n  Date, with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/4od/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Programmes by TX Date(4)",
         "tags": [
           "discoveryresources"
         ],
-        "operationId": "Categories_Landing_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Categories_Landing_Feed",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/collections/{collection_name}/4od.atom": {
-      "get": {
-        "description": "  Collections are editorially controlled groups of brands, series, episodes or \n  other collections used for promotion and discovery of content. A SIMPLE \n  collection can contain an assortment of Brands, Series, Episodes or Freeform \n  items. A GROUP collection contains other collections.\n\n  http://api.channel4.com/pmlsd/collections/collection_name/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/collections/4od-home-promo/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xe",
-        "summary": "Collections Feed",
-        "tags": [
-          "discoveryresources"
-        ],
-        "operationId": "Collections_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Collections_Feed",
+        "operationId": "4oD_Programmes_by_TX_Date(4)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
         "produces": [],
         "parameters": [
           {
             "$ref": "#/parameters/platform"
           },
           {
-            "name": "collection_name",
+            "name": "category",
             "type": "string",
             "in": "path",
             "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/collections/{collection_name}.atom": {
-      "get": {
-        "description": "  Collections are editorially controlled groups of brands, series, episodes or \n  other collections used for promotion and discovery of content. A SIMPLE \n  collection can contain an assortment of Brands, Series, Episodes or Freeform \n  items. A GROUP collection contains other collections.\n\n  http://api.channel4.com/pmlsd/collections/collection_name.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/collections/4od-home-promo/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xe",
-        "summary": "Collections Feed(2)",
-        "tags": [
-          "discoveryresources"
-        ],
-        "operationId": "Collections_Feed(2)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Collections_Feed",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
           },
           {
-            "name": "collection_name",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/collections/{collection_name}/flattened/4od.atom": {
-      "get": {
-        "description": "  The Flattened Collections Feed is only applicable for GROUP collections and \n  its purpose is mainly return 3 items (BRAND, SERIES or EPSIODE) of each of \n  the simple collections assigned to the GROUP.\n\n  http://api.channel4.com/pmlsd/collections/collection_name/flattened/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xe",
-        "summary": "Flattened Collection Feed",
-        "tags": [
-          "discoveryresources"
-        ],
-        "operationId": "Flattened_Collection_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Flattened_Collection_Feed",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "collection_name",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/collections/{collection_name}/flattened.atom": {
-      "get": {
-        "description": "  The Flattened Collections Feed is only applicable for GROUP collections and \n  its purpose is mainly return 3 items (BRAND, SERIES or EPSIODE) of each of \n  the simple collections assigned to the GROUP.\n\n  http://api.channel4.com/pmlsd/collections/collection_name/flattened.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xe",
-        "summary": "Flattened Collection Feed(2)",
-        "tags": [
-          "discoveryresources"
-        ],
-        "operationId": "Flattened_Collection_Feed(2)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Flattened_Collection_Feed",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "collection_name",
-            "type": "string",
+            "name": "pageno",
+            "type": "integer",
             "in": "path",
             "required": true
           }
@@ -845,13 +1088,13 @@
     },
     "/categories/{category}/4od/popular.atom": {
       "get": {
-        "description": "  Lists all Channel 4oD most popular brands for the given category within the \n  last 7 days, in order of popularity.\n\n  http://api.channel4.com/pmlsd/categories/category/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
+        "description": "Lists all Channel 4oD most popular brands for the given category within the \n  last 7 days, in order of popularity.\n\n  http://api.channel4.com/pmlsd/categories/category/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "Most Popular Brands Feed",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "Most_Popular_Brands_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
         "produces": [],
         "parameters": [
           {
@@ -876,13 +1119,13 @@
     },
     "/categories/{category}/popular.atom": {
       "get": {
-        "description": "  Lists all Channel 4oD most popular brands for the given category within the \n  last 7 days, in order of popularity.\n\n  http://api.channel4.com/pmlsd/categories/category/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
+        "description": "Lists all Channel 4oD most popular brands for the given category within the \n  last 7 days, in order of popularity.\n\n  http://api.channel4.com/pmlsd/categories/category/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "Most Popular Brands Feed(2)",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "Most_Popular_Brands_Feed(2)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
         "produces": [],
         "parameters": [
           {
@@ -907,13 +1150,13 @@
     },
     "/categories/{category}/channel/{channel}/4od/popular.atom": {
       "get": {
-        "description": "  Lists all Channel 4oD most popular brands for the given category within the \n  last 7 days, in order of popularity.\n\n  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
+        "description": "Lists all Channel 4oD most popular brands for the given category within the \n  last 7 days, in order of popularity.\n\n  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "Most Popular Brands Feed(3)",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "Most_Popular_Brands_Feed(3)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
         "produces": [],
         "parameters": [
           {
@@ -952,13 +1195,13 @@
     },
     "/categories/{category}/derived/ad/4od/popular.atom": {
       "get": {
-        "description": "  Lists all Channel 4oD most popular brands for the given category within the \n  last 7 days, in order of popularity.\n\n  http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
+        "description": "Lists all Channel 4oD most popular brands for the given category within the \n  last 7 days, in order of popularity.\n\n  http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "Most Popular Brands Feed(4)",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "Most_Popular_Brands_Feed(4)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
         "produces": [],
         "parameters": [
           {
@@ -981,15 +1224,464 @@
         }
       }
     },
-    "/brands/popular.atom": {
+    "/categories/{category}/4od/popular/page-{pageno}.atom": {
       "get": {
-        "description": "  Lists all Channel 4 programmes by popularity considering the data gathered \n  within the last 7 days.\n\n  http://api.channel4.com/pmlsd/brands/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/brands/popular.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "Popular Brands Feed",
+        "description": "Lists all Channel 4oD most popular brands for the given category within the \n  last 7 days, in order of popularity.\n\n  http://api.channel4.com/pmlsd/categories/category/4od/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Most Popular Brands Feed(5)",
         "tags": [
           "discoveryresources"
         ],
-        "operationId": "Popular_Brands_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Popular_Brands_Feed",
+        "operationId": "Most_Popular_Brands_Feed(5)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/4od/title.atom": {
+      "get": {
+        "description": "Lists all Channel 4oD programmes associated with the specified category \n  (tag), alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Programmes by Title",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "4oD_Programmes_by_Title",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/channel/{channel}/4od/title.atom": {
+      "get": {
+        "description": "Lists all Channel 4oD programmes associated with the specified category \n  (tag), alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Programmes by Title(2)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "4oD_Programmes_by_Title(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "channel",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "enum": [
+              "c4",
+              "f4",
+              "e4",
+              "m4",
+              "4m",
+              "4s"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/derived/ad/4od/title.atom": {
+      "get": {
+        "description": "Lists all Channel 4oD programmes associated with the specified category \n  (tag), alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Programmes by Title(3)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "4oD_Programmes_by_Title(3)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/4od/title/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4oD programmes associated with the specified category \n  (tag), alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/4od/title/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Programmes by Title(4)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "4oD_Programmes_by_Title(4)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/title.atom": {
+      "get": {
+        "description": "Lists all Channel 4 programmes associated with the specified category (tag), \n  alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/history/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "All Programmes by Title",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "All_Programmes_by_Title",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/channel/{channel}/title.atom": {
+      "get": {
+        "description": "Lists all Channel 4 programmes associated with the specified category (tag), \n  alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/history/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "All Programmes by Title(2)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "All_Programmes_by_Title(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "channel",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "enum": [
+              "c4",
+              "f4",
+              "e4",
+              "m4",
+              "4m",
+              "4s"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/derived/ad/title.atom": {
+      "get": {
+        "description": "Lists all Channel 4 programmes associated with the specified category (tag), \n  alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/derived/ad/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/history/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "All Programmes by Title(3)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "All_Programmes_by_Title(3)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/title/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4 programmes associated with the specified category (tag), \n  alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/title/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/history/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "All Programmes by Title(4)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "All_Programmes_by_Title(4)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collection_name}/4od.atom": {
+      "get": {
+        "description": "Collections are editorially controlled groups of brands, series, episodes or \n  other collections used for promotion and discovery of content. A SIMPLE \n  collection can contain an assortment of Brands, Series, Episodes or Freeform \n  items. A GROUP collection contains other collections.\n\n  http://api.channel4.com/pmlsd/collections/collection_name/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/collections/4od-home-promo/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Collections Feed",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Collections_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Collections_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "collection_name",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collection_name}.atom": {
+      "get": {
+        "description": "Collections are editorially controlled groups of brands, series, episodes or \n  other collections used for promotion and discovery of content. A SIMPLE \n  collection can contain an assortment of Brands, Series, Episodes or Freeform \n  items. A GROUP collection contains other collections.\n\n  http://api.channel4.com/pmlsd/collections/collection_name.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/collections/4od-home-promo/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Collections Feed(2)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Collections_Feed(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Collections_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "collection_name",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collection_name}/flattened/4od.atom": {
+      "get": {
+        "description": "The Flattened Collections Feed is only applicable for GROUP collections and \n  its purpose is mainly return 3 items (BRAND, SERIES or EPSIODE) of each of \n  the simple collections assigned to the GROUP.\n\n  http://api.channel4.com/pmlsd/collections/collection_name/flattened/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Flattened Collection Feed",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Flattened_Collection_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Flattened_Collection_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "collection_name",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collection_name}/flattened.atom": {
+      "get": {
+        "description": "The Flattened Collections Feed is only applicable for GROUP collections and \n  its purpose is mainly return 3 items (BRAND, SERIES or EPSIODE) of each of \n  the simple collections assigned to the GROUP.\n\n  http://api.channel4.com/pmlsd/collections/collection_name/flattened.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Flattened Collection Feed(2)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Flattened_Collection_Feed(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Flattened_Collection_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "collection_name",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/coming-soon.atom": {
+      "get": {
+        "description": "Coming Soon feed display a list of episodes coming soon to linear TV so that \n  I can promote new Channel 4 content.\n\n  http://api.channel4.com/pmlsd/coming-soon.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/coming-soon.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Coming Soon feed",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Coming_Soon_feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Coming_Soon_feed",
         "produces": [],
         "parameters": [
           {
@@ -1006,15 +1698,77 @@
         }
       }
     },
+    "/coming-soon/{category}.atom": {
+      "get": {
+        "description": "Coming Soon feed display a list of episodes coming soon to linear TV so that \n  I can promote new Channel 4 content.\n\n  http://api.channel4.com/pmlsd/coming-soon/[category].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/coming-soon.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Coming Soon feed(2)",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Coming_Soon_feed(2)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Coming_Soon_feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/programme/{programme-id}.atom": {
+      "get": {
+        "description": "A feed containing all long-form content currently or previously available \n  for a specified Programme Id. The entries for the Programme feed contain \n  references to long-form assets for each platform.\n\n  http://api.channel4.com/pmlsd/programme/[programme-id].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/programme/33881-001/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Programme Feed",
+        "tags": [
+          "metadataresources"
+        ],
+        "operationId": "Programme_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Programme_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "programme-id",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
     "/search.atom": {
       "get": {
-        "description": "  Lists all Channel 4 programmes where title (brand name) matching the search \n  term. Matches are made from the beginning of individual words in the title.\n\n  http://api.channel4.com/pmlsd/search.atom?q=search-term&apikey=xxx\n\n  http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&apikey=z4mwwux6yvahy4jz4xe3xeb4",
+        "description": "Lists all Channel 4 programmes where title (brand name) matching the search \n  term. Matches are made from the beginning of individual words in the title.\n\n  http://api.channel4.com/pmlsd/search.atom?q=search-term&apikey=xxx\n\n  http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "Search Feed",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "Search_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Search_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Search_Feed",
         "produces": [],
         "parameters": [
           {
@@ -1039,13 +1793,13 @@
     },
     "/search/{q}.atom": {
       "get": {
-        "description": "  Lists all Channel 4 programmes where title (brand name) matching the search \n  term. Matches are made from the beginning of individual words in the title.\n\n  http://api.channel4.com/pmlsd/search/search-term.atom?apikey=xxx\n\n  http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&apikey=z4mwwux6yvahy4jz4xe3xeb4",
+        "description": "Lists all Channel 4 programmes where title (brand name) matching the search \n  term. Matches are made from the beginning of individual words in the title.\n\n  http://api.channel4.com/pmlsd/search/search-term.atom?apikey=xxx\n\n  http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "Search Feed(2)",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "Search_Feed(2)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Search_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Search_Feed",
         "produces": [],
         "parameters": [
           {
@@ -1068,15 +1822,52 @@
         }
       }
     },
+    "/search/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4 programmes where title (brand name) matching the search \n  term. Matches are made from the beginning of individual words in the title.\n\n  http://api.channel4.com/pmlsd/search/page-{pageno}.atom?q=search-term&apikey=xxx\n\n  http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Search Feed(3)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Search_Feed(3)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Search_Feed",
+        "produces": [],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "q",
+            "type": "string",
+            "in": "query",
+            "required": true
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
     "/tv-listings/daily/{yyyy}/{mm}/{dd}.atom": {
       "get": {
-        "description": "  EPG Information of daily broadcast content aired per channels, according to \n  broadcast date\n\n  http://api.channel4.com/pmlsd/tv-listings/daily/[yyyy]/[mm]/[dd].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/tv-listings/daily/2010/11/28.atom?apikey=xxxxxxx",
+        "description": "EPG Information of daily broadcast content aired per channels, according to \n  broadcast date\n\n  http://api.channel4.com/pmlsd/tv-listings/daily/[yyyy]/[mm]/[dd].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/tv-listings/daily/2010/11/28.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "TV Listings Feed",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "TV_Listings_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/TV_Listings_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/TV_Listings_Feed",
         "produces": [],
         "parameters": [
           {
@@ -1113,13 +1904,13 @@
     },
     "/tv-listings/daily/{yyyy}/{mm}/{dd}/{channel}.atom": {
       "get": {
-        "description": "  EPG Information of daily broadcast content aired per channels, according to \n  broadcast date\n\n  http://api.channel4.com/pmlsd/tv-listings/daily/[yyyy]/[mm]/[dd]/[channel].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/tv-listings/daily/2010/11/28.atom?apikey=xxxxxxx",
+        "description": "EPG Information of daily broadcast content aired per channels, according to \n  broadcast date\n\n  http://api.channel4.com/pmlsd/tv-listings/daily/[yyyy]/[mm]/[dd]/[channel].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/tv-listings/daily/2010/11/28.atom?xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "TV Listings Feed(2)",
         "tags": [
           "discoveryresources"
         ],
         "operationId": "TV_Listings_Feed(2)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/discoveryresources/TV_Listings_Feed",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/TV_Listings_Feed",
         "produces": [],
         "parameters": [
           {
@@ -1167,445 +1958,6 @@
           }
         }
       }
-    },
-    "/{brand-web-safe-title}/4od.atom": {
-      "get": {
-        "description": "  A feed containing all available on-demand long-form content for a specified \n  brand. The entries for the 4oD feed contain references to each long-form \n  asset for a brand, ordered by series number and episode number.\n\n  http://api.channel4.com/pmlsd/[brand-web-safe-title]/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/the-it-crowd/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "4oD Feed",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "4oD_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/metadataresources/4oD_Feed",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "brand-web-safe-title",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/{brand-web-safe-title}/epg.atom": {
-      "get": {
-        "description": "  This feed contains metadata about upcoming electronic programme guide (EPG) \n  information for a brand. The entry details upcoming transmission slots for \n  this brand.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/epg.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/the-simpsons/epg.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "Brand EPG Atom Feed",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Brand_EPG_Atom_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/metadataresources/Brand_EPG_Atom_Feed",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "brand-web-safe-title",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/{brand-web-safe-title}/videos/{clip-asset-id}.atom": {
-      "get": {
-        "description": "  A feed containing metadata about a single short-form video (clip).\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/clip-asset-id.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/the-it-crowd/videos/TCGS_CLIP_0000001015.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "Clip Detail Atom Feed",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Clip_Detail_Atom_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clip_Detail_Atom_Feed",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "brand-web-safe-title",
-            "type": "string",
-            "in": "path",
-            "required": true
-          },
-          {
-            "name": "clip-asset-id",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/{brand-web-safe-title}/videos/all.atom": {
-      "get": {
-        "description": "  A feed containing metadata about all the short-form (clip) videos. The clips \n  feed can be accessed at different levels: the content is then filtered \n  depending on the level, but the structure is identical.When accessed: from \n  the top, the feed contains all the clips for the brand;  at series level, \n  the feed contains only clips from the series; and  at episode level, the \n  feed contains only clips for the episode (and is very unlikely to require \n  pagination). The entries for the Clips Landing Feed contain references to \n  each short-form asset.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/all.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/peep-show/videos.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "Clips Landing Feed Brand Series and Episode Levels",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "brand-web-safe-title",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/{brand-web-safe-title}/videos/series-{SERIES_SEQUENCE_NUMBER}.atom": {
-      "get": {
-        "description": "  A feed containing metadata about all the short-form (clip) videos. The clips \n  feed can be accessed at different levels: the content is then filtered \n  depending on the level, but the structure is identical.When accessed: from \n  the top, the feed contains all the clips for the brand;  at series level, \n  the feed contains only clips from the series; and  at episode level, the \n  feed contains only clips for the episode (and is very unlikely to require \n  pagination). The entries for the Clips Landing Feed contain references to \n  each short-form asset.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/peep-show/videos.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "Clips Landing Feed Brand Series and Episode Levels(2)",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels(2)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "brand-web-safe-title",
-            "type": "string",
-            "in": "path",
-            "required": true
-          },
-          {
-            "name": "SERIES_SEQUENCE_NUMBER",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/{brand-web-safe-title}/videos/series-{SERIES_SEQUENCE_NUMBER}/episode-{EPISODE_SEQUENCE_NUMBER}.atom": {
-      "get": {
-        "description": "  A feed containing metadata about all the short-form (clip) videos. The clips \n  feed can be accessed at different levels: the content is then filtered \n  depending on the level, but the structure is identical.When accessed: from \n  the top, the feed contains all the clips for the brand;  at series level, \n  the feed contains only clips from the series; and  at episode level, the \n  feed contains only clips for the episode (and is very unlikely to require \n  pagination). The entries for the Clips Landing Feed contain references to \n  each short-form asset.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER/episode-EPISODE_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/peep-show/videos.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "Clips Landing Feed Brand Series and Episode Levels(3)",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels(3)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "brand-web-safe-title",
-            "type": "string",
-            "in": "path",
-            "required": true
-          },
-          {
-            "name": "SERIES_SEQUENCE_NUMBER",
-            "type": "string",
-            "in": "path",
-            "required": true
-          },
-          {
-            "name": "EPISODE_SEQUENCE_NUMBER",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/coming-soon.atom": {
-      "get": {
-        "description": "  Coming Soon feed display a list of episodes coming soon to linear TV so that \n  I can promote new Channel 4 content.\n\n  http://api.channel4.com/pmlsd/coming-soon.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/coming-soon.atom?apikey=xxxxxxx",
-        "summary": "Coming Soon feed",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Coming_Soon_feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/metadataresources/Coming_Soon_feed",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/coming-soon/{category}.atom": {
-      "get": {
-        "description": "  Coming Soon feed display a list of episodes coming soon to linear TV so that \n  I can promote new Channel 4 content.\n\n  http://api.channel4.com/pmlsd/coming-soon/[category].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/coming-soon.atom?apikey=xxxxxxx",
-        "summary": "Coming Soon feed(2)",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Coming_Soon_feed(2)",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/metadataresources/Coming_Soon_feed",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "category",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/{brand-web-safe-title}/episode-guide/series-{series_number}/episode-{episode_number}.atom": {
-      "get": {
-        "description": "  A feed containing metadata about a specified episode. (This feed does not \n  contain any entries and only contains a feed element regarding this \n  episode.)\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/episode-guide/series-series_number/episode-episode_number.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/the-it-crowd/episode-guide/series-1/episode-1.atom?apikey=your-key",
-        "summary": "Episode Guide Feed Episode Detail",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Episode_Guide_Feed_Episode_Detail",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Episode_Detail",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "brand-web-safe-title",
-            "type": "string",
-            "in": "path",
-            "required": true
-          },
-          {
-            "name": "series_number",
-            "type": "string",
-            "in": "path",
-            "required": true
-          },
-          {
-            "name": "episode_number",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/{brand-web-safe-title}/episode-guide/series-{series_number}.atom": {
-      "get": {
-        "description": "  A feed containing metadata about all the episodes for a specific series. The \n  entries in this feed contain references to each of the episodes (where \n  metadata has been published), with some convenient links.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/episode-guide/series-series_number.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/chelmsford-123/episode-guide/series-1.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4\t",
-        "summary": "Episode Guide Feed Series Detail",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Episode_Guide_Feed_Series_Detail",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Detail",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "brand-web-safe-title",
-            "type": "string",
-            "in": "path",
-            "required": true
-          },
-          {
-            "name": "series_number",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/{brand-web-safe-title}/episode-guide.atom": {
-      "get": {
-        "description": "  A feed containing metadata about all series for a specified brand. The \n  entries in this feed contain references to each of the series (where \n  metadata has been published), with some convenient links.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/episode-guide.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/father-ted/episode-guide.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4\t",
-        "summary": "Episode Guide Feed Series Landing",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Episode_Guide_Feed_Series_Landing",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Landing",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "brand-web-safe-title",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/{brand-web-safe-title}.atom": {
-      "get": {
-        "description": "  The basis for all brand information\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/the-it-crowd.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "Hub Feed",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Hub_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/metadataresources/Hub_Feed",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "brand-web-safe-title",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
-    },
-    "/programme/{programme-id}.atom": {
-      "get": {
-        "description": "  A feed containing all long-form content currently or previously available \n  for a specified Programme Id. The entries for the Programme feed contain \n  references to long-form assets for each platform.\n\n  http://api.channel4.com/pmlsd/programme/[programme-id].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/programme/33881-001/4od.atom?apikey=z4mwwux6yvahy4jz4xe3xeb4",
-        "summary": "Programme Feed",
-        "tags": [
-          "metadataresources"
-        ],
-        "operationId": "Programme_Feed",
-        "x-documentation": "./apiSource/developer.channel4.com/docs/read/programmesapiguide/metadataresources/Programme_Feed",
-        "produces": [],
-        "parameters": [
-          {
-            "$ref": "#/parameters/platform"
-          },
-          {
-            "name": "programme-id",
-            "type": "string",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Default response",
-            "schema": {
-              "$ref": "#/definitions/atom"
-            }
-          }
-        }
-      }
     }
   },
   "definitions": {
@@ -1626,40 +1978,45 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Unique identifier of this feed, including the programmeId"
+          "description": "Unique identifier of this feed"
         },
         "title": {
           "type": "string",
-          "description": "Title of brand for the programmeId"
+          "description": "Channel 4 EPG for [date selected]"
         },
-        "updated": {
+        "link@self": {
           "type": "string",
-          "format": "date-time",
-          "description": "Date & time feed last updated"
+          "format": "uri",
+          "description": "URL of current page / feed"
+        },
+        "link@previous": {
+          "type": "string",
+          "format": "uri",
+          "description": "Link to previous day's page / feed (if available)"
+        },
+        "link@next": {
+          "type": "string",
+          "format": "uri",
+          "description": "Link to next day's page / feed (if available)"
         },
         "author": {
           "type": "object",
           "properties": {
             "name": {
               "type": "string",
-              "description": "Author / owner of feed"
+              "description": "Name of author / owner"
             }
           }
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date & time feed rendered"
         },
         "logo": {
           "type": "string",
           "format": "uri",
-          "description": "Brand image URL"
-        },
-        "link@alternate": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to HTML version of current feed"
-        },
-        "link@self": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL of current feed"
+          "description": "Default Image URL"
         },
         "generator": {
           "type": "string",
@@ -1671,22 +2028,45 @@
         },
         "dc:relation.platformClientVersion": {
           "type": "number",
-          "description": "Identifies the version of the client application compatible with this feed."
+          "description": "Identifies the version of the specified platform client application compatible with this feed."
         },
         "link@up": {
           "type": "string",
           "format": "uri",
-          "description": "URL of parent feed"
+          "description": "URL to parent feed"
         },
-        "link@next": {
+        "link@alternate": {
           "type": "string",
           "format": "uri",
-          "description": "URL to next set of clips, if available"
+          "description": "URL to HTML version, i.e., player page"
         },
-        "link@previous": {
+        "dc:relation.BrandFlattened": {
+          "type": "boolean",
+          "description": "Boolean indicating whether there is no Series -> Episode structure in this brand (\"false\" indicating that there is such a structure)"
+        },
+        "dc:relation.presentationBrand": {
           "type": "string",
-          "format": "uri",
-          "description": "URL to previous set of clips, if available"
+          "description": "The presentation brand"
+        },
+        "dc:relation.BrandWebSafeTitle": {
+          "type": "string",
+          "description": "Title of the brand safe for web linking (no whitespaces, no special chars...)"
+        },
+        "dc:relation.ProgrammeType": {
+          "type": "string",
+          "description": "Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type."
+        },
+        "dc:relation.4oDSeriesCount": {
+          "type": "integer",
+          "description": "Number of available 4oD series for this Brand"
+        },
+        "dc:relation.4oDProgrammeCount": {
+          "type": "integer",
+          "description": "Number of available brands in this category beginning with this letter (4oD only)"
+        },
+        "dc:relation.New4oDSeriesAvailable": {
+          "type": "boolean",
+          "description": "Flags that notifies clients when a Brand contains NEW series."
         },
         "link@related": {
           "type": "string",
@@ -1697,75 +2077,79 @@
           "type": "string",
           "description": "Presence of this element indicates no pagination"
         },
-        "dc:relation.4oDProgrammeCount": {
-          "type": "integer",
-          "description": "Number of available 4oD episodes for this Brand"
-        },
         "dc:relation.AllProgrammeCount": {
           "type": "integer",
           "description": "Number of available brands in this category beginning with this letter (all programmes)"
         },
-        "Entry Elements": {
-          "type": "string",
-          "description": "Element Description Example Value id ID containing Brand Web Safe Name tag:www.channel4.com,2009:/brand/inside-natures-giants title Programme's Brand Name Inside Nature's Giants summary Synopsis of this brand The award-winning series that gets under the skin of the largest animals on the planet. Most wildlife documentaries show how animals behave, but by exploring their anatomy, Inside Nature's Giants reveals how these creatures really work. updated Date and time element last updated 2010-10-18T10:08:44.295Z dc:relation.sortLetter  Starting letter for this programme I dc:relation.ProgrammeType  Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type. SSU dc:date.TXDate  Transmission date of the programme 2010-10-18T10:30:00.000Z media:content / media:thumbnail URL to medium-sized image of this brand url=\"http://www.channel4.com/assets/programmes/images/inside-natures-giants/7eb0ec03-1321-4532-bf51-cb2af0d9d528_145x82.jpg\" height=\"82\" width=\"145\" link@alternate URL to HTML version of brand http://www.channel4.com/programmes/inside-natures-giants link@self URL to the Channel 4 XML feed for this brand http://api.channel4.com/pmlsd/inside-natures-giants.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx link@related (Official Site) URL to the brand's official site, if available link@related (4oD) URL to 4oD feed, if available (self-referential in 4oD feeds) http://api.channel4.com/pmlsd/inside-natures-giants/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx link@related (Clips) URL to short-form video feed, if available http://api.channel4.com/pmlsd/inside-natures-giants/video.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx link@related (Episode Guide) URL to Episode Guide feed, if available http://api.channel4.com/pmlsd/inside-natures-giants/episode-guide.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
-        },
-        "dc:relation.CategoryType": {
-          "type": "string",
-          "description": "Type to which the category belongs (if applicable).(Valid values are 'Channel', 'Display' or 'None'.)"
-        },
-        "dc:relation.CategoryOrder": {
-          "type": "integer",
-          "description": "Enumerated order of category within its type(e.g., 'Channel' might have Food=1, More4=2, etc.)(Appears in feed only if CategoryType<>'None'.)"
-        },
-        "dc:relation.Synopsis": {
-          "type": "string",
-          "description": "Summary of this feed"
-        },
         "subtitle": {
           "type": "string",
-          "description": "Synopsis of this brand"
+          "description": "The synopsis of the series."
         },
-        "media:thumbnail": {
-          "type": "object",
-          "properties": {
-            "media:thumbnail": {
-              "type": "string",
-              "description": "URL to medium-sized image of this episode"
-            }
-          }
-        },
-        "Link@Related title=\"4oD\"": {
+        "link@related (Episode Guide)": {
           "type": "string",
           "format": "uri",
-          "description": "URL to Brand 4oD feed, if available"
+          "description": "URL to Episode Guide feed, if available"
+        },
+        "link@related (4oD)": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to 4oD feed, if available"
+        },
+        "link@related (Clips)": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to short-form video feed for this episode, if available"
+        },
+        "category (primary)": {
+          "type": "string",
+          "description": "Primary category (brand must have ONE)"
+        },
+        "category (secondary)": {
+          "type": "string",
+          "description": "Secondary category (brand may have any number)"
         },
         "dc:relation.BrandTitle": {
           "type": "string",
-          "description": "Title of the brand for this feed"
+          "description": "Title of brand"
+        },
+        "dc:relation.comingSoonTo4oD": {
+          "type": "string",
+          "description": "If the brand is coming to be available on 4oD soon this empty element should be included."
+        },
+        "link@related (4oD Episode)": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to HTML version of 4oD page for full episode, if available"
+        },
+        "dc:relation.firstTXDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date of first broadcast (optional). This is based on EPG or, when EPG data is not available for the episode, it can be set editorially (significant date)"
+        },
+        "dc:relation.firstTXChannel": {
+          "type": "string",
+          "description": "First TX channel information for this episode"
+        },
+        "dc:relation.lastTXDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date of last broadcast (optional). This is based on EPG ignoring repeats and giving preference to the channel that the brand is primarily targeted at (preferred channel)"
+        },
+        "dc:relation.lastTXChannel": {
+          "type": "string",
+          "description": "Channel of last broadcast (optional). This is based on EPG ignoring repeats and giving preference to the channel that the brand is primarily targeted at (preferred channel)"
         },
         "dc:relation.SeriesNumber": {
           "type": "integer",
-          "description": "Series to which this episode belongs"
-        },
-        "dc:relation.ProgrammeType": {
-          "type": "string",
-          "description": "Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type."
-        },
-        "dc:relation.resourceType": {
-          "type": "string",
-          "description": "The type of the entry"
-        },
-        "summary": {
-          "type": "string",
-          "description": "Synopsis of episode"
+          "description": "The series to which this episode belongs"
         },
         "dc:relation.EpisodeNumber": {
           "type": "integer",
-          "description": "Episode number within this series"
+          "description": "The episode number within the series"
         },
-        "dc:relation.programmeId": {
-          "type": "string",
-          "description": "Indicates the contract and programme numbers"
+        "dc:relation.Sharable": {
+          "type": "boolean",
+          "description": "Boolean value indicating if clips for this brand are sharable"
         },
         "media:group": {
           "type": "object",
@@ -1773,15 +2157,15 @@
             "media:player": {
               "type": "string",
               "format": "uri",
-              "description": "URL to media-player version of full episode"
+              "description": "URL to media-player version of episode"
             },
             "media:thumbnail": {
               "type": "string",
-              "description": "URL to clip image"
+              "description": "URL to medium-sized image of this episode"
             },
             "media:rating": {
               "type": "string",
-              "description": "Flag to show whether clip is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")"
+              "description": "Flag to show whether episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")"
             },
             "media:copyright": {
               "type": "string",
@@ -1794,6 +2178,10 @@
             "media:rights": {
               "type": "string",
               "description": "Status of media rights under which Channel 4 provides episode content"
+            },
+            "media:category": {
+              "type": "string",
+              "description": "Defines the type of short-form item. Its value can be one of the next: EXTRACT, PREVIEW, EXTRA, TRAILER"
             },
             "media:content": {
               "type": "object",
@@ -1864,20 +2252,12 @@
                   "description": "Length in minutes and seconds - does not include ad breaks"
                 }
               }
-            },
-            "media:category": {
-              "type": "string",
-              "description": "Defines the type of short-form item. Its value can be one of the next: EXTRACT, PREVIEW, EXTRA, TRAILER"
             }
           }
         },
         "dcterms:available": {
           "type": "string",
           "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)"
-        },
-        "dc:relation.RelatedEntryId": {
-          "type": "string",
-          "description": "The episode guide entry related to this episode"
         },
         "dc:relation.AgeRating": {
           "type": "integer",
@@ -1886,6 +2266,60 @@
         "dc:relation.Guidance": {
           "type": "string",
           "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable"
+        },
+        "dc:relation.Duration": {
+          "type": "string",
+          "description": "Length in minutes and seconds - does not include ad breaks"
+        },
+        "dc:relation.ExternalVideoId": {
+          "type": "string",
+          "description": "Clip Asset_id value from the Clip table (a.k.a. Brightcode id)."
+        },
+        "dc:relation.CategoryType": {
+          "type": "string",
+          "description": "Type to which the category belongs (if applicable).(Valid values are 'Channel', 'Display' or 'None'.)"
+        },
+        "dc:relation.CategoryOrder": {
+          "type": "integer",
+          "description": "Enumerated order of category within its type(e.g., 'Channel' might have Food=1, More4=2, etc.)(Appears in feed only if CategoryType<>'None'.)"
+        },
+        "Entry Elements": {
+          "type": "string",
+          "description": "Element Description Example Value id ID containing Brand Web Safe Name tag:www.channel4.com,2009:/brand/inside-natures-giants title Programme's Brand Name Inside Nature's Giants summary Synopsis of this brand The award-winning series that gets under the skin of the largest animals on the planet. Most wildlife documentaries show how animals behave, but by exploring their anatomy, Inside Nature's Giants reveals how these creatures really work. updated Date and time element last updated 2010-10-18T10:08:44.295Z dc:relation.sortLetter  Starting letter for this programme I dc:relation.ProgrammeType  Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type. SSU dc:date.TXDate  Transmission date of the programme 2010-10-18T10:30:00.000Z media:content / media:thumbnail URL to medium-sized image of this brand url=\"http://www.channel4.com/assets/programmes/images/inside-natures-giants/7eb0ec03-1321-4532-bf51-cb2af0d9d528_145x82.jpg\" height=\"82\" width=\"145\" link@alternate URL to HTML version of brand http://www.channel4.com/programmes/inside-natures-giants link@self URL to the Channel 4 XML feed for this brand http://api.channel4.com/pmlsd/inside-natures-giants.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx link@related (Official Site) URL to the brand's official site, if available link@related (4oD) URL to 4oD feed, if available (self-referential in 4oD feeds) http://api.channel4.com/pmlsd/inside-natures-giants/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx link@related (Clips) URL to short-form video feed, if available http://api.channel4.com/pmlsd/inside-natures-giants/video.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx link@related (Episode Guide) URL to Episode Guide feed, if available http://api.channel4.com/pmlsd/inside-natures-giants/episode-guide.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx"
+        },
+        "dc:relation.Synopsis": {
+          "type": "string",
+          "description": "Summary of this feed"
+        },
+        "media:thumbnail": {
+          "type": "object",
+          "properties": {
+            "media:thumbnail": {
+              "type": "string",
+              "description": "URL to medium-sized image of this episode"
+            }
+          }
+        },
+        "Link@Related title=\"4oD\"": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to Brand 4oD feed, if available"
+        },
+        "dc:relation.resourceType": {
+          "type": "string",
+          "description": "The type of the entry"
+        },
+        "summary": {
+          "type": "string",
+          "description": "Synopsis of episode"
+        },
+        "dc:relation.programmeId": {
+          "type": "string",
+          "description": "Indicates the contract and programme numbers"
+        },
+        "dc:relation.RelatedEntryId": {
+          "type": "string",
+          "description": "The episode guide entry related to this episode"
         },
         "dc:date.TXDate": {
           "type": "string",
@@ -1908,18 +2342,10 @@
           "type": "boolean",
           "description": "Boolean indicating if the user has to be logged-in in order to play this episode."
         },
-        "dc:relation.Duration": {
-          "type": "string",
-          "description": "Duration in minutes and seconds"
-        },
         "dc:date.firstTXDate": {
           "type": "string",
           "format": "date-time",
           "description": "First TX date information for this episode"
-        },
-        "dc:relation.firstTXChannel": {
-          "type": "string",
-          "description": "Channel of first broadcast (optional). This is based on EPG or, when EPG data is not available for the episode, it can be set editorially (significant date)"
         },
         "dc:relation.ParentCollectionId": {
           "type": "string",
@@ -1932,80 +2358,6 @@
         "dc:relation.StartOffset": {
           "type": "integer",
           "description": ""
-        },
-        "dc:relation.BrandFlattened": {
-          "type": "boolean",
-          "description": "Boolean indicating if this is a flattened brand"
-        },
-        "dc:relation.presentationBrand": {
-          "type": "string",
-          "description": "The presentation brand"
-        },
-        "dc:relation.BrandWebSafeTitle": {
-          "type": "string",
-          "description": "Title of the brand safe for web linking (no whitespaces, no special chars...)"
-        },
-        "dc:relation.4oDSeriesCount": {
-          "type": "integer",
-          "description": "Number of available 4oD series for this Brand"
-        },
-        "dc:relation.New4oDSeriesAvailable": {
-          "type": "boolean",
-          "description": "Flags that notifies clients when a Brand contains NEW series."
-        },
-        "link@related (4oD Episode)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to 4oD HTML (player page) if available"
-        },
-        "dc:relation.Sharable": {
-          "type": "boolean",
-          "description": "Boolean value indicating if clips for brand are sharable"
-        },
-        "dc:relation.ExternalVideoId": {
-          "type": "string",
-          "description": "Clip Asset_id value from the Clip table (a.k.a. Brightcode id)."
-        },
-        "link@related (Clips)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to Short form video feed, if available"
-        },
-        "dc:relation.firstTXDate": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Date of first broadcast (optional). This is based on EPG or, when EPG data is not available for the episode, it can be set editorially (significant date)"
-        },
-        "dc:relation.lastTXDate": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Date of last broadcast (optional). This is based on EPG ignoring repeats and giving preference to the channel that the brand is primarily targeted at (preferred channel)"
-        },
-        "dc:relation.lastTXChannel": {
-          "type": "string",
-          "description": "Channel of last broadcast (optional). This is based on EPG ignoring repeats and giving preference to the channel that the brand is primarily targeted at (preferred channel)"
-        },
-        "link@related (Episode Guide)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to Episode Guide feed, if available"
-        },
-        "link@related (4oD)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to 4oD feed, if available"
-        },
-        "category (primary)": {
-          "type": "string",
-          "description": "Primary category (brand must have ONE)"
-        },
-        "category (secondary)": {
-          "type": "string",
-          "description": "Secondary category (brand may have any number)"
-        },
-        "dc:relation.comingSoonTo4oD": {
-          "type": "string",
-          "description": "If the brand is coming to be available on 4oD soon this empty element should be included."
         }
       },
       "additionalProperties": true
@@ -2015,71 +2367,20 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "ID of entry"
+          "description": "ID of the entry"
         },
         "title": {
           "type": "string",
-          "description": "Title of episode"
-        },
-        "summary": {
-          "type": "string",
-          "description": "Synopsis of episode"
+          "description": "Episode Title. If available on 4oD then the 4oD episode title is returned. If not, then the title attributed to the slot is returned. It is possible for these to be different"
         },
         "updated": {
           "type": "string",
           "format": "date-time",
-          "description": "Date & time entry last updated"
+          "description": "Date & time episode last updated"
         },
-        "link@alternate": {
+        "summary": {
           "type": "string",
-          "format": "uri",
-          "description": "URL to HTML version, i.e., player page"
-        },
-        "link@related": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to Episode Guide feed, if available"
-        },
-        "link@self": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to current feed of episode"
-        },
-        "dc:relation.sortLetter": {
-          "type": "string",
-          "description": "Starting letter for this programme"
-        },
-        "dc:relation.ProgrammeType": {
-          "type": "string",
-          "description": "Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type."
-        },
-        "media:content": {
-          "type": "object",
-          "properties": {
-            "media:thumbnail": {
-              "type": "string",
-              "description": "URL to medium-sized image of this episode"
-            },
-            "media:credit": {
-              "type": "string",
-              "description": "List of credits/cast for the episode"
-            }
-          }
-        },
-        "link@related (4oD)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to HTML version of 4oD page for this episode, if available"
-        },
-        "link@related (Clips)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to feed of video clips for this series"
-        },
-        "link@related (Episode Guide)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to feed of full episode, if available"
+          "description": "Synopsis of this episode"
         },
         "dc:relation.BrandTitle": {
           "type": "string",
@@ -2087,15 +2388,15 @@
         },
         "dcterms:available": {
           "type": "string",
-          "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)"
+          "description": "Start date, end date and date / time format for the period of time when episode is available on 4oD. This element is not returned if the programme is not currently available on 4oD."
         },
         "dc:relation.SeriesNumber": {
           "type": "integer",
-          "description": "The series to which this episode belongs"
+          "description": "The series to which this episode belongs."
         },
         "dc:relation.EpisodeNumber": {
           "type": "integer",
-          "description": "The episode number within the series"
+          "description": "The episode number within the series."
         },
         "dc:relation.AgeRating": {
           "type": "integer",
@@ -2108,11 +2409,11 @@
         "dc:date.TXDate": {
           "type": "string",
           "format": "date-time",
-          "description": "First TX date information for this episode"
+          "description": "If this programme is available on 4oD then this element indicates the broadcast date/time of the episode selected for 4oD. If the programme is not on 4oD then this element is omitted.(Indicates whether pre- or post-watershed)"
         },
         "dc:relation.TXChannel": {
           "type": "string",
-          "description": "First TX channel information for this episode"
+          "description": "If this programme is available on 4oD then this element indicates the broadcast channel that the episode selected for 4oD. If the programme is not on 4oD then this element is omitted."
         },
         "dc:relation.Subtitles": {
           "type": "boolean",
@@ -2126,33 +2427,43 @@
           "type": "string",
           "description": "Length in minutes and seconds - does not include ad breaks"
         },
+        "link@alternate": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to HTML version of episode (if available)"
+        },
+        "link@related": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL of ATOM feed of current episode"
+        },
         "media:group": {
           "type": "object",
           "properties": {
             "media:player": {
               "type": "string",
               "format": "uri",
-              "description": "URL to media-player version of episode"
+              "description": "URL to 4oD media-player version of episode (if available)"
             },
             "media:thumbnail": {
               "type": "string",
-              "description": "URL to medium-sized image of this episode"
+              "description": "URL to 4oD medium-sized image of this episode (if available)"
             },
             "media:rating": {
               "type": "string",
-              "description": "Flag to show whether episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")"
+              "description": "Flag to show whether the 4oD version of the episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\") (if available)"
             },
             "media:copyright": {
               "type": "string",
-              "description": "Link to copyright / T&C information"
+              "description": "Link to 4oD  copyright / T&C information (if available)"
             },
             "media:restriction": {
               "type": "string",
-              "description": "Restriction flag (\"allow\") and list of country or state codes where episode is accessible to website users"
+              "description": "Restriction flag (\"allow\") and list of country or state codes where 4oD episode is accessible to website users (if available)"
             },
             "media:rights": {
               "type": "string",
-              "description": "Status of media rights under which Channel 4 provides episode content"
+              "description": "Status of 4oD media rights under which Channel 4 provides episode content (if available)"
             },
             "media:content": {
               "type": "object",
@@ -2230,13 +2541,17 @@
             }
           }
         },
+        "dc:relation.ProgrammeType": {
+          "type": "string",
+          "description": "Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type."
+        },
         "dc:relation.BrandWebsafeTitle": {
           "type": "string",
           "description": "The associated brand web-safe title"
         },
         "dc:relation.programmeId": {
           "type": "string",
-          "description": "The contract number/programme number for episode."
+          "description": "The episode identifier."
         },
         "dc:date.firstTXDate": {
           "type": "string",
@@ -2256,6 +2571,24 @@
           "type": "string",
           "description": "Current TX channel information for this slot's episode"
         },
+        "dc:relation.requestType": {
+          "type": "string",
+          "enum": [
+            "ARCHIVE",
+            "CATCHUP"
+          ],
+          "description": "Indicates catchup or archive content"
+        },
+        "link@self": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to the Channel 4 XML feed for this brand"
+        },
+        "link@related (Episode Guide)": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to Episode Guide feed, if available"
+        },
         "dc:relation.ExternalVideoId": {
           "type": "integer",
           "description": "This is the clip asset id (from column CLIP_ASSET.ASSET_ID. For the current implementation this is the Brightcove Id."
@@ -2268,13 +2601,76 @@
           "type": "string",
           "description": "Web-safe title for the brand that the clip is associated with (directly or indirectly)"
         },
-        "dc:relation.requestType": {
+        "dc:relation.RelatedEntryId": {
           "type": "string",
-          "enum": [
-            "ARCHIVE",
-            "CATCHUP"
-          ],
-          "description": "Indicates catchup or archive content"
+          "description": "The episode guide entry related to this episode"
+        },
+        "dc:relation.LoginRequired": {
+          "type": "boolean",
+          "description": "Boolean indicating if the requestType is ARCHIVE and the user needs to be logged in to watch."
+        },
+        "dc:relation.sortLetter": {
+          "type": "string",
+          "description": "Starting letter for this programme"
+        },
+        "media:content": {
+          "type": "object",
+          "properties": {
+            "media:thumbnail": {
+              "type": "string",
+              "description": "URL to medium-sized image of this brand"
+            },
+            "media:credit": {
+              "type": "string",
+              "description": "List of credits/cast for the episode"
+            }
+          }
+        },
+        "link@related (4oD)": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to 4oD feed, if available (self-referential in 4oD feeds)"
+        },
+        "link@related (Clips)": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to short-form video feed, if available"
+        },
+        "dc:relation.Repeat": {
+          "type": "boolean",
+          "description": "Boolean indicating if the Slot includes an indicator marked as repeat."
+        },
+        "dc:date.Last": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of the previous TX from this brand (if applicable)"
+        },
+        "dc:relation.LastChannel": {
+          "type": "string",
+          "description": "The channel on which the previous TX from this brand(if applicable)"
+        },
+        "dc:date.Next": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of the next TX from this brand (if applicable)"
+        },
+        "dc:relation.NextChannel": {
+          "type": "string",
+          "description": "The channel on which the next TX from this brand (if applicable)"
+        },
+        "dc:relation.TXStartTime": {
+          "type": "string",
+          "description": "Start date and time of the broadcast"
+        },
+        "link@up": {
+          "type": "string",
+          "format": "uri",
+          "description": "Parent brand feed URL"
+        },
+        "link@EpisodeUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "Episode URL, if applicable"
         },
         "dc:relation.BrandWebSafeTitle": {
           "type": "string",
@@ -2291,7 +2687,39 @@
         },
         "link@related (Official Site)": {
           "type": "string",
+          "format": "uri",
           "description": "URL to the brand's official site, if available"
+        },
+        "link@related (All Programmes by Title)": {
+          "type": "string",
+          "format": "uri",
+          "description": "All programmes in category by title"
+        },
+        "link@related (4oD Programmes by TX Date)": {
+          "type": "string",
+          "format": "uri",
+          "description": "4oD programmes in category by TX date"
+        },
+        "link@related (4oD Programmes by Title)": {
+          "type": "string",
+          "format": "uri",
+          "description": "4oD programmes in category by title"
+        },
+        "dc:relation.CategoryType": {
+          "type": "string",
+          "description": "Type to which the category belongs (if applicable). (Valid values are 'Channel', 'Display' or 'None'.)"
+        },
+        "dc:relation.CategoryOrder": {
+          "type": "integer",
+          "description": "Enumerated order of category within its type (e.g., 'Channel' might have Food=1, More4=2, etc.) (Appears in feed only if CategoryType<>'None'.)"
+        },
+        "dc:relation.AllProgrammeCount": {
+          "type": "integer",
+          "description": "Number of available brands in this category (all programmes)"
+        },
+        "dc:relation.4oDProgrammeCount": {
+          "type": "integer",
+          "description": "The number of 4oD available programmes in the collection, including all Brand/Series/Episodes."
         },
         "generator": {
           "type": "string",
@@ -2332,37 +2760,6 @@
           "type": "integer",
           "description": "Starting letter for this programme"
         },
-        "link@related (All Programmes by Title)": {
-          "type": "string",
-          "format": "uri",
-          "description": "All programmes in category by title"
-        },
-        "link@related (4oD Programmes by TX Date)": {
-          "type": "string",
-          "format": "uri",
-          "description": "4oD programmes in category by TX date"
-        },
-        "link@related (4oD Programmes by Title)": {
-          "type": "string",
-          "format": "uri",
-          "description": "4oD programmes in category by title"
-        },
-        "dc:relation.CategoryType": {
-          "type": "string",
-          "description": "Type to which the category belongs (if applicable). (Valid values are 'Channel', 'Display' or 'None'.)"
-        },
-        "dc:relation.CategoryOrder": {
-          "type": "integer",
-          "description": "Enumerated order of category within its type (e.g., 'Channel' might have Food=1, More4=2, etc.) (Appears in feed only if CategoryType<>'None'.)"
-        },
-        "dc:relation.AllProgrammeCount": {
-          "type": "integer",
-          "description": "Number of available brands in this category (all programmes)"
-        },
-        "dc:relation.4oDProgrammeCount": {
-          "type": "integer",
-          "description": "The number of 4oD available programmes in the collection, including all Brand/Series/Episodes."
-        },
         "dc:relation.Synopsys": {
           "type": "string",
           "description": "The synopsis of this brand"
@@ -2392,48 +2789,6 @@
         "subtitle": {
           "type": "string",
           "description": "The synopsis of the series."
-        },
-        "dc:relation.Repeat": {
-          "type": "boolean",
-          "description": "Boolean indicating if the Slot includes an indicator marked as repeat."
-        },
-        "dc:relation.LoginRequired": {
-          "type": "boolean",
-          "description": "Boolean indicating if the user has to be logged-in in order to play this episode."
-        },
-        "dc:relation.SimulcastRights": {
-          "type": "boolean",
-          "description": "Boolean indicating if the episode has rights to be streamed on the live simulcast service."
-        },
-        "dc:relation.Movie": {
-          "type": "boolean",
-          "description": "Boolean indicating if the SLOT is a Movie or not."
-        },
-        "dc:relation.comingSoonTo4oD": {
-          "type": "string",
-          "description": "If the brand is coming to be available on 4oD soon this empty element should be included."
-        },
-        "dc:relation.hd": {
-          "type": "boolean",
-          "description": "Boolean indicating if the SLOT is HD on linear"
-        },
-        "dc:relation.RelatedEntryId": {
-          "type": "string",
-          "description": "The episode guide entry related to this episode"
-        },
-        "dc:relation.TXStartTime": {
-          "type": "string",
-          "description": "Start date and time of the broadcast"
-        },
-        "link@up": {
-          "type": "string",
-          "format": "uri",
-          "description": "Parent brand feed URL"
-        },
-        "link@EpisodeUrl": {
-          "type": "string",
-          "format": "uri",
-          "description": "Episode URL, if applicable"
         },
         "dc:relation.WideScreen": {
           "type": "boolean",
@@ -2478,27 +2833,25 @@
           "format": "uri",
           "description": "URL of ATOM Episode Guide details feed of current brand (if available)"
         },
-        "dc:date.Last": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Timestamp of the previous TX from this brand (if applicable)"
-        },
-        "dc:relation.LastChannel": {
-          "type": "string",
-          "description": "The channel on which the previous TX from this brand(if applicable)"
-        },
-        "dc:date.Next": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Timestamp of the next TX from this brand (if applicable)"
-        },
-        "dc:relation.NextChannel": {
-          "type": "string",
-          "description": "The channel on which the next TX from this brand (if applicable)"
+        "dc:relation.SimulcastRights": {
+          "type": "boolean",
+          "description": "Boolean indicating if the episode has rights to be streamed on the live simulcast service."
         },
         "dc:relation.Platform": {
           "type": "string",
           "description": "The platform code that this episode is available on"
+        },
+        "dc:relation.Movie": {
+          "type": "boolean",
+          "description": "Boolean indicating if the SLOT is a Movie or not."
+        },
+        "dc:relation.comingSoonTo4oD": {
+          "type": "string",
+          "description": "If the brand is coming to be available on 4oD soon this empty element should be included."
+        },
+        "dc:relation.hd": {
+          "type": "boolean",
+          "description": "Boolean indicating if the SLOT is HD on linear"
         }
       },
       "additionalProperties": true

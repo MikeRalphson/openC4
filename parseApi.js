@@ -59,7 +59,9 @@ function postProcess(src) {
 	var result = {};
 	result.score = 0;
 	result.urls = [];
-	result.sampleUrl = src.sample;
+	result.sampleUrl = src.sample.replace(/apikey=(.*)/,function(match,group1){
+		return 'xxxxxxxxxxxxxxxxxxxxxxxx';
+	});
 	result.feedDescription = '';
 	result.parameters = [];
 	result.feed = [];
@@ -130,6 +132,11 @@ function postProcess(src) {
 						urls.push(urls[0].replace('categories/category','categories/category/derived/ad'));
 					}
 
+					if ((urls[0].indexOf('/atoz/')>=0) || (urls[0].indexOf('/brands/')>0) || (urls[0].indexOf('/categories/')>0) ||
+						(urls[0].indexOf('/search')>0)) {
+						urls.push(urls[0].replace('.atom','/page-{pageno}.atom'));
+					}
+
 					result.urls = result.urls.concat(urls);
 					result.score++;
 				}
@@ -159,12 +166,6 @@ function postProcess(src) {
 							var param3 = clone(param);
 							param3.name = 'dd';
 							result.parameters.push(param3);
-						}
-						if (param.name == 'category') {
-							var param2 = clone(param);
-							param2.name = 'channel';
-							param2.description = 'The name of the channel for which you seek associated Channel 4oD programmes';
-							result.parameters.push(param2);
 						}
 					}
 					result.score++;
@@ -276,12 +277,12 @@ function processPath(filespec){
 function definePath(file,url,suffix) {
 	var path = {};
 	path.get = {};
-	path.get.description = wrap(file.output.feedDescription+'\n'+url+'\n'+file.output.sampleUrl,{width: 76});
+	path.get.description = wrap(file.output.feedDescription+'\n'+url+'\n'+file.output.sampleUrl,{width: 76}).trim();
 	path.get.summary = file.summary+suffix;
 	path.get.tags = [];
 	path.get.tags.push(file.group);
 	path.get.operationId = file.operation+suffix;
-	path.get["x-documentation"] = file.filename.replace('apiSource\\','http://').replaceAll('-','/');
+	path.get["x-documentation"] = file.filename.replace('./apiSource/','http://').replaceAll('-','/');
 	path.get.produces = [];
 	path.get.produces.push = 'application/xml';
 	path.get.parameters = [];
@@ -362,7 +363,27 @@ function generateSwagger(){
 			url = url.replaceAll(']','}');
 
 			url = url.replace('search-term.','{q}.');
-			//url = url.replace('{yyyy}/{mm}/{dd}','{yyyy.mm.dd}');
+
+			if (url.indexOf('{pageno}')>=0) {
+				var pageno = {};
+				pageno.name = 'pageno';
+				pageno.description = 'Page number of results to return';
+				pageno.type = 'integer';
+				file.output.parameters.push(pageno);
+			}
+			if (url.indexOf('{channel}')>=0) {
+				var found = false;
+				for (var p in file.output.parameters) {
+					var param = file.output.parameters[p];
+					if (param.name == 'channel') found = true;
+				}
+				if (!found) {
+					var channel = {};
+					channel.name = 'channel';
+					channel.description = 'The name of the channel for which you seek associated Channel 4oD programmes';
+					file.output.parameters.push(channel);
+				}
+			}
 
 			for (var p in file.output.parameters) {
 				var param = file.output.parameters[p];
@@ -518,6 +539,16 @@ processPath('./apiSource');
 
 process.on('exit', function(code) {
 	fs.writeFileSync('./c4Api/api.json',JSON.stringify(api,null,2),'utf8');
+
+	api.files = api.files.sort(function(x,y){
+		if (x.output.urls[0]<y.output.urls[0]) {
+			return -1;
+		}
+		if (x.output.urls[0]>y.output.urls[0]) {
+			return +1;
+		}
+		return 0;
+	});
 
 	console.log();
 	generateSwagger();
