@@ -60,7 +60,7 @@ function postProcess(src) {
 	result.score = 0;
 	result.urls = [];
 	result.sampleUrl = src.sample.replace(/apikey=(.*)/,function(match,group1){
-		return 'xxxxxxxxxxxxxxxxxxxxxxxx';
+		return 'apikey=xxxxxxxxxxxxxxxxxxxxxxxx';
 	});
 	result.feedDescription = '';
 	result.parameters = [];
@@ -284,7 +284,7 @@ function definePath(file,url,suffix) {
 	path.get.operationId = file.operation+suffix;
 	path.get["x-documentation"] = file.filename.replace('./apiSource/','http://').replaceAll('-','/');
 	path.get.produces = [];
-	path.get.produces.push = 'application/xml';
+	path.get.produces.push('application/xml');
 	path.get.parameters = [];
 
 	var param = {};
@@ -406,7 +406,7 @@ function generateSwagger(){
 						path.get.parameters.push(swagParam);
 					}
 					else {
-						if ((param.name.indexOf(' ')<0) && (param.name != 'Film')) {
+						if ((param.name.indexOf(' ')<0) && (param.name != 'Film') && (param.name != 'channel')) {
 							console.log(file.operation+suffix+' omitted parameter: '+param.name);
 						}
 					}

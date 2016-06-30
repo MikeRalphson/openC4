@@ -14,7 +14,7 @@ const commonPlatformSamsung = 'platform=samsung';
 
   http://api.channel4.com/pmlsd/4od/episode-list/date/[yyyy]/[mm]/[dd].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/4od/episode-list/date/2010/11/28.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/4od/episode-list/date/2010/11/28.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function get4odEpisodeListDate(yyyy,mm,dd){
   var p = '/pmlsd/4od/episode-list/date/{yyyy}/{mm}/{dd}.atom';
   p = p.replace('{yyyy}',yyyy);
@@ -28,7 +28,7 @@ function get4odEpisodeListDate(yyyy,mm,dd){
 
   http://api.channel4.com/pmlsd/4od/episode-list/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/4od/episode-list/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/4od/episode-list/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 const get4odEpisodeListPopular = '/pmlsd/4od/episode-list/popular.atom';
 
 /* A feed containing metadata about short-form content relating to 4oD Episodes 
@@ -38,7 +38,7 @@ const get4odEpisodeListPopular = '/pmlsd/4od/episode-list/popular.atom';
 
   http://api.channel4.com/pmlsd/4od/recently-added/videos.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/4od/episode-list/videos.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/4od/episode-list/videos.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 const get4odRecentlyAddedVideos = '/pmlsd/4od/recently-added/videos.atom';
 
 /* A feed containing all available on-demand long-form content for a specified 
@@ -47,7 +47,7 @@ const get4odRecentlyAddedVideos = '/pmlsd/4od/recently-added/videos.atom';
 
   http://api.channel4.com/pmlsd/[brand-web-safe-title]/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/the-it-crowd/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/the-it-crowd/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function get4od(brandWebSafeTitle){
   var p = '/pmlsd/{brand-web-safe-title}/4od.atom';
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
@@ -60,14 +60,14 @@ function get4od(brandWebSafeTitle){
 
   http://api.channel4.com/pmlsd/atoz.atom
 
-  http://api.channel4.com/pmlsd/atoz.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/atoz.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 const getAtoz = '/pmlsd/atoz.atom';
 
 /* Lists Channel 4 programmes whose names begin with the associated letter.
 
   http://api.channel4.com/pmlsd/atoz/start_letter.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/atoz/a.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/atoz/a.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getAtoz2(startLetter){
   var p = '/pmlsd/atoz/{start_letter}.atom';
   p = p.replace('{start_letter}',startLetter);
@@ -78,7 +78,7 @@ function getAtoz2(startLetter){
 
   http://api.channel4.com/pmlsd/atoz/start_letter/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/atoz/a.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/atoz/a.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getAtozPage(startLetter,pageno){
   var p = '/pmlsd/atoz/{start_letter}/page-{pageno}.atom';
   p = p.replace('{start_letter}',startLetter);
@@ -90,7 +90,7 @@ function getAtozPage(startLetter,pageno){
 
   http://api.channel4.com/pmlsd/brand-web-safe-title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/the-it-crowd.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/the-it-crowd.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function get(brandWebSafeTitle){
   var p = '/pmlsd/{brand-web-safe-title}.atom';
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
@@ -103,7 +103,7 @@ function get(brandWebSafeTitle){
 
   http://api.channel4.com/pmlsd/brand-web-safe-title/epg.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/the-simpsons/epg.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/the-simpsons/epg.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getEpg(brandWebSafeTitle){
   var p = '/pmlsd/{brand-web-safe-title}/epg.atom';
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
@@ -116,7 +116,7 @@ function getEpg(brandWebSafeTitle){
 
   http://api.channel4.com/pmlsd/brand-web-safe-title/episode-guide.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/father-ted/episode-guide.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/father-ted/episode-guide.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getEpisodeGuide(brandWebSafeTitle){
   var p = '/pmlsd/{brand-web-safe-title}/episode-guide.atom';
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
@@ -129,7 +129,7 @@ function getEpisodeGuide(brandWebSafeTitle){
 
   http://api.channel4.com/pmlsd/brand-web-safe-title/episode-guide/series-series_number.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/chelmsford-123/episode-guide/series-1.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/chelmsford-123/episode-guide/series-1.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getEpisodeGuideSeries(brandWebSafeTitle,seriesNumber){
   var p = '/pmlsd/{brand-web-safe-title}/episode-guide/series-{series_number}.atom';
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
@@ -143,7 +143,7 @@ function getEpisodeGuideSeries(brandWebSafeTitle,seriesNumber){
 
   http://api.channel4.com/pmlsd/brand-web-safe-title/episode-guide/series-series_number/episode-episode_number.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/the-it-crowd/episode-guide/series-1/episode-1.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/the-it-crowd/episode-guide/series-1/episode-1.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getEpisodeGuideSeriesEpisode(brandWebSafeTitle,seriesNumber,episodeNumber){
   var p = '/pmlsd/{brand-web-safe-title}/episode-guide/series-{series_number}/episode-{episode_number}.atom';
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
@@ -163,7 +163,7 @@ function getEpisodeGuideSeriesEpisode(brandWebSafeTitle,seriesNumber,episodeNumb
 
   http://api.channel4.com/pmlsd/brand-web-safe-title/videos/all.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/peep-show/videos.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/peep-show/videos.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getVideosAll(brandWebSafeTitle){
   var p = '/pmlsd/{brand-web-safe-title}/videos/all.atom';
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
@@ -181,7 +181,7 @@ function getVideosAll(brandWebSafeTitle){
 
   http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/peep-show/videos.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/peep-show/videos.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getVideosSeries(brandWebSafeTitle,seriesSequenceNumber){
   var p = '/pmlsd/{brand-web-safe-title}/videos/series-{SERIES_SEQUENCE_NUMBER}.atom';
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
@@ -200,7 +200,7 @@ function getVideosSeries(brandWebSafeTitle,seriesSequenceNumber){
 
   http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER/episode-EPISODE_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/peep-show/videos.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/peep-show/videos.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getVideosSeriesEpisode(brandWebSafeTitle,seriesSequenceNumber,episodeSequenceNumber){
   var p = '/pmlsd/{brand-web-safe-title}/videos/series-{SERIES_SEQUENCE_NUMBER}/episode-{EPISODE_SEQUENCE_NUMBER}.atom';
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
@@ -213,7 +213,7 @@ function getVideosSeriesEpisode(brandWebSafeTitle,seriesSequenceNumber,episodeSe
 
   http://api.channel4.com/pmlsd/brand-web-safe-title/videos/clip-asset-id.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/the-it-crowd/videos/TCGS_CLIP_0000001015.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/the-it-crowd/videos/TCGS_CLIP_0000001015.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getVideos(brandWebSafeTitle,clipAssetId){
   var p = '/pmlsd/{brand-web-safe-title}/videos/{clip-asset-id}.atom';
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
@@ -226,7 +226,7 @@ function getVideos(brandWebSafeTitle,clipAssetId){
 
   http://api.channel4.com/pmlsd/brands/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/brands/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/brands/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 const getBrands4od = '/pmlsd/brands/4od.atom';
 
 /* Lists all Channel 4 programmes available on 4oD.  By default, the programmes 
@@ -234,7 +234,7 @@ const getBrands4od = '/pmlsd/brands/4od.atom';
 
   http://api.channel4.com/pmlsd/brands/4od/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/brands/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/brands/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getBrands4odPage(pageno){
   var p = '/pmlsd/brands/4od/page-{pageno}.atom';
   p = p.replace('{pageno}',pageno);
@@ -246,7 +246,7 @@ function getBrands4odPage(pageno){
 
   http://api.channel4.com/pmlsd/brands/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/brands/4od/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/brands/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 const getBrands4odPopular = '/pmlsd/brands/4od/popular.atom';
 
 /* Lists all Channel 4 programmes available on 4oD by popularity considering 
@@ -254,7 +254,7 @@ const getBrands4odPopular = '/pmlsd/brands/4od/popular.atom';
 
   http://api.channel4.com/pmlsd/brands/4od/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/brands/4od/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/brands/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getBrands4odPopularPage(pageno){
   var p = '/pmlsd/brands/4od/popular/page-{pageno}.atom';
   p = p.replace('{pageno}',pageno);
@@ -266,7 +266,7 @@ function getBrands4odPopularPage(pageno){
 
   http://api.channel4.com/pmlsd/brands/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/brands/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/brands/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 const getBrandsPopular = '/pmlsd/brands/popular.atom';
 
 /* Lists all Channel 4 programmes by popularity considering the data gathered 
@@ -274,7 +274,7 @@ const getBrandsPopular = '/pmlsd/brands/popular.atom';
 
   http://api.channel4.com/pmlsd/brands/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/brands/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/brands/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getBrandsPopularPage(pageno){
   var p = '/pmlsd/brands/popular/page-{pageno}.atom';
   p = p.replace('{pageno}',pageno);
@@ -285,7 +285,7 @@ function getBrandsPopularPage(pageno){
 
   http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 const getCategories = '/pmlsd/categories.atom';
 
 /* Lists all Channel 4 programmes associated with the specified category (tag).  
@@ -294,7 +294,7 @@ const getCategories = '/pmlsd/categories.atom';
 
   http://api.channel4.com/pmlsd/categories/category.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/animals.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/animals.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategories2(category){
   var p = '/pmlsd/categories/{category}.atom';
   p = p.replace('{category}',category);
@@ -307,7 +307,7 @@ function getCategories2(category){
 
   http://api.channel4.com/pmlsd/categories/category/channel/[channel].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/animals.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/animals.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategoriesChannel(category,channel){
   var p = '/pmlsd/categories/{category}/channel/{channel}.atom';
   p = p.replace('{category}',category);
@@ -327,7 +327,7 @@ const getCategoriesChannelChannel4s = '4s';
 
   http://api.channel4.com/pmlsd/categories/category/derived/ad.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/animals.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/animals.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategoriesDerivedAd(category){
   var p = '/pmlsd/categories/{category}/derived/ad.atom';
   p = p.replace('{category}',category);
@@ -340,7 +340,7 @@ function getCategoriesDerivedAd(category){
 
   http://api.channel4.com/pmlsd/categories/category/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/animals.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/animals.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategoriesPage(category,pageno){
   var p = '/pmlsd/categories/{category}/page-{pageno}.atom';
   p = p.replace('{category}',category);
@@ -354,7 +354,7 @@ function getCategoriesPage(category,pageno){
 
   http://api.channel4.com/pmlsd/categories/category/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategories4od(category){
   var p = '/pmlsd/categories/{category}/4od.atom';
   p = p.replace('{category}',category);
@@ -367,7 +367,7 @@ function getCategories4od(category){
 
   http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategoriesChannel4od(category,channel){
   var p = '/pmlsd/categories/{category}/channel/{channel}/4od.atom';
   p = p.replace('{category}',category);
@@ -387,7 +387,7 @@ const getCategoriesChannel4odChannel4s = '4s';
 
   http://api.channel4.com/pmlsd/categories/category/derived/ad/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategoriesDerivedAd4od(category){
   var p = '/pmlsd/categories/{category}/derived/ad/4od.atom';
   p = p.replace('{category}',category);
@@ -400,7 +400,7 @@ function getCategoriesDerivedAd4od(category){
 
   http://api.channel4.com/pmlsd/categories/category/4od/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategories4odPage(category,pageno){
   var p = '/pmlsd/categories/{category}/4od/page-{pageno}.atom';
   p = p.replace('{category}',category);
@@ -413,7 +413,7 @@ function getCategories4odPage(category,pageno){
 
   http://api.channel4.com/pmlsd/categories/category/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategories4odPopular(category){
   var p = '/pmlsd/categories/{category}/4od/popular.atom';
   p = p.replace('{category}',category);
@@ -425,7 +425,7 @@ function getCategories4odPopular(category){
 
   http://api.channel4.com/pmlsd/categories/category/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategoriesPopular(category){
   var p = '/pmlsd/categories/{category}/popular.atom';
   p = p.replace('{category}',category);
@@ -437,7 +437,7 @@ function getCategoriesPopular(category){
 
   http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategoriesChannel4odPopular(category,channel){
   var p = '/pmlsd/categories/{category}/channel/{channel}/4od/popular.atom';
   p = p.replace('{category}',category);
@@ -456,7 +456,7 @@ const getCategoriesChannel4odPopularChannel4s = '4s';
 
   http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategoriesDerivedAd4odPopular(category){
   var p = '/pmlsd/categories/{category}/derived/ad/4od/popular.atom';
   p = p.replace('{category}',category);
@@ -468,7 +468,7 @@ function getCategoriesDerivedAd4odPopular(category){
 
   http://api.channel4.com/pmlsd/categories/category/4od/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategories4odPopularPage(category,pageno){
   var p = '/pmlsd/categories/{category}/4od/popular/page-{pageno}.atom';
   p = p.replace('{category}',category);
@@ -481,7 +481,7 @@ function getCategories4odPopularPage(category,pageno){
 
   http://api.channel4.com/pmlsd/categories/category/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategories4odTitle(category){
   var p = '/pmlsd/categories/{category}/4od/title.atom';
   p = p.replace('{category}',category);
@@ -493,7 +493,7 @@ function getCategories4odTitle(category){
 
   http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategoriesChannel4odTitle(category,channel){
   var p = '/pmlsd/categories/{category}/channel/{channel}/4od/title.atom';
   p = p.replace('{category}',category);
@@ -512,7 +512,7 @@ const getCategoriesChannel4odTitleChannel4s = '4s';
 
   http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategoriesDerivedAd4odTitle(category){
   var p = '/pmlsd/categories/{category}/derived/ad/4od/title.atom';
   p = p.replace('{category}',category);
@@ -524,7 +524,7 @@ function getCategoriesDerivedAd4odTitle(category){
 
   http://api.channel4.com/pmlsd/categories/category/4od/title/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategories4odTitlePage(category,pageno){
   var p = '/pmlsd/categories/{category}/4od/title/page-{pageno}.atom';
   p = p.replace('{category}',category);
@@ -537,7 +537,7 @@ function getCategories4odTitlePage(category,pageno){
 
   http://api.channel4.com/pmlsd/categories/category/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/history/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategoriesTitle(category){
   var p = '/pmlsd/categories/{category}/title.atom';
   p = p.replace('{category}',category);
@@ -549,7 +549,7 @@ function getCategoriesTitle(category){
 
   http://api.channel4.com/pmlsd/categories/category/channel/[channel]/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/history/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategoriesChannelTitle(category,channel){
   var p = '/pmlsd/categories/{category}/channel/{channel}/title.atom';
   p = p.replace('{category}',category);
@@ -568,7 +568,7 @@ const getCategoriesChannelTitleChannel4s = '4s';
 
   http://api.channel4.com/pmlsd/categories/category/derived/ad/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/history/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategoriesDerivedAdTitle(category){
   var p = '/pmlsd/categories/{category}/derived/ad/title.atom';
   p = p.replace('{category}',category);
@@ -580,7 +580,7 @@ function getCategoriesDerivedAdTitle(category){
 
   http://api.channel4.com/pmlsd/categories/category/title/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/categories/history/title.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategoriesTitlePage(category,pageno){
   var p = '/pmlsd/categories/{category}/title/page-{pageno}.atom';
   p = p.replace('{category}',category);
@@ -595,7 +595,7 @@ function getCategoriesTitlePage(category,pageno){
 
   http://api.channel4.com/pmlsd/collections/collection_name/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/collections/4od-home-promo/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/collections/4od-home-promo/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCollections4od(collectionName){
   var p = '/pmlsd/collections/{collection_name}/4od.atom';
   p = p.replace('{collection_name}',collectionName);
@@ -609,7 +609,7 @@ function getCollections4od(collectionName){
 
   http://api.channel4.com/pmlsd/collections/collection_name.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/collections/4od-home-promo/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/collections/4od-home-promo/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCollections(collectionName){
   var p = '/pmlsd/collections/{collection_name}.atom';
   p = p.replace('{collection_name}',collectionName);
@@ -622,7 +622,7 @@ function getCollections(collectionName){
 
   http://api.channel4.com/pmlsd/collections/collection_name/flattened/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCollectionsFlattened4od(collectionName){
   var p = '/pmlsd/collections/{collection_name}/flattened/4od.atom';
   p = p.replace('{collection_name}',collectionName);
@@ -635,7 +635,7 @@ function getCollectionsFlattened4od(collectionName){
 
   http://api.channel4.com/pmlsd/collections/collection_name/flattened.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/collections/4od-home-promo/flattened/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCollectionsFlattened(collectionName){
   var p = '/pmlsd/collections/{collection_name}/flattened.atom';
   p = p.replace('{collection_name}',collectionName);
@@ -647,7 +647,7 @@ function getCollectionsFlattened(collectionName){
 
   http://api.channel4.com/pmlsd/coming-soon.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/coming-soon.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/coming-soon.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 const getComingSoon = '/pmlsd/coming-soon.atom';
 
 /* Coming Soon feed display a list of episodes coming soon to linear TV so that 
@@ -655,7 +655,7 @@ const getComingSoon = '/pmlsd/coming-soon.atom';
 
   http://api.channel4.com/pmlsd/coming-soon/[category].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/coming-soon.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/coming-soon.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getComingSoon2(category){
   var p = '/pmlsd/coming-soon/{category}.atom';
   p = p.replace('{category}',category);
@@ -668,7 +668,7 @@ function getComingSoon2(category){
 
   http://api.channel4.com/pmlsd/programme/[programme-id].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/programme/33881-001/4od.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/programme/33881-001/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getProgramme(programmeId){
   var p = '/pmlsd/programme/{programme-id}.atom';
   p = p.replace('{programme-id}',programmeId);
@@ -680,7 +680,7 @@ function getProgramme(programmeId){
 
   http://api.channel4.com/pmlsd/search.atom?q=search-term&apikey=xxx
 
-  http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 const getSearch = '/pmlsd/search.atom';
 const getSearchQ = 'q';
 
@@ -689,7 +689,7 @@ const getSearchQ = 'q';
 
   http://api.channel4.com/pmlsd/search/search-term.atom?apikey=xxx
 
-  http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getSearch2(q){
   var p = '/pmlsd/search/{q}.atom';
   p = p.replace('{q}',q);
@@ -701,7 +701,7 @@ function getSearch2(q){
 
   http://api.channel4.com/pmlsd/search/page-{pageno}.atom?q=search-term&apikey=xxx
 
-  http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getSearchPage(pageno){
   var p = '/pmlsd/search/page-{pageno}.atom';
   p = p.replace('{pageno}',pageno);
@@ -714,7 +714,7 @@ const getSearchPageQ = 'q';
 
   http://api.channel4.com/pmlsd/tv-listings/daily/[yyyy]/[mm]/[dd].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/tv-listings/daily/2010/11/28.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/tv-listings/daily/2010/11/28.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getTvListingsDaily(yyyy,mm,dd){
   var p = '/pmlsd/tv-listings/daily/{yyyy}/{mm}/{dd}.atom';
   p = p.replace('{yyyy}',yyyy);
@@ -728,7 +728,7 @@ function getTvListingsDaily(yyyy,mm,dd){
 
   http://api.channel4.com/pmlsd/tv-listings/daily/[yyyy]/[mm]/[dd]/[channel].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
-  http://api.channel4.com/pmlsd/tv-listings/daily/2010/11/28.atom?xxxxxxxxxxxxxxxxxxxxxxxx */
+  http://api.channel4.com/pmlsd/tv-listings/daily/2010/11/28.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getTvListingsDaily2(yyyy,mm,dd,channel){
   var p = '/pmlsd/tv-listings/daily/{yyyy}/{mm}/{dd}/{channel}.atom';
   p = p.replace('{yyyy}',yyyy);
