@@ -2680,6 +2680,9 @@
           "type": "number",
           "description": "Identifies the version of the specified platform client application compatible with this feed."
         },
+        "entry": {
+          "$ref": "#/definitions/entry"
+        },
         "link@up": {
           "type": "string",
           "format": "uri",

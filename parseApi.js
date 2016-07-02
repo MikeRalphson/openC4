@@ -427,6 +427,7 @@ function generateSwagger(){
 			for (var i in file.output.feed) {
 				addProperties(swagger.definitions.feed.properties,file.output.feed[i]);
 			}
+			swagger.definitions.feed.properties.entry = {"$ref": "#/definitions/entry"};
 			for (var i in file.output.singleEntry) {
 				addProperties(swagger.definitions.entry.properties,file.output.singleEntry[i]);
 			}
