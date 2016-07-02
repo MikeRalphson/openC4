@@ -2466,7 +2466,7 @@
         }
       }
     },
-    "/search/search-term/page-{pageno}.atom": {
+    "/search/{q}/page-{pageno}.atom": {
       "get": {
         "description": "Lists all Channel 4 programmes where title (brand name) matching the search \n  term. Matches are made from the beginning of individual words in the title.\n\n  http://api.channel4.com/pmlsd/search/search-term/page-{pageno}.atom?apikey=xxx\n\n  http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "Search Feed(4)",
@@ -2481,6 +2481,12 @@
         "parameters": [
           {
             "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "q",
+            "type": "string",
+            "in": "path",
+            "required": true
           },
           {
             "name": "pageno",

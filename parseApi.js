@@ -368,7 +368,7 @@ function generateSwagger(){
 			url = url.replaceAll('[','{');
 			url = url.replaceAll(']','}');
 
-			url = url.replace('search-term.','{q}.');
+			url = url.replace('/search-term','/{q}');
 
 			if ((url.indexOf('{pageno}')>=0) && (!donePageNo)) {
 				var pageno = {};

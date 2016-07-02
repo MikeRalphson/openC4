@@ -897,8 +897,9 @@ const getSearchPageQ = 'q';
   http://api.channel4.com/pmlsd/search/search-term/page-{pageno}.atom?apikey=xxx
 
   http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
-function getSearchSearchTermPage(pageno){
-  var p = '/pmlsd/search/search-term/page-{pageno}.atom';
+function getSearchPage2(q,pageno){
+  var p = '/pmlsd/search/{q}/page-{pageno}.atom';
+  p = p.replace('{q}',q);
   p = p.replace('{pageno}',pageno);
   return p;
 }
@@ -1004,7 +1005,7 @@ module.exports = {
   getSearch : getSearch,
   getSearch2 : getSearch2,
   getSearchPage : getSearchPage,
-  getSearchSearchTermPage : getSearchSearchTermPage,
+  getSearchPage2 : getSearchPage2,
   getTvListingsDaily : getTvListingsDaily,
   getTvListingsDaily2 : getTvListingsDaily2,
   host : 'api.channel4.com'
