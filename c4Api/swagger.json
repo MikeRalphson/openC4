@@ -996,6 +996,98 @@
         }
       }
     },
+    "/categories/{category}/channel/{channel}/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4 programmes associated with the specified category (tag).  \n  By default, the programmes are listed in order of Transmission (TX) Date, \n  with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "All Programmes by TX Date(5)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "All_Programmes_by_TX_Date(5)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
+        "produces": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "channel",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "enum": [
+              "c4",
+              "f4",
+              "e4",
+              "m4",
+              "4m",
+              "4s"
+            ]
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/derived/ad/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4 programmes associated with the specified category (tag).  \n  By default, the programmes are listed in order of Transmission (TX) Date, \n  with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/derived/ad/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "All Programmes by TX Date(6)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "All_Programmes_by_TX_Date(6)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
+        "produces": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
     "/categories/{category}/4od.atom": {
       "get": {
         "description": "Lists all Channel 4oD programmes associated with the specified category \n  (tag).By default, the programmes are listed in order of Transmission (TX) \n  Date, with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
@@ -1117,6 +1209,98 @@
           "discoveryresources"
         ],
         "operationId": "4oD_Programmes_by_TX_Date(4)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
+        "produces": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/channel/{channel}/4od/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4oD programmes associated with the specified category \n  (tag).By default, the programmes are listed in order of Transmission (TX) \n  Date, with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Programmes by TX Date(5)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "4oD_Programmes_by_TX_Date(5)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
+        "produces": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "channel",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "enum": [
+              "c4",
+              "f4",
+              "e4",
+              "m4",
+              "4m",
+              "4s"
+            ]
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/derived/ad/4od/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4oD programmes associated with the specified category \n  (tag).By default, the programmes are listed in order of Transmission (TX) \n  Date, with the most-recently-transmitted programmes listed first.\n\n  http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Programmes by TX Date(6)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "4oD_Programmes_by_TX_Date(6)",
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
         "produces": [
           "application/xml"
@@ -1333,6 +1517,137 @@
         }
       }
     },
+    "/categories/{category}/popular/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4oD most popular brands for the given category within the \n  last 7 days, in order of popularity.\n\n  http://api.channel4.com/pmlsd/categories/category/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Most Popular Brands Feed(6)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Most_Popular_Brands_Feed(6)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
+        "produces": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/channel/{channel}/4od/popular/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4oD most popular brands for the given category within the \n  last 7 days, in order of popularity.\n\n  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Most Popular Brands Feed(7)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Most_Popular_Brands_Feed(7)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
+        "produces": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "channel",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "enum": [
+              "c4",
+              "f4",
+              "e4",
+              "m4",
+              "4m",
+              "4s"
+            ]
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/derived/ad/4od/popular/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4oD most popular brands for the given category within the \n  last 7 days, in order of popularity.\n\n  http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Most Popular Brands Feed(8)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Most_Popular_Brands_Feed(8)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
+        "produces": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
     "/categories/{category}/4od/title.atom": {
       "get": {
         "description": "Lists all Channel 4oD programmes associated with the specified category \n  (tag), alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
@@ -1485,6 +1800,98 @@
         }
       }
     },
+    "/categories/{category}/channel/{channel}/4od/title/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4oD programmes associated with the specified category \n  (tag), alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/title/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Programmes by Title(5)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "4oD_Programmes_by_Title(5)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
+        "produces": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "channel",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "enum": [
+              "c4",
+              "f4",
+              "e4",
+              "m4",
+              "4m",
+              "4s"
+            ]
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/derived/ad/4od/title/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4oD programmes associated with the specified category \n  (tag), alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/title/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "4oD Programmes by Title(6)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "4oD_Programmes_by_Title(6)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
+        "produces": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
     "/categories/{category}/title.atom": {
       "get": {
         "description": "Lists all Channel 4 programmes associated with the specified category (tag), \n  alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
@@ -1606,6 +2013,98 @@
           "discoveryresources"
         ],
         "operationId": "All_Programmes_by_Title(4)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
+        "produces": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/channel/{channel}/title/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4 programmes associated with the specified category (tag), \n  alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/title/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "All Programmes by Title(5)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "All_Programmes_by_Title(5)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
+        "produces": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "channel",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "enum": [
+              "c4",
+              "f4",
+              "e4",
+              "m4",
+              "4m",
+              "4s"
+            ]
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/categories/{category}/derived/ad/title/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4 programmes associated with the specified category (tag), \n  alphanumerically in order of Title.\n\n  http://api.channel4.com/pmlsd/categories/category/derived/ad/title/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "All Programmes by Title(6)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "All_Programmes_by_Title(6)",
         "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
         "produces": [
           "application/xml"
@@ -1949,6 +2448,39 @@
             "type": "string",
             "in": "query",
             "required": true
+          },
+          {
+            "name": "pageno",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default response",
+            "schema": {
+              "$ref": "#/definitions/atom"
+            }
+          }
+        }
+      }
+    },
+    "/search/search-term/page-{pageno}.atom": {
+      "get": {
+        "description": "Lists all Channel 4 programmes where title (brand name) matching the search \n  term. Matches are made from the beginning of individual words in the title.\n\n  http://api.channel4.com/pmlsd/search/search-term/page-{pageno}.atom?apikey=xxx\n\n  http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+        "summary": "Search Feed(4)",
+        "tags": [
+          "discoveryresources"
+        ],
+        "operationId": "Search_Feed(4)",
+        "x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Search_Feed",
+        "produces": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/platform"
           },
           {
             "name": "pageno",

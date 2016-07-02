@@ -134,10 +134,15 @@ function postProcess(src) {
 
 					if ((urls[0].indexOf('/atoz/')>=0) || (urls[0].indexOf('/brands/')>0) || (urls[0].indexOf('/categories/')>0) ||
 						(urls[0].indexOf('/search')>0)) {
-						urls.push(urls[0].replace('.atom','/page-{pageno}.atom'));
+						var tot = urls.length;
+						for (var u=0;u<tot;u++) {
+							if ((urls[u].indexOf('pageno')<0) && (urls[u].indexOf('.atom')>=0)) {
+								urls.push(urls[u].replace('.atom','/page-{pageno}.atom'));
+							}
+						}
 					}
 
-					result.urls = result.urls.concat(urls);
+					result.urls = Array.from(new Set(result.urls.concat(urls)));
 					result.score++;
 				}
 				else if (cols[0] == 'Parameter') {
@@ -347,6 +352,7 @@ function addProperties(target,item) {
 function generateSwagger(){
 	for (var f in api.files) {
 		var file = api.files[f];
+		var donePageNo = false;
 		for (var u in file.output.urls) {
 			var url = file.output.urls[u];
 
@@ -364,12 +370,13 @@ function generateSwagger(){
 
 			url = url.replace('search-term.','{q}.');
 
-			if (url.indexOf('{pageno}')>=0) {
+			if ((url.indexOf('{pageno}')>=0) && (!donePageNo)) {
 				var pageno = {};
 				pageno.name = 'pageno';
 				pageno.description = 'Page number of results to return';
 				pageno.type = 'integer';
 				file.output.parameters.push(pageno);
+				donePageNo = true;
 			}
 			if (url.indexOf('{channel}')>=0) {
 				var found = false;

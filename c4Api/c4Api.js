@@ -348,6 +348,41 @@ function getCategoriesPage(category,pageno){
   return p;
 }
 
+/* Lists all Channel 4 programmes associated with the specified category (tag).  
+  By default, the programmes are listed in order of Transmission (TX) Date, 
+  with the most-recently-transmitted programmes listed first.
+
+  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/animals.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
+function getCategoriesChannelPage(category,channel,pageno){
+  var p = '/pmlsd/categories/{category}/channel/{channel}/page-{pageno}.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{channel}',channel);
+  p = p.replace('{pageno}',pageno);
+  return p;
+}
+const getCategoriesChannelPageChannelC4 = 'c4';
+const getCategoriesChannelPageChannelF4 = 'f4';
+const getCategoriesChannelPageChannelE4 = 'e4';
+const getCategoriesChannelPageChannelM4 = 'm4';
+const getCategoriesChannelPageChannel4m = '4m';
+const getCategoriesChannelPageChannel4s = '4s';
+
+/* Lists all Channel 4 programmes associated with the specified category (tag).  
+  By default, the programmes are listed in order of Transmission (TX) Date, 
+  with the most-recently-transmitted programmes listed first.
+
+  http://api.channel4.com/pmlsd/categories/category/derived/ad/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/animals.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
+function getCategoriesDerivedAdPage(category,pageno){
+  var p = '/pmlsd/categories/{category}/derived/ad/page-{pageno}.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{pageno}',pageno);
+  return p;
+}
+
 /* Lists all Channel 4oD programmes associated with the specified category 
   (tag).By default, the programmes are listed in order of Transmission (TX) 
   Date, with the most-recently-transmitted programmes listed first.
@@ -403,6 +438,41 @@ function getCategoriesDerivedAd4od(category){
   http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategories4odPage(category,pageno){
   var p = '/pmlsd/categories/{category}/4od/page-{pageno}.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{pageno}',pageno);
+  return p;
+}
+
+/* Lists all Channel 4oD programmes associated with the specified category 
+  (tag).By default, the programmes are listed in order of Transmission (TX) 
+  Date, with the most-recently-transmitted programmes listed first.
+
+  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
+function getCategoriesChannel4odPage(category,channel,pageno){
+  var p = '/pmlsd/categories/{category}/channel/{channel}/4od/page-{pageno}.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{channel}',channel);
+  p = p.replace('{pageno}',pageno);
+  return p;
+}
+const getCategoriesChannel4odPageChannelC4 = 'c4';
+const getCategoriesChannel4odPageChannelF4 = 'f4';
+const getCategoriesChannel4odPageChannelE4 = 'e4';
+const getCategoriesChannel4odPageChannelM4 = 'm4';
+const getCategoriesChannel4odPageChannel4m = '4m';
+const getCategoriesChannel4odPageChannel4s = '4s';
+
+/* Lists all Channel 4oD programmes associated with the specified category 
+  (tag).By default, the programmes are listed in order of Transmission (TX) 
+  Date, with the most-recently-transmitted programmes listed first.
+
+  http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
+function getCategoriesDerivedAd4odPage(category,pageno){
+  var p = '/pmlsd/categories/{category}/derived/ad/4od/page-{pageno}.atom';
   p = p.replace('{category}',category);
   p = p.replace('{pageno}',pageno);
   return p;
@@ -476,6 +546,52 @@ function getCategories4odPopularPage(category,pageno){
   return p;
 }
 
+/* Lists all Channel 4oD most popular brands for the given category within the 
+  last 7 days, in order of popularity.
+
+  http://api.channel4.com/pmlsd/categories/category/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
+function getCategoriesPopularPage(category,pageno){
+  var p = '/pmlsd/categories/{category}/popular/page-{pageno}.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{pageno}',pageno);
+  return p;
+}
+
+/* Lists all Channel 4oD most popular brands for the given category within the 
+  last 7 days, in order of popularity.
+
+  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
+function getCategoriesChannel4odPopularPage(category,channel,pageno){
+  var p = '/pmlsd/categories/{category}/channel/{channel}/4od/popular/page-{pageno}.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{channel}',channel);
+  p = p.replace('{pageno}',pageno);
+  return p;
+}
+const getCategoriesChannel4odPopularPageChannelC4 = 'c4';
+const getCategoriesChannel4odPopularPageChannelF4 = 'f4';
+const getCategoriesChannel4odPopularPageChannelE4 = 'e4';
+const getCategoriesChannel4odPopularPageChannelM4 = 'm4';
+const getCategoriesChannel4odPopularPageChannel4m = '4m';
+const getCategoriesChannel4odPopularPageChannel4s = '4s';
+
+/* Lists all Channel 4oD most popular brands for the given category within the 
+  last 7 days, in order of popularity.
+
+  http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
+function getCategoriesDerivedAd4odPopularPage(category,pageno){
+  var p = '/pmlsd/categories/{category}/derived/ad/4od/popular/page-{pageno}.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{pageno}',pageno);
+  return p;
+}
+
 /* Lists all Channel 4oD programmes associated with the specified category 
   (tag), alphanumerically in order of Title.
 
@@ -532,6 +648,39 @@ function getCategories4odTitlePage(category,pageno){
   return p;
 }
 
+/* Lists all Channel 4oD programmes associated with the specified category 
+  (tag), alphanumerically in order of Title.
+
+  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/title/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
+function getCategoriesChannel4odTitlePage(category,channel,pageno){
+  var p = '/pmlsd/categories/{category}/channel/{channel}/4od/title/page-{pageno}.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{channel}',channel);
+  p = p.replace('{pageno}',pageno);
+  return p;
+}
+const getCategoriesChannel4odTitlePageChannelC4 = 'c4';
+const getCategoriesChannel4odTitlePageChannelF4 = 'f4';
+const getCategoriesChannel4odTitlePageChannelE4 = 'e4';
+const getCategoriesChannel4odTitlePageChannelM4 = 'm4';
+const getCategoriesChannel4odTitlePageChannel4m = '4m';
+const getCategoriesChannel4odTitlePageChannel4s = '4s';
+
+/* Lists all Channel 4oD programmes associated with the specified category 
+  (tag), alphanumerically in order of Title.
+
+  http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/title/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
+function getCategoriesDerivedAd4odTitlePage(category,pageno){
+  var p = '/pmlsd/categories/{category}/derived/ad/4od/title/page-{pageno}.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{pageno}',pageno);
+  return p;
+}
+
 /* Lists all Channel 4 programmes associated with the specified category (tag), 
   alphanumerically in order of Title.
 
@@ -583,6 +732,39 @@ function getCategoriesDerivedAdTitle(category){
   http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 function getCategoriesTitlePage(category,pageno){
   var p = '/pmlsd/categories/{category}/title/page-{pageno}.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{pageno}',pageno);
+  return p;
+}
+
+/* Lists all Channel 4 programmes associated with the specified category (tag), 
+  alphanumerically in order of Title.
+
+  http://api.channel4.com/pmlsd/categories/category/channel/[channel]/title/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
+function getCategoriesChannelTitlePage(category,channel,pageno){
+  var p = '/pmlsd/categories/{category}/channel/{channel}/title/page-{pageno}.atom';
+  p = p.replace('{category}',category);
+  p = p.replace('{channel}',channel);
+  p = p.replace('{pageno}',pageno);
+  return p;
+}
+const getCategoriesChannelTitlePageChannelC4 = 'c4';
+const getCategoriesChannelTitlePageChannelF4 = 'f4';
+const getCategoriesChannelTitlePageChannelE4 = 'e4';
+const getCategoriesChannelTitlePageChannelM4 = 'm4';
+const getCategoriesChannelTitlePageChannel4m = '4m';
+const getCategoriesChannelTitlePageChannel4s = '4s';
+
+/* Lists all Channel 4 programmes associated with the specified category (tag), 
+  alphanumerically in order of Title.
+
+  http://api.channel4.com/pmlsd/categories/category/derived/ad/title/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+
+  http://api.channel4.com/pmlsd/categories/history/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
+function getCategoriesDerivedAdTitlePage(category,pageno){
+  var p = '/pmlsd/categories/{category}/derived/ad/title/page-{pageno}.atom';
   p = p.replace('{category}',category);
   p = p.replace('{pageno}',pageno);
   return p;
@@ -709,6 +891,18 @@ function getSearchPage(pageno){
 }
 const getSearchPageQ = 'q';
 
+/* Lists all Channel 4 programmes where title (brand name) matching the search 
+  term. Matches are made from the beginning of individual words in the title.
+
+  http://api.channel4.com/pmlsd/search/search-term/page-{pageno}.atom?apikey=xxx
+
+  http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
+function getSearchSearchTermPage(pageno){
+  var p = '/pmlsd/search/search-term/page-{pageno}.atom';
+  p = p.replace('{pageno}',pageno);
+  return p;
+}
+
 /* EPG Information of daily broadcast content aired per channels, according to 
   broadcast date
 
@@ -772,23 +966,34 @@ module.exports = {
   getCategoriesChannel : getCategoriesChannel,
   getCategoriesDerivedAd : getCategoriesDerivedAd,
   getCategoriesPage : getCategoriesPage,
+  getCategoriesChannelPage : getCategoriesChannelPage,
+  getCategoriesDerivedAdPage : getCategoriesDerivedAdPage,
   getCategories4od : getCategories4od,
   getCategoriesChannel4od : getCategoriesChannel4od,
   getCategoriesDerivedAd4od : getCategoriesDerivedAd4od,
   getCategories4odPage : getCategories4odPage,
+  getCategoriesChannel4odPage : getCategoriesChannel4odPage,
+  getCategoriesDerivedAd4odPage : getCategoriesDerivedAd4odPage,
   getCategories4odPopular : getCategories4odPopular,
   getCategoriesPopular : getCategoriesPopular,
   getCategoriesChannel4odPopular : getCategoriesChannel4odPopular,
   getCategoriesDerivedAd4odPopular : getCategoriesDerivedAd4odPopular,
   getCategories4odPopularPage : getCategories4odPopularPage,
+  getCategoriesPopularPage : getCategoriesPopularPage,
+  getCategoriesChannel4odPopularPage : getCategoriesChannel4odPopularPage,
+  getCategoriesDerivedAd4odPopularPage : getCategoriesDerivedAd4odPopularPage,
   getCategories4odTitle : getCategories4odTitle,
   getCategoriesChannel4odTitle : getCategoriesChannel4odTitle,
   getCategoriesDerivedAd4odTitle : getCategoriesDerivedAd4odTitle,
   getCategories4odTitlePage : getCategories4odTitlePage,
+  getCategoriesChannel4odTitlePage : getCategoriesChannel4odTitlePage,
+  getCategoriesDerivedAd4odTitlePage : getCategoriesDerivedAd4odTitlePage,
   getCategoriesTitle : getCategoriesTitle,
   getCategoriesChannelTitle : getCategoriesChannelTitle,
   getCategoriesDerivedAdTitle : getCategoriesDerivedAdTitle,
   getCategoriesTitlePage : getCategoriesTitlePage,
+  getCategoriesChannelTitlePage : getCategoriesChannelTitlePage,
+  getCategoriesDerivedAdTitlePage : getCategoriesDerivedAdTitlePage,
   getCollections4od : getCollections4od,
   getCollections : getCollections,
   getCollectionsFlattened4od : getCollectionsFlattened4od,
@@ -799,6 +1004,7 @@ module.exports = {
   getSearch : getSearch,
   getSearch2 : getSearch2,
   getSearchPage : getSearchPage,
+  getSearchSearchTermPage : getSearchSearchTermPage,
   getTvListingsDaily : getTvListingsDaily,
   getTvListingsDaily2 : getTvListingsDaily2,
   host : 'api.channel4.com'
