@@ -492,8 +492,10 @@ var swagStr = `{
 	  "parameters": {
 		"platform": {
 		  "name": "platform",
-		  "type": "string",
 		  "in": "query",
+		  "description": "The platform to use for the query.",
+		  "required": false,
+		  "type": "string",
 		  "enum": [
               "c4",
               "ps3",
