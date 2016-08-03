@@ -87,19 +87,22 @@
             "name": "yyyy",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The date for which you wish to see programming information"
           },
           {
             "name": "mm",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The date for which you wish to see programming information"
           },
           {
             "name": "dd",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The date for which you wish to see programming information"
           }
         ],
         "responses": {
@@ -186,7 +189,8 @@
             "name": "brand-web-safe-title",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The title of the programme for which you seek on-demand content"
           }
         ],
         "responses": {
@@ -246,7 +250,8 @@
             "name": "start_letter",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The letter of the alphabet for which you seek associated Channel 4 programmes"
           }
         ],
         "responses": {
@@ -279,13 +284,15 @@
             "name": "start_letter",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The letter of the alphabet for which you seek associated Channel 4 programmes"
           },
           {
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -318,7 +325,8 @@
             "name": "brand-web-safe-title",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The title of the programme for which you seek associated data"
           }
         ],
         "responses": {
@@ -351,7 +359,8 @@
             "name": "brand-web-safe-title",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Title of the programme for which you seek EPG information"
           }
         ],
         "responses": {
@@ -384,7 +393,8 @@
             "name": "brand-web-safe-title",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The title of the programme for which you seek episode-guide information"
           }
         ],
         "responses": {
@@ -417,13 +427,15 @@
             "name": "brand-web-safe-title",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The title of the programme for which you seek series-related information"
           },
           {
             "name": "series_number",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Unique enumerated identifier of the series within its brand"
           }
         ],
         "responses": {
@@ -456,19 +468,22 @@
             "name": "brand-web-safe-title",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Title of the brand to which the episode belongs"
           },
           {
             "name": "series_number",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Unique enumerated identifier of the series within its brand to which the episode belongs"
           },
           {
             "name": "episode_number",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Unique enumerated identifier of the episode within its series"
           }
         ],
         "responses": {
@@ -501,7 +516,8 @@
             "name": "brand-web-safe-title",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Title of brand to which clips belong"
           }
         ],
         "responses": {
@@ -534,13 +550,15 @@
             "name": "brand-web-safe-title",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Title of brand to which clips belong"
           },
           {
             "name": "SERIES_SEQUENCE_NUMBER",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Unique identifier of series to which clips belong"
           }
         ],
         "responses": {
@@ -573,19 +591,22 @@
             "name": "brand-web-safe-title",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Title of brand to which clips belong"
           },
           {
             "name": "SERIES_SEQUENCE_NUMBER",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Unique identifier of series to which clips belong"
           },
           {
             "name": "EPISODE_SEQUENCE_NUMBER",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Unique identifier of episode to which clips belong"
           }
         ],
         "responses": {
@@ -618,13 +639,15 @@
             "name": "brand-web-safe-title",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Title of the brand for which you seek a clip"
           },
           {
             "name": "clip-asset-id",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Asset id for this clip"
           }
         ],
         "responses": {
@@ -684,7 +707,8 @@
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -744,7 +768,8 @@
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -804,7 +829,8 @@
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -864,7 +890,8 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )"
           }
         ],
         "responses": {
@@ -897,13 +924,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )"
           },
           {
             "name": "channel",
             "type": "string",
             "in": "path",
             "required": true,
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes",
             "enum": [
               "c4",
               "f4",
@@ -944,7 +973,8 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )"
           }
         ],
         "responses": {
@@ -977,13 +1007,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )"
           },
           {
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -1016,13 +1048,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )"
           },
           {
             "name": "channel",
             "type": "string",
             "in": "path",
             "required": true,
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes",
             "enum": [
               "c4",
               "f4",
@@ -1036,7 +1070,8 @@
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -1069,13 +1104,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )"
           },
           {
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -1108,7 +1145,8 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           }
         ],
         "responses": {
@@ -1141,13 +1179,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "channel",
             "type": "string",
             "in": "path",
             "required": true,
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes",
             "enum": [
               "c4",
               "f4",
@@ -1188,7 +1228,8 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           }
         ],
         "responses": {
@@ -1221,13 +1262,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -1260,13 +1303,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "channel",
             "type": "string",
             "in": "path",
             "required": true,
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes",
             "enum": [
               "c4",
               "f4",
@@ -1280,7 +1325,8 @@
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -1313,13 +1359,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -1352,7 +1400,8 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           }
         ],
         "responses": {
@@ -1385,7 +1434,8 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           }
         ],
         "responses": {
@@ -1418,13 +1468,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "channel",
             "type": "string",
             "in": "path",
             "required": true,
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes",
             "enum": [
               "c4",
               "f4",
@@ -1465,7 +1517,8 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           }
         ],
         "responses": {
@@ -1498,13 +1551,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -1537,13 +1592,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -1576,13 +1633,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "channel",
             "type": "string",
             "in": "path",
             "required": true,
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes",
             "enum": [
               "c4",
               "f4",
@@ -1596,7 +1655,8 @@
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -1629,13 +1689,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -1668,7 +1730,8 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           }
         ],
         "responses": {
@@ -1701,13 +1764,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "channel",
             "type": "string",
             "in": "path",
             "required": true,
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes",
             "enum": [
               "c4",
               "f4",
@@ -1748,7 +1813,8 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           }
         ],
         "responses": {
@@ -1781,13 +1847,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -1820,13 +1888,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "channel",
             "type": "string",
             "in": "path",
             "required": true,
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes",
             "enum": [
               "c4",
               "f4",
@@ -1840,7 +1910,8 @@
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -1873,13 +1944,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -1912,7 +1985,8 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           }
         ],
         "responses": {
@@ -1945,13 +2019,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "channel",
             "type": "string",
             "in": "path",
             "required": true,
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes",
             "enum": [
               "c4",
               "f4",
@@ -1992,7 +2068,8 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           }
         ],
         "responses": {
@@ -2025,13 +2102,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -2064,13 +2143,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "channel",
             "type": "string",
             "in": "path",
             "required": true,
+            "description": "The name of the channel for which you seek associated Channel 4oD programmes",
             "enum": [
               "c4",
               "f4",
@@ -2084,7 +2165,8 @@
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -2117,13 +2199,15 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
           },
           {
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -2156,7 +2240,8 @@
             "name": "collection_name",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Web safe title for the collection."
           }
         ],
         "responses": {
@@ -2189,7 +2274,8 @@
             "name": "collection_name",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Web safe title for the collection."
           }
         ],
         "responses": {
@@ -2222,7 +2308,8 @@
             "name": "collection_name",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Web safe title for the collection."
           }
         ],
         "responses": {
@@ -2255,7 +2342,8 @@
             "name": "collection_name",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Web safe title for the collection."
           }
         ],
         "responses": {
@@ -2315,7 +2403,8 @@
             "name": "category",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The category websafe_title to filter the coming soon programmes on TV."
           }
         ],
         "responses": {
@@ -2348,7 +2437,8 @@
             "name": "programme-id",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The websafe programme identifier for the episode for which you seek on-demand content"
           }
         ],
         "responses": {
@@ -2381,7 +2471,8 @@
             "name": "q",
             "type": "string",
             "in": "query",
-            "required": true
+            "required": true,
+            "description": "The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded."
           }
         ],
         "responses": {
@@ -2414,7 +2505,8 @@
             "name": "q",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded."
           }
         ],
         "responses": {
@@ -2447,13 +2539,15 @@
             "name": "q",
             "type": "string",
             "in": "query",
-            "required": true
+            "required": true,
+            "description": "The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded."
           },
           {
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -2486,13 +2580,15 @@
             "name": "q",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded."
           },
           {
             "name": "pageno",
             "type": "integer",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "Page number of results to return"
           }
         ],
         "responses": {
@@ -2525,19 +2621,22 @@
             "name": "yyyy",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
           },
           {
             "name": "mm",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
           },
           {
             "name": "dd",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
           }
         ],
         "responses": {
@@ -2570,25 +2669,29 @@
             "name": "yyyy",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
           },
           {
             "name": "mm",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
           },
           {
             "name": "dd",
             "type": "string",
             "in": "path",
-            "required": true
+            "required": true,
+            "description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
           },
           {
             "name": "channel",
             "type": "string",
             "in": "path",
             "required": true,
+            "description": "The EPG for a specific channel (c4, e4, m4, 4m, f4, 4s)",
             "enum": [
               "c4",
               "f4",
