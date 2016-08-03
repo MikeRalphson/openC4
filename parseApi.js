@@ -493,7 +493,7 @@ var swagStr = `{
 		"platform": {
 		  "name": "platform",
 		  "in": "query",
-		  "description": "The platform to use for the query.",
+		  "description": "The platform to use for the query. Alias 'client'.",
 		  "required": false,
 		  "type": "string",
 		  "enum": [
