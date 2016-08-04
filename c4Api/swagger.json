@@ -532,9 +532,9 @@
         }
       }
     },
-    "/{brand-web-safe-title}/videos/series-{SERIES_SEQUENCE_NUMBER}.atom": {
+    "/{brand-web-safe-title}/videos/series-{series_number}.atom": {
       "get": {
-        "description": "A feed containing metadata about all the short-form (clip) videos. The clips \n  feed can be accessed at different levels: the content is then filtered \n  depending on the level, but the structure is identical.When accessed: from \n  the top, the feed contains all the clips for the brand;  at series level, \n  the feed contains only clips from the series; and  at episode level, the \n  feed contains only clips for the episode (and is very unlikely to require \n  pagination). The entries for the Clips Landing Feed contain references to \n  each short-form asset.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/peep-show/videos.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+        "description": "A feed containing metadata about all the short-form (clip) videos. The clips \n  feed can be accessed at different levels: the content is then filtered \n  depending on the level, but the structure is identical.When accessed: from \n  the top, the feed contains all the clips for the brand;  at series level, \n  the feed contains only clips from the series; and  at episode level, the \n  feed contains only clips for the episode (and is very unlikely to require \n  pagination). The entries for the Clips Landing Feed contain references to \n  each short-form asset.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-series_number.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/peep-show/videos.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "Clips Landing Feed Brand Series and Episode Levels(2)",
         "tags": [
           "metadataresources"
@@ -556,7 +556,7 @@
             "description": "Title of brand to which clips belong"
           },
           {
-            "name": "SERIES_SEQUENCE_NUMBER",
+            "name": "series_number",
             "type": "string",
             "in": "path",
             "required": true,
@@ -573,9 +573,9 @@
         }
       }
     },
-    "/{brand-web-safe-title}/videos/series-{SERIES_SEQUENCE_NUMBER}/episode-{EPISODE_SEQUENCE_NUMBER}.atom": {
+    "/{brand-web-safe-title}/videos/series-{series_number}/episode-{episode_number}.atom": {
       "get": {
-        "description": "A feed containing metadata about all the short-form (clip) videos. The clips \n  feed can be accessed at different levels: the content is then filtered \n  depending on the level, but the structure is identical.When accessed: from \n  the top, the feed contains all the clips for the brand;  at series level, \n  the feed contains only clips from the series; and  at episode level, the \n  feed contains only clips for the episode (and is very unlikely to require \n  pagination). The entries for the Clips Landing Feed contain references to \n  each short-form asset.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER/episode-EPISODE_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/peep-show/videos.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+        "description": "A feed containing metadata about all the short-form (clip) videos. The clips \n  feed can be accessed at different levels: the content is then filtered \n  depending on the level, but the structure is identical.When accessed: from \n  the top, the feed contains all the clips for the brand;  at series level, \n  the feed contains only clips from the series; and  at episode level, the \n  feed contains only clips for the episode (and is very unlikely to require \n  pagination). The entries for the Clips Landing Feed contain references to \n  each short-form asset.\n\n  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-series_number/episode-episode_number.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx\n\n  http://api.channel4.com/pmlsd/peep-show/videos.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
         "summary": "Clips Landing Feed Brand Series and Episode Levels(3)",
         "tags": [
           "metadataresources"
@@ -597,14 +597,14 @@
             "description": "Title of brand to which clips belong"
           },
           {
-            "name": "SERIES_SEQUENCE_NUMBER",
+            "name": "series_number",
             "type": "string",
             "in": "path",
             "required": true,
             "description": "Unique identifier of series to which clips belong"
           },
           {
-            "name": "EPISODE_SEQUENCE_NUMBER",
+            "name": "episode_number",
             "type": "string",
             "in": "path",
             "required": true,

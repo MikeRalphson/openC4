@@ -113,6 +113,8 @@ function postProcess(src) {
 					url = url.replaceAll('series number','series_number');
 					url = url.replaceAll('episode number','episode_number');
 					url = url.replaceAll('episode number','episode_number');
+					url = url.replaceAll('SERIES_SEQUENCE_NUMBER','series_number');
+					url = url.replaceAll('EPISODE_SEQUENCE_NUMBER','episode_number');
 					url = url.replaceAll('collection-name','collection_name');
 					var urls = url.split(' ');
 
@@ -157,6 +159,8 @@ function postProcess(src) {
 					param.name = cols[0];
 					param.name = param.name.replaceAll('series number','series_number');
 					param.name = param.name.replaceAll('episode number','episode_number');
+					param.name = param.name.replaceAll('SERIES_SEQUENCE_NUMBER','series_number');
+					param.name = param.name.replaceAll('EPISODE_SEQUENCE_NUMBER','episode_number');
 					param.name = param.name.replaceAll('collection name','collection_name');
 					param.name = param.name.replaceAll('[','');
 					param.name = param.name.replaceAll(']','');

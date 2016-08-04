@@ -179,13 +179,13 @@ function getVideosAll(brandWebSafeTitle){
   pagination). The entries for the Clips Landing Feed contain references to 
   each short-form asset.
 
-  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
+  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-series_number.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/peep-show/videos.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
-function getVideosSeries(brandWebSafeTitle,seriesSequenceNumber){
-  var p = '/pmlsd/{brand-web-safe-title}/videos/series-{SERIES_SEQUENCE_NUMBER}.atom';
+function getVideosSeries(brandWebSafeTitle,seriesNumber){
+  var p = '/pmlsd/{brand-web-safe-title}/videos/series-{series_number}.atom';
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
-  p = p.replace('{SERIES_SEQUENCE_NUMBER}',seriesSequenceNumber);
+  p = p.replace('{series_number}',seriesNumber);
   return p;
 }
 
@@ -198,14 +198,14 @@ function getVideosSeries(brandWebSafeTitle,seriesSequenceNumber){
   pagination). The entries for the Clips Landing Feed contain references to 
   each short-form asset.
 
-  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER/episode-EPISODE_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx
+  http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-series_number/episode-episode_number.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/peep-show/videos.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
-function getVideosSeriesEpisode(brandWebSafeTitle,seriesSequenceNumber,episodeSequenceNumber){
-  var p = '/pmlsd/{brand-web-safe-title}/videos/series-{SERIES_SEQUENCE_NUMBER}/episode-{EPISODE_SEQUENCE_NUMBER}.atom';
+function getVideosSeriesEpisode(brandWebSafeTitle,seriesNumber,episodeNumber){
+  var p = '/pmlsd/{brand-web-safe-title}/videos/series-{series_number}/episode-{episode_number}.atom';
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
-  p = p.replace('{SERIES_SEQUENCE_NUMBER}',seriesSequenceNumber);
-  p = p.replace('{EPISODE_SEQUENCE_NUMBER}',episodeSequenceNumber);
+  p = p.replace('{series_number}',seriesNumber);
+  p = p.replace('{episode_number}',episodeNumber);
   return p;
 }
 

@@ -5911,8 +5911,8 @@
         "score": 44,
         "urls": [
           "http://api.channel4.com/pmlsd/brand-web-safe-title/videos/all.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-          "http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
-          "http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-SERIES_SEQUENCE_NUMBER/episode-EPISODE_SEQUENCE_NUMBER.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx"
+          "http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-series_number.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
+          "http://api.channel4.com/pmlsd/brand-web-safe-title/videos/series-series_number/episode-episode_number.atom?apikey=xxxxxxxxxxxxxxxxxxxxxx"
         ],
         "sampleUrl": "http://api.channel4.com/pmlsd/peep-show/videos.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx",
         "feedDescription": "A feed containing metadata about all the short-form (clip) videos. The clips feed can be accessed at different levels: the content is then filtered depending on the level, but the structure is identical.When accessed: from the top, the feed contains all the clips for the brand;  at series level, the feed contains only clips from the series; and  at episode level, the feed contains only clips for the episode (and is very unlikely to require pagination). The entries for the Clips Landing Feed contain references to each short-form asset.",
@@ -5922,11 +5922,11 @@
             "description": "Title of brand to which clips belong"
           },
           {
-            "name": "SERIES_SEQUENCE_NUMBER",
+            "name": "series_number",
             "description": "Unique identifier of series to which clips belong"
           },
           {
-            "name": "EPISODE_SEQUENCE_NUMBER",
+            "name": "episode_number",
             "description": "Unique identifier of episode to which clips belong"
           },
           {
