@@ -10,3 +10,8 @@ Compare:
 
 * [Swagger UI](http://mermade.github.io/swagger/index.html?url=https://raw.githubusercontent.com/Mermade/openC4/master/c4Api/swagger.json) Generated from written documentation with numerous fixups 
 * [Mashery IO docs](http://developer.channel4.com/io-docs) Official, hidden on C4 developer's page
+ 
+1. node scrapeApi # to retrieve the raw API doc html, this has already been done for you
+2. node parseApi # to produce c4Api/api.json, swagger.json and api.js, this has already been done for you
+3. ??? # seriously, look at [BBCParse OpenNitroSDK](https://github.com/Mermade/bbcparse/blob/master/nitroSdk.js)
+4. profit
