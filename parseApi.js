@@ -2,7 +2,7 @@ var fs = require('fs');
 var nodePath = require('path');
 
 var cheerio = require('cheerio');
-var validator = require('is-my-json-valid')
+var validator = require('is-my-json-valid');
 var wrap = require('word-wrap');
 var oa2js = require('openapi2js');
 

@@ -940,6 +940,7 @@ const getTvListingsDaily2Channel4m = '4m';
 const getTvListingsDaily2Channel4s = '4s';
 
 module.exports = {
+  commonPlatform : commonPlatform,
   get4odEpisodeListDate : get4odEpisodeListDate,
   get4odEpisodeListPopular : get4odEpisodeListPopular,
   get4odRecentlyAddedVideos : get4odRecentlyAddedVideos,
