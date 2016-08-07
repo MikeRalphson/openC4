@@ -13,5 +13,5 @@ Compare:
  
 1. node scrapeApi # to retrieve the raw API doc html, this has already been done for you
 2. node parseApi # to produce c4Api/api.json, swagger.json and api.js, this has already been done for you
-3. ??? # seriously, look at [BBCParse OpenNitroSDK](https://github.com/Mermade/bbcparse/blob/master/nitroSdk.js)
+3. ??? # seriously, look at [BBCParse OpenNitroSDK](https://github.com/Mermade/bbcparse/blob/master/nitroSdk.js) and the [example in the wiki](https://github.com/Mermade/openC4/wiki)
 4. profit
