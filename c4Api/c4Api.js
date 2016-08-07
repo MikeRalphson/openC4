@@ -315,6 +315,7 @@ function getCategoriesChannel(category,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
+/* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannelChannelC4 = 'c4';
 const getCategoriesChannelChannelF4 = 'f4';
 const getCategoriesChannelChannelE4 = 'e4';
@@ -363,6 +364,7 @@ function getCategoriesChannelPage(category,channel,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannelPageChannelC4 = 'c4';
 const getCategoriesChannelPageChannelF4 = 'f4';
 const getCategoriesChannelPageChannelE4 = 'e4';
@@ -410,6 +412,7 @@ function getCategoriesChannel4od(category,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
+/* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannel4odChannelC4 = 'c4';
 const getCategoriesChannel4odChannelF4 = 'f4';
 const getCategoriesChannel4odChannelE4 = 'e4';
@@ -458,6 +461,7 @@ function getCategoriesChannel4odPage(category,channel,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannel4odPageChannelC4 = 'c4';
 const getCategoriesChannel4odPageChannelF4 = 'f4';
 const getCategoriesChannel4odPageChannelE4 = 'e4';
@@ -515,6 +519,7 @@ function getCategoriesChannel4odPopular(category,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
+/* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannel4odPopularChannelC4 = 'c4';
 const getCategoriesChannel4odPopularChannelF4 = 'f4';
 const getCategoriesChannel4odPopularChannelE4 = 'e4';
@@ -573,6 +578,7 @@ function getCategoriesChannel4odPopularPage(category,channel,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannel4odPopularPageChannelC4 = 'c4';
 const getCategoriesChannel4odPopularPageChannelF4 = 'f4';
 const getCategoriesChannel4odPopularPageChannelE4 = 'e4';
@@ -617,6 +623,7 @@ function getCategoriesChannel4odTitle(category,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
+/* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannel4odTitleChannelC4 = 'c4';
 const getCategoriesChannel4odTitleChannelF4 = 'f4';
 const getCategoriesChannel4odTitleChannelE4 = 'e4';
@@ -662,6 +669,7 @@ function getCategoriesChannel4odTitlePage(category,channel,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannel4odTitlePageChannelC4 = 'c4';
 const getCategoriesChannel4odTitlePageChannelF4 = 'f4';
 const getCategoriesChannel4odTitlePageChannelE4 = 'e4';
@@ -706,6 +714,7 @@ function getCategoriesChannelTitle(category,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
+/* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannelTitleChannelC4 = 'c4';
 const getCategoriesChannelTitleChannelF4 = 'f4';
 const getCategoriesChannelTitleChannelE4 = 'e4';
@@ -751,6 +760,7 @@ function getCategoriesChannelTitlePage(category,channel,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannelTitlePageChannelC4 = 'c4';
 const getCategoriesChannelTitlePageChannelF4 = 'f4';
 const getCategoriesChannelTitlePageChannelE4 = 'e4';
@@ -865,6 +875,7 @@ function getProgramme(programmeId){
 
   http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&apikey=xxxxxxxxxxxxxxxxxxxxxxxx */
 const getSearch = '/pmlsd/search.atom';
+/* The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded. */
 const getSearchQ = 'q';
 
 /* Lists all Channel 4 programmes where title (brand name) matching the search 
@@ -890,6 +901,7 @@ function getSearchPage(pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded. */
 const getSearchPageQ = 'q';
 
 /* Lists all Channel 4 programmes where title (brand name) matching the search 
@@ -933,6 +945,7 @@ function getTvListingsDaily2(yyyy,mm,dd,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
+/* The EPG for a specific channel (c4, e4, m4, 4m, f4, 4s) */
 const getTvListingsDaily2ChannelC4 = 'c4';
 const getTvListingsDaily2ChannelF4 = 'f4';
 const getTvListingsDaily2ChannelE4 = 'e4';
