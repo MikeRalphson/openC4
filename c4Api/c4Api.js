@@ -23,6 +23,9 @@ function get4odEpisodeListDate(yyyy,mm,dd){
   p = p.replace('{dd}',dd);
   return p;
 }
+/* The date for which you wish to see programming information */
+/* The date for which you wish to see programming information */
+/* The date for which you wish to see programming information */
 
 /* Information of the most popular content available on 4oD, according to user 
   data driven.
@@ -54,6 +57,7 @@ function get4od(brandWebSafeTitle){
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
   return p;
 }
+/* The title of the programme for which you seek on-demand content */
 
 /* Lists Channel 4 programmes alphabetically from A to Z, providing the same 
   functionality and information as is available in the A to Z section of the 
@@ -74,6 +78,7 @@ function getAtoz2(startLetter){
   p = p.replace('{start_letter}',startLetter);
   return p;
 }
+/* The letter of the alphabet for which you seek associated Channel 4 programmes */
 
 /* Lists Channel 4 programmes whose names begin with the associated letter.
 
@@ -86,6 +91,8 @@ function getAtozPage(startLetter,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The letter of the alphabet for which you seek associated Channel 4 programmes */
+/* Page number of results to return */
 
 /* The basis for all brand information
 
@@ -97,6 +104,7 @@ function get(brandWebSafeTitle){
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
   return p;
 }
+/* The title of the programme for which you seek associated data */
 
 /* This feed contains metadata about upcoming electronic programme guide (EPG) 
   information for a brand. The entry details upcoming transmission slots for 
@@ -110,6 +118,7 @@ function getEpg(brandWebSafeTitle){
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
   return p;
 }
+/* Title of the programme for which you seek EPG information */
 
 /* A feed containing metadata about all series for a specified brand. The 
   entries in this feed contain references to each of the series (where 
@@ -123,6 +132,7 @@ function getEpisodeGuide(brandWebSafeTitle){
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
   return p;
 }
+/* The title of the programme for which you seek episode-guide information */
 
 /* A feed containing metadata about all the episodes for a specific series. The 
   entries in this feed contain references to each of the episodes (where 
@@ -137,6 +147,8 @@ function getEpisodeGuideSeries(brandWebSafeTitle,seriesNumber){
   p = p.replace('{series_number}',seriesNumber);
   return p;
 }
+/* The title of the programme for which you seek series-related information */
+/* Unique enumerated identifier of the series within its brand */
 
 /* A feed containing metadata about a specified episode. (This feed does not 
   contain any entries and only contains a feed element regarding this 
@@ -152,6 +164,9 @@ function getEpisodeGuideSeriesEpisode(brandWebSafeTitle,seriesNumber,episodeNumb
   p = p.replace('{episode_number}',episodeNumber);
   return p;
 }
+/* Title of the brand to which the episode belongs */
+/* Unique enumerated identifier of the series within its brand to which the episode belongs */
+/* Unique enumerated identifier of the episode within its series */
 
 /* A feed containing metadata about all the short-form (clip) videos. The clips 
   feed can be accessed at different levels: the content is then filtered 
@@ -170,6 +185,7 @@ function getVideosAll(brandWebSafeTitle){
   p = p.replace('{brand-web-safe-title}',brandWebSafeTitle);
   return p;
 }
+/* Title of brand to which clips belong */
 
 /* A feed containing metadata about all the short-form (clip) videos. The clips 
   feed can be accessed at different levels: the content is then filtered 
@@ -189,6 +205,8 @@ function getVideosSeries(brandWebSafeTitle,seriesNumber){
   p = p.replace('{series_number}',seriesNumber);
   return p;
 }
+/* Title of brand to which clips belong */
+/* Unique identifier of series to which clips belong */
 
 /* A feed containing metadata about all the short-form (clip) videos. The clips 
   feed can be accessed at different levels: the content is then filtered 
@@ -209,6 +227,9 @@ function getVideosSeriesEpisode(brandWebSafeTitle,seriesNumber,episodeNumber){
   p = p.replace('{episode_number}',episodeNumber);
   return p;
 }
+/* Title of brand to which clips belong */
+/* Unique identifier of series to which clips belong */
+/* Unique identifier of episode to which clips belong */
 
 /* A feed containing metadata about a single short-form video (clip).
 
@@ -221,6 +242,8 @@ function getVideos(brandWebSafeTitle,clipAssetId){
   p = p.replace('{clip-asset-id}',clipAssetId);
   return p;
 }
+/* Title of the brand for which you seek a clip */
+/* Asset id for this clip */
 
 /* Lists all Channel 4 programmes available on 4oD.  By default, the programmes 
   are listed by title in alphabetical order (case unsensitive).
@@ -241,6 +264,7 @@ function getBrands4odPage(pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* Page number of results to return */
 
 /* Lists all Channel 4 programmes available on 4oD by popularity considering 
   the data gathered within the last 7 days.
@@ -261,6 +285,7 @@ function getBrands4odPopularPage(pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* Page number of results to return */
 
 /* Lists all Channel 4 programmes by popularity considering the data gathered 
   within the last 7 days.
@@ -281,6 +306,7 @@ function getBrandsPopularPage(pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* Page number of results to return */
 
 /* Lists Channel 4 programmes by category (/ tag).
 
@@ -301,6 +327,7 @@ function getCategories2(category){
   p = p.replace('{category}',category);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx ) */
 
 /* Lists all Channel 4 programmes associated with the specified category (tag).  
   By default, the programmes are listed in order of Transmission (TX) Date, 
@@ -315,6 +342,7 @@ function getCategoriesChannel(category,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx ) */
 /* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannelChannelC4 = 'c4';
 const getCategoriesChannelChannelF4 = 'f4';
@@ -335,6 +363,7 @@ function getCategoriesDerivedAd(category){
   p = p.replace('{category}',category);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx ) */
 
 /* Lists all Channel 4 programmes associated with the specified category (tag).  
   By default, the programmes are listed in order of Transmission (TX) Date, 
@@ -349,6 +378,8 @@ function getCategoriesPage(category,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx ) */
+/* Page number of results to return */
 
 /* Lists all Channel 4 programmes associated with the specified category (tag).  
   By default, the programmes are listed in order of Transmission (TX) Date, 
@@ -364,6 +395,7 @@ function getCategoriesChannelPage(category,channel,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx ) */
 /* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannelPageChannelC4 = 'c4';
 const getCategoriesChannelPageChannelF4 = 'f4';
@@ -371,6 +403,7 @@ const getCategoriesChannelPageChannelE4 = 'e4';
 const getCategoriesChannelPageChannelM4 = 'm4';
 const getCategoriesChannelPageChannel4m = '4m';
 const getCategoriesChannelPageChannel4s = '4s';
+/* Page number of results to return */
 
 /* Lists all Channel 4 programmes associated with the specified category (tag).  
   By default, the programmes are listed in order of Transmission (TX) Date, 
@@ -385,6 +418,8 @@ function getCategoriesDerivedAdPage(category,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx ) */
+/* Page number of results to return */
 
 /* Lists all Channel 4oD programmes associated with the specified category 
   (tag).By default, the programmes are listed in order of Transmission (TX) 
@@ -398,6 +433,7 @@ function getCategories4od(category){
   p = p.replace('{category}',category);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 
 /* Lists all Channel 4oD programmes associated with the specified category 
   (tag).By default, the programmes are listed in order of Transmission (TX) 
@@ -412,6 +448,7 @@ function getCategoriesChannel4od(category,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 /* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannel4odChannelC4 = 'c4';
 const getCategoriesChannel4odChannelF4 = 'f4';
@@ -432,6 +469,7 @@ function getCategoriesDerivedAd4od(category){
   p = p.replace('{category}',category);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 
 /* Lists all Channel 4oD programmes associated with the specified category 
   (tag).By default, the programmes are listed in order of Transmission (TX) 
@@ -446,6 +484,8 @@ function getCategories4odPage(category,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
+/* Page number of results to return */
 
 /* Lists all Channel 4oD programmes associated with the specified category 
   (tag).By default, the programmes are listed in order of Transmission (TX) 
@@ -461,6 +501,7 @@ function getCategoriesChannel4odPage(category,channel,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 /* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannel4odPageChannelC4 = 'c4';
 const getCategoriesChannel4odPageChannelF4 = 'f4';
@@ -468,6 +509,7 @@ const getCategoriesChannel4odPageChannelE4 = 'e4';
 const getCategoriesChannel4odPageChannelM4 = 'm4';
 const getCategoriesChannel4odPageChannel4m = '4m';
 const getCategoriesChannel4odPageChannel4s = '4s';
+/* Page number of results to return */
 
 /* Lists all Channel 4oD programmes associated with the specified category 
   (tag).By default, the programmes are listed in order of Transmission (TX) 
@@ -482,6 +524,8 @@ function getCategoriesDerivedAd4odPage(category,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
+/* Page number of results to return */
 
 /* Lists all Channel 4oD most popular brands for the given category within the 
   last 7 days, in order of popularity.
@@ -494,6 +538,7 @@ function getCategories4odPopular(category){
   p = p.replace('{category}',category);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 
 /* Lists all Channel 4oD most popular brands for the given category within the 
   last 7 days, in order of popularity.
@@ -506,6 +551,7 @@ function getCategoriesPopular(category){
   p = p.replace('{category}',category);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 
 /* Lists all Channel 4oD most popular brands for the given category within the 
   last 7 days, in order of popularity.
@@ -519,6 +565,7 @@ function getCategoriesChannel4odPopular(category,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 /* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannel4odPopularChannelC4 = 'c4';
 const getCategoriesChannel4odPopularChannelF4 = 'f4';
@@ -538,6 +585,7 @@ function getCategoriesDerivedAd4odPopular(category){
   p = p.replace('{category}',category);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 
 /* Lists all Channel 4oD most popular brands for the given category within the 
   last 7 days, in order of popularity.
@@ -551,6 +599,8 @@ function getCategories4odPopularPage(category,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
+/* Page number of results to return */
 
 /* Lists all Channel 4oD most popular brands for the given category within the 
   last 7 days, in order of popularity.
@@ -564,6 +614,8 @@ function getCategoriesPopularPage(category,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
+/* Page number of results to return */
 
 /* Lists all Channel 4oD most popular brands for the given category within the 
   last 7 days, in order of popularity.
@@ -578,6 +630,7 @@ function getCategoriesChannel4odPopularPage(category,channel,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 /* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannel4odPopularPageChannelC4 = 'c4';
 const getCategoriesChannel4odPopularPageChannelF4 = 'f4';
@@ -585,6 +638,7 @@ const getCategoriesChannel4odPopularPageChannelE4 = 'e4';
 const getCategoriesChannel4odPopularPageChannelM4 = 'm4';
 const getCategoriesChannel4odPopularPageChannel4m = '4m';
 const getCategoriesChannel4odPopularPageChannel4s = '4s';
+/* Page number of results to return */
 
 /* Lists all Channel 4oD most popular brands for the given category within the 
   last 7 days, in order of popularity.
@@ -598,6 +652,8 @@ function getCategoriesDerivedAd4odPopularPage(category,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
+/* Page number of results to return */
 
 /* Lists all Channel 4oD programmes associated with the specified category 
   (tag), alphanumerically in order of Title.
@@ -610,6 +666,7 @@ function getCategories4odTitle(category){
   p = p.replace('{category}',category);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 
 /* Lists all Channel 4oD programmes associated with the specified category 
   (tag), alphanumerically in order of Title.
@@ -623,6 +680,7 @@ function getCategoriesChannel4odTitle(category,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 /* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannel4odTitleChannelC4 = 'c4';
 const getCategoriesChannel4odTitleChannelF4 = 'f4';
@@ -642,6 +700,7 @@ function getCategoriesDerivedAd4odTitle(category){
   p = p.replace('{category}',category);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 
 /* Lists all Channel 4oD programmes associated with the specified category 
   (tag), alphanumerically in order of Title.
@@ -655,6 +714,8 @@ function getCategories4odTitlePage(category,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
+/* Page number of results to return */
 
 /* Lists all Channel 4oD programmes associated with the specified category 
   (tag), alphanumerically in order of Title.
@@ -669,6 +730,7 @@ function getCategoriesChannel4odTitlePage(category,channel,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 /* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannel4odTitlePageChannelC4 = 'c4';
 const getCategoriesChannel4odTitlePageChannelF4 = 'f4';
@@ -676,6 +738,7 @@ const getCategoriesChannel4odTitlePageChannelE4 = 'e4';
 const getCategoriesChannel4odTitlePageChannelM4 = 'm4';
 const getCategoriesChannel4odTitlePageChannel4m = '4m';
 const getCategoriesChannel4odTitlePageChannel4s = '4s';
+/* Page number of results to return */
 
 /* Lists all Channel 4oD programmes associated with the specified category 
   (tag), alphanumerically in order of Title.
@@ -689,6 +752,8 @@ function getCategoriesDerivedAd4odTitlePage(category,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
+/* Page number of results to return */
 
 /* Lists all Channel 4 programmes associated with the specified category (tag), 
   alphanumerically in order of Title.
@@ -701,6 +766,7 @@ function getCategoriesTitle(category){
   p = p.replace('{category}',category);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 
 /* Lists all Channel 4 programmes associated with the specified category (tag), 
   alphanumerically in order of Title.
@@ -714,6 +780,7 @@ function getCategoriesChannelTitle(category,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 /* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannelTitleChannelC4 = 'c4';
 const getCategoriesChannelTitleChannelF4 = 'f4';
@@ -733,6 +800,7 @@ function getCategoriesDerivedAdTitle(category){
   p = p.replace('{category}',category);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 
 /* Lists all Channel 4 programmes associated with the specified category (tag), 
   alphanumerically in order of Title.
@@ -746,6 +814,8 @@ function getCategoriesTitlePage(category,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
+/* Page number of results to return */
 
 /* Lists all Channel 4 programmes associated with the specified category (tag), 
   alphanumerically in order of Title.
@@ -760,6 +830,7 @@ function getCategoriesChannelTitlePage(category,channel,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
 /* The name of the channel for which you seek associated Channel 4oD programmes */
 const getCategoriesChannelTitlePageChannelC4 = 'c4';
 const getCategoriesChannelTitlePageChannelF4 = 'f4';
@@ -767,6 +838,7 @@ const getCategoriesChannelTitlePageChannelE4 = 'e4';
 const getCategoriesChannelTitlePageChannelM4 = 'm4';
 const getCategoriesChannelTitlePageChannel4m = '4m';
 const getCategoriesChannelTitlePageChannel4s = '4s';
+/* Page number of results to return */
 
 /* Lists all Channel 4 programmes associated with the specified category (tag), 
   alphanumerically in order of Title.
@@ -780,6 +852,8 @@ function getCategoriesDerivedAdTitlePage(category,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx) */
+/* Page number of results to return */
 
 /* Collections are editorially controlled groups of brands, series, episodes or 
   other collections used for promotion and discovery of content. A SIMPLE 
@@ -794,6 +868,7 @@ function getCollections4od(collectionName){
   p = p.replace('{collection_name}',collectionName);
   return p;
 }
+/* Web safe title for the collection. */
 
 /* Collections are editorially controlled groups of brands, series, episodes or 
   other collections used for promotion and discovery of content. A SIMPLE 
@@ -808,6 +883,7 @@ function getCollections(collectionName){
   p = p.replace('{collection_name}',collectionName);
   return p;
 }
+/* Web safe title for the collection. */
 
 /* The Flattened Collections Feed is only applicable for GROUP collections and 
   its purpose is mainly return 3 items (BRAND, SERIES or EPSIODE) of each of 
@@ -821,6 +897,7 @@ function getCollectionsFlattened4od(collectionName){
   p = p.replace('{collection_name}',collectionName);
   return p;
 }
+/* Web safe title for the collection. */
 
 /* The Flattened Collections Feed is only applicable for GROUP collections and 
   its purpose is mainly return 3 items (BRAND, SERIES or EPSIODE) of each of 
@@ -834,6 +911,7 @@ function getCollectionsFlattened(collectionName){
   p = p.replace('{collection_name}',collectionName);
   return p;
 }
+/* Web safe title for the collection. */
 
 /* Coming Soon feed display a list of episodes coming soon to linear TV so that 
   I can promote new Channel 4 content.
@@ -854,6 +932,7 @@ function getComingSoon2(category){
   p = p.replace('{category}',category);
   return p;
 }
+/* The category websafe_title to filter the coming soon programmes on TV. */
 
 /* A feed containing all long-form content currently or previously available 
   for a specified Programme Id. The entries for the Programme feed contain 
@@ -867,6 +946,7 @@ function getProgramme(programmeId){
   p = p.replace('{programme-id}',programmeId);
   return p;
 }
+/* The websafe programme identifier for the episode for which you seek on-demand content */
 
 /* Lists all Channel 4 programmes where title (brand name) matching the search 
   term. Matches are made from the beginning of individual words in the title.
@@ -889,6 +969,7 @@ function getSearch2(q){
   p = p.replace('{q}',q);
   return p;
 }
+/* The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded. */
 
 /* Lists all Channel 4 programmes where title (brand name) matching the search 
   term. Matches are made from the beginning of individual words in the title.
@@ -903,6 +984,7 @@ function getSearchPage(pageno){
 }
 /* The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded. */
 const getSearchPageQ = 'q';
+/* Page number of results to return */
 
 /* Lists all Channel 4 programmes where title (brand name) matching the search 
   term. Matches are made from the beginning of individual words in the title.
@@ -916,6 +998,8 @@ function getSearchPage2(q,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
+/* The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded. */
+/* Page number of results to return */
 
 /* EPG Information of daily broadcast content aired per channels, according to 
   broadcast date
@@ -930,6 +1014,9 @@ function getTvListingsDaily(yyyy,mm,dd){
   p = p.replace('{dd}',dd);
   return p;
 }
+/* The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day. */
+/* The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day. */
+/* The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day. */
 
 /* EPG Information of daily broadcast content aired per channels, according to 
   broadcast date
@@ -945,6 +1032,9 @@ function getTvListingsDaily2(yyyy,mm,dd,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
+/* The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day. */
+/* The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day. */
+/* The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day. */
 /* The EPG for a specific channel (c4, e4, m4, 4m, f4, 4s) */
 const getTvListingsDaily2ChannelC4 = 'c4';
 const getTvListingsDaily2ChannelF4 = 'f4';

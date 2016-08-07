@@ -507,6 +507,7 @@ var swagStr = `{
               "ios",
               "p06",
               "flashmobile",
+			  "fm",
               "freesat",
               "android",
               "samsung"

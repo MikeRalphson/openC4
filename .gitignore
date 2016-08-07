@@ -2,3 +2,4 @@
 examples/
 node_modules/
 c4Api/swagger.err
+*.sqlite
