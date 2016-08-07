@@ -1,3 +1,4 @@
+/* The platform to use for the query. Alias 'client'. */
 const commonPlatform = 'platform';
 const commonPlatformC4 = 'platform=c4';
 const commonPlatformPs3 = 'platform=ps3';
@@ -941,6 +942,15 @@ const getTvListingsDaily2Channel4s = '4s';
 
 module.exports = {
   commonPlatform : commonPlatform,
+  commonPlatformC4 : commonPlatformC4,
+  commonPlatformPs3 : commonPlatformPs3,
+  commonPlatformYv : commonPlatformYv,
+  commonPlatformIos : commonPlatformIos,
+  commonPlatformP06 : commonPlatformP06,
+  commonPlatformFlashmobile : commonPlatformFlashmobile,
+  commonPlatformFreesat : commonPlatformFreesat,
+  commonPlatformAndroid : commonPlatformAndroid,
+  commonPlatformSamsung : commonPlatformSamsung,
   get4odEpisodeListDate : get4odEpisodeListDate,
   get4odEpisodeListPopular : get4odEpisodeListPopular,
   get4odRecentlyAddedVideos : get4odRecentlyAddedVideos,
