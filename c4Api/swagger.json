@@ -60,8 +60,9 @@
         "ps3",
         "yv",
         "ios",
+        "fm",
         "p06",
-        "flashmobile",
+        "ctv",
         "freesat",
         "android",
         "samsung"
@@ -2717,509 +2718,284 @@
   },
   "definitions": {
     "atom": {
+      "title": "test/atomSchema.xsd",
+      "description": "This version of the Atom schema is based on version 1.0 of the format specifications, found here http://www.atomenabled.org/developers/syndication/atom-format-spec.php. The original namespace was http://www.w3.org/2005/Atom but we changed it to http://www.opengis.net/atom/2005 to avoid conflicting definitions of the same namespace in the future. NOT DONE YET. There is no XSD official schema for atom but this one seems to be the most known: http://www.kbcafe.com/rss/atom.xsd.xml (The Atom Publishing Protocol was issued as a Proposed Standard in IETF RFC 5023 in October 2007 http://tools.ietf.org/html/rfc5023)\nAn Atom document may have two root elements, feed and entry, as defined in section 2.",
       "type": "object",
       "properties": {
         "feed": {
-          "$ref": "#/definitions/feed"
+          "$ref": "#/definitions/feedType"
         }
       },
       "required": [
         "feed"
       ],
-      "additionalProperties": true
+      "additionalProperties": false
     },
     "feed": {
       "type": "object",
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "Unique identifier of this feed"
-        },
-        "title": {
-          "type": "string",
-          "description": "Channel 4 EPG for [date selected]"
-        },
-        "link@self": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL of current page / feed"
-        },
-        "link@previous": {
-          "type": "string",
-          "format": "uri",
-          "description": "Link to previous day's page / feed (if available)"
-        },
-        "link@next": {
-          "type": "string",
-          "format": "uri",
-          "description": "Link to next day's page / feed (if available)"
-        },
-        "author": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string",
-              "description": "Name of author / owner"
-            }
-          }
-        },
-        "updated": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Date & time feed rendered"
-        },
-        "logo": {
-          "type": "string",
-          "format": "uri",
-          "description": "Default Image URL"
-        },
-        "generator": {
-          "type": "string",
-          "description": "Identifies the agent used to generate the feed"
-        },
-        "generator@version": {
-          "type": "number",
-          "description": "Identifies the version of the agent used to generate the feed"
-        },
-        "dc:relation.platformClientVersion": {
-          "type": "number",
-          "description": "Identifies the version of the specified platform client application compatible with this feed."
-        },
-        "entry": {
-          "$ref": "#/definitions/entry"
-        },
-        "link@up": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to parent feed"
-        },
-        "link@alternate": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to HTML version, i.e., player page"
-        },
-        "dc:relation.BrandFlattened": {
-          "type": "boolean",
-          "description": "Boolean indicating whether there is no Series -> Episode structure in this brand (\"false\" indicating that there is such a structure)"
-        },
-        "dc:relation.presentationBrand": {
-          "type": "string",
-          "description": "The presentation brand"
-        },
-        "dc:relation.BrandWebSafeTitle": {
-          "type": "string",
-          "description": "Title of the brand safe for web linking (no whitespaces, no special chars...)"
-        },
-        "dc:relation.ProgrammeType": {
-          "type": "string",
-          "description": "Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type."
-        },
-        "dc:relation.4oDSeriesCount": {
-          "type": "integer",
-          "description": "Number of available 4oD series for this Brand"
-        },
-        "dc:relation.4oDProgrammeCount": {
-          "type": "integer",
-          "description": "Number of available brands in this category beginning with this letter (4oD only)"
-        },
-        "dc:relation.New4oDSeriesAvailable": {
-          "type": "boolean",
-          "description": "Flags that notifies clients when a Brand contains NEW series."
-        },
-        "link@related": {
-          "type": "string",
-          "format": "uri",
-          "description": "4oD programmes in category by title"
-        },
-        "fh:complete": {
-          "type": "string",
-          "description": "Presence of this element indicates no pagination"
-        },
-        "dc:relation.AllProgrammeCount": {
-          "type": "integer",
-          "description": "Number of available brands in this category beginning with this letter (all programmes)"
-        },
-        "subtitle": {
-          "type": "string",
-          "description": "The synopsis of the series."
-        },
-        "link@related (Episode Guide)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to Episode Guide feed, if available"
-        },
-        "link@related (4oD)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to 4oD feed, if available"
-        },
-        "link@related (Clips)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to short-form video feed for this episode, if available"
-        },
-        "category (primary)": {
-          "type": "string",
-          "description": "Primary category (brand must have ONE)"
-        },
-        "category (secondary)": {
-          "type": "string",
-          "description": "Secondary category (brand may have any number)"
-        },
-        "dc:relation.BrandTitle": {
-          "type": "string",
-          "description": "Title of brand"
-        },
-        "dc:relation.comingSoonTo4oD": {
-          "type": "string",
-          "description": "If the brand is coming to be available on 4oD soon this empty element should be included."
-        },
-        "link@related (4oD Episode)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to HTML version of 4oD page for full episode, if available"
-        },
-        "dc:relation.firstTXDate": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Date of first broadcast (optional). This is based on EPG or, when EPG data is not available for the episode, it can be set editorially (significant date)"
-        },
-        "dc:relation.firstTXChannel": {
-          "type": "string",
-          "description": "First TX channel information for this episode"
-        },
-        "dc:relation.lastTXDate": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Date of last broadcast (optional). This is based on EPG ignoring repeats and giving preference to the channel that the brand is primarily targeted at (preferred channel)"
-        },
-        "dc:relation.lastTXChannel": {
-          "type": "string",
-          "description": "Channel of last broadcast (optional). This is based on EPG ignoring repeats and giving preference to the channel that the brand is primarily targeted at (preferred channel)"
-        },
-        "dc:relation.SeriesNumber": {
-          "type": "integer",
-          "description": "The series to which this episode belongs"
-        },
-        "dc:relation.EpisodeNumber": {
-          "type": "integer",
-          "description": "The episode number within the series"
-        },
-        "dc:relation.Sharable": {
-          "type": "boolean",
-          "description": "Boolean value indicating if clips for this brand are sharable"
-        },
-        "media:group": {
-          "type": "object",
-          "properties": {
-            "media:player": {
-              "type": "string",
-              "format": "uri",
-              "description": "URL to media-player version of episode"
-            },
-            "media:thumbnail": {
-              "type": "string",
-              "description": "URL to medium-sized image of this episode"
-            },
-            "media:rating": {
-              "type": "string",
-              "description": "Flag to show whether episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")"
-            },
-            "media:copyright": {
-              "type": "string",
-              "description": "Link to copyright / T&C information"
-            },
-            "media:restriction": {
-              "type": "string",
-              "description": "Restriction flag (\"allow\") and list of country or state codes where episode is accessible to website users"
-            },
-            "media:rights": {
-              "type": "string",
-              "description": "Status of media rights under which Channel 4 provides episode content"
-            },
-            "media:category": {
-              "type": "string",
-              "description": "Defines the type of short-form item. Its value can be one of the next: EXTRACT, PREVIEW, EXTRA, TRAILER"
-            },
-            "media:content": {
-              "type": "object",
-              "properties": {
-                "media:player": {
-                  "type": "string",
-                  "format": "uri",
-                  "description": "URL to media-player version of episode"
-                },
-                "media:thumbnail": {
-                  "type": "string",
-                  "description": "URL to medium-sized image of this episode"
-                },
-                "media:rating": {
-                  "type": "string",
-                  "description": "Flag to show whether episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")"
-                },
-                "media:copyright": {
-                  "type": "string",
-                  "description": "Link to copyright / T&C information"
-                },
-                "media:restriction": {
-                  "type": "string",
-                  "description": "Restriction flag (\"allow\") and list of country or state codes where episode is accessible to website users"
-                },
-                "media:rights": {
-                  "type": "string",
-                  "description": "Status of media rights under which Channel 4 provides episode content"
-                },
-                "dc:relation.requestType": {
-                  "type": "string",
-                  "enum": [
-                    "ARCHIVE",
-                    "CATCHUP"
-                  ],
-                  "description": "Indicates catchup or archive content"
-                },
-                "dc:relation.deliveryType": {
-                  "type": "string",
-                  "enum": [
-                    "STREAM",
-                    "DOWNLOAD"
-                  ],
-                  "description": "Indicates STREAMING or FOR DOWNLOAD content"
-                },
-                "dcterms:available": {
-                  "type": "string",
-                  "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)"
-                },
-                "dc:relation.AgeRating": {
-                  "type": "integer",
-                  "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)"
-                },
-                "dc:relation.Guidance": {
-                  "type": "string",
-                  "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable"
-                },
-                "dc:relation.Subtitles": {
-                  "type": "boolean",
-                  "description": "Boolean indicating if subtitles are available for this episode"
-                },
-                "dc:relation.AudioDescription": {
-                  "type": "boolean",
-                  "description": "Boolean indicating if an audio description is available for this episode"
-                },
-                "dc:relation.Duration": {
-                  "type": "string",
-                  "description": "Length in minutes and seconds - does not include ad breaks"
-                }
-              }
-            }
-          }
-        },
-        "dcterms:available": {
-          "type": "string",
-          "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)"
-        },
-        "dc:relation.AgeRating": {
-          "type": "integer",
-          "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)"
-        },
-        "dc:relation.Guidance": {
-          "type": "string",
-          "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable"
-        },
-        "dc:relation.Duration": {
-          "type": "string",
-          "description": "Length in minutes and seconds - does not include ad breaks"
-        },
-        "dc:relation.ExternalVideoId": {
-          "type": "string",
-          "description": "Clip Asset_id value from the Clip table (a.k.a. Brightcode id)."
-        },
-        "dc:relation.CategoryType": {
-          "type": "string",
-          "description": "Type to which the category belongs (if applicable).(Valid values are 'Channel', 'Display' or 'None'.)"
-        },
-        "dc:relation.CategoryOrder": {
-          "type": "integer",
-          "description": "Enumerated order of category within its type(e.g., 'Channel' might have Food=1, More4=2, etc.)(Appears in feed only if CategoryType<>'None'.)"
-        },
-        "dc:relation.Synopsis": {
-          "type": "string",
-          "description": "Summary of this feed"
-        },
-        "media:thumbnail": {
-          "type": "object",
-          "properties": {
-            "media:thumbnail": {
-              "type": "string",
-              "description": "URL to medium-sized image of this episode"
-            }
-          }
-        },
-        "Link@Related title=\"4oD\"": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to Brand 4oD feed, if available"
-        },
-        "dc:relation.resourceType": {
-          "type": "string",
-          "description": "The type of the entry"
-        },
-        "summary": {
-          "type": "string",
-          "description": "Synopsis of episode"
-        },
-        "dc:relation.programmeId": {
-          "type": "string",
-          "description": "Indicates the contract and programme numbers"
-        },
-        "dc:relation.RelatedEntryId": {
-          "type": "string",
-          "description": "The episode guide entry related to this episode"
-        },
-        "dc:date.TXDate": {
-          "type": "string",
-          "format": "date-time",
-          "description": "First TX date information for this episode"
-        },
-        "dc:relation.TXChannel": {
-          "type": "string",
-          "description": "First TX channel information for this episode"
-        },
-        "dc:relation.Subtitles": {
-          "type": "boolean",
-          "description": "Boolean indicating if subtitles are available for this episode"
-        },
-        "dc:relation.AudioDescription": {
-          "type": "boolean",
-          "description": "Boolean indicating if an audio description is available for this episode"
-        },
-        "dc:relation.LoginRequired": {
-          "type": "boolean",
-          "description": "Boolean indicating if the user has to be logged-in in order to play this episode."
-        },
-        "dc:date.firstTXDate": {
-          "type": "string",
-          "format": "date-time",
-          "description": "First TX date information for this episode"
-        },
-        "dc:relation.ParentCollectionId": {
-          "type": "string",
-          "description": "The ID of the Parent Collection where the resource is assigned to."
-        },
-        "dc:relation.TotalResults": {
-          "type": "integer",
-          "description": "Number of entries what match the search-term"
-        },
-        "dc:relation.StartOffset": {
-          "type": "integer",
-          "description": ""
-        }
-      },
+      "properties": {},
       "additionalProperties": true
     },
     "entry": {
+      "$ref": "#/definitions/entryType"
+    },
+    "textTypeType": {
+      "enum": [
+        "text",
+        "html",
+        "xhtml"
+      ]
+    },
+    "MimeType": {
+      "type": "string",
+      "description": "XML encoded identifier of a standard MIME type, possibly a parameterized MIME type. Copied from ows 2.0.1",
+      "pattern": "(application|audio|image|text|video|message|multipart|model)/.+(;\\s*.+=.+)*"
+    },
+    "ContentTypeType": {
       "type": "object",
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "ID of the entry"
+      "additionalProperties": false,
+      "x-oneOf": [
+        {
+          "$ref": "#/definitions/textTypeType"
         },
-        "title": {
-          "type": "string",
-          "description": "Episode Title. If available on 4oD then the 4oD episode title is returned. If not, then the title attributed to the slot is returned. It is possible for these to be different"
+        {
+          "$ref": "#/definitions/MimeType"
+        }
+      ]
+    },
+    "emailType": {
+      "type": "string",
+      "description": "Schema definition for an email address.",
+      "pattern": "\\w+@(\\w+\\.)+\\w+"
+    },
+    "KnownRelCodeType": {
+      "description": "alternate: The value \"alternate\" signifies that the IRI in the value of the href attribute identifies an alternate version of the resource described by the containing element.related: The value \"related\" signifies that the IRI in the value of the href attribute identifies a resource related to the resource described by the containing element. For example, the feed for a site that discusses the performance of the search engine at \"http://search.example.com\" might contain, as a child of atom:feed. An identical link might appear as a child of any atom:entry whose content contains a discussion of that same search engine.self: The value \"self\" signifies that the IRI in the value of the href attribute identifies a resource equivalent to the containing element.enclosure: The value \"enclosure\" signifies that the IRI in the value of the href attribute identifies a related resource that is potentially large in size and might require special handling. For atom:link elements with rel=\"enclosure\", the length attribute SHOULD be provided.via: The value \"via\" signifies that the IRI in the value of the href attribute identifies a resource that is the source of the information provided in the containing element.",
+      "enum": [
+        "alternate",
+        "related",
+        "self",
+        "enclosure",
+        "via"
+      ]
+    },
+    "RelCodeType": {
+      "type": "object",
+      "additionalProperties": false,
+      "x-oneOf": [
+        {
+          "$ref": "#/definitions/KnownRelCodeType"
         },
-        "updated": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Date & time episode last updated"
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "textType": {
+      "type": "object",
+      "description": "The Atom text construct is defined in section 3.1 of the format spec.",
+      "additionalProperties": true,
+      "x-anyOf": [
+        {
+          "$ref": "#/definitions/commonAttributes"
         },
-        "summary": {
-          "type": "string",
-          "description": "Synopsis of this episode"
-        },
-        "dc:relation.BrandTitle": {
-          "type": "string",
-          "description": "Title of brand"
-        },
-        "dcterms:available": {
-          "type": "string",
-          "description": "Start date, end date and date / time format for the period of time when episode is available on 4oD. This element is not returned if the programme is not currently available on 4oD."
-        },
-        "dc:relation.SeriesNumber": {
-          "type": "integer",
-          "description": "The series to which this episode belongs."
-        },
-        "dc:relation.EpisodeNumber": {
-          "type": "integer",
-          "description": "The episode number within the series."
-        },
-        "dc:relation.AgeRating": {
-          "type": "integer",
-          "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)"
-        },
-        "dc:relation.Guidance": {
-          "type": "string",
-          "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable"
-        },
-        "dc:date.TXDate": {
-          "type": "string",
-          "format": "date-time",
-          "description": "If this programme is available on 4oD then this element indicates the broadcast date/time of the episode selected for 4oD. If the programme is not on 4oD then this element is omitted.(Indicates whether pre- or post-watershed)"
-        },
-        "dc:relation.TXChannel": {
-          "type": "string",
-          "description": "If this programme is available on 4oD then this element indicates the broadcast channel that the episode selected for 4oD. If the programme is not on 4oD then this element is omitted."
-        },
-        "dc:relation.Subtitles": {
-          "type": "boolean",
-          "description": "Boolean indicating if subtitles are available for this episode"
-        },
-        "dc:relation.AudioDescription": {
-          "type": "boolean",
-          "description": "Boolean indicating if an audio description is available for this episode"
-        },
-        "dc:relation.Duration": {
-          "type": "string",
-          "description": "Length in minutes and seconds - does not include ad breaks"
-        },
-        "link@alternate": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to HTML version of episode (if available)"
-        },
-        "link@related": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL of ATOM feed of current episode"
-        },
-        "media:group": {
-          "type": "object",
+        {
           "properties": {
-            "media:player": {
+            "type": {
+              "$ref": "#/definitions/textTypeType"
+            }
+          }
+        }
+      ]
+    },
+    "personType": {
+      "type": "object",
+      "description": "The Atom person construct is defined in section 3.2 of the format spec.",
+      "additionalProperties": true,
+      "x-anyOf": [
+        {
+          "$ref": "#/definitions/commonAttributes"
+        },
+        {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "uri": {
+              "$ref": "#/definitions/uriType"
+            },
+            "email": {
+              "$ref": "#/definitions/emailType"
+            }
+          }
+        }
+      ]
+    },
+    "feedType": {
+      "type": "object",
+      "description": "The Atom feed construct is defined in section 4.1.1 of the format spec.",
+      "additionalProperties": true,
+      "x-anyOf": [
+        {
+          "$ref": "#/definitions/commonAttributes"
+        },
+        {
+          "properties": {
+            "author": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Name of author / owner"
+                }
+              }
+            },
+            "category": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/categoryType"
+              }
+            },
+            "contributor": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/personType"
+              }
+            },
+            "generator": {
+              "type": "string",
+              "description": "Identifies the agent used to generate the feed"
+            },
+            "icon": {
+              "$ref": "#/definitions/iconType"
+            },
+            "id": {
+              "type": "string",
+              "description": "Unique identifier of this feed"
+            },
+            "link": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/linkType"
+              }
+            },
+            "logo": {
               "type": "string",
               "format": "uri",
-              "description": "URL to 4oD media-player version of episode (if available)"
+              "description": "Default Image URL"
             },
-            "media:thumbnail": {
+            "rights": {
+              "$ref": "#/definitions/textType"
+            },
+            "subtitle": {
               "type": "string",
-              "description": "URL to 4oD medium-sized image of this episode (if available)"
+              "description": "The synopsis of the series."
             },
-            "media:rating": {
+            "title": {
               "type": "string",
-              "description": "Flag to show whether the 4oD version of the episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\") (if available)"
+              "description": "Channel 4 EPG for [date selected]"
             },
-            "media:copyright": {
+            "updated": {
               "type": "string",
-              "description": "Link to 4oD  copyright / T&C information (if available)"
+              "format": "date-time",
+              "description": "Date & time feed rendered"
             },
-            "media:restriction": {
+            "entry": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/entryType"
+              }
+            },
+            "generator@version": {
+              "type": "number",
+              "description": "Identifies the version of the agent used to generate the feed"
+            },
+            "dc:relation.platformClientVersion": {
+              "type": "number",
+              "description": "Identifies the version of the specified platform client application compatible with this feed."
+            },
+            "dc:relation.BrandFlattened": {
+              "type": "boolean",
+              "description": "Boolean indicating whether there is no Series -> Episode structure in this brand (\"false\" indicating that there is such a structure)"
+            },
+            "dc:relation.presentationBrand": {
               "type": "string",
-              "description": "Restriction flag (\"allow\") and list of country or state codes where 4oD episode is accessible to website users (if available)"
+              "description": "The presentation brand"
             },
-            "media:rights": {
+            "dc:relation.BrandWebSafeTitle": {
               "type": "string",
-              "description": "Status of 4oD media rights under which Channel 4 provides episode content (if available)"
+              "description": "Title of the brand safe for web linking (no whitespaces, no special chars...)"
             },
-            "media:content": {
+            "dc:relation.ProgrammeType": {
+              "type": "string",
+              "description": "Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type."
+            },
+            "dc:relation.4oDSeriesCount": {
+              "type": "integer",
+              "description": "Number of available 4oD series for this Brand"
+            },
+            "dc:relation.4oDProgrammeCount": {
+              "type": "integer",
+              "description": "Number of available brands in this category beginning with this letter (4oD only)"
+            },
+            "dc:relation.New4oDSeriesAvailable": {
+              "type": "boolean",
+              "description": "Flags that notifies clients when a Brand contains NEW series."
+            },
+            "fh:complete": {
+              "type": "string",
+              "description": "Presence of this element indicates no pagination"
+            },
+            "dc:relation.AllProgrammeCount": {
+              "type": "integer",
+              "description": "Number of available brands in this category beginning with this letter (all programmes)"
+            },
+            "category (primary)": {
+              "type": "string",
+              "description": "Primary category (brand must have ONE)"
+            },
+            "category (secondary)": {
+              "type": "string",
+              "description": "Secondary category (brand may have any number)"
+            },
+            "dc:relation.BrandTitle": {
+              "type": "string",
+              "description": "Title of brand"
+            },
+            "dc:relation.comingSoonTo4oD": {
+              "type": "string",
+              "description": "If the brand is coming to be available on 4oD soon this empty element should be included."
+            },
+            "dc:relation.firstTXDate": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Date of first broadcast (optional). This is based on EPG or, when EPG data is not available for the episode, it can be set editorially (significant date)"
+            },
+            "dc:relation.firstTXChannel": {
+              "type": "string",
+              "description": "First TX channel information for this episode"
+            },
+            "dc:relation.lastTXDate": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Date of last broadcast (optional). This is based on EPG ignoring repeats and giving preference to the channel that the brand is primarily targeted at (preferred channel)"
+            },
+            "dc:relation.lastTXChannel": {
+              "type": "string",
+              "description": "Channel of last broadcast (optional). This is based on EPG ignoring repeats and giving preference to the channel that the brand is primarily targeted at (preferred channel)"
+            },
+            "dc:relation.SeriesNumber": {
+              "type": "integer",
+              "description": "The series to which this episode belongs"
+            },
+            "dc:relation.EpisodeNumber": {
+              "type": "integer",
+              "description": "The episode number within the series"
+            },
+            "dc:relation.Sharable": {
+              "type": "boolean",
+              "description": "Boolean value indicating if clips for this brand are sharable"
+            },
+            "media:group": {
               "type": "object",
               "properties": {
                 "media:player": {
@@ -3247,365 +3023,862 @@
                   "type": "string",
                   "description": "Status of media rights under which Channel 4 provides episode content"
                 },
-                "dc:relation.requestType": {
+                "media:category": {
                   "type": "string",
-                  "enum": [
-                    "ARCHIVE",
-                    "CATCHUP"
-                  ],
-                  "description": "Indicates catchup or archive content"
+                  "description": "Defines the type of short-form item. Its value can be one of the next: EXTRACT, PREVIEW, EXTRA, TRAILER"
                 },
-                "dc:relation.deliveryType": {
-                  "type": "string",
-                  "enum": [
-                    "STREAM",
-                    "DOWNLOAD"
-                  ],
-                  "description": "Indicates STREAMING or FOR DOWNLOAD content"
-                },
-                "dcterms:available": {
-                  "type": "string",
-                  "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)"
-                },
-                "dc:relation.AgeRating": {
-                  "type": "integer",
-                  "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)"
-                },
-                "dc:relation.Guidance": {
-                  "type": "string",
-                  "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable"
-                },
-                "dc:relation.Subtitles": {
-                  "type": "boolean",
-                  "description": "Boolean indicating if subtitles are available for this episode"
-                },
-                "dc:relation.AudioDescription": {
-                  "type": "boolean",
-                  "description": "Boolean indicating if an audio description is available for this episode"
-                },
-                "dc:relation.Duration": {
-                  "type": "string",
-                  "description": "Length in minutes and seconds - does not include ad breaks"
+                "media:content": {
+                  "type": "object",
+                  "properties": {
+                    "media:player": {
+                      "type": "string",
+                      "format": "uri",
+                      "description": "URL to media-player version of episode"
+                    },
+                    "media:thumbnail": {
+                      "type": "string",
+                      "description": "URL to medium-sized image of this episode"
+                    },
+                    "media:rating": {
+                      "type": "string",
+                      "description": "Flag to show whether episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")"
+                    },
+                    "media:copyright": {
+                      "type": "string",
+                      "description": "Link to copyright / T&C information"
+                    },
+                    "media:restriction": {
+                      "type": "string",
+                      "description": "Restriction flag (\"allow\") and list of country or state codes where episode is accessible to website users"
+                    },
+                    "media:rights": {
+                      "type": "string",
+                      "description": "Status of media rights under which Channel 4 provides episode content"
+                    },
+                    "dc:relation.requestType": {
+                      "type": "string",
+                      "enum": [
+                        "ARCHIVE",
+                        "CATCHUP"
+                      ],
+                      "description": "Indicates catchup or archive content"
+                    },
+                    "dc:relation.deliveryType": {
+                      "type": "string",
+                      "enum": [
+                        "STREAM",
+                        "DOWNLOAD"
+                      ],
+                      "description": "Indicates STREAMING or FOR DOWNLOAD content"
+                    },
+                    "dcterms:available": {
+                      "type": "string",
+                      "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)"
+                    },
+                    "dc:relation.AgeRating": {
+                      "type": "integer",
+                      "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)"
+                    },
+                    "dc:relation.Guidance": {
+                      "type": "string",
+                      "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable"
+                    },
+                    "dc:relation.Subtitles": {
+                      "type": "boolean",
+                      "description": "Boolean indicating if subtitles are available for this episode"
+                    },
+                    "dc:relation.AudioDescription": {
+                      "type": "boolean",
+                      "description": "Boolean indicating if an audio description is available for this episode"
+                    },
+                    "dc:relation.Duration": {
+                      "type": "string",
+                      "description": "Length in minutes and seconds - does not include ad breaks"
+                    }
+                  }
                 }
               }
             },
-            "media:category": {
+            "dcterms:available": {
               "type": "string",
-              "description": "Defines the type of short-form item."
-            }
-          }
-        },
-        "dc:relation.ProgrammeType": {
-          "type": "string",
-          "description": "Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type."
-        },
-        "dc:relation.BrandWebsafeTitle": {
-          "type": "string",
-          "description": "The associated brand web-safe title"
-        },
-        "dc:relation.programmeId": {
-          "type": "string",
-          "description": "The episode identifier."
-        },
-        "dc:date.firstTXDate": {
-          "type": "string",
-          "format": "date-time",
-          "description": "First TX date information for this episode"
-        },
-        "dc:relation.firstTXChannel": {
-          "type": "string",
-          "description": "First TX channel information for this episode"
-        },
-        "dc:date.slotTXDate": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Current TX date information for this slot's episode"
-        },
-        "dc:relation.slotTXChannel": {
-          "type": "string",
-          "description": "Current TX channel information for this slot's episode"
-        },
-        "dc:relation.requestType": {
-          "type": "string",
-          "enum": [
-            "ARCHIVE",
-            "CATCHUP"
-          ],
-          "description": "Indicates catchup or archive content"
-        },
-        "link@self": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to the Channel 4 XML feed for this brand"
-        },
-        "link@related (Episode Guide)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to Episode Guide feed, if available"
-        },
-        "dc:relation.ExternalVideoId": {
-          "type": "integer",
-          "description": "This is the clip asset id (from column CLIP_ASSET.ASSET_ID. For the current implementation this is the Brightcove Id."
-        },
-        "dc:relataion.BrandTitle": {
-          "type": "string",
-          "description": "Title for the brand that the clip is associated with (directly or indirectly)"
-        },
-        "dc:relataion.BrandWebSafeTitle": {
-          "type": "string",
-          "description": "Web-safe title for the brand that the clip is associated with (directly or indirectly)"
-        },
-        "dc:relation.RelatedEntryId": {
-          "type": "string",
-          "description": "The episode guide entry related to this episode"
-        },
-        "dc:relation.LoginRequired": {
-          "type": "boolean",
-          "description": "Boolean indicating if the requestType is ARCHIVE and the user needs to be logged in to watch."
-        },
-        "dc:relation.sortLetter": {
-          "type": "string",
-          "description": "Starting letter for this programme"
-        },
-        "media:content": {
-          "type": "object",
-          "properties": {
-            "media:thumbnail": {
-              "type": "string",
-              "description": "URL to medium-sized image of this brand"
+              "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)"
             },
-            "media:credit": {
+            "dc:relation.AgeRating": {
+              "type": "integer",
+              "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)"
+            },
+            "dc:relation.Guidance": {
               "type": "string",
-              "description": "List of credits/cast for the episode"
+              "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable"
+            },
+            "dc:relation.Duration": {
+              "type": "string",
+              "description": "Length in minutes and seconds - does not include ad breaks"
+            },
+            "dc:relation.ExternalVideoId": {
+              "type": "string",
+              "description": "Clip Asset_id value from the Clip table (a.k.a. Brightcode id)."
+            },
+            "dc:relation.CategoryType": {
+              "type": "string",
+              "description": "Type to which the category belongs (if applicable).(Valid values are 'Channel', 'Display' or 'None'.)"
+            },
+            "dc:relation.CategoryOrder": {
+              "type": "integer",
+              "description": "Enumerated order of category within its type(e.g., 'Channel' might have Food=1, More4=2, etc.)(Appears in feed only if CategoryType<>'None'.)"
+            },
+            "dc:relation.Synopsis": {
+              "type": "string",
+              "description": "Summary of this feed"
+            },
+            "media:thumbnail": {
+              "type": "object",
+              "properties": {
+                "media:thumbnail": {
+                  "type": "string",
+                  "description": "URL to medium-sized image of this episode"
+                }
+              }
+            },
+            "dc:relation.resourceType": {
+              "type": "string",
+              "description": "The type of the entry"
+            },
+            "summary": {
+              "type": "string",
+              "description": "Synopsis of episode"
+            },
+            "dc:relation.programmeId": {
+              "type": "string",
+              "description": "Indicates the contract and programme numbers"
+            },
+            "dc:relation.RelatedEntryId": {
+              "type": "string",
+              "description": "The episode guide entry related to this episode"
+            },
+            "dc:date.TXDate": {
+              "type": "string",
+              "format": "date-time",
+              "description": "First TX date information for this episode"
+            },
+            "dc:relation.TXChannel": {
+              "type": "string",
+              "description": "First TX channel information for this episode"
+            },
+            "dc:relation.Subtitles": {
+              "type": "boolean",
+              "description": "Boolean indicating if subtitles are available for this episode"
+            },
+            "dc:relation.AudioDescription": {
+              "type": "boolean",
+              "description": "Boolean indicating if an audio description is available for this episode"
+            },
+            "dc:relation.LoginRequired": {
+              "type": "boolean",
+              "description": "Boolean indicating if the user has to be logged-in in order to play this episode."
+            },
+            "dc:date.firstTXDate": {
+              "type": "string",
+              "format": "date-time",
+              "description": "First TX date information for this episode"
+            },
+            "dc:relation.ParentCollectionId": {
+              "type": "string",
+              "description": "The ID of the Parent Collection where the resource is assigned to."
+            },
+            "dc:relation.TotalResults": {
+              "type": "integer",
+              "description": "Number of entries what match the search-term"
+            },
+            "dc:relation.StartOffset": {
+              "type": "integer",
+              "description": ""
             }
           }
+        }
+      ]
+    },
+    "entryType": {
+      "type": "object",
+      "description": "The Atom entry construct is defined in section 4.1.2 of the format spec.",
+      "additionalProperties": true,
+      "x-anyOf": [
+        {
+          "$ref": "#/definitions/commonAttributes"
         },
-        "link@related (4oD)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to 4oD feed, if available (self-referential in 4oD feeds)"
-        },
-        "link@related (Clips)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to short-form video feed, if available"
-        },
-        "dc:relation.Repeat": {
-          "type": "boolean",
-          "description": "Boolean indicating if the Slot includes an indicator marked as repeat."
-        },
-        "dc:date.Last": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Timestamp of the previous TX from this brand (if applicable)"
-        },
-        "dc:relation.LastChannel": {
-          "type": "string",
-          "description": "The channel on which the previous TX from this brand(if applicable)"
-        },
-        "dc:date.Next": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Timestamp of the next TX from this brand (if applicable)"
-        },
-        "dc:relation.NextChannel": {
-          "type": "string",
-          "description": "The channel on which the next TX from this brand (if applicable)"
-        },
-        "dc:relation.TXStartTime": {
-          "type": "string",
-          "description": "Start date and time of the broadcast"
-        },
-        "link@up": {
-          "type": "string",
-          "format": "uri",
-          "description": "Parent brand feed URL"
-        },
-        "link@EpisodeUrl": {
-          "type": "string",
-          "format": "uri",
-          "description": "Episode URL, if applicable"
-        },
-        "dc:relation.BrandWebSafeTitle": {
-          "type": "string",
-          "description": "Programme's Brand name in Web safe format"
-        },
-        "media:context": {
-          "type": "object",
+        {
           "properties": {
+            "author": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/personType"
+              }
+            },
+            "category": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/categoryType"
+              }
+            },
+            "content": {
+              "$ref": "#/definitions/contentType"
+            },
+            "contributor": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/personType"
+              }
+            },
+            "id": {
+              "type": "string",
+              "description": "ID of the entry"
+            },
+            "link": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/linkType"
+              }
+            },
+            "published": {
+              "$ref": "#/definitions/dateTimeType"
+            },
+            "rights": {
+              "$ref": "#/definitions/textType"
+            },
+            "source": {
+              "$ref": "#/definitions/textType"
+            },
+            "summary": {
+              "type": "string",
+              "description": "Synopsis of this episode"
+            },
+            "title": {
+              "type": "string",
+              "description": "Episode Title. If available on 4oD then the 4oD episode title is returned. If not, then the title attributed to the slot is returned. It is possible for these to be different"
+            },
+            "updated": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Date & time episode last updated"
+            },
+            "dc:relation.BrandTitle": {
+              "type": "string",
+              "description": "Title of brand"
+            },
+            "dcterms:available": {
+              "type": "string",
+              "description": "Start date, end date and date / time format for the period of time when episode is available on 4oD. This element is not returned if the programme is not currently available on 4oD."
+            },
+            "dc:relation.SeriesNumber": {
+              "type": "integer",
+              "description": "The series to which this episode belongs."
+            },
+            "dc:relation.EpisodeNumber": {
+              "type": "integer",
+              "description": "The episode number within the series."
+            },
+            "dc:relation.AgeRating": {
+              "type": "integer",
+              "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)"
+            },
+            "dc:relation.Guidance": {
+              "type": "string",
+              "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable"
+            },
+            "dc:date.TXDate": {
+              "type": "string",
+              "format": "date-time",
+              "description": "If this programme is available on 4oD then this element indicates the broadcast date/time of the episode selected for 4oD. If the programme is not on 4oD then this element is omitted.(Indicates whether pre- or post-watershed)"
+            },
+            "dc:relation.TXChannel": {
+              "type": "string",
+              "description": "If this programme is available on 4oD then this element indicates the broadcast channel that the episode selected for 4oD. If the programme is not on 4oD then this element is omitted."
+            },
+            "dc:relation.Subtitles": {
+              "type": "boolean",
+              "description": "Boolean indicating if subtitles are available for this episode"
+            },
+            "dc:relation.AudioDescription": {
+              "type": "boolean",
+              "description": "Boolean indicating if an audio description is available for this episode"
+            },
+            "dc:relation.Duration": {
+              "type": "string",
+              "description": "Length in minutes and seconds - does not include ad breaks"
+            },
+            "media:group": {
+              "type": "object",
+              "properties": {
+                "media:player": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "URL to 4oD media-player version of episode (if available)"
+                },
+                "media:thumbnail": {
+                  "type": "string",
+                  "description": "URL to 4oD medium-sized image of this episode (if available)"
+                },
+                "media:rating": {
+                  "type": "string",
+                  "description": "Flag to show whether the 4oD version of the episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\") (if available)"
+                },
+                "media:copyright": {
+                  "type": "string",
+                  "description": "Link to 4oD  copyright / T&C information (if available)"
+                },
+                "media:restriction": {
+                  "type": "string",
+                  "description": "Restriction flag (\"allow\") and list of country or state codes where 4oD episode is accessible to website users (if available)"
+                },
+                "media:rights": {
+                  "type": "string",
+                  "description": "Status of 4oD media rights under which Channel 4 provides episode content (if available)"
+                },
+                "media:content": {
+                  "type": "object",
+                  "properties": {
+                    "media:player": {
+                      "type": "string",
+                      "format": "uri",
+                      "description": "URL to media-player version of episode"
+                    },
+                    "media:thumbnail": {
+                      "type": "string",
+                      "description": "URL to medium-sized image of this episode"
+                    },
+                    "media:rating": {
+                      "type": "string",
+                      "description": "Flag to show whether episode is suitable for adults only (\"adult\") or for all viewers (\"nonadult\")"
+                    },
+                    "media:copyright": {
+                      "type": "string",
+                      "description": "Link to copyright / T&C information"
+                    },
+                    "media:restriction": {
+                      "type": "string",
+                      "description": "Restriction flag (\"allow\") and list of country or state codes where episode is accessible to website users"
+                    },
+                    "media:rights": {
+                      "type": "string",
+                      "description": "Status of media rights under which Channel 4 provides episode content"
+                    },
+                    "dc:relation.requestType": {
+                      "type": "string",
+                      "enum": [
+                        "ARCHIVE",
+                        "CATCHUP"
+                      ],
+                      "description": "Indicates catchup or archive content"
+                    },
+                    "dc:relation.deliveryType": {
+                      "type": "string",
+                      "enum": [
+                        "STREAM",
+                        "DOWNLOAD"
+                      ],
+                      "description": "Indicates STREAMING or FOR DOWNLOAD content"
+                    },
+                    "dcterms:available": {
+                      "type": "string",
+                      "description": "Start date, end date and date/time format for the period of time when episode is available.  (This feed would not be available if the current date is outside the start and end dates.)"
+                    },
+                    "dc:relation.AgeRating": {
+                      "type": "integer",
+                      "description": "Channel 4-specific recommended lower age-limit for viewers (0, 16 or 18)"
+                    },
+                    "dc:relation.Guidance": {
+                      "type": "string",
+                      "description": "Channel 4-specific warning text about specific disturbing content, adult humour, nudity, etc., if applicable"
+                    },
+                    "dc:relation.Subtitles": {
+                      "type": "boolean",
+                      "description": "Boolean indicating if subtitles are available for this episode"
+                    },
+                    "dc:relation.AudioDescription": {
+                      "type": "boolean",
+                      "description": "Boolean indicating if an audio description is available for this episode"
+                    },
+                    "dc:relation.Duration": {
+                      "type": "string",
+                      "description": "Length in minutes and seconds - does not include ad breaks"
+                    }
+                  }
+                },
+                "media:category": {
+                  "type": "string",
+                  "description": "Defines the type of short-form item."
+                }
+              }
+            },
+            "dc:relation.ProgrammeType": {
+              "type": "string",
+              "description": "Displays metadata code (as detailed in the following table) in a meaningful way on the application according to the specified programme type."
+            },
+            "dc:relation.BrandWebsafeTitle": {
+              "type": "string",
+              "description": "The associated brand web-safe title"
+            },
+            "dc:relation.programmeId": {
+              "type": "string",
+              "description": "The episode identifier."
+            },
+            "dc:date.firstTXDate": {
+              "type": "string",
+              "format": "date-time",
+              "description": "First TX date information for this episode"
+            },
+            "dc:relation.firstTXChannel": {
+              "type": "string",
+              "description": "First TX channel information for this episode"
+            },
+            "dc:date.slotTXDate": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Current TX date information for this slot's episode"
+            },
+            "dc:relation.slotTXChannel": {
+              "type": "string",
+              "description": "Current TX channel information for this slot's episode"
+            },
+            "dc:relation.requestType": {
+              "type": "string",
+              "enum": [
+                "ARCHIVE",
+                "CATCHUP"
+              ],
+              "description": "Indicates catchup or archive content"
+            },
+            "dc:relation.ExternalVideoId": {
+              "type": "integer",
+              "description": "This is the clip asset id (from column CLIP_ASSET.ASSET_ID. For the current implementation this is the Brightcove Id."
+            },
+            "dc:relataion.BrandTitle": {
+              "type": "string",
+              "description": "Title for the brand that the clip is associated with (directly or indirectly)"
+            },
+            "dc:relataion.BrandWebSafeTitle": {
+              "type": "string",
+              "description": "Web-safe title for the brand that the clip is associated with (directly or indirectly)"
+            },
+            "dc:relation.RelatedEntryId": {
+              "type": "string",
+              "description": "The episode guide entry related to this episode"
+            },
+            "dc:relation.LoginRequired": {
+              "type": "boolean",
+              "description": "Boolean indicating if the requestType is ARCHIVE and the user needs to be logged in to watch."
+            },
+            "dc:relation.sortLetter": {
+              "type": "string",
+              "description": "Starting letter for this programme"
+            },
+            "media:content": {
+              "type": "object",
+              "properties": {
+                "media:thumbnail": {
+                  "type": "string",
+                  "description": "URL to medium-sized image of this brand"
+                },
+                "media:credit": {
+                  "type": "string",
+                  "description": "List of credits/cast for the episode"
+                }
+              }
+            },
+            "dc:relation.Repeat": {
+              "type": "boolean",
+              "description": "Boolean indicating if the Slot includes an indicator marked as repeat."
+            },
+            "dc:date.Last": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Timestamp of the previous TX from this brand (if applicable)"
+            },
+            "dc:relation.LastChannel": {
+              "type": "string",
+              "description": "The channel on which the previous TX from this brand(if applicable)"
+            },
+            "dc:date.Next": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Timestamp of the next TX from this brand (if applicable)"
+            },
+            "dc:relation.NextChannel": {
+              "type": "string",
+              "description": "The channel on which the next TX from this brand (if applicable)"
+            },
+            "dc:relation.TXStartTime": {
+              "type": "string",
+              "description": "Start date and time of the broadcast"
+            },
+            "dc:relation.BrandWebSafeTitle": {
+              "type": "string",
+              "description": "Programme's Brand name in Web safe format"
+            },
+            "media:context": {
+              "type": "object",
+              "properties": {
+                "media:thumbnail": {
+                  "type": "string",
+                  "description": "URL to medium-sized image of this brand"
+                }
+              }
+            },
+            "dc:relation.CategoryType": {
+              "type": "string",
+              "description": "Type to which the category belongs (if applicable). (Valid values are 'Channel', 'Display' or 'None'.)"
+            },
+            "dc:relation.CategoryOrder": {
+              "type": "integer",
+              "description": "Enumerated order of category within its type (e.g., 'Channel' might have Food=1, More4=2, etc.) (Appears in feed only if CategoryType<>'None'.)"
+            },
+            "dc:relation.AllProgrammeCount": {
+              "type": "integer",
+              "description": "Number of available brands in this category (all programmes)"
+            },
+            "dc:relation.4oDProgrammeCount": {
+              "type": "integer",
+              "description": "The number of 4oD available programmes in the collection, including all Brand/Series/Episodes."
+            },
+            "generator": {
+              "type": "string",
+              "description": "Identifies the agent used to generate the feed"
+            },
+            "generator@version": {
+              "type": "number",
+              "description": "Identifies the version of the agent used to generate the feed"
+            },
+            "dc:relation.platformClientVersion": {
+              "type": "number",
+              "description": "Identifies the version of the client application compatible with this feed."
+            },
+            "dc:relation.sortOrder": {
+              "type": "integer",
+              "description": "Starting letter for this programme"
+            },
+            "dc.relation.sortLetter": {
+              "type": "integer",
+              "description": "Starting letter for this programme"
+            },
+            "dc:relation.Synopsys": {
+              "type": "string",
+              "description": "The synopsis of this brand"
+            },
             "media:thumbnail": {
               "type": "string",
-              "description": "URL to medium-sized image of this brand"
-            }
-          }
-        },
-        "link@related (Official Site)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to the brand's official site, if available"
-        },
-        "link@related (All Programmes by Title)": {
-          "type": "string",
-          "format": "uri",
-          "description": "All programmes in category by title"
-        },
-        "link@related (4oD Programmes by TX Date)": {
-          "type": "string",
-          "format": "uri",
-          "description": "4oD programmes in category by TX date"
-        },
-        "link@related (4oD Programmes by Title)": {
-          "type": "string",
-          "format": "uri",
-          "description": "4oD programmes in category by title"
-        },
-        "dc:relation.CategoryType": {
-          "type": "string",
-          "description": "Type to which the category belongs (if applicable). (Valid values are 'Channel', 'Display' or 'None'.)"
-        },
-        "dc:relation.CategoryOrder": {
-          "type": "integer",
-          "description": "Enumerated order of category within its type (e.g., 'Channel' might have Food=1, More4=2, etc.) (Appears in feed only if CategoryType<>'None'.)"
-        },
-        "dc:relation.AllProgrammeCount": {
-          "type": "integer",
-          "description": "Number of available brands in this category (all programmes)"
-        },
-        "dc:relation.4oDProgrammeCount": {
-          "type": "integer",
-          "description": "The number of 4oD available programmes in the collection, including all Brand/Series/Episodes."
-        },
-        "generator": {
-          "type": "string",
-          "description": "Identifies the agent used to generate the feed"
-        },
-        "generator@version": {
-          "type": "number",
-          "description": "Identifies the version of the agent used to generate the feed"
-        },
-        "dc:relation.platformClientVersion": {
-          "type": "number",
-          "description": "Identifies the version of the client application compatible with this feed."
-        },
-        "dc:relation.sortOrder": {
-          "type": "integer",
-          "description": "Starting letter for this programme"
-        },
-        "link@relative (Official Site)": {
-          "type": "string",
-          "description": "URL to the brand's official site, if available"
-        },
-        "link@relative (4oD)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to 4oD feed, if available (self-referential in 4oD feeds)"
-        },
-        "link@relative (Clips)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to short-form video feed, if available"
-        },
-        "link@relative (Episode Guide)": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to Episode Guide feed, if available"
-        },
-        "dc.relation.sortLetter": {
-          "type": "integer",
-          "description": "Starting letter for this programme"
-        },
-        "dc:relation.Synopsys": {
-          "type": "string",
-          "description": "The synopsis of this brand"
-        },
-        "media:thumbnail": {
-          "type": "string",
-          "description": "URL to medium sized image of this series"
-        },
-        "dc:relation.resourceType": {
-          "type": "string",
-          "description": "The type of the entry"
-        },
-        "Link@Related title=\"Episode Guide\"": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to brand episode guide feed"
-        },
-        "Link@Related title=\"4oD\"": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL to Brand 4oD feed, if available"
-        },
-        "dc:relation.ParentCollectionId": {
-          "type": "string",
-          "description": "The ID of the Parent Collection where the resource is assigned to."
-        },
-        "subtitle": {
-          "type": "string",
-          "description": "The synopsis of the series."
-        },
-        "dc:relation.WideScreen": {
-          "type": "boolean",
-          "description": "Boolean value is true if widescreen slot_indicator exists for this slot, otherwise false"
-        },
-        "dc:relation.Signing": {
-          "type": "boolean",
-          "description": "Boolean value is true if signing slot_indicator exists for this slot, otherwise false."
-        },
-        "link@rel=alternate @type=text": {
-          "type": "object",
-          "properties": {
-            "html": {
+              "description": "URL to medium sized image of this series"
+            },
+            "dc:relation.resourceType": {
               "type": "string",
-              "format": "uri",
-              "description": "URL to HTML version of brand (if available)"
-            }
-          }
-        },
-        "link@rel=self@type=application": {
-          "type": "object",
-          "properties": {
-            "atom+xml": {
+              "description": "The type of the entry"
+            },
+            "dc:relation.ParentCollectionId": {
               "type": "string",
-              "format": "uri",
-              "description": "URL of ATOM feed of current brand"
+              "description": "The ID of the Parent Collection where the resource is assigned to."
+            },
+            "subtitle": {
+              "type": "string",
+              "description": "The synopsis of the series."
+            },
+            "dc:relation.WideScreen": {
+              "type": "boolean",
+              "description": "Boolean value is true if widescreen slot_indicator exists for this slot, otherwise false"
+            },
+            "dc:relation.Signing": {
+              "type": "boolean",
+              "description": "Boolean value is true if signing slot_indicator exists for this slot, otherwise false."
+            },
+            "dc:relation.SimulcastRights": {
+              "type": "boolean",
+              "description": "Boolean indicating if the episode has rights to be streamed on the live simulcast service."
+            },
+            "dc:relation.Platform": {
+              "type": "string",
+              "description": "The platform code that this episode is available on"
+            },
+            "dc:relation.Movie": {
+              "type": "boolean",
+              "description": "Boolean indicating if the SLOT is a Movie or not."
+            },
+            "dc:relation.comingSoonTo4oD": {
+              "type": "string",
+              "description": "If the brand is coming to be available on 4oD soon this empty element should be included."
+            },
+            "dc:relation.hd": {
+              "type": "boolean",
+              "description": "Boolean indicating if the SLOT is HD on linear"
             }
           }
+        }
+      ]
+    },
+    "contentType": {
+      "type": "object",
+      "description": "The Atom content construct is defined in section 4.1.3 of the format spec.",
+      "additionalProperties": true,
+      "x-anyOf": [
+        {
+          "$ref": "#/definitions/commonAttributes"
         },
-        "link@rel=related@title=4oD": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL of ATOM 4oD feed of current brand (if available)"
+        {
+          "properties": {
+            "type": {
+              "$ref": "#/definitions/ContentTypeType"
+            },
+            "src": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      ]
+    },
+    "categoryType": {
+      "type": "object",
+      "description": "The Atom category construct is defined in section 4.2.2 of the format spec.",
+      "additionalProperties": false,
+      "x-anyOf": [
+        {
+          "required": [
+            "term"
+          ],
+          "$ref": "#/definitions/commonAttributes"
         },
-        "link@rel=related@title=Clips": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL of ATOM Clips feed of current brand (if available)"
+        {
+          "properties": {
+            "term": {
+              "type": "string"
+            },
+            "scheme": {
+              "type": "string",
+              "format": "uri"
+            },
+            "label": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "generatorType": {
+      "type": "object",
+      "description": "The Atom generator element is defined in section 4.2.4 of the format spec.",
+      "additionalProperties": false,
+      "x-anyOf": [
+        {
+          "$ref": "#/definitions/commonAttributes"
         },
-        "link@rel=related@title=Episode Guide": {
-          "type": "string",
-          "format": "uri",
-          "description": "URL of ATOM Episode Guide details feed of current brand (if available)"
+        {
+          "properties": {
+            "uri": {
+              "type": "string",
+              "format": "uri"
+            },
+            "version": {
+              "type": "string"
+            },
+            "#text": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "iconType": {
+      "type": "object",
+      "description": "The Atom icon construct is defined in section 4.2.5 of the format spec.",
+      "additionalProperties": false,
+      "x-anyOf": [
+        {
+          "$ref": "#/definitions/commonAttributes"
         },
-        "dc:relation.SimulcastRights": {
-          "type": "boolean",
-          "description": "Boolean indicating if the episode has rights to be streamed on the live simulcast service."
+        {
+          "properties": {
+            "#text": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      ]
+    },
+    "idType": {
+      "type": "object",
+      "description": "The Atom id construct is defined in section 4.2.6 of the format spec.",
+      "additionalProperties": false,
+      "x-anyOf": [
+        {
+          "$ref": "#/definitions/commonAttributes"
         },
-        "dc:relation.Platform": {
-          "type": "string",
-          "description": "The platform code that this episode is available on"
+        {
+          "properties": {
+            "#text": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      ]
+    },
+    "linkType": {
+      "type": "object",
+      "description": "The Atom link construct is defined in section 3.4 of the format spec.",
+      "additionalProperties": false,
+      "x-anyOf": [
+        {
+          "required": [
+            "href"
+          ],
+          "$ref": "#/definitions/commonAttributes"
         },
-        "dc:relation.Movie": {
-          "type": "boolean",
-          "description": "Boolean indicating if the SLOT is a Movie or not."
+        {
+          "properties": {
+            "href": {
+              "type": "string",
+              "format": "uri"
+            },
+            "rel": {
+              "$ref": "#/definitions/RelCodeType"
+            },
+            "type": {
+              "type": "string"
+            },
+            "hreflang": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "length": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      ]
+    },
+    "logoType": {
+      "type": "object",
+      "description": "The Atom logo construct is defined in section 4.2.8 of the format spec.",
+      "additionalProperties": false,
+      "x-anyOf": [
+        {
+          "$ref": "#/definitions/commonAttributes"
         },
-        "dc:relation.comingSoonTo4oD": {
-          "type": "string",
-          "description": "If the brand is coming to be available on 4oD soon this empty element should be included."
+        {
+          "properties": {
+            "#text": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      ]
+    },
+    "sourceType": {
+      "type": "object",
+      "description": "The Atom source construct is defined in section 4.2.11 of the format spec.",
+      "additionalProperties": true,
+      "x-anyOf": [
+        {
+          "$ref": "#/definitions/commonAttributes"
         },
-        "dc:relation.hd": {
-          "type": "boolean",
-          "description": "Boolean indicating if the SLOT is HD on linear"
+        {
+          "properties": {
+            "author": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/personType"
+              }
+            },
+            "category": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/categoryType"
+              }
+            },
+            "contributor": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/personType"
+              }
+            },
+            "generator": {
+              "$ref": "#/definitions/generatorType"
+            },
+            "icon": {
+              "$ref": "#/definitions/iconType"
+            },
+            "id": {
+              "$ref": "#/definitions/idType"
+            },
+            "link": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/linkType"
+              }
+            },
+            "logo": {
+              "$ref": "#/definitions/logoType"
+            },
+            "rights": {
+              "$ref": "#/definitions/textType"
+            },
+            "subtitle": {
+              "$ref": "#/definitions/textType"
+            },
+            "title": {
+              "$ref": "#/definitions/textType"
+            },
+            "updated": {
+              "$ref": "#/definitions/dateTimeType"
+            }
+          }
+        }
+      ]
+    },
+    "uriType": {
+      "type": "object",
+      "additionalProperties": false,
+      "x-anyOf": [
+        {
+          "$ref": "#/definitions/commonAttributes"
+        },
+        {
+          "properties": {
+            "#text": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      ]
+    },
+    "dateTimeType": {
+      "type": "object",
+      "additionalProperties": false,
+      "x-anyOf": [
+        {
+          "$ref": "#/definitions/commonAttributes"
+        },
+        {
+          "properties": {
+            "#text": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      ]
+    },
+    "commonAttributes": {
+      "type": "object",
+      "properties": {
+        "xml:base": {
+          "type": "string"
+        },
+        "xml:lang": {
+          "type": "string"
         }
       },
       "additionalProperties": true

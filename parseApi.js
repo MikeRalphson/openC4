@@ -7,6 +7,7 @@ var wrap = require('word-wrap');
 var oa2js = require('openapi2js');
 
 var swaggerSchema = require(nodePath.resolve('./validation/swagger2Schema.json'));
+var atomSchema = require(nodePath.resolve('./validation/atomSchema.json'));
 
 var api = {};
 var swagger;
@@ -311,7 +312,9 @@ function definePath(file,url,suffix) {
 }
 
 function addProperties(target,item) {
-	if (item.name) {
+	if (item.name && target) {
+		if (item.name.startsWith('link@')) return false;
+		if (item.name.startsWith('Link@')) return false;
 		var newProp = {};
 		if (item.type == 'date') {
 			newProp.type = 'string';
@@ -351,6 +354,40 @@ function addProperties(target,item) {
 			target[item.name] = newProp;
 		}
 	}
+}
+
+//____________________________________________________________________________
+function traverse(obj,parent) {
+
+var result = [];
+
+	var array = Array.isArray(obj);
+	for (var key in obj) {
+		// skip loop if the property is from prototype
+		if (!obj.hasOwnProperty(key)) continue;
+
+		if (key == 'oneOf') {
+			obj["x-oneOf"] = obj[key];
+			delete obj[key];
+		}
+
+		if (key == 'anyOf') {
+			obj["x-anyOf"] = obj[key];
+			delete obj[key];
+			//if (parent.required) {
+			//	parent["x-originalRequired"] = parent.required;
+			//	delete parent.required;
+			//}
+			if (parent.additionalProperties === false) {
+				parent.additionalProperties = true;
+			}
+		}
+
+		if (typeof obj[key] == 'object') {
+			traverse(obj[key],obj);
+		}
+	}
+	return result;
 }
 
 function generateSwagger(){
@@ -431,15 +468,15 @@ function generateSwagger(){
 
 			for (var i in file.output.feed) {
 				if (file.output.feed[i].name != 'Entry Elements') {
-					addProperties(swagger.definitions.feed.properties,file.output.feed[i]);
+					addProperties(swagger.definitions.feedType["x-anyOf"][1].properties,file.output.feed[i]);
 				}
 			}
-			swagger.definitions.feed.properties.entry = {"$ref": "#/definitions/entry"};
+			//swagger.definitions.feed.properties.entry = {"$ref": "#/definitions/entry"};
 			for (var i in file.output.singleEntry) {
-				addProperties(swagger.definitions.entry.properties,file.output.singleEntry[i]);
+				addProperties(swagger.definitions.entryType["x-anyOf"][1].properties,file.output.singleEntry[i]);
 			}
 			for (var i in file.output.multipleEntry) {
-				addProperties(swagger.definitions.entry.properties,file.output.multipleEntry[i]);
+				addProperties(swagger.definitions.entryType["x-anyOf"][1].properties,file.output.multipleEntry[i]);
 			}
 		}
 	}
@@ -505,9 +542,9 @@ var swagStr = `{
               "ps3",
               "yv",
               "ios",
-              "p06",
-              "flashmobile",
 			  "fm",
+              "p06",
+			  "ctv",
               "freesat",
               "android",
               "samsung"
@@ -552,6 +589,14 @@ var swagStr = `{
 	  }]
 	}`;
 swagger = JSON.parse(swagStr);
+delete atomSchema["$schema"];
+delete atomSchema.id;
+traverse(atomSchema,{});
+swagger.definitions.atom = atomSchema;
+var defs = swagger.definitions.atom.definitions;
+delete swagger.definitions.atom.definitions;
+swagger.definitions = Object.assign(swagger.definitions,defs);
+delete swagger.definitions["x-anyOf"]; // for now
 
 processPath('./apiSource');
 

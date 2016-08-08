@@ -4,8 +4,9 @@ const commonPlatformC4 = 'platform=c4';
 const commonPlatformPs3 = 'platform=ps3';
 const commonPlatformYv = 'platform=yv';
 const commonPlatformIos = 'platform=ios';
+const commonPlatformFm = 'platform=fm';
 const commonPlatformP06 = 'platform=p06';
-const commonPlatformFlashmobile = 'platform=flashmobile';
+const commonPlatformCtv = 'platform=ctv';
 const commonPlatformFreesat = 'platform=freesat';
 const commonPlatformAndroid = 'platform=android';
 const commonPlatformSamsung = 'platform=samsung';
@@ -1049,8 +1050,9 @@ module.exports = {
   commonPlatformPs3 : commonPlatformPs3,
   commonPlatformYv : commonPlatformYv,
   commonPlatformIos : commonPlatformIos,
+  commonPlatformFm : commonPlatformFm,
   commonPlatformP06 : commonPlatformP06,
-  commonPlatformFlashmobile : commonPlatformFlashmobile,
+  commonPlatformCtv : commonPlatformCtv,
   commonPlatformFreesat : commonPlatformFreesat,
   commonPlatformAndroid : commonPlatformAndroid,
   commonPlatformSamsung : commonPlatformSamsung,
