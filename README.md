@@ -1,6 +1,4 @@
-# OpenC4 
-
-## Channel 4 API SDK
+![OpenC4 - Channel 4 API SDK](https://github.com/Mermade/openC4/blob/master/logo/banner.png?raw=true)
 
 OpenApi (Swagger) 2.0 and simple Javascript SDK for the (UK) Channel 4 API.
 
