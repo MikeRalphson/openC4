@@ -337,13 +337,17 @@ function addProperties(target,item) {
 		}
 		newProp.description = item.description;
 
+		item.name = item.name.replaceAll('@','/').replaceAll('.','/');
 		var path = item.name.split('/');
 		if (path.length>1) {
 			for (var p=0;p<path.length-1;p++) {
 				var comp = path[p].trim();
 				if ((!target[comp]) || (!target[comp].properties)) {
+					var desc;
+					if (target[comp] && target[comp].description) desc = target[comp].description;
 					target[comp] = {};
 					target[comp].type = 'object';
+					if (desc) target[comp].description = desc;
 					target[comp].properties = {};
 				}
 				target = target[comp].properties;
@@ -374,10 +378,6 @@ var result = [];
 		if (key == 'anyOf') {
 			obj["x-anyOf"] = obj[key];
 			delete obj[key];
-			//if (parent.required) {
-			//	parent["x-originalRequired"] = parent.required;
-			//	delete parent.required;
-			//}
 			if (parent.additionalProperties === false) {
 				parent.additionalProperties = true;
 			}
@@ -555,26 +555,7 @@ var swagStr = `{
 	  },
 	  "definitions": {
 		  "atom": {
-			  "type": "object",
-			  "properties": {
-				  "feed": {
-					  "$ref": "#/definitions/feed"
-				  }
-			  },
-			  "required": [
-				"feed"
-			  ],
-			  "additionalProperties": true
-		  },
-		  "feed": {
-			  "type": "object",
-			  "properties": {},
-			  "additionalProperties": true
-		  },
-		  "entry": {
-			  "type": "object",
-			  "properties": {},
-			  "additionalProperties": true
+			  "type": "object"
 		  }
 	  },
       "securityDefinitions" : {
