@@ -355,7 +355,12 @@ function addProperties(target,item) {
 			target[path[path.length-1].trim()] = newProp;
 		}
 		else {
-			target[item.name] = newProp;
+			if ((target[item.name]) && (target[item.name]["$ref"])) {
+
+			}
+			else {
+				target[item.name] = newProp;
+			}
 		}
 	}
 }
