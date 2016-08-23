@@ -1,17 +1,17 @@
 {
   "name": "openc4",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Open Channel 4 SDK",
   "main": "parseApi.js",
   "directories": {
     "example": "examples"
   },
   "dependencies": {
-	"cheerio": "latest",
-	"request": "latest",
-	"is-my-json-valid": "latest",
-	"word-wrap": "^1.1.0",
-	"openapi2js": "latest"
+    "cheerio": "latest",
+    "request": "latest",
+    "is-my-json-valid": "latest",
+    "word-wrap": "^1.1.0",
+    "openapi2js": "latest"
   },
   "devDependencies": {},
   "scripts": {
