@@ -67,6 +67,98 @@
 				"android",
 				"samsung"
 			]
+		},
+		"start_letter": {
+			"name": "start_letter",
+			"type": "string",
+			"in": "path",
+			"required": true,
+			"description": "The letter of the alphabet for which you seek associated Channel 4 programmes"
+		},
+		"pageno": {
+			"name": "pageno",
+			"type": "integer",
+			"in": "path",
+			"required": true,
+			"description": "Page number of results to return"
+		},
+		"brand-web-safe-title": {
+			"name": "brand-web-safe-title",
+			"type": "string",
+			"in": "path",
+			"required": true,
+			"description": "Title of brand to which clips belong"
+		},
+		"series_number": {
+			"name": "series_number",
+			"type": "string",
+			"in": "path",
+			"required": true,
+			"description": "Unique identifier of series to which clips belong"
+		},
+		"category": {
+			"name": "category",
+			"type": "string",
+			"in": "path",
+			"required": true,
+			"description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+		},
+		"channel": {
+			"name": "channel",
+			"type": "string",
+			"in": "path",
+			"required": true,
+			"description": "The name of the channel for which you seek associated Channel 4oD programmes",
+			"enum": [
+				"c4",
+				"f4",
+				"e4",
+				"m4",
+				"4m",
+				"4s"
+			]
+		},
+		"collection_name": {
+			"name": "collection_name",
+			"type": "string",
+			"in": "path",
+			"required": true,
+			"description": "Web safe title for the collection."
+		},
+		"q": {
+			"name": "q",
+			"type": "string",
+			"in": "query",
+			"required": true,
+			"description": "The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded."
+		},
+		"q1": {
+			"name": "q",
+			"type": "string",
+			"in": "path",
+			"required": true,
+			"description": "The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded."
+		},
+		"yyyy": {
+			"name": "yyyy",
+			"type": "string",
+			"in": "path",
+			"required": true,
+			"description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
+		},
+		"mm": {
+			"name": "mm",
+			"type": "string",
+			"in": "path",
+			"required": true,
+			"description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
+		},
+		"dd": {
+			"name": "dd",
+			"type": "string",
+			"in": "path",
+			"required": true,
+			"description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
 		}
 	},
 	"paths": {
@@ -79,9 +171,6 @@
 				],
 				"operationId": "4oD_Browse_by_Date_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Browse_by_Date_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -127,9 +216,6 @@
 				],
 				"operationId": "4oD_Most_Popular_Episodes_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Most_Popular_Episodes_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -154,9 +240,6 @@
 				],
 				"operationId": "4oD_Clips_Catch_Up_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Clips_Catch_Up_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -181,9 +264,6 @@
 				],
 				"operationId": "4oD_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/4oD_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -215,9 +295,6 @@
 				],
 				"operationId": "A_to_Z_Landing_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Landing_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -242,19 +319,12 @@
 				],
 				"operationId": "A_to_Z_Letter_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Letter_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "start_letter",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The letter of the alphabet for which you seek associated Channel 4 programmes"
+						"$ref": "#/parameters/start_letter"
 					}
 				],
 				"responses": {
@@ -276,26 +346,15 @@
 				],
 				"operationId": "A_to_Z_Letter_Feed(2)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Letter_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "start_letter",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The letter of the alphabet for which you seek associated Channel 4 programmes"
+						"$ref": "#/parameters/start_letter"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -317,9 +376,6 @@
 				],
 				"operationId": "Hub_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Hub_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -351,9 +407,6 @@
 				],
 				"operationId": "Brand_EPG_Atom_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Brand_EPG_Atom_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -385,9 +438,6 @@
 				],
 				"operationId": "Episode_Guide_Feed_Series_Landing",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Landing",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -419,9 +469,6 @@
 				],
 				"operationId": "Episode_Guide_Feed_Series_Detail",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Detail",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -460,9 +507,6 @@
 				],
 				"operationId": "Episode_Guide_Feed_Episode_Detail",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Episode_Detail",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -508,19 +552,12 @@
 				],
 				"operationId": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "brand-web-safe-title",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "Title of brand to which clips belong"
+						"$ref": "#/parameters/brand-web-safe-title"
 					}
 				],
 				"responses": {
@@ -542,26 +579,15 @@
 				],
 				"operationId": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels(2)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "brand-web-safe-title",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "Title of brand to which clips belong"
+						"$ref": "#/parameters/brand-web-safe-title"
 					},
 					{
-						"name": "series_number",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "Unique identifier of series to which clips belong"
+						"$ref": "#/parameters/series_number"
 					}
 				],
 				"responses": {
@@ -583,26 +609,15 @@
 				],
 				"operationId": "Clips_Landing_Feed_Brand_Series_and_Episode_Levels(3)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "brand-web-safe-title",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "Title of brand to which clips belong"
+						"$ref": "#/parameters/brand-web-safe-title"
 					},
 					{
-						"name": "series_number",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "Unique identifier of series to which clips belong"
+						"$ref": "#/parameters/series_number"
 					},
 					{
 						"name": "episode_number",
@@ -631,9 +646,6 @@
 				],
 				"operationId": "Clip_Detail_Atom_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clip_Detail_Atom_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -672,9 +684,6 @@
 				],
 				"operationId": "4oD_Title_All_Brands_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Title_All_Brands_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -699,19 +708,12 @@
 				],
 				"operationId": "4oD_Title_All_Brands_Feed(2)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Title_All_Brands_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -733,9 +735,6 @@
 				],
 				"operationId": "4oD_Popular_All_Brands_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Popular_All_Brands_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -760,19 +759,12 @@
 				],
 				"operationId": "4oD_Popular_All_Brands_Feed(2)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Popular_All_Brands_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -794,9 +786,6 @@
 				],
 				"operationId": "Popular_Brands_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Popular_Brands_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -821,19 +810,12 @@
 				],
 				"operationId": "Popular_Brands_Feed(2)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Popular_Brands_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -855,9 +837,6 @@
 				],
 				"operationId": "Categories_Landing_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Categories_Landing_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -882,19 +861,12 @@
 				],
 				"operationId": "All_Programmes_by_TX_Date",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )"
+						"$ref": "#/parameters/category"
 					}
 				],
 				"responses": {
@@ -916,34 +888,15 @@
 				],
 				"operationId": "All_Programmes_by_TX_Date(2)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "channel",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the channel for which you seek associated Channel 4oD programmes",
-						"enum": [
-							"c4",
-							"f4",
-							"e4",
-							"m4",
-							"4m",
-							"4s"
-						]
+						"$ref": "#/parameters/channel"
 					}
 				],
 				"responses": {
@@ -965,19 +918,12 @@
 				],
 				"operationId": "All_Programmes_by_TX_Date(3)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )"
+						"$ref": "#/parameters/category"
 					}
 				],
 				"responses": {
@@ -999,26 +945,15 @@
 				],
 				"operationId": "All_Programmes_by_TX_Date(4)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -1040,41 +975,18 @@
 				],
 				"operationId": "All_Programmes_by_TX_Date(5)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "channel",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the channel for which you seek associated Channel 4oD programmes",
-						"enum": [
-							"c4",
-							"f4",
-							"e4",
-							"m4",
-							"4m",
-							"4s"
-						]
+						"$ref": "#/parameters/channel"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -1096,26 +1008,15 @@
 				],
 				"operationId": "All_Programmes_by_TX_Date(6)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -1137,19 +1038,12 @@
 				],
 				"operationId": "4oD_Programmes_by_TX_Date",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					}
 				],
 				"responses": {
@@ -1171,34 +1065,15 @@
 				],
 				"operationId": "4oD_Programmes_by_TX_Date(2)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "channel",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the channel for which you seek associated Channel 4oD programmes",
-						"enum": [
-							"c4",
-							"f4",
-							"e4",
-							"m4",
-							"4m",
-							"4s"
-						]
+						"$ref": "#/parameters/channel"
 					}
 				],
 				"responses": {
@@ -1220,19 +1095,12 @@
 				],
 				"operationId": "4oD_Programmes_by_TX_Date(3)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					}
 				],
 				"responses": {
@@ -1254,26 +1122,15 @@
 				],
 				"operationId": "4oD_Programmes_by_TX_Date(4)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -1295,41 +1152,18 @@
 				],
 				"operationId": "4oD_Programmes_by_TX_Date(5)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "channel",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the channel for which you seek associated Channel 4oD programmes",
-						"enum": [
-							"c4",
-							"f4",
-							"e4",
-							"m4",
-							"4m",
-							"4s"
-						]
+						"$ref": "#/parameters/channel"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -1351,26 +1185,15 @@
 				],
 				"operationId": "4oD_Programmes_by_TX_Date(6)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -1392,19 +1215,12 @@
 				],
 				"operationId": "Most_Popular_Brands_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					}
 				],
 				"responses": {
@@ -1426,19 +1242,12 @@
 				],
 				"operationId": "Most_Popular_Brands_Feed(2)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					}
 				],
 				"responses": {
@@ -1460,34 +1269,15 @@
 				],
 				"operationId": "Most_Popular_Brands_Feed(3)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "channel",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the channel for which you seek associated Channel 4oD programmes",
-						"enum": [
-							"c4",
-							"f4",
-							"e4",
-							"m4",
-							"4m",
-							"4s"
-						]
+						"$ref": "#/parameters/channel"
 					}
 				],
 				"responses": {
@@ -1509,19 +1299,12 @@
 				],
 				"operationId": "Most_Popular_Brands_Feed(4)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					}
 				],
 				"responses": {
@@ -1543,26 +1326,15 @@
 				],
 				"operationId": "Most_Popular_Brands_Feed(5)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -1584,26 +1356,15 @@
 				],
 				"operationId": "Most_Popular_Brands_Feed(6)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -1625,41 +1386,18 @@
 				],
 				"operationId": "Most_Popular_Brands_Feed(7)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "channel",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the channel for which you seek associated Channel 4oD programmes",
-						"enum": [
-							"c4",
-							"f4",
-							"e4",
-							"m4",
-							"4m",
-							"4s"
-						]
+						"$ref": "#/parameters/channel"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -1681,26 +1419,15 @@
 				],
 				"operationId": "Most_Popular_Brands_Feed(8)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -1722,19 +1449,12 @@
 				],
 				"operationId": "4oD_Programmes_by_Title",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					}
 				],
 				"responses": {
@@ -1756,34 +1476,15 @@
 				],
 				"operationId": "4oD_Programmes_by_Title(2)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "channel",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the channel for which you seek associated Channel 4oD programmes",
-						"enum": [
-							"c4",
-							"f4",
-							"e4",
-							"m4",
-							"4m",
-							"4s"
-						]
+						"$ref": "#/parameters/channel"
 					}
 				],
 				"responses": {
@@ -1805,19 +1506,12 @@
 				],
 				"operationId": "4oD_Programmes_by_Title(3)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					}
 				],
 				"responses": {
@@ -1839,26 +1533,15 @@
 				],
 				"operationId": "4oD_Programmes_by_Title(4)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -1880,41 +1563,18 @@
 				],
 				"operationId": "4oD_Programmes_by_Title(5)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "channel",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the channel for which you seek associated Channel 4oD programmes",
-						"enum": [
-							"c4",
-							"f4",
-							"e4",
-							"m4",
-							"4m",
-							"4s"
-						]
+						"$ref": "#/parameters/channel"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -1936,26 +1596,15 @@
 				],
 				"operationId": "4oD_Programmes_by_Title(6)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -1977,19 +1626,12 @@
 				],
 				"operationId": "All_Programmes_by_Title",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					}
 				],
 				"responses": {
@@ -2011,34 +1653,15 @@
 				],
 				"operationId": "All_Programmes_by_Title(2)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "channel",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the channel for which you seek associated Channel 4oD programmes",
-						"enum": [
-							"c4",
-							"f4",
-							"e4",
-							"m4",
-							"4m",
-							"4s"
-						]
+						"$ref": "#/parameters/channel"
 					}
 				],
 				"responses": {
@@ -2060,19 +1683,12 @@
 				],
 				"operationId": "All_Programmes_by_Title(3)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					}
 				],
 				"responses": {
@@ -2094,26 +1710,15 @@
 				],
 				"operationId": "All_Programmes_by_Title(4)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -2135,41 +1740,18 @@
 				],
 				"operationId": "All_Programmes_by_Title(5)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "channel",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the channel for which you seek associated Channel 4oD programmes",
-						"enum": [
-							"c4",
-							"f4",
-							"e4",
-							"m4",
-							"4m",
-							"4s"
-						]
+						"$ref": "#/parameters/channel"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -2191,26 +1773,15 @@
 				],
 				"operationId": "All_Programmes_by_Title(6)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "category",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)"
+						"$ref": "#/parameters/category"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -2232,19 +1803,12 @@
 				],
 				"operationId": "Collections_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Collections_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "collection_name",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "Web safe title for the collection."
+						"$ref": "#/parameters/collection_name"
 					}
 				],
 				"responses": {
@@ -2266,19 +1830,12 @@
 				],
 				"operationId": "Collections_Feed(2)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Collections_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "collection_name",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "Web safe title for the collection."
+						"$ref": "#/parameters/collection_name"
 					}
 				],
 				"responses": {
@@ -2300,19 +1857,12 @@
 				],
 				"operationId": "Flattened_Collection_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Flattened_Collection_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "collection_name",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "Web safe title for the collection."
+						"$ref": "#/parameters/collection_name"
 					}
 				],
 				"responses": {
@@ -2334,19 +1884,12 @@
 				],
 				"operationId": "Flattened_Collection_Feed(2)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Flattened_Collection_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "collection_name",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "Web safe title for the collection."
+						"$ref": "#/parameters/collection_name"
 					}
 				],
 				"responses": {
@@ -2368,9 +1911,6 @@
 				],
 				"operationId": "Coming_Soon_feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Coming_Soon_feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -2395,9 +1935,6 @@
 				],
 				"operationId": "Coming_Soon_feed(2)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Coming_Soon_feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -2429,9 +1966,6 @@
 				],
 				"operationId": "Programme_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Programme_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
@@ -2463,19 +1997,12 @@
 				],
 				"operationId": "Search_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Search_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "q",
-						"type": "string",
-						"in": "query",
-						"required": true,
-						"description": "The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded."
+						"$ref": "#/parameters/q"
 					}
 				],
 				"responses": {
@@ -2497,19 +2024,12 @@
 				],
 				"operationId": "Search_Feed(2)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Search_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "q",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded."
+						"$ref": "#/parameters/q1"
 					}
 				],
 				"responses": {
@@ -2531,26 +2051,15 @@
 				],
 				"operationId": "Search_Feed(3)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Search_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "q",
-						"type": "string",
-						"in": "query",
-						"required": true,
-						"description": "The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded."
+						"$ref": "#/parameters/q"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -2572,26 +2081,15 @@
 				],
 				"operationId": "Search_Feed(4)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Search_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "q",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded."
+						"$ref": "#/parameters/q1"
 					},
 					{
-						"name": "pageno",
-						"type": "integer",
-						"in": "path",
-						"required": true,
-						"description": "Page number of results to return"
+						"$ref": "#/parameters/pageno"
 					}
 				],
 				"responses": {
@@ -2613,33 +2111,18 @@
 				],
 				"operationId": "TV_Listings_Feed",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/TV_Listings_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "yyyy",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
+						"$ref": "#/parameters/yyyy"
 					},
 					{
-						"name": "mm",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
+						"$ref": "#/parameters/mm"
 					},
 					{
-						"name": "dd",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
+						"$ref": "#/parameters/dd"
 					}
 				],
 				"responses": {
@@ -2661,33 +2144,18 @@
 				],
 				"operationId": "TV_Listings_Feed(2)",
 				"x-documentation": "http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/TV_Listings_Feed",
-				"produces": [
-					"application/xml"
-				],
 				"parameters": [
 					{
 						"$ref": "#/parameters/platform"
 					},
 					{
-						"name": "yyyy",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
+						"$ref": "#/parameters/yyyy"
 					},
 					{
-						"name": "mm",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
+						"$ref": "#/parameters/mm"
 					},
 					{
-						"name": "dd",
-						"type": "string",
-						"in": "path",
-						"required": true,
-						"description": "The date for which you wish to see programming information. Note the schedule days start from 6am and run until 6am on the next calendar day."
+						"$ref": "#/parameters/dd"
 					},
 					{
 						"name": "channel",

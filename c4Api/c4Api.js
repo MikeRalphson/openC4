@@ -3,7 +3,7 @@
 @copyright Copyright (c) 2016 Mike Ralphson
 @license https://opensource.org/licenses/BSD-3-Clause
 */
-/* The platform to use for the query. Alias 'client'. */
+/** The platform to use for the query. Alias 'client'. */
 const commonPlatform = 'platform';
 const commonPlatformC4 = 'platform=c4';
 const commonPlatformPs3 = 'platform=ps3';
@@ -15,6 +15,15 @@ const commonPlatformCtv = 'platform=ctv';
 const commonPlatformFreesat = 'platform=freesat';
 const commonPlatformAndroid = 'platform=android';
 const commonPlatformSamsung = 'platform=samsung';
+/** The name of the channel for which you seek associated Channel 4oD programmes */
+const commonChannelC4 = 'c4';
+const commonChannelF4 = 'f4';
+const commonChannelE4 = 'e4';
+const commonChannelM4 = 'm4';
+const commonChannel4m = '4m';
+const commonChannel4s = '4s';
+/** The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded. */
+const commonQ = 'q';
 
 /** Information of daily broadcast content available on 4oD, according to 
   broadcast date
@@ -360,7 +369,7 @@ const getCategories = '/pmlsd/categories.atom';
   http://api.channel4.com/pmlsd/categories/category.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/animals.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @return {string} The path to request
 */
 function getCategories2(category){
@@ -376,7 +385,7 @@ function getCategories2(category){
   http://api.channel4.com/pmlsd/categories/category/channel/[channel].atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/animals.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @channel {string} The name of the channel for which you seek associated Channel 4oD programmes
 @return {string} The path to request
 */
@@ -386,13 +395,6 @@ function getCategoriesChannel(category,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
-/* The name of the channel for which you seek associated Channel 4oD programmes */
-const getCategoriesChannelChannelC4 = 'c4';
-const getCategoriesChannelChannelF4 = 'f4';
-const getCategoriesChannelChannelE4 = 'e4';
-const getCategoriesChannelChannelM4 = 'm4';
-const getCategoriesChannelChannel4m = '4m';
-const getCategoriesChannelChannel4s = '4s';
 
 /** Lists all Channel 4 programmes associated with the specified category (tag).  
   By default, the programmes are listed in order of Transmission (TX) Date, 
@@ -401,7 +403,7 @@ const getCategoriesChannelChannel4s = '4s';
   http://api.channel4.com/pmlsd/categories/category/derived/ad.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/animals.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @return {string} The path to request
 */
 function getCategoriesDerivedAd(category){
@@ -417,7 +419,7 @@ function getCategoriesDerivedAd(category){
   http://api.channel4.com/pmlsd/categories/category/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/animals.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @pageno {integer} Page number of results to return
 @return {string} The path to request
 */
@@ -435,7 +437,7 @@ function getCategoriesPage(category,pageno){
   http://api.channel4.com/pmlsd/categories/category/channel/[channel]/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/animals.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @channel {string} The name of the channel for which you seek associated Channel 4oD programmes
 @pageno {integer} Page number of results to return
 @return {string} The path to request
@@ -447,13 +449,6 @@ function getCategoriesChannelPage(category,channel,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
-/* The name of the channel for which you seek associated Channel 4oD programmes */
-const getCategoriesChannelPageChannelC4 = 'c4';
-const getCategoriesChannelPageChannelF4 = 'f4';
-const getCategoriesChannelPageChannelE4 = 'e4';
-const getCategoriesChannelPageChannelM4 = 'm4';
-const getCategoriesChannelPageChannel4m = '4m';
-const getCategoriesChannelPageChannel4s = '4s';
 
 /** Lists all Channel 4 programmes associated with the specified category (tag).  
   By default, the programmes are listed in order of Transmission (TX) Date, 
@@ -462,7 +457,7 @@ const getCategoriesChannelPageChannel4s = '4s';
   http://api.channel4.com/pmlsd/categories/category/derived/ad/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/animals.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx )
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @pageno {integer} Page number of results to return
 @return {string} The path to request
 */
@@ -480,7 +475,7 @@ function getCategoriesDerivedAdPage(category,pageno){
   http://api.channel4.com/pmlsd/categories/category/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @return {string} The path to request
 */
 function getCategories4od(category){
@@ -496,7 +491,7 @@ function getCategories4od(category){
   http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @channel {string} The name of the channel for which you seek associated Channel 4oD programmes
 @return {string} The path to request
 */
@@ -506,13 +501,6 @@ function getCategoriesChannel4od(category,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
-/* The name of the channel for which you seek associated Channel 4oD programmes */
-const getCategoriesChannel4odChannelC4 = 'c4';
-const getCategoriesChannel4odChannelF4 = 'f4';
-const getCategoriesChannel4odChannelE4 = 'e4';
-const getCategoriesChannel4odChannelM4 = 'm4';
-const getCategoriesChannel4odChannel4m = '4m';
-const getCategoriesChannel4odChannel4s = '4s';
 
 /** Lists all Channel 4oD programmes associated with the specified category 
   (tag).By default, the programmes are listed in order of Transmission (TX) 
@@ -521,7 +509,7 @@ const getCategoriesChannel4odChannel4s = '4s';
   http://api.channel4.com/pmlsd/categories/category/derived/ad/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @return {string} The path to request
 */
 function getCategoriesDerivedAd4od(category){
@@ -537,7 +525,7 @@ function getCategoriesDerivedAd4od(category){
   http://api.channel4.com/pmlsd/categories/category/4od/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @pageno {integer} Page number of results to return
 @return {string} The path to request
 */
@@ -555,7 +543,7 @@ function getCategories4odPage(category,pageno){
   http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @channel {string} The name of the channel for which you seek associated Channel 4oD programmes
 @pageno {integer} Page number of results to return
 @return {string} The path to request
@@ -567,13 +555,6 @@ function getCategoriesChannel4odPage(category,channel,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
-/* The name of the channel for which you seek associated Channel 4oD programmes */
-const getCategoriesChannel4odPageChannelC4 = 'c4';
-const getCategoriesChannel4odPageChannelF4 = 'f4';
-const getCategoriesChannel4odPageChannelE4 = 'e4';
-const getCategoriesChannel4odPageChannelM4 = 'm4';
-const getCategoriesChannel4odPageChannel4m = '4m';
-const getCategoriesChannel4odPageChannel4s = '4s';
 
 /** Lists all Channel 4oD programmes associated with the specified category 
   (tag).By default, the programmes are listed in order of Transmission (TX) 
@@ -582,7 +563,7 @@ const getCategoriesChannel4odPageChannel4s = '4s';
   http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/animals/4oD.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @pageno {integer} Page number of results to return
 @return {string} The path to request
 */
@@ -599,7 +580,7 @@ function getCategoriesDerivedAd4odPage(category,pageno){
   http://api.channel4.com/pmlsd/categories/category/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @return {string} The path to request
 */
 function getCategories4odPopular(category){
@@ -614,7 +595,7 @@ function getCategories4odPopular(category){
   http://api.channel4.com/pmlsd/categories/category/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @return {string} The path to request
 */
 function getCategoriesPopular(category){
@@ -629,7 +610,7 @@ function getCategoriesPopular(category){
   http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @channel {string} The name of the channel for which you seek associated Channel 4oD programmes
 @return {string} The path to request
 */
@@ -639,13 +620,6 @@ function getCategoriesChannel4odPopular(category,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
-/* The name of the channel for which you seek associated Channel 4oD programmes */
-const getCategoriesChannel4odPopularChannelC4 = 'c4';
-const getCategoriesChannel4odPopularChannelF4 = 'f4';
-const getCategoriesChannel4odPopularChannelE4 = 'e4';
-const getCategoriesChannel4odPopularChannelM4 = 'm4';
-const getCategoriesChannel4odPopularChannel4m = '4m';
-const getCategoriesChannel4odPopularChannel4s = '4s';
 
 /** Lists all Channel 4oD most popular brands for the given category within the 
   last 7 days, in order of popularity.
@@ -653,7 +627,7 @@ const getCategoriesChannel4odPopularChannel4s = '4s';
   http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @return {string} The path to request
 */
 function getCategoriesDerivedAd4odPopular(category){
@@ -668,7 +642,7 @@ function getCategoriesDerivedAd4odPopular(category){
   http://api.channel4.com/pmlsd/categories/category/4od/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @pageno {integer} Page number of results to return
 @return {string} The path to request
 */
@@ -685,7 +659,7 @@ function getCategories4odPopularPage(category,pageno){
   http://api.channel4.com/pmlsd/categories/category/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @pageno {integer} Page number of results to return
 @return {string} The path to request
 */
@@ -702,7 +676,7 @@ function getCategoriesPopularPage(category,pageno){
   http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @channel {string} The name of the channel for which you seek associated Channel 4oD programmes
 @pageno {integer} Page number of results to return
 @return {string} The path to request
@@ -714,13 +688,6 @@ function getCategoriesChannel4odPopularPage(category,channel,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
-/* The name of the channel for which you seek associated Channel 4oD programmes */
-const getCategoriesChannel4odPopularPageChannelC4 = 'c4';
-const getCategoriesChannel4odPopularPageChannelF4 = 'f4';
-const getCategoriesChannel4odPopularPageChannelE4 = 'e4';
-const getCategoriesChannel4odPopularPageChannelM4 = 'm4';
-const getCategoriesChannel4odPopularPageChannel4m = '4m';
-const getCategoriesChannel4odPopularPageChannel4s = '4s';
 
 /** Lists all Channel 4oD most popular brands for the given category within the 
   last 7 days, in order of popularity.
@@ -728,7 +695,7 @@ const getCategoriesChannel4odPopularPageChannel4s = '4s';
   http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/popular/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/comedy/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @pageno {integer} Page number of results to return
 @return {string} The path to request
 */
@@ -745,7 +712,7 @@ function getCategoriesDerivedAd4odPopularPage(category,pageno){
   http://api.channel4.com/pmlsd/categories/category/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @return {string} The path to request
 */
 function getCategories4odTitle(category){
@@ -760,7 +727,7 @@ function getCategories4odTitle(category){
   http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @channel {string} The name of the channel for which you seek associated Channel 4oD programmes
 @return {string} The path to request
 */
@@ -770,13 +737,6 @@ function getCategoriesChannel4odTitle(category,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
-/* The name of the channel for which you seek associated Channel 4oD programmes */
-const getCategoriesChannel4odTitleChannelC4 = 'c4';
-const getCategoriesChannel4odTitleChannelF4 = 'f4';
-const getCategoriesChannel4odTitleChannelE4 = 'e4';
-const getCategoriesChannel4odTitleChannelM4 = 'm4';
-const getCategoriesChannel4odTitleChannel4m = '4m';
-const getCategoriesChannel4odTitleChannel4s = '4s';
 
 /** Lists all Channel 4oD programmes associated with the specified category 
   (tag), alphanumerically in order of Title.
@@ -784,7 +744,7 @@ const getCategoriesChannel4odTitleChannel4s = '4s';
   http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @return {string} The path to request
 */
 function getCategoriesDerivedAd4odTitle(category){
@@ -799,7 +759,7 @@ function getCategoriesDerivedAd4odTitle(category){
   http://api.channel4.com/pmlsd/categories/category/4od/title/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @pageno {integer} Page number of results to return
 @return {string} The path to request
 */
@@ -816,7 +776,7 @@ function getCategories4odTitlePage(category,pageno){
   http://api.channel4.com/pmlsd/categories/category/channel/[channel]/4od/title/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @channel {string} The name of the channel for which you seek associated Channel 4oD programmes
 @pageno {integer} Page number of results to return
 @return {string} The path to request
@@ -828,13 +788,6 @@ function getCategoriesChannel4odTitlePage(category,channel,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
-/* The name of the channel for which you seek associated Channel 4oD programmes */
-const getCategoriesChannel4odTitlePageChannelC4 = 'c4';
-const getCategoriesChannel4odTitlePageChannelF4 = 'f4';
-const getCategoriesChannel4odTitlePageChannelE4 = 'e4';
-const getCategoriesChannel4odTitlePageChannelM4 = 'm4';
-const getCategoriesChannel4odTitlePageChannel4m = '4m';
-const getCategoriesChannel4odTitlePageChannel4s = '4s';
 
 /** Lists all Channel 4oD programmes associated with the specified category 
   (tag), alphanumerically in order of Title.
@@ -842,7 +795,7 @@ const getCategoriesChannel4odTitlePageChannel4s = '4s';
   http://api.channel4.com/pmlsd/categories/category/derived/ad/4od/title/page-{pageno}.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
   http://api.channel4.com/pmlsd/categories/religion-and-belief/4oD/title.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
-@category {string} The name of the category for which you seek associated Channel 4oD programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
+@category {string} The name of the category for which you seek associated Channel 4 programmes. (For a full list of categories, please see http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx)
 @pageno {integer} Page number of results to return
 @return {string} The path to request
 */
@@ -884,13 +837,6 @@ function getCategoriesChannelTitle(category,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
-/* The name of the channel for which you seek associated Channel 4oD programmes */
-const getCategoriesChannelTitleChannelC4 = 'c4';
-const getCategoriesChannelTitleChannelF4 = 'f4';
-const getCategoriesChannelTitleChannelE4 = 'e4';
-const getCategoriesChannelTitleChannelM4 = 'm4';
-const getCategoriesChannelTitleChannel4m = '4m';
-const getCategoriesChannelTitleChannel4s = '4s';
 
 /** Lists all Channel 4 programmes associated with the specified category (tag), 
   alphanumerically in order of Title.
@@ -942,13 +888,6 @@ function getCategoriesChannelTitlePage(category,channel,pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
-/* The name of the channel for which you seek associated Channel 4oD programmes */
-const getCategoriesChannelTitlePageChannelC4 = 'c4';
-const getCategoriesChannelTitlePageChannelF4 = 'f4';
-const getCategoriesChannelTitlePageChannelE4 = 'e4';
-const getCategoriesChannelTitlePageChannelM4 = 'm4';
-const getCategoriesChannelTitlePageChannel4m = '4m';
-const getCategoriesChannelTitlePageChannel4s = '4s';
 
 /** Lists all Channel 4 programmes associated with the specified category (tag), 
   alphanumerically in order of Title.
@@ -1079,8 +1018,6 @@ function getProgramme(programmeId){
 
   http://api.channel4.com/pmlsd/search.atom?q=the+it+crowd&apikey=xxxxxxxxxxxxxxxxxxxxxxxx*/
 const getSearch = '/pmlsd/search.atom';
-/* The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded. */
-const getSearchQ = 'q';
 
 /** Lists all Channel 4 programmes where title (brand name) matching the search 
   term. Matches are made from the beginning of individual words in the title.
@@ -1111,8 +1048,6 @@ function getSearchPage(pageno){
   p = p.replace('{pageno}',pageno);
   return p;
 }
-/* The programme name to look for, minimum length: 2 chars.Looking for programme names with special chars might be URL encoded. */
-const getSearchPageQ = 'q';
 
 /** Lists all Channel 4 programmes where title (brand name) matching the search 
   term. Matches are made from the beginning of individual words in the title.
@@ -1170,7 +1105,7 @@ function getTvListingsDaily2(yyyy,mm,dd,channel){
   p = p.replace('{channel}',channel);
   return p;
 }
-/* The EPG for a specific channel (c4, e4, m4, 4m, f4, 4s) */
+/** The EPG for a specific channel (c4, e4, m4, 4m, f4, 4s) */
 const getTvListingsDaily2ChannelC4 = 'c4';
 const getTvListingsDaily2ChannelF4 = 'f4';
 const getTvListingsDaily2ChannelE4 = 'e4';
@@ -1190,6 +1125,13 @@ module.exports = {
   commonPlatformFreesat : commonPlatformFreesat,
   commonPlatformAndroid : commonPlatformAndroid,
   commonPlatformSamsung : commonPlatformSamsung,
+  commonChannelC4 : commonChannelC4,
+  commonChannelF4 : commonChannelF4,
+  commonChannelE4 : commonChannelE4,
+  commonChannelM4 : commonChannelM4,
+  commonChannel4m : commonChannel4m,
+  commonChannel4s : commonChannel4s,
+  commonQ : commonQ,
   get4odEpisodeListDate : get4odEpisodeListDate,
   get4odEpisodeListPopular : get4odEpisodeListPopular,
   get4odRecentlyAddedVideos : get4odRecentlyAddedVideos,
@@ -1215,95 +1157,35 @@ module.exports = {
   getCategories : getCategories,
   getCategories2 : getCategories2,
   getCategoriesChannel : getCategoriesChannel,
-  getCategoriesChannelChannelC4 : getCategoriesChannelChannelC4,
-  getCategoriesChannelChannelF4 : getCategoriesChannelChannelF4,
-  getCategoriesChannelChannelE4 : getCategoriesChannelChannelE4,
-  getCategoriesChannelChannelM4 : getCategoriesChannelChannelM4,
-  getCategoriesChannelChannel4m : getCategoriesChannelChannel4m,
-  getCategoriesChannelChannel4s : getCategoriesChannelChannel4s,
   getCategoriesDerivedAd : getCategoriesDerivedAd,
   getCategoriesPage : getCategoriesPage,
   getCategoriesChannelPage : getCategoriesChannelPage,
-  getCategoriesChannelPageChannelC4 : getCategoriesChannelPageChannelC4,
-  getCategoriesChannelPageChannelF4 : getCategoriesChannelPageChannelF4,
-  getCategoriesChannelPageChannelE4 : getCategoriesChannelPageChannelE4,
-  getCategoriesChannelPageChannelM4 : getCategoriesChannelPageChannelM4,
-  getCategoriesChannelPageChannel4m : getCategoriesChannelPageChannel4m,
-  getCategoriesChannelPageChannel4s : getCategoriesChannelPageChannel4s,
   getCategoriesDerivedAdPage : getCategoriesDerivedAdPage,
   getCategories4od : getCategories4od,
   getCategoriesChannel4od : getCategoriesChannel4od,
-  getCategoriesChannel4odChannelC4 : getCategoriesChannel4odChannelC4,
-  getCategoriesChannel4odChannelF4 : getCategoriesChannel4odChannelF4,
-  getCategoriesChannel4odChannelE4 : getCategoriesChannel4odChannelE4,
-  getCategoriesChannel4odChannelM4 : getCategoriesChannel4odChannelM4,
-  getCategoriesChannel4odChannel4m : getCategoriesChannel4odChannel4m,
-  getCategoriesChannel4odChannel4s : getCategoriesChannel4odChannel4s,
   getCategoriesDerivedAd4od : getCategoriesDerivedAd4od,
   getCategories4odPage : getCategories4odPage,
   getCategoriesChannel4odPage : getCategoriesChannel4odPage,
-  getCategoriesChannel4odPageChannelC4 : getCategoriesChannel4odPageChannelC4,
-  getCategoriesChannel4odPageChannelF4 : getCategoriesChannel4odPageChannelF4,
-  getCategoriesChannel4odPageChannelE4 : getCategoriesChannel4odPageChannelE4,
-  getCategoriesChannel4odPageChannelM4 : getCategoriesChannel4odPageChannelM4,
-  getCategoriesChannel4odPageChannel4m : getCategoriesChannel4odPageChannel4m,
-  getCategoriesChannel4odPageChannel4s : getCategoriesChannel4odPageChannel4s,
   getCategoriesDerivedAd4odPage : getCategoriesDerivedAd4odPage,
   getCategories4odPopular : getCategories4odPopular,
   getCategoriesPopular : getCategoriesPopular,
   getCategoriesChannel4odPopular : getCategoriesChannel4odPopular,
-  getCategoriesChannel4odPopularChannelC4 : getCategoriesChannel4odPopularChannelC4,
-  getCategoriesChannel4odPopularChannelF4 : getCategoriesChannel4odPopularChannelF4,
-  getCategoriesChannel4odPopularChannelE4 : getCategoriesChannel4odPopularChannelE4,
-  getCategoriesChannel4odPopularChannelM4 : getCategoriesChannel4odPopularChannelM4,
-  getCategoriesChannel4odPopularChannel4m : getCategoriesChannel4odPopularChannel4m,
-  getCategoriesChannel4odPopularChannel4s : getCategoriesChannel4odPopularChannel4s,
   getCategoriesDerivedAd4odPopular : getCategoriesDerivedAd4odPopular,
   getCategories4odPopularPage : getCategories4odPopularPage,
   getCategoriesPopularPage : getCategoriesPopularPage,
   getCategoriesChannel4odPopularPage : getCategoriesChannel4odPopularPage,
-  getCategoriesChannel4odPopularPageChannelC4 : getCategoriesChannel4odPopularPageChannelC4,
-  getCategoriesChannel4odPopularPageChannelF4 : getCategoriesChannel4odPopularPageChannelF4,
-  getCategoriesChannel4odPopularPageChannelE4 : getCategoriesChannel4odPopularPageChannelE4,
-  getCategoriesChannel4odPopularPageChannelM4 : getCategoriesChannel4odPopularPageChannelM4,
-  getCategoriesChannel4odPopularPageChannel4m : getCategoriesChannel4odPopularPageChannel4m,
-  getCategoriesChannel4odPopularPageChannel4s : getCategoriesChannel4odPopularPageChannel4s,
   getCategoriesDerivedAd4odPopularPage : getCategoriesDerivedAd4odPopularPage,
   getCategories4odTitle : getCategories4odTitle,
   getCategoriesChannel4odTitle : getCategoriesChannel4odTitle,
-  getCategoriesChannel4odTitleChannelC4 : getCategoriesChannel4odTitleChannelC4,
-  getCategoriesChannel4odTitleChannelF4 : getCategoriesChannel4odTitleChannelF4,
-  getCategoriesChannel4odTitleChannelE4 : getCategoriesChannel4odTitleChannelE4,
-  getCategoriesChannel4odTitleChannelM4 : getCategoriesChannel4odTitleChannelM4,
-  getCategoriesChannel4odTitleChannel4m : getCategoriesChannel4odTitleChannel4m,
-  getCategoriesChannel4odTitleChannel4s : getCategoriesChannel4odTitleChannel4s,
   getCategoriesDerivedAd4odTitle : getCategoriesDerivedAd4odTitle,
   getCategories4odTitlePage : getCategories4odTitlePage,
   getCategoriesChannel4odTitlePage : getCategoriesChannel4odTitlePage,
-  getCategoriesChannel4odTitlePageChannelC4 : getCategoriesChannel4odTitlePageChannelC4,
-  getCategoriesChannel4odTitlePageChannelF4 : getCategoriesChannel4odTitlePageChannelF4,
-  getCategoriesChannel4odTitlePageChannelE4 : getCategoriesChannel4odTitlePageChannelE4,
-  getCategoriesChannel4odTitlePageChannelM4 : getCategoriesChannel4odTitlePageChannelM4,
-  getCategoriesChannel4odTitlePageChannel4m : getCategoriesChannel4odTitlePageChannel4m,
-  getCategoriesChannel4odTitlePageChannel4s : getCategoriesChannel4odTitlePageChannel4s,
   getCategoriesDerivedAd4odTitlePage : getCategoriesDerivedAd4odTitlePage,
   getCategoriesTitle : getCategoriesTitle,
   getCategoriesChannelTitle : getCategoriesChannelTitle,
-  getCategoriesChannelTitleChannelC4 : getCategoriesChannelTitleChannelC4,
-  getCategoriesChannelTitleChannelF4 : getCategoriesChannelTitleChannelF4,
-  getCategoriesChannelTitleChannelE4 : getCategoriesChannelTitleChannelE4,
-  getCategoriesChannelTitleChannelM4 : getCategoriesChannelTitleChannelM4,
-  getCategoriesChannelTitleChannel4m : getCategoriesChannelTitleChannel4m,
-  getCategoriesChannelTitleChannel4s : getCategoriesChannelTitleChannel4s,
   getCategoriesDerivedAdTitle : getCategoriesDerivedAdTitle,
   getCategoriesTitlePage : getCategoriesTitlePage,
   getCategoriesChannelTitlePage : getCategoriesChannelTitlePage,
-  getCategoriesChannelTitlePageChannelC4 : getCategoriesChannelTitlePageChannelC4,
-  getCategoriesChannelTitlePageChannelF4 : getCategoriesChannelTitlePageChannelF4,
-  getCategoriesChannelTitlePageChannelE4 : getCategoriesChannelTitlePageChannelE4,
-  getCategoriesChannelTitlePageChannelM4 : getCategoriesChannelTitlePageChannelM4,
-  getCategoriesChannelTitlePageChannel4m : getCategoriesChannelTitlePageChannel4m,
-  getCategoriesChannelTitlePageChannel4s : getCategoriesChannelTitlePageChannel4s,
   getCategoriesDerivedAdTitlePage : getCategoriesDerivedAdTitlePage,
   getCollections4od : getCollections4od,
   getCollections : getCollections,
@@ -1313,10 +1195,8 @@ module.exports = {
   getComingSoon2 : getComingSoon2,
   getProgramme : getProgramme,
   getSearch : getSearch,
-  getSearchQ : getSearchQ,
   getSearch2 : getSearch2,
   getSearchPage : getSearchPage,
-  getSearchPageQ : getSearchPageQ,
   getSearchPage2 : getSearchPage2,
   getTvListingsDaily : getTvListingsDaily,
   getTvListingsDaily2 : getTvListingsDaily2,

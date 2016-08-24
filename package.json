@@ -11,7 +11,8 @@
     "request": "latest",
     "is-my-json-valid": "latest",
     "word-wrap": "^1.1.0",
-    "openapi2js": "latest"
+    "openapi2js": "latest",
+    "openapi_optimise": "latest"
   },
   "devDependencies": {},
   "scripts": {

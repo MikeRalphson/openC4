@@ -5,6 +5,7 @@ var cheerio = require('cheerio');
 var validator = require('is-my-json-valid');
 var wrap = require('word-wrap');
 var oa2js = require('openapi2js');
+var opt = require('openapi_optimise');
 
 var swaggerSchema = require(nodePath.resolve('./validation/swagger2Schema.json'));
 var atomSchema = require(nodePath.resolve('./validation/atomSchema.json'));
@@ -166,7 +167,11 @@ function postProcess(src) {
 					param.name = param.name.replaceAll('[','');
 					param.name = param.name.replaceAll(']','');
 					param.name = param.name.replaceAll('yyyy/mm/dd','yyyy');
+
 					param.description = cols[1];
+					param.description = param.description.replaceAll('xx )','xx)');
+					param.description = param.description.replace('associated Channel 4oD programmes','associated Channel 4 programmes');
+
 					if (param.name != '4od') {
 						result.parameters.push(param);
 						if (param.name == 'yyyy') {
@@ -601,6 +606,8 @@ process.on('exit', function(code) {
 
 	console.log();
 	generateSwagger();
+
+	swagger = opt.optimise(swagger);
 
 	console.log();
 	console.log('Validating swagger spec...');
