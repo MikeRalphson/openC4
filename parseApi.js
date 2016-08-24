@@ -612,11 +612,11 @@ process.on('exit', function(code) {
 	var errors = validate.errors;
 	if (errors) {
 		console.log(errors);
-		fs.writeFileSync('./c4Api/swagger.err',JSON.stringify(swagger,null,2),'utf8');
+		fs.writeFileSync('./c4Api/swagger.err',JSON.stringify(swagger,null,'\t'),'utf8');
 	}
 	else {
 		console.log('Writing swagger spec');
-		fs.writeFileSync('./c4Api/swagger.json',JSON.stringify(swagger,null,2),'utf8');
+		fs.writeFileSync('./c4Api/swagger.json',JSON.stringify(swagger,null,'\t'),'utf8');
 		console.log('Writing JS API definitions');
 		oa2js.openAPI2js(swagger,'./c4Api/c4Api.js');
 	}
