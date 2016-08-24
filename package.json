@@ -1,6 +1,6 @@
 {
   "name": "openc4",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Open Channel 4 SDK",
   "main": "parseApi.js",
   "directories": {
