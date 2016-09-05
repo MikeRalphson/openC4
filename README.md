@@ -13,3 +13,5 @@ Compare:
 2. node parseApi # to produce c4Api/api.json, swagger.json and api.js, this has already been done for you
 3. ??? # seriously, look at [BBCParse OpenNitroSDK](https://github.com/Mermade/bbcparse/blob/master/nitroSdk.js) and the [example in the wiki](https://github.com/Mermade/openC4/wiki)
 4. profit
+
+Generated [JSDoc](https://doclets.io/Mermade/openC4/master) courtesy of [doclets.io](http://doclets.io)
