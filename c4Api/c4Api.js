@@ -44,7 +44,7 @@ function get4odEpisodeListDate(yyyy,mm,dd){
   return p;
 }
 
-/** Information of the most popular content available on 4oD, according to user 
+/* Information of the most popular content available on 4oD, according to user 
   data driven.
 
   http://api.channel4.com/pmlsd/4od/episode-list/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
@@ -52,7 +52,7 @@ function get4odEpisodeListDate(yyyy,mm,dd){
   http://api.channel4.com/pmlsd/4od/episode-list/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx*/
 const get4odEpisodeListPopular = '/pmlsd/4od/episode-list/popular.atom';
 
-/** A feed containing metadata about short-form content relating to 4oD Episodes 
+/* A feed containing metadata about short-form content relating to 4oD Episodes 
   recently added to 4oD based on linear transmission. The entries for the 
   Clips Landing Feed contain references to each short-form asset. It will 
   return up to 20 entries.
@@ -78,7 +78,7 @@ function get4od(brandWebSafeTitle){
   return p;
 }
 
-/** Lists Channel 4 programmes alphabetically from A to Z, providing the same 
+/* Lists Channel 4 programmes alphabetically from A to Z, providing the same 
   functionality and information as is available in the A to Z section of the 
   Channel 4 Programmes page, http://www.channel4.com/programmes.
 
@@ -286,7 +286,7 @@ function getVideos(brandWebSafeTitle,clipAssetId){
   return p;
 }
 
-/** Lists all Channel 4 programmes available on 4oD.  By default, the programmes 
+/* Lists all Channel 4 programmes available on 4oD.  By default, the programmes 
   are listed by title in alphabetical order (case unsensitive).
 
   http://api.channel4.com/pmlsd/brands/4od.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
@@ -309,7 +309,7 @@ function getBrands4odPage(pageno){
   return p;
 }
 
-/** Lists all Channel 4 programmes available on 4oD by popularity considering 
+/* Lists all Channel 4 programmes available on 4oD by popularity considering 
   the data gathered within the last 7 days.
 
   http://api.channel4.com/pmlsd/brands/4od/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
@@ -332,7 +332,7 @@ function getBrands4odPopularPage(pageno){
   return p;
 }
 
-/** Lists all Channel 4 programmes by popularity considering the data gathered 
+/* Lists all Channel 4 programmes by popularity considering the data gathered 
   within the last 7 days.
 
   http://api.channel4.com/pmlsd/brands/popular.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
@@ -355,7 +355,7 @@ function getBrandsPopularPage(pageno){
   return p;
 }
 
-/** Lists Channel 4 programmes by category (/ tag).
+/* Lists Channel 4 programmes by category (/ tag).
 
   http://api.channel4.com/pmlsd/categories.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
 
@@ -972,7 +972,7 @@ function getCollectionsFlattened(collectionName){
   return p;
 }
 
-/** Coming Soon feed display a list of episodes coming soon to linear TV so that 
+/* Coming Soon feed display a list of episodes coming soon to linear TV so that 
   I can promote new Channel 4 content.
 
   http://api.channel4.com/pmlsd/coming-soon.atom?apikey=xxxxxxxxxxxxxxxxxxxxxxxx
@@ -1011,7 +1011,7 @@ function getProgramme(programmeId){
   return p;
 }
 
-/** Lists all Channel 4 programmes where title (brand name) matching the search 
+/* Lists all Channel 4 programmes where title (brand name) matching the search 
   term. Matches are made from the beginning of individual words in the title.
 
   http://api.channel4.com/pmlsd/search.atom?q=search-term&apikey=xxx
@@ -1206,5 +1206,5 @@ module.exports = {
   getTvListingsDaily2ChannelM4 : getTvListingsDaily2ChannelM4,
   getTvListingsDaily2Channel4m : getTvListingsDaily2Channel4m,
   getTvListingsDaily2Channel4s : getTvListingsDaily2Channel4s,
-  host : 'api.channel4.com'
+  host : 'channel4.com'
 };

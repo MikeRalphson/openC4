@@ -520,7 +520,7 @@ var swagStr = `{
 		"description": "Programmes API Guide",
 		"url": "http://developer.channel4.com/docs/read/ProgrammesAPIGuide"
 	  },
-	  "host": "api.channel4.com",
+	  "host": "channel4.com",
 	  "basePath": "/pmlsd",
 	  "tags" : [{
 			"name" : "discoveryresources",
@@ -607,7 +607,7 @@ process.on('exit', function(code) {
 	console.log();
 	generateSwagger();
 
-	swagger = opt.optimise(swagger);
+	swagger = opt.defaultOptimisations(swagger,{});
 
 	console.log();
 	console.log('Validating swagger spec...');
