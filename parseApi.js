@@ -2,7 +2,7 @@ var fs = require('fs');
 var nodePath = require('path');
 
 var cheerio = require('cheerio');
-var validator = require('is-my-json-valid');
+var ajv = require('ajv')();
 var wrap = require('word-wrap');
 var oa2js = require('openapi2js');
 var opt = require('openapi_optimise');
@@ -611,9 +611,9 @@ process.on('exit', function(code) {
 
 	console.log();
 	console.log('Validating swagger spec...');
-	var validate = validator(swaggerSchema);
+	var validate = ajv.compile(swaggerSchema);
 	validate(swagger,{
-		greedy: true,
+		allErrors: true,
 		verbose: true
 	});
 	var errors = validate.errors;
