@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" id="www-mashery-com">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Channel4 Secure Login</title>
+    <meta name="robots" content="noarchive"/>
+    <link rel="stylesheet"  type="text/css" media="screen" href="/public/Mashery/styles-min/Mashery-base.css" />
+    <link rel="stylesheet"  type="text/css" media="screen" href="/public/Mashery/styles/mashery/mashery-idp.css" />
+    <link rel="stylesheet"  type="text/css" media="screen" href="/public/Mashery/styles/login.css" />
+    <script src="/public/Mashery/scripts/Mashery/Mashery-base.js?25453" type="text/javascript"></script>
+</head>
+<body id="page-login" class="login en_US">
+
+
+    <!-- PAGE -->
+    <div id="page">
+            <div id="header" class="header">
+        <div id="standard-idp-header" class="standard-idp-header">
+        <div id="mashery-logo" class="mashery-logo">
+            <img src="/public/Mashery/images/mashery/dashboard/mashery-logo.png" />
+        </div> <!-- /mashery-logo -->
+                                    <div id="client-name" class="client-name">
+                    <h1 class="first">
+                        developer.channel4.com                    </h1>
+                </div>
+                        </div> <!-- /standard-idp-header -->
+
+        </div> <!-- END HEADER -->
+            <!-- CONTENT -->
+        <div id="content">
+
+            <div id="main">
+
+<script language="Javascript">
+(function() {
+    // detect iframe
+    if (window.location != window.parent.location) {
+        window.parent.location = window.location; // pop out of iframe
+    }
+})();
+</script>
+
+
+<div id="signin_member_mashery" class="signin_member_mashery">
+
+<div id="signin" class="signin"><h2 class="signin">Sign In</h2><h3>Sign in to secure.mashery.com using Mashery ID</h3>    <form action="/login/developer.channel4.com/" method="post" enctype="multipart/form-data">
+    <fieldset style="display: none;">
+        <input type="hidden" name="synctoken" value="" />
+    </fieldset>
+    <fieldset>
+        <legend></legend>
+        <dl>
+            <dt class="require">
+                <label class="require" for="handle">Username</label>
+            </dt>
+            <dd class="require">
+                <input type="text" name="handle" value="" id="handle" class="input-text handle require" />
+            </dd>
+            <dt class="require">
+                <label class="require" for="passwd">Password</label>
+            </dt>
+            <dd class="require">
+                <input type="password" name="passwd" value="" AUTOCOMPLETE="off" id="passwd" class="input-password passwd require" auto_complete="off" />
+            </dd>
+            <dt>
+                <label for="status"></label>
+            </dt>
+            <dd>
+                <p id="status"></p>
+            </dd>
+            <dt>
+                <label for="unconfirmedStatus"></label>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt>
+                <label></label>
+            </dt>
+            <dd>
+                <input type="submit" name="process" value="Sign In" id="process-login" class="input-submit process-login" />
+            </dd>
+            <dt>
+                <label for="ignore"></label>
+            </dt>
+            <dd>
+                <p>Recover <a href="https://secure.mashery.com/member/lost/lE0hJsZe6tw$">password</a> or <a href="https://secure.mashery.com/member/lost-username/lE0hJsZe6tw$">username</a></p>
+            </dd>
+        </dl>
+    </fieldset>
+    </form></div> <!-- END SIGNIN -->    <div class="options">
+<h2>Register</h2><p><a href="http://developer.channel4.com/member/register">Create an account</a> to access secure.mashery.com. Your account information can then be used to access other APIs on the Mashery API Network.</p><h2>What is Mashery?</h2><p><a href="http://www.mashery.com/">Mashery</a> powers APIs of leading brands in retail, media, business services, software, and more. By signing in to a Mashery powered portal, you can gain access to Mashery's base of API providers. All with a single Mashery ID.</p><a href="http://developer.channel4.com/member/register" class="register" target="_top">Register a Mashery ID</a>    <script type="text/javascript" language="Javascript" src="/public/Mashery/scripts/MasheryLogin.js">
+    </script>
+    </div> <!-- END OPTIONS -->
+</div> <!-- END SIGNIN MEMBER MASHERY -->
+
+            </div><!-- /main -->
+
+
+        <!-- SUB -->
+        <div id="sub">
+
+
+        </div>
+        <!-- /SUB -->
+
+
+       </div>
+       <!-- /CONTENT -->
+
+    </div>
+    <!-- /PAGE -->
+
+</body>
+</html>

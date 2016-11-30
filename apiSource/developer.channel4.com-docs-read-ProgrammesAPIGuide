@@ -1,0 +1,815 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="P3Pv1" href="/w3c/p3p.xml" />
+        <script type="text/javascript">
+            //<![CDATA[
+            var mashery_info = {
+            'username':"mermade"
+            };
+
+            // iframe'd detection, to pop out if in an iframe
+            if (window.location !== parent.window.location && !(/(page|docs|blog)\/preview/.test(window.location.pathname))) {
+                parent.window.location = window.location;
+            }
+            //]]>
+        </script>
+            <title>Channel 4 - PMLSD API Guide</title>
+    <link rel="alternate" type="application/rss+xml" href="http://developer.channel4.com/docs/feed-comments/ProgrammesAPIGuide" />
+    <link rel="stylesheet"  type="text/css" media="screen" href="/public/Mashery/styles-min/Mashery-base.css" />
+    <link rel="stylesheet"  type="text/css" media="screen" href="/public/Mashery/styles/clients/channel4-theme.css" />
+    <link rel="stylesheet"  media="print" type="text/css" href="/public/Mashery/styles/community/mashery-blue.css" />
+<style type="text/css" media="screen">
+<!--
+/**
+ * New Logo
+ */
+div#branding-logo {
+    background-image: url("/files/logo.jpg");
+    background-size: 67px 88px;
+}
+-->
+</style>
+    <script src="/public/Mashery/scripts/Mashery/Mashery-base.js?25453" type="text/javascript"></script>
+    <script src="/public/Mashery/scripts/Mashery/source/ForumPreview.js" type="text/javascript"></script>
+        <!-- add syntax highlighter -->
+        <script type="text/javascript">
+            if(window.SyntaxHighlighter != undefined) { // check for syntax highlighter load before using
+                SyntaxHighlighter.all();
+            }
+        </script>
+        <!-- end syntax highlighter -->
+        <!--[if lt IE 7.]>
+            <link href="/public/Mashery/styles/IE6.css" type="text/css" media="screen" rel="stylesheet" />
+        <![endif]-->
+        <!--[if IE 7]>
+            <link href="/public/Mashery/styles/IE7.css" type="text/css" media="screen" rel="stylesheet" />
+        <![endif]-->
+        <!--[if gte IE 8]>
+            <link href="/public/Mashery/styles/IE8.css" type="text/css" media="screen" rel="stylesheet" />
+        <![endif]-->
+
+    </head>
+    <body id="page-docs" class="page-docs read signed-in en_US">
+        <!-- PAGE -->
+        <div id="page" class="page read">
+
+            <!-- HEADER -->
+            <div id="header" class="header">
+                <div id="branding" class="branding">
+                    <div id="branding-logo" class="branding-logo">
+                        Channel 4                    </div><!-- /branding-logo -->
+                    <div id="branding-tagline">
+                    </div><!-- /branding-tagline -->
+                    <div id="branding-mashery">
+                    </div><!-- /branding-mashery -->
+                </div><!-- /branding -->
+                <div id="search" class="search">
+    <form id="search-input" class="search-input" method="get" action="/search">
+        <div>
+            <input id="search-box" class="search-box" type="text"
+                    value="" name="q" />
+            <input id="search-button" class="search-button" type="submit"
+                    value="Search" />
+        </div>
+    </form>
+</div>
+            </div>
+            <!-- /HEADER -->
+
+            <div id="user" class="user">
+                <div id="user-auth" class="user-auth">
+                </div><!-- /user-auth -->
+                <div id="user-main" class="user-main">
+                </div><!-- /user-main -->
+                <div id="user-nav" class="user-nav">
+                    <ul>
+                            <li class="first status">
+        Signed in as <span class="name">mermade</span>
+    </li>
+    <li class="account">
+        <a href="http://developer.channel4.com/member/my-account">My Account</a>    </li>
+        
+    
+        <li class="last sign-out">
+        <a href="#" onclick="document.getElementById('mashery-logout-form').submit();">Sign Out</a>
+            <form action="http://developer.channel4.com/logout/logout" method="post" enctype="multipart/form-data" id="mashery-logout-form" style="display:none;">
+    <fieldset style="display: none;">
+        <input type="hidden" name="synctoken" value="25d0e51711c503718514d9e7086fc1b4" />
+    </fieldset>
+    <dl>
+        <dt>
+            <label for="process-logout"></label>
+        </dt>
+        <dd>
+            <input type="submit" name="process" value="Sign Out" id="process-logout" class="input-submit process-logout" />
+        </dd>
+    </dl>
+    </form>    </li>
+                    </ul>
+                </div><!-- /user-nav -->
+                <div id="user-menu">
+        <ul>
+    
+        </ul>
+</div>
+            </div><!-- /user -->
+
+            <div id="info" class="info" style="display: none;">
+            </div><!-- /info -->
+
+            <!-- CONTENT -->
+            <div id="content" class="content">
+
+                
+                <div id="main" class="main">
+                        <ul class="pun-nav last"><li class="previous"><span class="label">Previous:</span> <a href="http://developer.channel4.com/docs/read/Home">Channel 4 API Documentation Portal</a></li><li class="up"><span class="label">Up:</span> <a href="http://developer.channel4.com/docs/read/Home">Channel 4 API Documentation Portal</a></li><li class="next"><span class="label">Next:</span> <a href="http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources">Discovery Resources</a></li></ul>
+<h1 class="first">PMLSD API Guide</h1>
+
+    <div class="section">
+        <div class="section-body">
+<p>The Programme Metadata Library Services for Devices (PMLSD) API Guide describes how to power your web applications with    rich ATOM feeds your users employ to discover Channel 4 programmes and associated    metadata. The PMLSD API offers the following resources:</p>
+<table border="1" style="width: 75%;">
+<tbody>
+<tr>
+<td width="17%"><strong>Resource Type</strong></td>
+<td width="83%"><strong>Description</strong></td>
+</tr>
+<tr>
+<td width="17%">Discovery</td>
+<td width="83%">
+<p>The discovery resources help your users discover Channel 4 programmes.          Responses are in the form of ATOM feeds that mirror the information available          from the familiar A to Z landing page at Channel4.com's <a href="http://www.channel4.com/programmes">Programmes</a> page. These resources include:</p>
+<ul>
+<li><a href="/docs/programmesapiguide/DiscoveryResources/A_to_Z_Landing_Feed">A to Z Landing Feed</a></li>
+<li><a href="/docs/programmesapiguide/DiscoveryResources/A_to_Z_Letter_Feed">A to Z Letter Feed</a></li>
+<li><a href="/docs/programmesapiguide/discoveryresources/Categories_Landing_Feed">Category Landing Feed</a></li>
+<li><a href="/docs/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date">TX Date Category Feed</a></li>
+<li><a href="/docs/programmesapiguide/discoveryresources/All_Programmes_by_Title">Title Category Feed</a></li>
+<li><a href="/docs/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date">4oD TX Date Category Feed</a></li>
+<li><a href="/docs/programmesapiguide/discoveryresources/4oD_Programmes_by_Title">4oD Title Category Feed</a></li>
+<li><a href="/docs/programmesapiguide/discoveryresources/4oD_Browse_by_Date_Feed">4oD Browse by Date Feed</a></li>
+<li><a href="/docs/programmesapiguide/discoveryresources/4oD_Most_Popular_Episodes_Feed">4oD Most Popular Episodes Feed</a></li>
+<li><a href="/docs/programmesapiguide/discoveryresources/TV_Listings_Feed">TV Listings Feed</a></li>
+<li><a href="/docs/programmesapiguide/discoveryresources/Collections_Feed">Collections Feed</a></li>
+<li><a href="/docs/programmesapiguide/discoveryresources/Search_Feed">Brand Search Feed</a></li>
+<li><a href="/docs/programmesapiguide/discoveryresources/Flattened_Collection_Feed">Flattened Collections Feed</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="17%">Metadata</td>
+<td width="83%">
+<p>The metadata resources help your users learn details about specific Channel          4 programmes. These resources include:</p>
+<ul>
+<li><a href="/docs/programmesapiguide/metadataresources/Hub_Feed">Hub Feed</a> <em>(all Brands)</em></li>
+<li><a href="/docs/programmesapiguide/metadataresources/4oD_Feed">4oD Feed</a> <em>(all 4oD Brands)</em></li>
+<li><a href="/docs/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Landing">Episode Guide Feed (Series Landing)</a></li>
+<li><a href="/docs/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Detail">Episode Guide Feed (Series Detail)</a></li>
+<li><a href="/docs/programmesapiguide/metadataresources/Episode_Guide_Feed_Episode_Detail">Episode Guide Feed (Episode Detail)</a></li>
+<li><a href="/docs/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels">Clips Landing Feed (Brand, Series and Episode Levels)</a></li>
+<li><a href="/docs/programmesapiguide/metadataresources/Clip_Detail_Atom_Feed">Clip Detail Atom Feed</a></li>
+<li><a href="/docs/programmesapiguide/metadataresources/Brand_EPG_Atom_Feed">Brand EPG Atom Feed</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Authentication</h2>
+<p>You will need to append your application's API key to your API calls. The API    key is the 24 character alphanumeric key provided to you when you registered    your application at <a href="/apps/register">http://developer.channel4.com/apps/register</a>.    To append the API key, use a ? character, followed by<strong> apikey=<em>[</em></strong>your assigned API key]. For example:</p>
+<pre class="brush: plain;gutter: false; fontsize: 100; first-line: 1; ">http://api.channel4.com/programmes/the-it-crowd/epg.atom?apikey=your-key</pre>
+<p>You can review your API keys by viewing the MyKeys section on your My Account page: <a href="/apps/mykeys">http://developer.channel4.com/apps/mykeys</a>.</p>
+<h2>Error Messages</h2>
+<p>The following errors are indicative of permission, capacity, or authentication issues:</p>
+<table border="1" cellpadding="0" rules="all">
+<tbody>
+<tr>
+<td>
+<p align="center"><strong>HTTP Status Code</strong></p>
+</td>
+<td>
+<p align="center"><strong>Error Message</strong></p>
+</td>
+<td>
+<p align="center"><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>403</p>
+</td>
+<td>
+<p>Forbidden</p>
+</td>
+<td>
+<p>You have not been granted permission to access the   requested method or object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>403</p>
+</td>
+<td>
+<p>Not Authorized</p>
+</td>
+<td>
+<p>The API key associated with your request was not   recconized or the signature was incorrect.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>403</p>
+</td>
+<td>
+<p>Account Inactive</p>
+</td>
+<td>
+<p>The API key you are using to access the Channel 4 API has   not been approved or has been disabled.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>403</p>
+</td>
+<td>
+<p>Account Over Queries Per Second Limit</p>
+</td>
+<td>
+<p>The API key you are using has attempted to access the api   too many times in one second.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>403</p>
+</td>
+<td>
+<p>Account Over Rate Limit</p>
+</td>
+<td>
+<p>The API key you are using has attempted to access the api   too many times in the rate limiting period.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>403</p>
+</td>
+<td>
+<p>Rate Limit Exceeded</p>
+</td>
+<td>
+<p>The service you have requested is over-capacity.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Caching &amp; Server-side Requests</h2>
+<p>As there are capacity and authentication limitations on every  account, consideration should be made to the architecture of your  implementation so that hitting a capacity limit (is not only rare but)  doesn't affect the operation of your application and it is not possible  for your users to discover your API Key.</p>
+<p>We therefore recommend that your application requests data from the  Channel 4 API via a server-to-server call and that these calls are not a  direct relationship to user requests on your application, i.e., some form  of caching.</p>
+<h2>Platform-specific Responses</h2>
+<p>Not all URLs and links are applicable to all platforms:&nbsp; specifically, the PlayStation 3 (PS3) platform does not support HTML links.&nbsp; Therefore, if you wish to request feeds and XML responses that return content for PS3 devices only (if applicable), you should include this parameter in your requests:</p>
+<pre>?platform=android
+</pre>
+<p>At present, there are no other values for this parameter.&nbsp; If you do <em>not </em>include this parameter name and value, all responses include link data for C4 only, by default.</p>
+<p>Current supported platforms:</p>
+<table border="1">
+<tbody>
+<tr>
+<td><strong>Name</strong></td>
+<td><strong>Platform Code</strong></td>
+<td><strong>Clients support</strong></td>
+</tr>
+<tr>
+<td>Channel4.com</td>
+<td>c4</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>Playstation 3</td>
+<td>ps3</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>Youview</td>
+<td>yv</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>ios</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>P06 platform</td>
+<td>p06</td>
+<td>xbox / ps / wp8</td>
+</tr>
+<tr>
+<td>m.channel4.com</td>
+<td>flashmobile</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>Freesat</td>
+<td>freesat</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>Android</td>
+<td>android</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>Samsung TV</td>
+<td>samsung</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2>Navigation</h2>
+<p>ATOM feeds often contain links to other feeds and URLs. The exact order variues between feeds but these often include:</p>
+<table border="1" cellpadding="0" rules="all" style="width: 748px; height: 160px;">
+<tbody>
+<tr valign="top">
+<td>
+<p align="center"><strong>Name</strong></p>
+</td>
+<td>
+<p align="center"><strong>Description</strong></p>
+</td>
+<td>
+<p align="center"><strong>Example</strong></p>
+</td>
+</tr>
+<tr valign="top">
+<td>Alternate</td>
+<td>Link to HTML page relevant <br />to the current ATOM feed. <br /></td>
+<td>http://int.channel4.com/programmes/atoz/a/page-2<br /></td>
+</tr>
+<tr valign="top">
+<td>Self</td>
+<td>URL of the current ATOM feed.<br /></td>
+<td>http://int.channel4.com/programmes/atoz/a/page-2.atom<br /></td>
+</tr>
+<tr valign="top">
+<td>4oD</td>
+<td>Link to the ATOM feed for the 4oD-filtered <br />subset of the current feed. <br /><em>(Self referential in cases where the <br />current feed is a 4oD feed already.)</em><br /></td>
+<td>http://int.channel4.com/programmes/atoz/a/4od.atom<br /></td>
+</tr>
+<tr valign="top">
+<td>Up</td>
+<td>Link to the current feed's 'parent' ATOM feed. <em><br />(See separate note below.)</em><br /></td>
+<td>http://int.channel4.com/programmes/atoz.atom<br /></td>
+</tr>
+<tr valign="top">
+<td>Next</td>
+<td>Link to the next page of a paginated series <br />for the current ATOM feed, if applicable.<br /></td>
+<td>http://int.channel4.com/programmes/atoz/a/page-3.atom<br /></td>
+</tr>
+<tr valign="top">
+<td>Previous</td>
+<td>Link to the previous page of a paginated series <br />for the current ATOM feed, if applicable.</td>
+<td>http://int.channel4.com/programmes/atoz/a.atom<br /></td>
+</tr>
+<tr valign="top">
+<td>Video</td>
+<td>Link to the short-form video clips ATOM feed <br />for the current feed, if applicable.</td>
+<td>http://int.channel4.com/programmes/the-air-hospital/video.atom<br /></td>
+</tr>
+<tr valign="top">
+<td>Episode Guide</td>
+<td>Link to the Episode Guide ATOM feed <br />for the current feed, if applicable.</td>
+<td>http://int.channel4.com/programmes/the-air-hospital/episode-guide.atom<br /></td>
+</tr>
+</tbody>
+</table>
+<h2></h2>
+<h3>Parent ('Up') Feeds</h3>
+<p>The structure and content of these links depends on the type of the  current ATOM feed and its position in the overall feed hierarchy:</p>
+<table border="1" cellpadding="0" rules="all" style="border-width: 1px; width: 748px;">
+<tbody>
+<tr style="height: 25px;" valign="top">
+<td><strong>Feed <br /></strong></td>
+<td><strong>Parent </strong><br /></td>
+<td><strong>Note(s)</strong></td>
+</tr>
+<tr style="height: 10px;" valign="top">
+<td>/atoz/a.atom<br /></td>
+<td>/atoz.atom<br /></td>
+<td>Returns to feed of all programmes in alphanumeric order.</td>
+</tr>
+<tr style="height: 25px;" valign="top">
+<td>/atoz/a/page-2.atom<br /></td>
+<td>/atoz.atom<br /></td>
+<td>Returns to feed of all programmes, <br />NOT to the page for the selected letter.</td>
+</tr>
+<tr style="height: 25px;" valign="top">
+<td><em>(/atoz/4od.atom)<br /></em></td>
+<td><em>N/A<br /></em></td>
+<td><em>Invalid URL</em></td>
+</tr>
+<tr style="height: 25px;" valign="top">
+<td>/atoz/a/4od.atom<br /></td>
+<td>/atoz/a.atom<br /></td>
+<td>Returns to superset of all programmes of selected letter.</td>
+</tr>
+<tr style="height: 25px;" valign="top">
+<td>/atoz/a/4od/page-2.atom<br /></td>
+<td>/atoz/a.atom*<br /></td>
+<td>Returns to feed of all programmes of selected  letter, <br />NOT to the 'previous' page or the subset of 4oD-filtered  programmes.</td>
+</tr>
+<tr style="height: 25px;" valign="top">
+<td>/categories/entertainment.atom<br /></td>
+<td>/categories.atom<br /></td>
+<td>Returns to feed of all categories.</td>
+</tr>
+<tr style="height: 25px;" valign="top">
+<td><em>(/categories/4od.atom)<br /></em></td>
+<td><em>N/A<br /></em></td>
+<td><em>Invalid URL</em></td>
+</tr>
+<tr style="height: 25px;" valign="top">
+<td>/categories/entertainment/title.atom<br /></td>
+<td>/categories.atom<br /></td>
+<td>Returns to feed of all categories <br />but does not retain sort-order parameter.</td>
+</tr>
+<tr style="height: 25px;" valign="top">
+<td>/categories/entertainment/4od.atom <br /></td>
+<td>/categories/entertainment.atom<br /></td>
+<td>Returns to superset of all programmes of selected category.</td>
+</tr>
+<tr style="height: 25px;" valign="top">
+<td>/categories/entertainment/4od/title.atom<br /></td>
+<td>/categories/entertainment/title.atom<br /></td>
+<td>Returns to superset of all  programmes of selected category <br />but retains the previous (4oD) subset's  sort-order parameter.</td>
+</tr>
+<tr style="height: 25px;" valign="top">
+<td>/categories/entertainment/page-2.atom</td>
+<td>/categories.atom<br /></td>
+<td>Returns to feed of all categories, <br />NOT to the 'previous' page.</td>
+</tr>
+<tr style="height: 25px;" valign="top">
+<td>/categories/entertainment/4od/page-2.atom</td>
+<td>/categories/entertainment.atom*<br /></td>
+<td>Returns to feed of all categories, <br /> NOT to the 'previous' page or the subset of 4oD-filtered programmes.</td>
+</tr>
+</tbody>
+</table>
+<p><em>*For paginated 4oD feeds beyond Page 1, this refers to the parent (all programmes) feed, not the preceding 4oD page.</em></p>
+<p>&nbsp;</p>
+<h2>Programme Types definition</h2>
+<p>Displays metadata code (as detailed in the following table)&nbsp;in a meaningful way on the application according to the specified programme type.</p>
+<table border="1" cellpadding="0" rules="all" style="border-width: 1px; width: 748px;">
+<tbody>
+<tr>
+<th>Description</th><th>Code</th>
+</tr>
+<tr>
+<td>Single Season Ep Untitled</td>
+<td>SSU</td>
+</tr>
+<tr>
+<td>Single season Ep Titled</td>
+<td>SST</td>
+</tr>
+<tr>
+<td>Multi-season Ep Untitled</td>
+<td>MSU</td>
+</tr>
+<tr>
+<td>Multi-season Ep Titled</td>
+<td>MST</td>
+</tr>
+<tr>
+<td>Long running series</td>
+<td>LR</td>
+</tr>
+<tr>
+<td>One off / Standalone</td>
+<td>OOS</td>
+</tr>
+<tr>
+<td>Film</td>
+<td>FM</td>
+</tr>
+<tr>
+<td>Flattened Brand (PML)</td>
+<td>FB</td>
+</tr>
+<tr>
+<td>PML default while data is in migration</td>
+<td>UNDEFINED&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<h2></h2>
+<h2>4oD and Non-4oD Content (Online and Offline)</h2>
+<p>Please remember that some of the feeds described in this documentation contain details of 4oD content only, i.e., programmes that are available online to view or download.&nbsp;</p>
+<p>Not all of Channel 4's content is available in this way: the material that is <em>not </em>appears only in the 'All Programmes' feeds (alongside the 4oD content).</p>
+<p>&nbsp;</p>
+<h2>Style, Branding and Terminology</h2>
+<p>Although it is recognised that API users will be using the data for a  number of reasons and in a variety of different ways, it is important  for Channel 4 that our brand and content is maintained in a consistent  manner.</p>
+<p>Please refer to the Channel 4 style guide on this page&nbsp;<a href="http://www.channel4.com/about_c4/styleguide/">http://www.channel4.com/about_c4/styleguide/</a>.</p>
+<p>&nbsp;</p>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 1376px; width: 1px; height: 1px; overflow: hidden;">Returns to feed of all programmes in alphanumeric order.</div>        </div>
+
+
+        <div class="section-meta">
+            <p>
+            <span class="revision">version 71</span> <span class="timestamp">as of <abbr title="7/26/13 4:56 am">3 years ago</abbr></span> <span class="moniker">by <span class="user-reference"><a href="http://developer.channel4.com/profile/700821">cdelgado</a></span></span></p>
+        </div>
+        
+        <ul class="pun-nav last"><li class="previous"><span class="label">Previous:</span> <a href="http://developer.channel4.com/docs/read/Home">Channel 4 API Documentation Portal</a></li><li class="up"><span class="label">Up:</span> <a href="http://developer.channel4.com/docs/read/Home">Channel 4 API Documentation Portal</a></li><li class="next"><span class="label">Next:</span> <a href="http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources">Discovery Resources</a></li></ul>
+            </div>
+
+            <div class="comments">
+            <h3>
+                0 Comments            </h3>
+            
+                <form action="/docs/read/ProgrammesAPIGuide" method="post" enctype="multipart/form-data">
+    <fieldset style="display: none;">
+        <input type="hidden" name="synctoken" value="25d0e51711c503718514d9e7086fc1b4" />
+    </fieldset>
+    <fieldset>
+        <legend>Add New Comment</legend>
+        <dl>
+            <dt>
+                <label for="moniker">Display Name</label>
+            </dt>
+            <dd>
+                mermade
+            </dd>
+            <dt class="require">
+                <label class="require" for="comments-body"></label>
+                <div class="descr"><span class="moniker">Body</span> <span id="markdown-help">Parsed with <a href="javascript:void(0);" id="show-mashery-markdown-help">enhanced Markdown</a></span></div>
+            </dt>
+            <dd class="require">
+                <textarea name="comments[body]" id="comments-body" class="input-textarea comments-body require"></textarea>
+            </dd>
+            <dt>
+                <label for="process-add-comment"></label>
+            </dt>
+            <dd>
+                <input type="submit" name="process" value="Add Comment" id="process-add-comment" class="input-submit process-add-comment" />
+            </dd>
+            <dt>
+                <label for="process-preview"></label>
+            </dt>
+            <dd>
+                <input type="submit" name="process" value="Preview" id="process-preview" class="input-submit process-preview" />
+            </dd>
+            <dt>
+                <label></label>
+            </dt>
+            <dd>
+                <div id="mashery-markdown-help">
+    <h2>Markdown Quick Reference <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">Full Markdown Reference</a></h2>
+    <div class="type">
+        <h3>Text</h3>
+
+<pre>*I'm italic text*
+_I'm also italic text_
+
+**I'm bold text**
+__I'm also bold text__
+
+*you* can __mix__ *them*</pre>
+
+    </div>
+
+    <div class="type even">
+        <h3>Links</h3>
+
+<pre>http://someurl.com  - automatic
+
+[Some URL](http://someurl.com)</pre>
+
+    </div>
+
+    <div class="type">
+        <h3>Code</h3>
+
+<pre>
+```javascript
+alert('Syntax highlighting');
+```
+
+`inline code` in a paragraph
+
+   4 space indents make
+   code blocks too.</pre>
+    </div>
+
+    <div class="type even">
+        <h3>Lists</h3>
+
+            <h4>Ordered list</h4>
+
+<pre>
+1. The first list item
+2. The second list item
+3. The third list item</pre>
+
+            <h4>Unordered List</h4>
+<pre>
+* List item
+* List item
+* List item</pre>
+
+            <h4>Nested Lists</h4>
+<pre>
+1. First
+2. Second
+    * Unordered nested list
+        1. Ordered nested list</pre>
+
+    </div>
+</div>
+            </dd>
+        </dl>
+    </fieldset>
+    </form>        </div>
+    
+
+                </div><!-- /main -->
+
+                <!-- SUB -->
+                <div id="sub" class="sub">
+                    <h2>Docs Navigation</h2>
+
+<ul>
+<li class="active"><a href="http://developer.channel4.com/docs/read/Home">Channel 4 API Documentation Portal</a></li>
+<li class="active"><a href="http://developer.channel4.com/docs/read/ProgrammesAPIGuide" class="active">PMLSD API Guide</a><ul>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources">Discovery Resources</a><ul>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Landing_Feed">A to Z Landing Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Letter_Feed">A to Z Letter Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Categories_Landing_Feed">Category Landing Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date">TX Date Category Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title">Title Category Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed">Most Popular Brands Category Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date">4oD TX Date Category Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title">4oD Title Category Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Browse_by_Date_Feed">4oD Browse by Date Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Most_Popular_Episodes_Feed">4oD Most Popular Episodes Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Search_Feed">Brand Search Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/TV_Listings_Feed">TV Listings Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Collections_Feed">Collections Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Flattened_Collection_Feed">Flattened Collection Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Clips_Catch_Up_Feed">4oD Clips Catch Up Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Untitled">Title All Brands Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Title_All_Brands_Feed">4oD Title All Brands Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Popular_Brands_Feed">Popular All Brands Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Popular_All_Brands_Feed">4oD Popular All Brands Feed</a></li>
+</ul>
+</li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/MetadataResources">Metadata Resources</a><ul>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Hub_Feed">Hub Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/4oD_Feed">4oD Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Landing">Episode Guide Feed (Series Landing)</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Detail">Episode Guide Feed (Series Detail)</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Episode_Detail">Episode Guide Feed (Episode Detail)</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels">Clips Landing Feed (Brand, Series and Episode Levels)</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clip_Detail_Atom_Feed">Clip Detail Atom Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Brand_EPG_Atom_Feed">Brand EPG Atom Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Programme_Feed">Programme Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Coming_Soon_feed">Coming Soon Feed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+                </div>
+                <!-- /SUB -->
+
+                <div id="breadcrumbs">
+                </div><!-- /breadcrumbs -->
+
+                <div id="local" class="local">
+                    <ul>
+    <li class=" first"><a href="http://developer.channel4.com/page">Home</a></li>
+    <li class=" "><a href="http://developer.channel4.com/api_gallery">API Gallery</a></li>
+    <li class="active "><a href="http://developer.channel4.com/docs">Documentation</a></li>
+    <li class=" "><a href="http://developer.channel4.com/forum">Forum</a></li>
+    <li class=" "><a href="http://developer.channel4.com/blog">Blog</a></li>
+</ul>
+                </div><!-- /local -->
+
+                                    <div id="nav" class="nav">
+                    </div><!-- /nav -->
+                            </div>
+            <!-- /CONTENT -->
+
+            <div id="footer" class="footer">
+
+                
+                <!-- SITEINFO -->
+                <div id="siteinfo" class="siteinfo">
+                                        </div>
+                <!-- /SITEINFO -->
+            </div><!-- /footer -->
+        </div>
+        <!-- /page -->
+
+        <!-- Start Branding script tag -->
+        <script type="text/javascript">
+            // get the branding logo to set the mouseover/out and onclick
+            var brandingLogo = document.getElementById('branding-logo');
+            if(brandingLogo != undefined) {
+                brandingLogo['onclick'] = function() {
+                    location.href = "http://developer.channel4.com/";
+                };
+                brandingLogo['onmouseover'] = function() {
+                    this.style.cursor = 'pointer';
+                };
+                brandingLogo['onmouseout'] = function() {
+                    this.style.cursor = 'auto';
+                };
+            }
+
+            // get the mashery logo to set the mouseover/out and onclick
+            var masheryLogo = document.getElementById('branding-mashery');
+            if(masheryLogo != undefined) {
+                masheryLogo['onclick'] = function() {
+                    location.href = "http://www.mashery.com/";
+                };
+                masheryLogo['onmouseover'] = function() {
+                    this.style.cursor = 'pointer';
+                };
+                masheryLogo['onmouseout'] = function() {
+                    this.style.cursor = 'auto';
+                };
+            }
+        </script>
+        <!-- End Branding script tag -->
+            <!-- <div id="extra1">&nbsp;</div>
+            <div id="extra2">&nbsp;</div> -->
+
+        <script type="text/javascript">
+//<![CDATA[
+/* ##############################
+ * # Javascript Hack to insert  #
+ * # custom text into App       #
+ * # registration form for      #
+ * # Channel4.                  #
+ * #                            #
+ * # By: Kelly at Mashery       #
+ * ############################## */
+ 
+(function() {
+    if(window.location.pathname == '/apps/register' || /^\/apps\/edit.*/.test(window.location.pathname)) {
+        var form = document.getElementById('application-edit'); // App registration form
+        var welcome = document.createElement('p');
+        welcome.appendChild(document.createTextNode('In order for us to assess your application we’d appreciate it if you told us about you and your proposed use of the Channel 4 API and Channel 4 Content.'));
+        form.parentNode.insertBefore(welcome, form); // insert welcome message before the form.
+        
+        var fieldsets = form.getElementsByTagName('fieldset');
+        
+        var mainFieldset = fieldsets[0];
+        
+        var formDL = mainFieldset.getElementsByTagName('dl')[0];
+        
+        var labels = formDL.getElementsByTagName('label');
+        
+        var DTs = formDL.getElementsByTagName('dt');
+        
+        var websiteHeaderDT = document.createElement('dt');
+        
+        var websiteHeader = document.createElement('h2');
+        websiteHeader.appendChild(document.createTextNode('Your Website (your "Site")'));
+        
+        websiteHeaderDT.appendChild(websiteHeader);
+        
+        formDL.insertBefore(websiteHeaderDT, DTs[0]);
+        
+        for (var x = 0; x < labels.length; x++) {
+            if (labels[x].getAttributeNode('for') != undefined) {
+                if (labels[x].getAttributeNode('for').value == 'applications-notes') {
+                    var purposeDT = document.createElement('dt');
+                    
+                    var purposeHeader = document.createElement('h2');
+                    purposeHeader.appendChild(document.createTextNode('Purpose for use of the Channel 4 API/Channel 4 Content ("Purpose")'));
+                    
+                    purposeDT.appendChild(purposeHeader);
+                    
+                    formDL.insertBefore(purposeDT, labels[x].parentNode);
+                }
+            }
+        }
+    }
+})();
+//]]>
+</script>
+		
+        <!-- Start Quantcast tag -->
+        <script type="text/javascript">
+            _qoptions={
+                qacct:"p-2eDO_fDX5hTv6"
+            };
+        </script>
+        <script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+        <noscript>
+            <img src="http://pixel.quantserve.com/pixel/p-2eDO_fDX5hTv6.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+        </noscript>
+        <!-- End Quantcast tag -->    </body>
+</html>

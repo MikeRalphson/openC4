@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="P3Pv1" href="/w3c/p3p.xml" />
+        <script type="text/javascript">
+            //<![CDATA[
+            var mashery_info = {
+            'username':"mermade"
+            };
+
+            // iframe'd detection, to pop out if in an iframe
+            if (window.location !== parent.window.location && !(/(page|docs|blog)\/preview/.test(window.location.pathname))) {
+                parent.window.location = window.location;
+            }
+            //]]>
+        </script>
+            <title>Channel 4 - Channel 4 API Documentation Portal</title>
+    <link rel="alternate" type="application/rss+xml" href="http://developer.channel4.com/docs/feed-comments/Home" />
+    <link rel="stylesheet"  type="text/css" media="screen" href="/public/Mashery/styles-min/Mashery-base.css" />
+    <link rel="stylesheet"  type="text/css" media="screen" href="/public/Mashery/styles/clients/channel4-theme.css" />
+    <link rel="stylesheet"  media="print" type="text/css" href="/public/Mashery/styles/community/mashery-blue.css" />
+<style type="text/css" media="screen">
+<!--
+/**
+ * New Logo
+ */
+div#branding-logo {
+    background-image: url("/files/logo.jpg");
+    background-size: 67px 88px;
+}
+-->
+</style>
+    <script src="/public/Mashery/scripts/Mashery/Mashery-base.js?25453" type="text/javascript"></script>
+    <script src="/public/Mashery/scripts/Mashery/source/ForumPreview.js" type="text/javascript"></script>
+        <!-- add syntax highlighter -->
+        <script type="text/javascript">
+            if(window.SyntaxHighlighter != undefined) { // check for syntax highlighter load before using
+                SyntaxHighlighter.all();
+            }
+        </script>
+        <!-- end syntax highlighter -->
+        <!--[if lt IE 7.]>
+            <link href="/public/Mashery/styles/IE6.css" type="text/css" media="screen" rel="stylesheet" />
+        <![endif]-->
+        <!--[if IE 7]>
+            <link href="/public/Mashery/styles/IE7.css" type="text/css" media="screen" rel="stylesheet" />
+        <![endif]-->
+        <!--[if gte IE 8]>
+            <link href="/public/Mashery/styles/IE8.css" type="text/css" media="screen" rel="stylesheet" />
+        <![endif]-->
+
+    </head>
+    <body id="page-docs" class="page-docs read signed-in en_US">
+        <!-- PAGE -->
+        <div id="page" class="page read">
+
+            <!-- HEADER -->
+            <div id="header" class="header">
+                <div id="branding" class="branding">
+                    <div id="branding-logo" class="branding-logo">
+                        Channel 4                    </div><!-- /branding-logo -->
+                    <div id="branding-tagline">
+                    </div><!-- /branding-tagline -->
+                    <div id="branding-mashery">
+                    </div><!-- /branding-mashery -->
+                </div><!-- /branding -->
+                <div id="search" class="search">
+    <form id="search-input" class="search-input" method="get" action="/search">
+        <div>
+            <input id="search-box" class="search-box" type="text"
+                    value="" name="q" />
+            <input id="search-button" class="search-button" type="submit"
+                    value="Search" />
+        </div>
+    </form>
+</div>
+            </div>
+            <!-- /HEADER -->
+
+            <div id="user" class="user">
+                <div id="user-auth" class="user-auth">
+                </div><!-- /user-auth -->
+                <div id="user-main" class="user-main">
+                </div><!-- /user-main -->
+                <div id="user-nav" class="user-nav">
+                    <ul>
+                            <li class="first status">
+        Signed in as <span class="name">mermade</span>
+    </li>
+    <li class="account">
+        <a href="http://developer.channel4.com/member/my-account">My Account</a>    </li>
+        
+    
+        <li class="last sign-out">
+        <a href="#" onclick="document.getElementById('mashery-logout-form').submit();">Sign Out</a>
+            <form action="http://developer.channel4.com/logout/logout" method="post" enctype="multipart/form-data" id="mashery-logout-form" style="display:none;">
+    <fieldset style="display: none;">
+        <input type="hidden" name="synctoken" value="25d0e51711c503718514d9e7086fc1b4" />
+    </fieldset>
+    <dl>
+        <dt>
+            <label for="process-logout"></label>
+        </dt>
+        <dd>
+            <input type="submit" name="process" value="Sign Out" id="process-logout" class="input-submit process-logout" />
+        </dd>
+    </dl>
+    </form>    </li>
+                    </ul>
+                </div><!-- /user-nav -->
+                <div id="user-menu">
+        <ul>
+    
+        </ul>
+</div>
+            </div><!-- /user -->
+
+            <div id="info" class="info" style="display: none;">
+            </div><!-- /info -->
+
+            <!-- CONTENT -->
+            <div id="content" class="content">
+
+                
+                <div id="main" class="main">
+                        <ul class="pun-nav last"><li class="previous empty"><span class="label">Previous:</span>&nbsp;</li><li class="up empty"><span class="label">Up:</span>&nbsp;</li><li class="next"><span class="label">Next:</span> <a href="http://developer.channel4.com/docs/read/ProgrammesAPIGuide">PMLSD API Guide</a></li></ul>
+<h1 class="first">Channel 4 API Documentation Portal</h1>
+
+    <div class="section">
+        <div class="section-body">
+<table border="0" cellspacing="0" style="width: 629px; height: 308px;">
+<tbody>
+<tr valign="top">
+<td style="width: 3%;"><img height="216" src="/files/channel4doclogo.jpg" width="149" /></td>
+<td valign="top" width="97%">
+<h3><strong>Welcome to the Channel 4 API Documentation Portal!</strong></h3>
+<p>This is the place to come for all the technical details you need to power your applications with Channel 4's deep programmes data. Each page of our documentation offers a commenting feature that you can  use to share your thoughts and suggestions about our documentation. We  welcome the chance to collaborate with you on our technical  documentation!</p>
+<p>This Channel 4 documentation portal offers the following documentation:</p>
+<table border="1" rules="all" style="width: 389px; height: 93px;">
+<tbody>
+<tr>
+<td height="29" width="27%"><strong>Document</strong></td>
+<td height="29" width="73%"><strong>Description</strong></td>
+</tr>
+<tr>
+<td width="27%"><a href="/docs/ProgrammesAPIGuide">Channel 4 PMLSD API Guide</a></td>
+<td align="left" valign="top" width="73%">The Channel 4 Programme Metadata Library Services for Devices (PMLSD) API Guide describes how to include rich programme discovery and metadata atom feeds in your web applications.</td>
+</tr>
+</tbody>
+</table>
+<p>Check this page for updates and new documentation from time to time.</p>
+</td>
+</tr>
+</tbody>
+</table>        </div>
+
+
+        <div class="section-meta">
+            <p>
+            <span class="revision">version 18</span> <span class="timestamp">as of <abbr title="8/31/12 3:39 am">4 years ago</abbr></span> <span class="moniker">by <span class="user-reference"><a href="http://developer.channel4.com/profile/768632">Linda</a></span></span></p>
+        </div>
+        
+        <ul class="pun-nav last"><li class="previous empty"><span class="label">Previous:</span>&nbsp;</li><li class="up empty"><span class="label">Up:</span>&nbsp;</li><li class="next"><span class="label">Next:</span> <a href="http://developer.channel4.com/docs/read/ProgrammesAPIGuide">PMLSD API Guide</a></li></ul>
+            </div>
+
+            <div class="comments">
+            <h3>
+                1 Comment            </h3>
+                            <ol class="comments">
+                                            <li class="comment ">
+    <div class="comment-body" id="comment-131269">
+        <p class="comment-meta">
+            <span class="moniker"><span class="user-reference"><a href="http://developer.channel4.com/profile/1934505">yashrajsingh</a></span></span>
+            &ndash;
+            <span class="timestamp"><abbr title="11/25/16 1:00 am">3 days ago</abbr></span>
+                    </p>
+        <p>Why is the API giving "Gateway Timeout" error?</p>            </div>
+</li>                                    </ol>
+            
+                <form action="/docs" method="post" enctype="multipart/form-data">
+    <fieldset style="display: none;">
+        <input type="hidden" name="synctoken" value="25d0e51711c503718514d9e7086fc1b4" />
+    </fieldset>
+    <fieldset>
+        <legend>Add New Comment</legend>
+        <dl>
+            <dt>
+                <label for="moniker">Display Name</label>
+            </dt>
+            <dd>
+                mermade
+            </dd>
+            <dt class="require">
+                <label class="require" for="comments-body"></label>
+                <div class="descr"><span class="moniker">Body</span> <span id="markdown-help">Parsed with <a href="javascript:void(0);" id="show-mashery-markdown-help">enhanced Markdown</a></span></div>
+            </dt>
+            <dd class="require">
+                <textarea name="comments[body]" id="comments-body" class="input-textarea comments-body require"></textarea>
+            </dd>
+            <dt>
+                <label for="process-add-comment"></label>
+            </dt>
+            <dd>
+                <input type="submit" name="process" value="Add Comment" id="process-add-comment" class="input-submit process-add-comment" />
+            </dd>
+            <dt>
+                <label for="process-preview"></label>
+            </dt>
+            <dd>
+                <input type="submit" name="process" value="Preview" id="process-preview" class="input-submit process-preview" />
+            </dd>
+            <dt>
+                <label></label>
+            </dt>
+            <dd>
+                <div id="mashery-markdown-help">
+    <h2>Markdown Quick Reference <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">Full Markdown Reference</a></h2>
+    <div class="type">
+        <h3>Text</h3>
+
+<pre>*I'm italic text*
+_I'm also italic text_
+
+**I'm bold text**
+__I'm also bold text__
+
+*you* can __mix__ *them*</pre>
+
+    </div>
+
+    <div class="type even">
+        <h3>Links</h3>
+
+<pre>http://someurl.com  - automatic
+
+[Some URL](http://someurl.com)</pre>
+
+    </div>
+
+    <div class="type">
+        <h3>Code</h3>
+
+<pre>
+```javascript
+alert('Syntax highlighting');
+```
+
+`inline code` in a paragraph
+
+   4 space indents make
+   code blocks too.</pre>
+    </div>
+
+    <div class="type even">
+        <h3>Lists</h3>
+
+            <h4>Ordered list</h4>
+
+<pre>
+1. The first list item
+2. The second list item
+3. The third list item</pre>
+
+            <h4>Unordered List</h4>
+<pre>
+* List item
+* List item
+* List item</pre>
+
+            <h4>Nested Lists</h4>
+<pre>
+1. First
+2. Second
+    * Unordered nested list
+        1. Ordered nested list</pre>
+
+    </div>
+</div>
+            </dd>
+        </dl>
+    </fieldset>
+    </form>        </div>
+    
+
+                </div><!-- /main -->
+
+                <!-- SUB -->
+                <div id="sub" class="sub">
+                    <h2>Docs Navigation</h2>
+
+<ul>
+<li class="active"><a href="http://developer.channel4.com/docs/read/Home" class="active">Channel 4 API Documentation Portal</a></li>
+<li><a href="http://developer.channel4.com/docs/read/ProgrammesAPIGuide">PMLSD API Guide</a><ul>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources">Discovery Resources</a><ul>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Landing_Feed">A to Z Landing Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/DiscoveryResources/A_to_Z_Letter_Feed">A to Z Letter Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Categories_Landing_Feed">Category Landing Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_TX_Date">TX Date Category Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/All_Programmes_by_Title">Title Category Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Most_Popular_Brands_Feed">Most Popular Brands Category Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_TX_Date">4oD TX Date Category Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Programmes_by_Title">4oD Title Category Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Browse_by_Date_Feed">4oD Browse by Date Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Most_Popular_Episodes_Feed">4oD Most Popular Episodes Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Search_Feed">Brand Search Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/TV_Listings_Feed">TV Listings Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Collections_Feed">Collections Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Flattened_Collection_Feed">Flattened Collection Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Clips_Catch_Up_Feed">4oD Clips Catch Up Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Untitled">Title All Brands Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Title_All_Brands_Feed">4oD Title All Brands Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/Popular_Brands_Feed">Popular All Brands Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/discoveryresources/4oD_Popular_All_Brands_Feed">4oD Popular All Brands Feed</a></li>
+</ul>
+</li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/MetadataResources">Metadata Resources</a><ul>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Hub_Feed">Hub Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/4oD_Feed">4oD Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Landing">Episode Guide Feed (Series Landing)</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Series_Detail">Episode Guide Feed (Series Detail)</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Episode_Guide_Feed_Episode_Detail">Episode Guide Feed (Episode Detail)</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clips_Landing_Feed_Brand_Series_and_Episode_Levels">Clips Landing Feed (Brand, Series and Episode Levels)</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Clip_Detail_Atom_Feed">Clip Detail Atom Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Brand_EPG_Atom_Feed">Brand EPG Atom Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Programme_Feed">Programme Feed</a></li>
+<li><a href="http://developer.channel4.com/docs/read/programmesapiguide/metadataresources/Coming_Soon_feed">Coming Soon Feed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+                </div>
+                <!-- /SUB -->
+
+                <div id="breadcrumbs">
+                </div><!-- /breadcrumbs -->
+
+                <div id="local" class="local">
+                    <ul>
+    <li class=" first"><a href="http://developer.channel4.com/page">Home</a></li>
+    <li class=" "><a href="http://developer.channel4.com/api_gallery">API Gallery</a></li>
+    <li class="active "><a href="http://developer.channel4.com/docs">Documentation</a></li>
+    <li class=" "><a href="http://developer.channel4.com/forum">Forum</a></li>
+    <li class=" "><a href="http://developer.channel4.com/blog">Blog</a></li>
+</ul>
+                </div><!-- /local -->
+
+                                    <div id="nav" class="nav">
+                    </div><!-- /nav -->
+                            </div>
+            <!-- /CONTENT -->
+
+            <div id="footer" class="footer">
+
+                
+                <!-- SITEINFO -->
+                <div id="siteinfo" class="siteinfo">
+                                        </div>
+                <!-- /SITEINFO -->
+            </div><!-- /footer -->
+        </div>
+        <!-- /page -->
+
+        <!-- Start Branding script tag -->
+        <script type="text/javascript">
+            // get the branding logo to set the mouseover/out and onclick
+            var brandingLogo = document.getElementById('branding-logo');
+            if(brandingLogo != undefined) {
+                brandingLogo['onclick'] = function() {
+                    location.href = "http://developer.channel4.com/";
+                };
+                brandingLogo['onmouseover'] = function() {
+                    this.style.cursor = 'pointer';
+                };
+                brandingLogo['onmouseout'] = function() {
+                    this.style.cursor = 'auto';
+                };
+            }
+
+            // get the mashery logo to set the mouseover/out and onclick
+            var masheryLogo = document.getElementById('branding-mashery');
+            if(masheryLogo != undefined) {
+                masheryLogo['onclick'] = function() {
+                    location.href = "http://www.mashery.com/";
+                };
+                masheryLogo['onmouseover'] = function() {
+                    this.style.cursor = 'pointer';
+                };
+                masheryLogo['onmouseout'] = function() {
+                    this.style.cursor = 'auto';
+                };
+            }
+        </script>
+        <!-- End Branding script tag -->
+            <!-- <div id="extra1">&nbsp;</div>
+            <div id="extra2">&nbsp;</div> -->
+
+        <script type="text/javascript">
+//<![CDATA[
+/* ##############################
+ * # Javascript Hack to insert  #
+ * # custom text into App       #
+ * # registration form for      #
+ * # Channel4.                  #
+ * #                            #
+ * # By: Kelly at Mashery       #
+ * ############################## */
+ 
+(function() {
+    if(window.location.pathname == '/apps/register' || /^\/apps\/edit.*/.test(window.location.pathname)) {
+        var form = document.getElementById('application-edit'); // App registration form
+        var welcome = document.createElement('p');
+        welcome.appendChild(document.createTextNode('In order for us to assess your application we’d appreciate it if you told us about you and your proposed use of the Channel 4 API and Channel 4 Content.'));
+        form.parentNode.insertBefore(welcome, form); // insert welcome message before the form.
+        
+        var fieldsets = form.getElementsByTagName('fieldset');
+        
+        var mainFieldset = fieldsets[0];
+        
+        var formDL = mainFieldset.getElementsByTagName('dl')[0];
+        
+        var labels = formDL.getElementsByTagName('label');
+        
+        var DTs = formDL.getElementsByTagName('dt');
+        
+        var websiteHeaderDT = document.createElement('dt');
+        
+        var websiteHeader = document.createElement('h2');
+        websiteHeader.appendChild(document.createTextNode('Your Website (your "Site")'));
+        
+        websiteHeaderDT.appendChild(websiteHeader);
+        
+        formDL.insertBefore(websiteHeaderDT, DTs[0]);
+        
+        for (var x = 0; x < labels.length; x++) {
+            if (labels[x].getAttributeNode('for') != undefined) {
+                if (labels[x].getAttributeNode('for').value == 'applications-notes') {
+                    var purposeDT = document.createElement('dt');
+                    
+                    var purposeHeader = document.createElement('h2');
+                    purposeHeader.appendChild(document.createTextNode('Purpose for use of the Channel 4 API/Channel 4 Content ("Purpose")'));
+                    
+                    purposeDT.appendChild(purposeHeader);
+                    
+                    formDL.insertBefore(purposeDT, labels[x].parentNode);
+                }
+            }
+        }
+    }
+})();
+//]]>
+</script>
+		
+        <!-- Start Quantcast tag -->
+        <script type="text/javascript">
+            _qoptions={
+                qacct:"p-2eDO_fDX5hTv6"
+            };
+        </script>
+        <script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+        <noscript>
+            <img src="http://pixel.quantserve.com/pixel/p-2eDO_fDX5hTv6.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+        </noscript>
+        <!-- End Quantcast tag -->    </body>
+</html>
