@@ -498,7 +498,7 @@ var swagStr = `{
 		"version": "1.0.0",
 		"title": "Channel 4 API",
 		"x-logo": {
-			"url": "http://www.channel4.com/static/programmes/images/c4-atom-logo.gif",
+			"url": "https://twitter.com/Channel4/profile_image?size=original",
 			"backgroundColor": "#FFFFFF"
 		},
 		"x-apiClientRegistration": {
