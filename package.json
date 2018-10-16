@@ -8,11 +8,11 @@
   },
   "dependencies": {
     "cheerio": "latest",
-    "request": "latest",
+    "request": "2.84.0",
     "ajv": "^4.0.1",
     "word-wrap": "^1.1.0",
     "openapi2js": "latest",
-    "openapi_optimise": "latest"
+    "openapi_optimise": "1.0.3"
   },
   "devDependencies": {},
   "scripts": {
