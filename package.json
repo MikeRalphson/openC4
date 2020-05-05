@@ -12,11 +12,14 @@
     "ajv": "^4.0.1",
     "word-wrap": "^1.1.0",
     "openapi2js": "latest",
-    "openapi_optimise": "^1.0.3"
+    "openapi_optimise": "^1.0.3",
+    "snyk": "^1.319.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -37,5 +40,6 @@
   "bugs": {
     "url": "https://github.com/Mermade/openC4/issues"
   },
-  "homepage": "https://github.com/Mermade/openC4#readme"
+  "homepage": "https://github.com/Mermade/openC4#readme",
+  "snyk": true
 }
