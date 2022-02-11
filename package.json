@@ -9,7 +9,7 @@
   "dependencies": {
     "cheerio": "latest",
     "request": "^2.84.0",
-    "ajv": "^4.0.1",
+    "ajv": "^6.12.3",
     "word-wrap": "^1.1.0",
     "openapi2js": "latest",
     "openapi_optimise": "^1.0.3"
